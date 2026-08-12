@@ -1,0 +1,59 @@
+// WaffleUp Design Tokens — SCSS  ·  v1.0.0
+// Generated from tokens/wup-tokens.json. Do not hand-edit; edit the JSON.
+// Usage:  @use '../.brand/tokens/wup-tokens' as wup;  →  color: wup.$cocoa;
+
+// Brand — digital
+$cyan:  #0BF9F6;
+$pink:  #FF629B;
+$gold:  #FFD56D;
+$cocoa: #450001;   // ink — never use #000
+$white: #FFFFFF;
+
+// Brand — print / CMYK build
+$cyan-print:  #70CBD3;   // Pantone 3255 C
+$pink-print:  #F0629A;   // Pantone 212 C
+$gold-print:  #FFD76D;   // Pantone 1215 C
+$cocoa-print: #3F1212;   // Pantone 4975 C
+
+// Scale
+$cyan-100: #DFFEFD; $cyan-300: #8DFCFA; $cyan-700: #06B5B3;
+$pink-100: #FFE7EF; $pink-300: #FFA7C6; $pink-700: #D93C74;
+$gold-100: #FFF6E2; $gold-300: #FFE6A8; $gold-700: #E0AE38;
+$cocoa-300: #A56A6B; $cocoa-500: #6B1A1B;
+
+// Semantic
+$text: $cocoa;  $text-muted: $cocoa-300;  $text-invert: $white;
+$bg: $white;    $bg-alt: $cyan-100;       $surface: $white;
+$border: $cocoa; $accent: $pink;          $accent-alt: $cyan;  $highlight: $gold;
+$success: #1FBF6B; $warning: $gold-700;   $danger: $pink-700;  $info: $cyan-700;
+
+// Type
+$font-display:   ("CHUM", "Futura PT", Futura, system-ui, sans-serif);
+$font-headline:  ("Futura PT Extra Bold", Futura, "General Sans", system-ui, sans-serif);
+$font-condensed: ("Bebas Neue", Oswald, Impact, sans-serif);
+$font-body:      ("General Sans", Inter, -apple-system, "Segoe UI", Roboto, sans-serif);
+$font-bangla:    ("Noto Sans Bengali", "Hind Siliguri", "General Sans", sans-serif);
+
+$text-xs: 0.75rem; $text-sm: 0.875rem; $text-base: 1rem; $text-lg: 1.25rem;
+$text-xl: 1.75rem; $text-2xl: 2.5rem;  $text-hero: 4rem;
+
+// Shape
+$radius-sm: 8px; $radius: 16px; $radius-lg: 28px; $radius-pill: 999px;
+$stroke: 3px; $stroke-lg: 5px;
+$shadow-sticker: 0 4px 0 $cocoa;
+$shadow-card:    0 6px 0 $cocoa;
+$shadow-soft:    0 8px 24px rgba(69,0,1,0.12);
+
+// Space
+$space-1: 4px; $space-2: 8px; $space-3: 12px; $space-4: 16px;
+$space-5: 24px; $space-6: 32px; $space-7: 48px; $space-8: 64px;
+
+$ease: cubic-bezier(0.34, 1.36, 0.64, 1);
+$dur: 180ms;
+$touch-min: 48px;
+
+// Correct text colour for a brand field
+@function on-color($bg) {
+  @if $bg == $pink or $bg == $cocoa { @return $white; }
+  @return $cocoa;
+}

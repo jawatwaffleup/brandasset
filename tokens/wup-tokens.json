@@ -1,0 +1,101 @@
+{
+  "$schema": "https://design-tokens.org/schema.json",
+  "name": "WaffleUp Design Tokens",
+  "version": "1.0.0",
+  "updated": "2026-08-11",
+  "source": "[WUP-01] Brand Assets / [WUP-01-04] Color Code — verified against logo artwork pixels",
+  "note": "CANONICAL. All other token files in this folder are generated from this one.",
+
+  "color": {
+    "brand": {
+      "cyan":  { "value": "#0BF9F6", "print": "#70CBD3", "pantone": "3255 C", "cmyk": "C53 M0 Y15 K0",  "role": "primary" },
+      "pink":  { "value": "#FF629B", "print": "#F0629A", "pantone": "212 C",  "cmyk": "C0 M77 Y7 K0",   "role": "primary" },
+      "gold":  { "value": "#FFD56D", "print": "#FFD76D", "pantone": "1215 C", "cmyk": "C0 M15 Y68 K0",  "role": "secondary" },
+      "cocoa": { "value": "#450001", "print": "#3F1212", "pantone": "4975 C", "cmyk": "C47 M85 Y76 K71", "role": "ink" },
+      "white": { "value": "#FFFFFF", "role": "surface / signature wave" }
+    },
+    "legacy2022": {
+      "cyan": "#6DCBD8", "pink": "#F0639A", "gold": "#FFD66D", "cocoa": "#3E1312",
+      "note": "Brand Book V.1 (2022). Superseded — treat as the print/CMYK line."
+    },
+    "scale": {
+      "cyan":  { "100": "#DFFEFD", "300": "#8DFCFA", "500": "#0BF9F6", "700": "#06B5B3" },
+      "pink":  { "100": "#FFE7EF", "300": "#FFA7C6", "500": "#FF629B", "700": "#D93C74" },
+      "gold":  { "100": "#FFF6E2", "300": "#FFE6A8", "500": "#FFD56D", "700": "#E0AE38" },
+      "cocoa": { "300": "#A56A6B", "500": "#6B1A1B", "900": "#450001" }
+    },
+    "semantic": {
+      "bg": "#FFFFFF",
+      "bgAlt": "#DFFEFD",
+      "surface": "#FFFFFF",
+      "text": "#450001",
+      "textMuted": "#A56A6B",
+      "textInvert": "#FFFFFF",
+      "border": "#450001",
+      "accent": "#FF629B",
+      "accentAlt": "#0BF9F6",
+      "highlight": "#FFD56D",
+      "success": "#1FBF6B",
+      "warning": "#E0AE38",
+      "danger": "#D93C74",
+      "info": "#06B5B3"
+    },
+    "onColor": {
+      "cyan": "#450001",
+      "gold": "#450001",
+      "pink": "#FFFFFF",
+      "cocoa": "#FFFFFF",
+      "white": "#450001"
+    }
+  },
+
+  "colorRatio": {
+    "dominant": "60-75%",
+    "secondary": "15-25%",
+    "accent": "3-5% each, max two accents",
+    "source": "WUP Brand Guideline, colour palette page"
+  },
+
+  "font": {
+    "family": {
+      "display":   "\"CHUM\", \"Futura PT\", Futura, system-ui, sans-serif",
+      "headline":  "\"Futura PT Extra Bold\", Futura, \"General Sans\", system-ui, sans-serif",
+      "condensed": "\"Bebas Neue\", Oswald, Impact, sans-serif",
+      "body":      "\"General Sans\", Inter, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+      "bangla":    "\"Noto Sans Bengali\", \"Hind Siliguri\", \"General Sans\", sans-serif",
+      "mono":      "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, monospace"
+    },
+    "licensed": ["CHUM", "Futura", "Ultra", "Bebas Neue", "Puffin Display", "General Sans"],
+    "filesAt": "assets/fonts/*.zip",
+    "size": {
+      "xs": "0.75rem", "sm": "0.875rem", "base": "1rem", "lg": "1.25rem",
+      "xl": "1.75rem", "2xl": "2.5rem", "hero": "4rem"
+    },
+    "weight": { "regular": 400, "medium": 500, "bold": 700, "black": 900 },
+    "lineHeight": { "tight": 0.95, "snug": 1.2, "normal": 1.5 },
+    "heroLayers": ["background", "drop shadow", "outline", "text"]
+  },
+
+  "radius": { "sm": "8px", "md": "16px", "lg": "28px", "pill": "999px" },
+
+  "stroke": { "default": "3px", "large": "5px", "color": "#450001" },
+
+  "shadow": {
+    "sticker": "0 4px 0 #450001",
+    "card": "0 6px 0 #450001",
+    "soft": "0 8px 24px rgba(69,0,1,0.12)"
+  },
+
+  "space": { "1": "4px", "2": "8px", "3": "12px", "4": "16px", "5": "24px", "6": "32px", "7": "48px", "8": "64px" },
+
+  "motion": { "duration": "180ms", "ease": "cubic-bezier(0.34, 1.36, 0.64, 1)" },
+
+  "touch": { "minTarget": "48px", "note": "staff use these on phones, one-handed, sometimes wet hands" },
+
+  "format": {
+    "currency": { "code": "BDT", "symbol": "৳", "decimals": 0, "pattern": "BDT {amount}" },
+    "date": "YYYY-MM-DD",
+    "timezone": "Asia/Dhaka",
+    "locales": ["en-BD", "bn-BD"]
+  }
+}

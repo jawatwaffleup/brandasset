@@ -1,0 +1,105 @@
+/* ==========================================================================
+   WaffleUp Design Tokens — CSS  ·  v1.0.0
+   Generated from tokens/wup-tokens.json. Do not hand-edit; edit the JSON.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand palette (digital / RGB) ---- */
+  --wup-cyan:        #0BF9F6;
+  --wup-pink:        #FF629B;
+  --wup-gold:        #FFD56D;
+  --wup-cocoa:       #450001;   /* ink — never use #000 */
+  --wup-white:       #FFFFFF;
+
+  /* ---- Print / CMYK build (Pantone 3255C · 212C · 1215C · 4975C) ---- */
+  --wup-cyan-print:  #70CBD3;
+  --wup-pink-print:  #F0629A;
+  --wup-gold-print:  #FFD76D;
+  --wup-cocoa-print: #3F1212;
+
+  /* ---- Tints & shades ---- */
+  --wup-cyan-100:  #DFFEFD;  --wup-cyan-300:  #8DFCFA;  --wup-cyan-700:  #06B5B3;
+  --wup-pink-100:  #FFE7EF;  --wup-pink-300:  #FFA7C6;  --wup-pink-700:  #D93C74;
+  --wup-gold-100:  #FFF6E2;  --wup-gold-300:  #FFE6A8;  --wup-gold-700:  #E0AE38;
+  --wup-cocoa-300: #A56A6B;  --wup-cocoa-500: #6B1A1B;
+
+  /* ---- Semantic roles ---- */
+  --wup-bg:          var(--wup-white);
+  --wup-bg-alt:      var(--wup-cyan-100);
+  --wup-surface:     var(--wup-white);
+  --wup-text:        var(--wup-cocoa);
+  --wup-text-muted:  var(--wup-cocoa-300);
+  --wup-text-invert: var(--wup-white);
+  --wup-border:      var(--wup-cocoa);
+  --wup-accent:      var(--wup-pink);
+  --wup-accent-alt:  var(--wup-cyan);
+  --wup-highlight:   var(--wup-gold);
+
+  --wup-success: #1FBF6B;
+  --wup-warning: var(--wup-gold-700);
+  --wup-danger:  var(--wup-pink-700);
+  --wup-info:    var(--wup-cyan-700);
+
+  /* ---- Typography ---- */
+  --wup-font-display:   "CHUM", "Futura PT", Futura, system-ui, sans-serif;
+  --wup-font-headline:  "Futura PT Extra Bold", Futura, "General Sans", system-ui, sans-serif;
+  --wup-font-condensed: "Bebas Neue", Oswald, Impact, sans-serif;
+  --wup-font-body:      "General Sans", Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --wup-font-bangla:    "Noto Sans Bengali", "Hind Siliguri", "General Sans", sans-serif;
+  --wup-font-mono:      "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --wup-text-xs: 0.75rem;  --wup-text-sm: 0.875rem;  --wup-text-base: 1rem;
+  --wup-text-lg: 1.25rem;  --wup-text-xl: 1.75rem;   --wup-text-2xl: 2.5rem;
+  --wup-text-hero: 4rem;
+
+  /* ---- Shape: rounded, thick cocoa outline, hard offset shadow ---- */
+  --wup-radius-sm:   8px;
+  --wup-radius:      16px;
+  --wup-radius-lg:   28px;
+  --wup-radius-pill: 999px;
+  --wup-stroke:      3px;
+  --wup-stroke-lg:   5px;
+
+  --wup-shadow-sticker: 0 4px 0 var(--wup-cocoa);
+  --wup-shadow-card:    0 6px 0 var(--wup-cocoa);
+  --wup-shadow-soft:    0 8px 24px rgba(69, 0, 1, 0.12);
+
+  /* ---- Spacing (4px base) ---- */
+  --wup-space-1: 4px;  --wup-space-2: 8px;  --wup-space-3: 12px; --wup-space-4: 16px;
+  --wup-space-5: 24px; --wup-space-6: 32px; --wup-space-7: 48px; --wup-space-8: 64px;
+
+  /* ---- Brand pattern: the signature wave, as a CSS mask ---- */
+  --wup-wave-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 64' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C140,2 260,58 420,42 C580,26 700,60 860,38 C980,21 1100,36 1200,26 L1200,64 L0,64 Z' fill='%23000'/%3E%3C/svg%3E");
+
+  /* ---- Motion & touch ---- */
+  --wup-ease: cubic-bezier(0.34, 1.36, 0.64, 1);  /* slight overshoot = playful */
+  --wup-dur: 180ms;
+  --wup-touch-min: 48px;  /* staff use phones one-handed, sometimes wet hands */
+}
+
+/* Sensible base. Optional — remove if your app has its own reset. */
+.wup-root,
+body.wup {
+  background: var(--wup-bg);
+  color: var(--wup-text);
+  font-family: var(--wup-font-body);
+  font-size: var(--wup-text-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+:lang(bn) { font-family: var(--wup-font-bangla); }
+
+/* Colour-field helpers — enforce the 60-75 / 15-25 / 3-5 ratio by picking
+   ONE field per screen. Text colour is baked in correctly. */
+.wup-field-cyan { background: var(--wup-cyan);  color: var(--wup-cocoa); }
+.wup-field-pink { background: var(--wup-pink);  color: var(--wup-white); }
+.wup-field-gold { background: var(--wup-gold);  color: var(--wup-cocoa); }
+.wup-field-ink  { background: var(--wup-cocoa); color: var(--wup-white); }
+
+/* Tabular numerals for POS totals and stock counts */
+.wup-num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --wup-dur: 1ms; }
+}
