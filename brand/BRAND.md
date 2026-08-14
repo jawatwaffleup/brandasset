@@ -17,7 +17,7 @@ Last verified: 11 Aug 2026 · Sources: `[WUP-01] Brand Assets`, `Waffle Up Brand
 | Founder story | Mohammad Salman saw a streetside waffle truck in the USA; brought "waffles on a stick" to Dhaka, where waffles were a luxury restaurant dessert sold in sets of four |
 | Category | QSR / food-tech startup — largest & fastest-growing waffle chain in Bangladesh |
 | Scale (2023–24 profile) | 12 outlets + 3 cloud kitchens · ~8,000 waffles/day · ~38,000 orders/month · 100+ team · BDT 180M revenue (2023) |
-| Scale (verified Aug 2026) | **15 trading sites**: 8 standard outlets · 4 Chef's Table · 2 cloud kitchens live · 1 Singapore. Foodpanda alone: 8,809 delivered orders and BDT 4.5M GMV in Jul 2026, AOV 511. See `data/outlets.json` |
+| Scale (verified Aug 2026) | **15 trading sites**: 8 standard outlets · 4 Chef's Table · 2 cloud kitchens live · 1 Singapore. Foodpanda alone: 8,809 delivered orders and BDT 4.5M GMV in Jul 2026, AOV 511. |
 | Handles | @waffleup.online (IG / FB / TikTok) · waffleup.global |
 | Orders | +880 1958 095887 (WhatsApp) |
 
@@ -128,27 +128,25 @@ Font files: `[WUP-01-05] Fonts` — `01 chum` · `02 futura` · `03 ultra` · `0
 
 ## 6. Characters — "The Waffle Up Gang"
 
-**Created by founder Mohammad Salman**, then formalised into polished vector art and animation rigs with outside (likely freelance) help — the website's "renowned French-Australian artist" line describes that later stage. **Nine characters are canonical** — the numbered set in `Animation (Tasnim)/3D Characters/`, each with a full rig: main pose, T-poses, hoodie variant, extra poses, expression sheet and Moho animation files.
+**Created by founder Mohammad Salman**, then formalised into polished vector art and animation rigs with outside (likely freelance) help — the website's "renowned French-Australian artist" line describes that later stage. **Bangladesh has exactly nine canonical characters:** Mr Waffle, Air Maxi, Bhoppu, Picchi, Stovy, Swirly, Tvy, Spacy and Icy.
 
-| # | Character | What it is | Personality |
+| # | Character | What it is | Approved Surprise Card description |
 |---|---|---|---|
-| 1 | **Bhoppu** | Cyan bear in a pink tracksuit, dumbbell + waffle | Food and fitness; loves contrasts |
-| 2 | **Air Maxi** | Pink-curled kid, headphones, "AIR MAX" varsity jacket | Trendsetter |
-| 3 | **Picchi** | Small freckled kid in a cyan W-onesie | Very sweet; shares his waffles |
-| 4 | **Swirly** | Candy-swirl striped bear, tongue out | Twirls around to make you smile |
-| 5 | **Mr. Waffle** | An actual waffle square in sunglasses and hi-tops | Romantic; found love in every bite |
-| 6 | **Icy** | A melting popsicle on a WaffleUp stick | The cold-drinks character |
-| 7 | **TV** | Cyan television with antennae and a pixel grin | Prop/mascot |
-| 8 | **Stovie** | The WaffleUp waffle oven itself | Everything warm and ooey-gooey |
-| 9 | **Spacie** | Kid in a pink-and-cyan space helmet, floating | The dreamer |
+| 1 | **Bhoppu** | Cyan bear in a pink tracksuit, dumbbell + waffle | He has a knack for finding those elevated spots where waffles seem extra flavourful. Some say it's his natural zest for life; others think there's a secret ingredient. |
+| 2 | **Air Maxi** | Pink-curled kid, headphones, "AIR MAX" varsity jacket | The beat of the street! With his paw on the pulse of the latest trends, he's the go-to guy for all things trendy in the city. |
+| 3 | **Picchi** | Small freckled kid in a cyan W-onesie | With a flair for vibrant colors and a head full of curly dreams, Picchi dances through life, sprinkling joy everywhere. Believing every day is a celebration waiting to happen, Picchi spreads happiness with every step. |
+| 4 | **Swirly** | Candy-swirl striped bear, tongue out | While wild colors meet wildlife flavors, don't be fooled by Swirly's zany appearance; there's nothing more serious than our commitment to satisfy those late-night waffle whims. Dare to taste the swirl? |
+| 5 | **Mr Waffle** | An actual waffle square in sunglasses and hi-tops | The original trendsetter of the waffle world! With a drizzle of style and a splash of sass, he's here to prove that breakfast can be the highlight of any day. “Stay crispy, stay cool!” |
+| 6 | **Icy** | A melting popsicle on a WaffleUp stick | Swirling with cool colors and bursting with dynamic energy, Icy knows how to make a splash! Always the life of the party, Icy turns any ordinary day into a refreshing adventure. |
+| 7 | **Tvy** | Cyan television with antennae and a pixel grin | Retro vibes and crispy delights! Tvy is here to rewind you back to the golden era while you munch on our cosmic waffles. No breakfast? No worries! We're open till late at night. |
+| 8 | **Stovy** | The WaffleUp waffle oven itself | The mastermind behind every crispy edge and fluffy center. When waffles need an upgrade, Stovy turns up the heat! Some say his technique is unparalleled; others believe he whispers to the batter. |
+| 9 | **Spacy** | Kid in a pink-and-cyan space helmet, floating | From the Milky Waffle Way, Spacy brings you the cosmic delight of crispy edges and fluffy centers. Dive into a galactic treat with us, open till late night! |
 
-**Secondary (2D card art only, no rig):** Bubbly (Nutella-drip bear) · Sweety (sundae glass) · Chachhu Sam (moustached uncle, Bangla Pizza) · ZZZ (the sleeping one, drawn as a little house) · Lazy Squirrel (likely an alternate name for Swirly).
+**Singapore variant: Merlulu** — a pink-maned Merlion with a gold W medallion. Singapore therefore has ten characters: the Bangladesh nine plus Merlulu. Its approved Surprise Card description is: “Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder she's a fan of Waffle Up's bold flavors with a smooth twist.” On the SG sticker sheets, and as a tenth Surprise Card character in Batch 11 (May 26).
 
-**Singapore variant: Merlulu** — a pink-maned Merlion with a gold W medallion. On the SG sticker sheets, and as a tenth Surprise Card character in Batch 11 (May 26).
+Several characters are *objects*, not people — Stovy is the oven, Icy is the popsicle and Mr Waffle is the waffle. That maps unusually well onto software modules: Stovy for manufacturing, Icy for beverages and Mr Waffle for the waffle SKUs.
 
-Several characters are *objects*, not people — Stovie is the oven, Icy is the popsicle, Mr. Waffle is the waffle, Sweety is the sundae. That maps unusually well onto software modules: Stovie for manufacturing, Icy for beverages, Mr. Waffle for the waffle SKUs.
-
-Full roster, usage rules and outlet mapping: `brand/CHARACTERS.md`. Art: `assets/characters/{hero,expressions,cards,reference}/`.
+Only four supplied printable 3D models exist in this kit: **Mr Waffle, Air Maxi, Bhoppu and Picchi**. They are stored as `.stl` files in their market/character folders; 2D T-pose artwork is not a 3D model. Full roster, usage rules and asset map: `brand/CHARACTERS.md`. Art: `assets/characters/{bangladesh,singapore}/`.
 
 ---
 
@@ -221,7 +219,7 @@ Measured 2026 performance: **38,556 distributed** (Feb–May), **2,839 redeemed*
 
 ## 8. Outlets & channels
 
-**15 trading sites** across four models. The register of record is `data/outlets.json`, built from the ops team's Outlet Dashboard — not from the website locator, which is out of date.
+**15 trading sites** across four models. This visual brand library does not maintain an operational outlet register.
 
 | Type | Count | POS | Delivery | Price book |
 |---|---|---|---|---|

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "descriptionSource": "assets/Surprise Cards/Character Cards",
+  "characters": [
+    {
+      "id": "mr-waffle",
+      "name": "Mr Waffle",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Mr Waffle.png",
+      "description": "The original trendsetter of the waffle world! With a drizzle of style and a splash of sass, he's here to prove that breakfast can be the highlight of any day. \"Stay crispy, stay cool!\""
+    },
+    {
+      "id": "air-maxi",
+      "name": "Air Maxi",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Air Maxi.png",
+      "description": "The beat of the street! With his paw on the pulse of the latest trends, he's the go-to guy for all things trendy in the city."
+    },
+    {
+      "id": "bhoppu",
+      "name": "Bhoppu",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Bhoppu.png",
+      "description": "He has a knack for finding those elevated spots where waffles seem extra flavourful. Some say it's his natural zest for life; others think there's a secret ingredient."
+    },
+    {
+      "id": "picchi",
+      "name": "Picchi",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Picchi.png",
+      "description": "With a flair for vibrant colors and a head full of curly dreams, Picchi dances through life, sprinkling joy everywhere. Believing every day is a celebration waiting to happen, Picchi spreads happiness with every step."
+    },
+    {
+      "id": "stovy",
+      "name": "Stovy",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Stovy.png",
+      "description": "The mastermind behind every crispy edge and fluffy center. When waffles need an upgrade, Stovy turns up the heat! Some say his technique is unparalleled; others believe he whispers to the batter."
+    },
+    {
+      "id": "swirly",
+      "name": "Swirly",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Swirly.png",
+      "description": "While wild colors meet wildlife flavors, don't be fooled by Swirly's zany appearance; there's nothing more serious than our commitment to satisfy those late-night waffle whims. Dare to taste the swirl?"
+    },
+    {
+      "id": "tvy",
+      "name": "Tvy",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Tvy.png",
+      "description": "Retro vibes and crispy delights! Tvy is here to rewind you back to the golden era while you munch on our cosmic waffles. No breakfast? No worries! We're open till late at night."
+    },
+    {
+      "id": "spacy",
+      "name": "Spacy",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Spacy.png",
+      "description": "From the Milky Waffle Way, Spacy brings you the cosmic delight of crispy edges and fluffy centers. Dive into a galactic treat with us, open till late night!"
+    },
+    {
+      "id": "icy",
+      "name": "Icy",
+      "market": "bangladesh",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Icy.png",
+      "description": "Swirling with cool colors and bursting with dynamic energy, Icy knows how to make a splash! Always the life of the party, Icy turns any ordinary day into a refreshing adventure."
+    },
+    {
+      "id": "merlulu",
+      "name": "Merlulu",
+      "market": "singapore",
+      "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Merlulu.png",
+      "description": "Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder she's a fan of Waffle Up's bold flavors with a smooth twist."
+    }
+  ]
+}
