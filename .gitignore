@@ -28,3 +28,9 @@ node_modules/
 *.usda
 *.usdc
 *.usdz
+
+# Brand guidelines build artefacts (regenerate with brand-guidelines/build.py)
+brand-guidelines/img/
+brand-guidelines/fonts.css
+
+brand-guidelines/__pycache__/

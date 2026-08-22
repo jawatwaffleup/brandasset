@@ -1,0 +1,2569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WaffleUp — Visual Brand Guidelines</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+/* ==========================================================================
+   WaffleUp Brand Guidelines — print stylesheet
+   1440 x 810 px pages (16:9), rendered to PDF by build.py via headless Chrome.
+   ========================================================================== */
+
+:root{
+  --cyan:#0BF9F6; --pink:#FF629B; --gold:#FFD56D; --cocoa:#450001; --cream:#FFF8EC;
+  --cyan-print:#70CBD3; --pink-print:#F0629A; --gold-print:#FFD76D; --cocoa-print:#3F1212;
+  --cyan-100:#DFFEFD; --pink-100:#FFE7EF; --gold-100:#FFF6E2; --cocoa-300:#A56A6B;
+  --pad:62px;
+}
+
+@page{ size:1440px 810px; margin:0; }
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+body{
+  font-family:"GeneralSans", "Segoe UI", sans-serif;
+  color:var(--cocoa);
+  background:#fff;
+  counter-reset:page 0;
+  font-variant-ligatures:none;
+}
+
+.page{
+  position:relative;
+  width:1440px; height:810px;
+  overflow:hidden;
+  background:#fff;
+  page-break-after:always;
+  break-after:page;
+  display:flex; flex-direction:column;
+}
+.page:last-child{ page-break-after:auto; }
+
+.pad{ padding:var(--pad) 96px; }
+
+/* ---- colour fields ---- */
+.f-cyan{ background:var(--cyan); }
+.f-pink{ background:var(--pink); color:#fff; }
+.f-gold{ background:var(--gold); }
+.f-cocoa{ background:var(--cocoa); color:#fff; }
+.f-cream{ background:var(--cream); }
+.f-cyan-100{ background:var(--cyan-100); }
+
+/* ---- signature wave-blob decorations (masked shapes, tinted by class) ---- */
+.blob{ position:absolute; pointer-events:none; -webkit-mask-repeat:no-repeat; -webkit-mask-size:100% 100%; }
+.blob.tl{ top:0; left:0; width:560px; height:420px;
+  -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 420'><path d='M0,0 L318,0 C318,74 252,104 236,166 C220,228 272,258 244,314 C214,374 108,378 40,420 L0,420 Z'/></svg>"); }
+.blob.tr{ top:0; right:0; width:520px; height:360px;
+  -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 360'><path d='M520,0 L520,360 L470,360 C400,318 396,240 340,206 C282,171 214,196 158,160 C96,120 92,44 60,0 Z'/></svg>"); }
+.blob.bl{ bottom:0; left:0; width:560px; height:400px;
+  -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 400'><path d='M0,400 L560,400 L560,352 C486,306 400,344 330,306 C258,266 268,186 200,142 C140,103 56,120 0,60 Z'/></svg>"); }
+.blob.br{ bottom:0; right:0; width:640px; height:440px;
+  -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 440'><path d='M640,440 L640,52 C556,52 512,118 458,150 C386,193 314,174 248,216 C172,264 188,346 122,398 C78,432 40,428 0,440 Z'/></svg>"); }
+.blob.band{ left:0; right:0; width:1440px; height:150px;
+  -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 150' preserveAspectRatio='none'><path d='M0,44 C180,4 312,86 502,64 C700,41 812,96 1010,72 C1180,51 1290,28 1440,42 L1440,150 L0,150 Z'/></svg>"); }
+.blob.band-up{ -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 150' preserveAspectRatio='none'><path d='M0,0 L1440,0 L1440,110 C1290,124 1180,99 1010,78 C812,54 700,109 502,86 C312,64 180,146 0,106 Z'/></svg>"); }
+.b-cyan{ background:var(--cyan); } .b-pink{ background:var(--pink); }
+.b-gold{ background:var(--gold); } .b-white{ background:#fff; }
+.b-cream{ background:var(--cream); } .b-cocoa{ background:var(--cocoa); }
+.b-cyan-100{ background:var(--cyan-100); }
+
+.dot{ position:absolute; border-radius:50%; background:var(--cream); pointer-events:none; }
+.dot.w{ background:#fff; }
+
+/* ---- type ---- */
+.display{
+  font-family:"Chum", "FuturaXB", sans-serif;
+  font-weight:400; line-height:0.94; letter-spacing:0.01em;
+  text-transform:lowercase;
+}
+.d-cyan{ color:var(--cyan);
+  -webkit-text-stroke:5px var(--cocoa); paint-order:stroke fill; text-shadow:10px 11px 0 var(--cocoa); }
+.d-pink{ color:var(--pink);
+  -webkit-text-stroke:5px var(--cocoa); paint-order:stroke fill; text-shadow:10px 11px 0 var(--cocoa); }
+.d-gold{ color:var(--gold);
+  -webkit-text-stroke:5px var(--cocoa); paint-order:stroke fill; text-shadow:10px 11px 0 var(--cocoa); }
+.d-white{ color:#fff;
+  -webkit-text-stroke:5px var(--cocoa); paint-order:stroke fill; text-shadow:10px 11px 0 var(--cocoa); }
+.d-flat{ color:var(--cocoa); text-shadow:none; }
+
+h1.display{ font-size:104px; }
+h2.display{ font-size:58px; }
+h3.display{ font-size:38px; }
+
+.eyebrow{
+  font-family:"FuturaXB", sans-serif; text-transform:uppercase;
+  letter-spacing:0.22em; font-size:15px; line-height:1;
+}
+.lede{ font-size:22px; line-height:1.5; max-width:52ch; font-weight:500; }
+p{ font-size:16.5px; line-height:1.62; }
+.small{ font-size:14px; line-height:1.55; }
+.tiny{ font-size:12.5px; line-height:1.5; letter-spacing:0.01em; }
+strong{ font-weight:700; }
+.muted{ opacity:0.72; }
+
+.rule{ height:5px; background:var(--cocoa); border-radius:3px; }
+
+/* ---- section header block used on content pages ---- */
+.head{ display:flex; align-items:flex-end; justify-content:space-between; gap:48px; margin-bottom:28px; }
+.head .kicker{ display:flex; flex-direction:column; gap:14px; }
+.head .note{ max-width:44ch; font-size:15px; line-height:1.6; padding-bottom:8px; }
+
+/* ---- cards / panels ---- */
+.panel{
+  background:#fff; border:4px solid var(--cocoa); border-radius:22px;
+  box-shadow:0 8px 0 var(--cocoa); padding:21px 25px;
+}
+.panel.flat{ box-shadow:none; }
+.panel{ min-height:0; }
+.tile{
+  background:#fff; border:4px solid var(--cocoa); border-radius:20px;
+  overflow:hidden; display:flex; flex-direction:column; min-height:0;
+}
+.tile .frame{ flex:1; display:flex; align-items:center; justify-content:center; padding:14px; min-height:0; }
+.tile .frame img{ max-width:100%; max-height:100%; object-fit:contain; }
+.tile .cap{ border-top:4px solid var(--cocoa); padding:9px 14px; font-family:"FuturaXB",sans-serif;
+  font-size:12.5px; text-transform:uppercase; letter-spacing:0.09em; background:var(--cream); }
+.tile.photo .frame{ padding:0; }
+.tile.photo .frame img{ width:100%; height:100%; object-fit:cover; }
+
+.pill{
+  display:inline-block; border:3px solid var(--cocoa); border-radius:999px;
+  padding:5px 15px; font-family:"FuturaXB",sans-serif; font-size:12px;
+  text-transform:uppercase; letter-spacing:0.12em; background:#fff; color:var(--cocoa);
+}
+.pill.gold{ background:var(--gold); } .pill.cyan{ background:var(--cyan); }
+.pill.pink{ background:var(--pink); color:#fff; } .pill.cocoa{ background:var(--cocoa); color:#fff; }
+
+.grid{ display:grid; gap:20px; min-height:0; }
+.grid.rows2{ grid-template-rows:1fr 1fr; }
+.g2{ grid-template-columns:repeat(2,1fr); } .g3{ grid-template-columns:repeat(3,1fr); }
+.g4{ grid-template-columns:repeat(4,1fr); } .g5{ grid-template-columns:repeat(5,1fr); }
+.g6{ grid-template-columns:repeat(6,1fr); }
+.body{ flex:1; min-height:0; display:flex; flex-direction:column; }
+
+/* ---- tables ---- */
+table{ border-collapse:collapse; width:100%; font-size:15px; }
+th{ font-family:"FuturaXB",sans-serif; text-transform:uppercase; letter-spacing:0.11em;
+  font-size:11.5px; text-align:left; padding:0 14px 9px; border-bottom:3px solid var(--cocoa); }
+td{ padding:9px 14px; border-bottom:1.5px solid rgba(69,0,1,0.18); vertical-align:top; line-height:1.45; }
+tr:last-child td{ border-bottom:none; }
+td.k{ font-weight:600; white-space:nowrap; }
+.mono{ font-family:"BebasNeue",sans-serif; letter-spacing:0.06em; font-size:19px; }
+
+/* ---- divider pages ---- */
+.divider{ flex-direction:row; }
+.divider .left{ width:47%; position:relative; display:flex; flex-direction:column;
+  justify-content:center; padding:0 76px; gap:26px; }
+.divider .right{ flex:1; position:relative; display:flex; flex-direction:column;
+  justify-content:center; padding:0 76px; gap:22px; }
+.divider .num{ font-family:"BebasNeue",sans-serif; font-size:150px; line-height:0.8; }
+.divider h2.display{ line-height:1.08; }
+
+/* ---- page furniture ---- */
+.folio{
+  position:absolute; bottom:34px; left:96px; right:96px;
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:"FuturaXB",sans-serif; font-size:11px; letter-spacing:0.2em;
+  text-transform:uppercase; opacity:0.55;
+}
+.page{ counter-increment:page; }
+.folio .no::after{ content:counter(page); }
+
+/* ---- swatch blocks ---- */
+.swatch{ border:4px solid var(--cocoa); border-radius:20px; overflow:hidden; display:flex; flex-direction:column; }
+.swatch .chip{ height:150px; }
+.swatch .meta{ background:#fff; padding:16px 18px; flex:1; }
+.swatch .meta .name{ font-family:"FuturaXB",sans-serif; font-size:16px; text-transform:uppercase;
+  letter-spacing:0.05em; margin-bottom:9px; }
+.swatch .meta dl{ display:grid; grid-template-columns:auto 1fr; gap:3px 12px; font-size:13px; }
+.swatch .meta dt{ font-family:"FuturaXB",sans-serif; text-transform:uppercase; font-size:10.5px;
+  letter-spacing:0.11em; opacity:0.6; padding-top:2px; }
+.swatch .meta dd{ font-weight:600; letter-spacing:0.02em; }
+
+/* ---- do / don't ---- */
+.judge{ display:flex; align-items:center; gap:10px; font-family:"FuturaXB",sans-serif;
+  text-transform:uppercase; letter-spacing:0.12em; font-size:13px; }
+.judge .mark{ width:26px; height:26px; border-radius:50%; border:3px solid var(--cocoa);
+  display:flex; align-items:center; justify-content:center; font-size:15px; line-height:1; }
+.judge.yes .mark{ background:var(--cyan); } .judge.no .mark{ background:var(--pink); color:#fff; }
+
+.crossed{ position:relative; }
+.crossed::after{
+  content:""; position:absolute; inset:0; z-index:3; pointer-events:none;
+  background-image:
+    linear-gradient(to bottom right, transparent calc(50% - 2.5px), var(--pink) calc(50% - 2.5px),
+      var(--pink) calc(50% + 2.5px), transparent calc(50% + 2.5px)),
+    linear-gradient(to bottom left, transparent calc(50% - 2.5px), var(--pink) calc(50% - 2.5px),
+      var(--pink) calc(50% + 2.5px), transparent calc(50% + 2.5px));
+}
+
+/* ---- character profile ---- */
+.charcard{ display:flex; gap:26px; align-items:stretch; border:4px solid var(--cocoa);
+  border-radius:26px; background:#fff; overflow:hidden; box-shadow:0 8px 0 var(--cocoa); }
+.charcard .art{ width:44%; display:flex; align-items:center; justify-content:center; padding:14px; }
+.charcard .art img{ max-width:100%; max-height:224px; object-fit:contain; }
+.charcard .txt{ flex:1; padding:26px 28px 24px 0; display:flex; flex-direction:column; gap:12px; justify-content:center; }
+.charcard .txt p{ font-size:15px; line-height:1.55; }
+.charcard .tags{ display:flex; gap:8px; flex-wrap:wrap; }
+
+.lyr{ display:inline-block; width:42px; height:42px; border-radius:11px;
+  border:3px solid var(--cocoa); margin-right:10px; vertical-align:middle; }
+.imgcard{ border:4px solid var(--cocoa); border-radius:20px; overflow:hidden; background:#fff; }
+.imgcard img{ display:block; width:100%; height:100%; object-fit:cover; }
+
+/* ---- stacking: decorations sit behind everything else on the page ---- */
+.blob,.dot{ z-index:0; }
+.page > :not(.blob):not(.dot){ z-index:2; }
+.divider .left,.divider .right{ overflow:hidden; }
+.divider .left > :not(.blob):not(.dot),
+.divider .right > :not(.blob):not(.dot){ position:relative; z-index:2; }
+
+/* ---- surfaces carry their own ink, whatever field the page uses ---- */
+.panel,.tile,.swatch,.charcard,.imgcard{ color:var(--cocoa); }
+
+/* ---- colour fields win over the default white panel/tile surface ---- */
+.panel.f-cyan,.tile.f-cyan,.swatch.f-cyan{ background:var(--cyan); }
+.panel.f-pink,.tile.f-pink,.swatch.f-pink{ background:var(--pink); color:#fff; }
+.panel.f-gold,.tile.f-gold,.swatch.f-gold{ background:var(--gold); }
+.panel.f-cocoa,.tile.f-cocoa,.swatch.f-cocoa{ background:var(--cocoa); color:#fff; }
+.panel.f-cream,.tile.f-cream{ background:var(--cream); }
+.panel.f-cyan-100,.tile.f-cyan-100{ background:var(--cyan-100); }
+.f-cocoa .cap,.f-pink .cap{ background:rgba(255,255,255,.92); color:var(--cocoa); }
+</style>
+</head>
+<body>
+
+<!-- ============================= 1 · COVER ============================= -->
+<section class="page" style="background:var(--cyan)">
+  <div class="blob tl b-gold" style="width:620px;height:430px"></div>
+  <div class="blob tr b-pink" style="width:560px;height:390px"></div>
+  <div class="dot" style="top:56px;left:392px;width:34px;height:34px"></div>
+  <div class="dot w" style="top:150px;left:330px;width:18px;height:18px"></div>
+  <div class="dot" style="top:212px;right:118px;width:46px;height:46px"></div>
+  <img src="img/logo-rgb.png" alt="Waffle Up"
+       style="position:absolute;top:96px;left:50%;transform:translateX(-50%);width:660px">
+  <div style="position:absolute;top:296px;left:0;width:100%;text-align:center">
+    <h1 class="display d-white" style="font-size:88px">visual brand guidelines</h1>
+    <p class="eyebrow" style="margin-top:26px;color:var(--cocoa)">Waffle Up Global Pte. Ltd.</p>
+    <p class="eyebrow" style="margin-top:12px;color:var(--cocoa);opacity:.62">Edition 2026 &nbsp;·&nbsp; Bangladesh &amp; Singapore</p>
+  </div>
+  <div style="position:absolute;bottom:56px;left:0;width:1440px;display:flex;align-items:flex-end;
+              justify-content:center;gap:4px;padding:0 26px">
+    <img src="img/char-bhoppu.png" alt="Bhoppu" style="height:191px">
+    <img src="img/char-tvy.png" alt="Tvy" style="height:151px">
+    <img src="img/char-air-maxi.png" alt="Air Maxi" style="height:172px">
+    <img src="img/char-mr-waffle.png" alt="Mr Waffle" style="height:194px">
+    <img src="img/char-stovy.png" alt="Stovy" style="height:116px">
+    <img src="img/char-spacy.png" alt="Spacy" style="height:132px">
+    <img src="img/char-icy.png" alt="Icy" style="height:159px">
+    <img src="img/char-picchi.png" alt="Picchi" style="height:125px">
+    <img src="img/char-swirly.png" alt="Swirly" style="height:177px">
+    <img src="img/char-merlulu.png" alt="Merlulu" style="height:166px">
+  </div>
+  <div style="position:absolute;bottom:0;left:0;width:1440px;height:56px;background:var(--cocoa);color:#fff;
+              display:flex;align-items:center;justify-content:space-between;padding:0 96px">
+    <span class="eyebrow">Square is the new heart</span>
+    <span class="eyebrow" style="opacity:.65">waffleup.global &nbsp;·&nbsp; @waffleup.online</span>
+  </div>
+</section>
+
+<!-- ============================= 2 · CONTENTS ============================= -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:360px;height:250px;top:150px"></div>
+  <div class="blob bl b-pink" style="width:400px;height:290px"></div>
+  <div class="dot" style="top:64px;right:432px;width:26px;height:26px"></div>
+  <div class="head" style="margin-bottom:30px">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">Waffle Up · Visual brand guidelines 2026</p>
+      <h2 class="display d-pink">contents</h2>
+    </div>
+    <p class="note">Twelve sections. Everything in this book is drawn from the live asset
+      library — the artwork, colour codes, type files and character descriptions here are the
+      approved originals, not reproductions.</p>
+  </div>
+  <div class="grid g2" style="gap:0 76px;position:relative;z-index:2">
+    <div>
+      <table>
+        <tr><td class="mono" style="width:56px">01</td><td class="k">The brand</td><td class="mono" style="text-align:right">04</td></tr>
+        <tr><td class="mono">02</td><td class="k">Logo, symbol &amp; icon</td><td class="mono" style="text-align:right">10</td></tr>
+        <tr><td class="mono">03</td><td class="k">Colour</td><td class="mono" style="text-align:right">18</td></tr>
+        <tr><td class="mono">04</td><td class="k">Typography</td><td class="mono" style="text-align:right">24</td></tr>
+        <tr><td class="mono">05</td><td class="k">The brand pattern</td><td class="mono" style="text-align:right">30</td></tr>
+        <tr><td class="mono">06</td><td class="k">The Waffle Up Gang</td><td class="mono" style="text-align:right">32</td></tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <tr><td class="mono" style="width:56px">07</td><td class="k">Voice &amp; tone</td><td class="mono" style="text-align:right">44</td></tr>
+        <tr><td class="mono">08</td><td class="k">Product &amp; photography</td><td class="mono" style="text-align:right">49</td></tr>
+        <tr><td class="mono">09</td><td class="k">Packaging &amp; environment</td><td class="mono" style="text-align:right">54</td></tr>
+        <tr><td class="mono">10</td><td class="k">Merchandise</td><td class="mono" style="text-align:right">57</td></tr>
+        <tr><td class="mono">11</td><td class="k">The Surprise Card</td><td class="mono" style="text-align:right">60</td></tr>
+        <tr><td class="mono">12</td><td class="k">The asset library</td><td class="mono" style="text-align:right">63</td></tr>
+      </table>
+    </div>
+  </div>
+  <div style="position:absolute;right:96px;bottom:96px;display:flex;gap:26px;align-items:flex-end">
+    <img src="img/char-tvy.png" style="height:158px" alt="Tvy">
+    <img src="img/char-picchi.png" style="height:136px" alt="Picchi">
+    <img src="img/char-mr-waffle.png" style="height:186px" alt="Mr Waffle">
+  </div>
+  <p class="eyebrow" style="position:absolute;left:96px;bottom:150px;opacity:.5">Nine characters in Bangladesh · ten in Singapore</p>
+  <div class="folio"><span>Waffle Up · Visual brand guidelines</span><span class="no"></span></div>
+</section>
+
+<!-- ============================= 3 · HOW TO USE ============================= -->
+<section class="page pad">
+  <div class="blob br b-gold" style="width:560px;height:380px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">Before you start</p>
+      <h2 class="display d-cyan">how to use this book</h2>
+    </div>
+    <p class="note">If a rule here and a file on the drive disagree, this book and the token
+      files win. Everything is versioned together.</p>
+  </div>
+  <div class="grid g3" style="position:relative;z-index:2">
+    <div class="panel">
+      <h3 class="display d-flat" style="font-size:26px;margin-bottom:12px">one library</h3>
+      <p class="small">Every mark, colour code, typeface, character and photograph shown in this
+        book ships in the same portable kit. Use the supplied files. Do not rebuild artwork by
+        hand, trace it, or generate a new version of it.</p>
+    </div>
+    <div class="panel">
+      <h3 class="display d-flat" style="font-size:26px;margin-bottom:12px">two builds</h3>
+      <p class="small">Screens get the <strong>RGB</strong> build. Print, packaging and signage get
+        the <strong>CMYK</strong> build with the matching Pantone references. They are not
+        interchangeable and they do not look identical — that is intentional.</p>
+    </div>
+    <div class="panel">
+      <h3 class="display d-flat" style="font-size:26px;margin-bottom:12px">two markets</h3>
+      <p class="small">Bangladesh runs the nine canonical characters. Singapore runs those nine
+        plus Merlulu. Keep character treatments market-specific; never present Merlulu as part of
+        the Bangladesh nine.</p>
+    </div>
+  </div>
+  <div class="grid g2" style="margin-top:26px;position:relative;z-index:2">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:14px">What this book covers</p>
+      <p class="small">Identity, colour, typography, the pattern, the character system, voice,
+        photography and video, packaging, event material and the loyalty programme artwork.</p>
+    </div>
+    <div class="panel f-cream">
+      <p class="eyebrow" style="margin-bottom:14px">Where the files live</p>
+      <p class="small"><strong>assets/</strong> artwork &nbsp;·&nbsp; <strong>brand/</strong> written
+        guidance &nbsp;·&nbsp; <strong>tokens/</strong> design tokens for software &nbsp;·&nbsp;
+        <strong>data/characters.json</strong> approved character copy &nbsp;·&nbsp;
+        <strong>preview.html</strong> the browsable catalogue.</p>
+    </div>
+  </div>
+  <img src="img/pattern.jpg" alt="Brand pattern"
+       style="position:absolute;left:0;bottom:56px;width:1440px;height:118px;object-fit:cover">
+  <div class="folio"><span>Waffle Up · Visual brand guidelines</span><span class="no"></span></div>
+</section>
+
+<!-- ===================== 4 · DIVIDER — 01 THE BRAND ===================== -->
+<section class="page divider">
+  <div class="left f-cyan">
+    <div class="blob tl b-pink" style="width:300px;height:220px"></div>
+    <div class="dot" style="top:150px;left:236px;width:26px;height:26px"></div>
+    <span class="num d-flat" style="opacity:.28">01</span>
+    <h2 class="display d-pink" style="font-size:74px">the<br>brand</h2>
+  </div>
+  <div class="right f-pink">
+    <div class="blob br b-cyan" style="width:420px;height:300px"></div>
+    <p class="eyebrow">Section one</p>
+    <p class="lede" style="max-width:38ch">Who Waffle Up is, what it set out to do, and the
+      three words the whole company is measured against.</p>
+    <div class="rule" style="width:120px;background:#fff"></div>
+    <p class="small" style="max-width:44ch">Established 2021 in Singapore · first outlet Banani,
+      Dhaka, 16 December 2021 · today the largest waffle chain in Bangladesh, with Singapore
+      trading and further markets in preparation.</p>
+    <img src="img/char-air-maxi.png" alt="Air Maxi"
+         style="position:absolute;right:56px;bottom:48px;height:240px;z-index:2">
+  </div>
+</section>
+
+<!-- ============================= 5 · WHO WE ARE ============================= -->
+<section class="page pad">
+  <div class="blob tr b-gold" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">01 · The brand</p>
+      <h2 class="display d-pink">who we are</h2>
+    </div>
+    <p class="note">A food startup that took waffles off the hotel dessert trolley and put them
+      on a stick, on the street, at a price a student can reach.</p>
+  </div>
+  <div class="grid" style="grid-template-columns:1.25fr 1fr;gap:34px;flex:1;align-content:start">
+    <div class="panel flat">
+      <table>
+        <tr><td class="k">Legal entity</td><td>Waffle Up Global Pte. Ltd.</td></tr>
+        <tr><td class="k">Registered</td><td>33A Pagoda Street, Singapore 059192</td></tr>
+        <tr><td class="k">Bangladesh office</td><td>Road 11, House 67/C, Block E, Banani, Dhaka-1213</td></tr>
+        <tr><td class="k">Founded</td><td>2021, Singapore · first outlet Banani, Dhaka, 16 Dec 2021</td></tr>
+        <tr><td class="k">Category</td><td>QSR / food-tech startup — the largest and fastest-growing waffle chain in Bangladesh</td></tr>
+        <tr><td class="k">Markets</td><td>Bangladesh · Singapore</td></tr>
+        <tr><td class="k">Handles</td><td>@waffleup.online (Instagram · Facebook · TikTok) · waffleup.global</td></tr>
+        <tr><td class="k">Tagline</td><td>Square is the new heart</td></tr>
+        <tr><td class="k">Archetype</td><td>The Jester — casual, friendly, humorous</td></tr>
+        <tr><td class="k">Characters</td><td>Nine in Bangladesh; those nine plus Merlulu in Singapore</td></tr>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div class="panel f-gold">
+        <p class="eyebrow" style="margin-bottom:12px">The founder story</p>
+        <p class="small">Mohammad Salman saw a streetside waffle truck in the USA and brought
+          &ldquo;waffles on a stick&rdquo; to Dhaka &mdash; a city where waffles were a luxury
+          restaurant dessert sold in sets of four. Everything about the brand follows from that
+          inversion.</p>
+      </div>
+      <div class="panel f-cocoa">
+        <p class="eyebrow" style="margin-bottom:12px">Purpose</p>
+        <p class="lede" style="font-size:25px;line-height:1.3">Redefine waffles as a delectable
+          street food dessert.</p>
+      </div>
+    </div>
+  </div>
+  <img src="img/char-stovy.png" alt="Stovy" style="position:absolute;right:112px;bottom:96px;height:172px">
+  <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
+</section>
+
+<!-- ============================= 6 · MISSION ============================= -->
+<section class="page f-cyan pad">
+  <div class="blob bl b-white" style="width:660px;height:450px"></div>
+  <div class="blob tr b-pink" style="width:380px;height:270px"></div>
+  <div class="dot" style="top:300px;right:400px;width:34px;height:34px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.65">01 · The brand</p>
+      <h2 class="display d-white">our mission</h2>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;gap:60px">
+    <p style="font-size:41px;line-height:1.3;font-weight:600;max-width:20ch">
+      Offering innovative, delicious and premium products in a joyful, welcoming environment
+      that brings people together and creates memories.</p>
+    <img src="img/char-bhoppu.png" alt="Bhoppu" style="height:390px;margin-left:auto">
+  </div>
+  <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
+</section>
+
+<!-- ============================= 7 · VISION ============================= -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:520px;height:360px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">01 · The brand</p>
+      <h2 class="display d-cyan">the three r&rsquo;s</h2>
+    </div>
+    <p class="note">The vision names <strong>procedures and processes</strong>, not just product.
+      Improving how the company runs is vision work, not back-office overhead.</p>
+  </div>
+  <div class="grid g3" style="align-content:start">
+    <div class="panel f-pink" style="display:flex;flex-direction:column;gap:14px">
+      <span class="mono" style="font-size:34px;opacity:.7">01</span>
+      <h3 class="display" style="font-size:38px;color:#fff;text-shadow:6px 6px 0 var(--cocoa)">reimagine</h3>
+      <p class="small">Reimagine the consumer experience of eating waffles and fuse cuisines into
+        products nobody else is making. Constant reimagination is what keeps growth exponential.</p>
+    </div>
+    <div class="panel f-gold" style="display:flex;flex-direction:column;gap:14px">
+      <span class="mono" style="font-size:34px;opacity:.6">02</span>
+      <h3 class="display d-flat" style="font-size:38px">redefine</h3>
+      <p class="small">Redefining waffles as street food set the brand apart. To grow sustainably,
+        keep redefining both the products and the procedures behind them.</p>
+    </div>
+    <div class="panel f-cyan" style="display:flex;flex-direction:column;gap:14px">
+      <span class="mono" style="font-size:34px;opacity:.55">03</span>
+      <h3 class="display d-flat" style="font-size:38px">revolutionize</h3>
+      <p class="small">The core of the company&rsquo;s success is its ability to revolutionize
+        process as a food startup. That is what makes the model scalable across the globe.</p>
+    </div>
+  </div>
+  <div class="panel f-cocoa" style="margin-top:26px;display:flex;align-items:center;gap:40px;flex:1">
+    <div style="flex:1">
+      <p class="eyebrow" style="margin-bottom:14px;opacity:.7">Why it matters here</p>
+      <p class="small" style="opacity:.9;max-width:70ch">Reimagine feeds the product line, redefine
+        feeds the format, revolutionize feeds the process. A brand book is a process document: use
+        it, and the identity survives every new outlet, market and campaign intact.</p>
+    </div>
+    <img src="img/char-spacy.png" alt="Spacy" style="height:180px">
+  </div>
+  <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
+</section>
+
+<!-- ============================= 8 · VALUES ============================= -->
+<section class="page pad">
+  <div class="blob tl b-gold" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">01 · The brand</p>
+      <h2 class="display d-gold">what we value</h2>
+    </div>
+    <p class="note">Four pillars from the brand guideline; the company profile adds Speed and
+      Access. Use the union of the two whenever you write about Waffle Up.</p>
+  </div>
+  <div class="grid g2" style="gap:22px">
+    <div class="panel"><h3 class="display d-flat" style="font-size:30px;margin-bottom:10px">quality</h3>
+      <p class="small">Premium ingredients, products of the highest calibre. Never cut the recipe
+        to reach a price point.</p></div>
+    <div class="panel"><h3 class="display d-flat" style="font-size:30px;margin-bottom:10px">joy</h3>
+      <p class="small">Merchandise, communications and service exist to make customers&rsquo; lives
+        more enjoyable. The identity is built to feel lively and happy.</p></div>
+    <div class="panel"><h3 class="display d-flat" style="font-size:30px;margin-bottom:10px">community</h3>
+      <p class="small">Building a sense of community around the brand — outlets, events and the
+        Surprise Card are all community devices.</p></div>
+    <div class="panel"><h3 class="display d-flat" style="font-size:30px;margin-bottom:10px">innovation</h3>
+      <p class="small">Fusion products, new formats, new processes. Innovation is expected of the
+        kitchen and of the back office alike.</p></div>
+  </div>
+  <div style="display:flex;gap:14px;margin-top:26px;align-items:center">
+    <span class="pill cyan">Speed</span>
+    <span class="pill pink">Access</span>
+    <p class="small muted" style="margin-left:10px">Added by the company profile — use alongside
+      the four pillars when writing about how Waffle Up operates.</p>
+  </div>
+  <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 9 · AUDIENCE & LINES ====================== -->
+<section class="page pad">
+  <div class="blob bl b-cyan" style="width:520px;height:360px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">01 · The brand</p>
+      <h2 class="display d-pink">audience &amp; lines</h2>
+    </div>
+    <p class="note">Everything in this book is aimed at a young, urban, style-aware audience that
+      shares what it eats.</p>
+  </div>
+  <div class="grid g3" style="margin-bottom:26px">
+    <div class="panel"><p class="eyebrow" style="margin-bottom:12px;opacity:.6">Age</p>
+      <p class="lede" style="font-size:20px">Primary 10&ndash;25<br>Secondary 26&ndash;35</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:12px;opacity:.6">Income</p>
+      <p class="lede" style="font-size:20px">Primary upper class<br>Secondary upper-middle</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:12px;opacity:.6">Location</p>
+      <p class="lede" style="font-size:20px">Urban and prime hubs</p></div>
+  </div>
+  <div class="panel f-cocoa" style="display:flex;align-items:center;gap:46px">
+    <div style="flex:1">
+      <p class="eyebrow" style="margin-bottom:16px;opacity:.7">Signature lines</p>
+      <p class="small" style="margin-top:4px;opacity:.9;max-width:52ch">The primary tagline. Use
+        the supplied artwork whenever it is set large; never re-typeset it.</p>
+      <p class="small" style="margin-top:14px;opacity:.85"><strong>Ashol WaffleUp Chinun</strong>
+        &mdash; the Bangla authenticity line, used on menus.<br>
+        <strong>Every Waffle Day</strong> and <strong>For immediate consumption</strong> &mdash;
+        packaging lines.</p>
+    </div>
+    <img src="img/wm-square.png" alt="Square is the new heart word-mark" style="height:200px">
+  </div>
+  <div class="grid g3" style="margin-top:24px;flex:1">
+    <div class="tile"><div class="frame"><img src="img/wm-ashol.png" alt="Ashol WaffleUp Chinun"></div>
+      <div class="cap">Ashol WaffleUp Chinun · menus</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-everyday.png" alt="Every Waffle Day"></div>
+      <div class="cap">Every Waffle Day · packaging</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-halal-1.png" alt="Halal mark"></div>
+      <div class="cap">Halal · menus &amp; packaging</div></div>
+  </div>
+  <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
+</section>
+
+<!-- ================ 10 · DIVIDER — 02 LOGO, SYMBOL & ICON ================ -->
+<section class="page divider">
+  <div class="left f-pink">
+    <div class="blob tl b-gold" style="width:300px;height:220px"></div>
+    <span class="num" style="opacity:.35;color:#fff">02</span>
+    <h2 class="display d-white" style="font-size:68px">logo,<br>symbol<br>&amp; icon</h2>
+  </div>
+  <div class="right f-cyan">
+    <div class="blob br b-pink" style="width:440px;height:310px"></div>
+    <p class="eyebrow">Section two</p>
+    <p class="lede" style="max-width:38ch;color:var(--cocoa)">Three marks, one identity. The
+      signature wave runs through all of them and is never removed.</p>
+    <div class="rule" style="width:120px"></div>
+    <img src="img/logo-rgb.png" alt="Waffle Up logo" style="width:440px;margin-top:14px">
+  </div>
+</section>
+
+<!-- ============================= 11 · THE LOGO ============================= -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:420px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">02 · Logo, symbol &amp; icon</p>
+      <h2 class="display d-pink">the logo</h2>
+    </div>
+    <p class="note">The primary mark. Use it wherever there is room; it is the first thing that
+      makes a surface read as Waffle Up.</p>
+  </div>
+  <div style="display:flex;gap:50px;flex:1;align-items:center">
+    <div class="panel f-gold" style="flex:1.3;display:flex;align-items:center;justify-content:center;padding:44px;align-self:stretch">
+      <img src="img/logo-rgb.png" alt="Waffle Up primary logo" style="width:100%;max-width:600px">
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+      <div class="panel flat">
+        <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Anatomy</p>
+        <table>
+          <tr><td class="k">WAFFLE</td><td>Cyan letterforms carrying the white signature wave</td></tr>
+          <tr><td class="k">UP</td><td>Pink letterforms carrying the same wave</td></tr>
+          <tr><td class="k">Plaque</td><td>Waffle Gold rounded plate with a Deep Cocoa outline</td></tr>
+          <tr><td class="k">&reg;</td><td>Registered mark, top right — never removed</td></tr>
+        </table>
+      </div>
+      <div class="panel f-cyan">
+        <p class="eyebrow" style="margin-bottom:10px">The signature wave</p>
+        <p class="small">The wave inside the letterforms <strong>is</strong> the identity — not a
+          decoration on top of it. A Waffle Up logo without the wave is not the Waffle Up logo.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 12 · THE TWO BUILDS ========================= -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:460px;height:330px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">02 · Logo, symbol &amp; icon</p>
+      <h2 class="display d-cyan">two builds</h2>
+    </div>
+    <p class="note">The digital and print builds are separate files with separate colour. Pick by
+      output, never by whichever file is closest to hand.</p>
+  </div>
+  <div class="grid g2" style="flex:1;gap:34px">
+    <div class="tile">
+      <div class="frame f-cyan-100" style="padding:44px"><img src="img/logo-rgb.png" alt="RGB logo"></div>
+      <div class="cap" style="display:flex;justify-content:space-between">
+        <span>Waffle Up Logo — RGB</span><span>.png · .eps</span></div>
+      <div style="padding:18px 20px;border-top:4px solid var(--cocoa)">
+        <p class="small"><strong>Screens, web, apps, social, video.</strong> Built on the digital
+          palette — cyan #0BF9F6, pink #FF629B, gold #FFD56D, cocoa #450001.</p>
+      </div>
+    </div>
+    <div class="tile">
+      <div class="frame f-cream" style="padding:44px"><img src="img/logo-cmyk.png" alt="CMYK logo"></div>
+      <div class="cap" style="display:flex;justify-content:space-between">
+        <span>Waffle Up Logo — CMYK</span><span>.png · .eps</span></div>
+      <div style="padding:18px 20px;border-top:4px solid var(--cocoa)">
+        <p class="small"><strong>Print, packaging, signage, merchandise.</strong> Built on the
+          CMYK/Pantone line — #70CBD3, #F0629A, #FFD76D, #3F1212.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
+</section>
+
+<!-- ==================== 13 · CLEARSPACE & MINIMUM SIZE ==================== -->
+<section class="page pad">
+  <div class="blob tr b-pink" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">02 · Logo, symbol &amp; icon</p>
+      <h2 class="display d-gold">clearspace &amp; size</h2>
+    </div>
+    <p class="note">Even spacing in all directions. Nothing — type, image, edge, button — enters
+      the clearspace.</p>
+  </div>
+  <div style="display:flex;gap:44px;flex:1;align-items:stretch">
+    <div class="panel flat" style="flex:1.4;display:flex;align-items:center;justify-content:center;position:relative">
+      <div style="border:3px dashed var(--pink);border-radius:14px;padding:86px">
+        <img src="img/logo-rgb.png" alt="Logo clearspace diagram" style="width:390px;display:block">
+      </div>
+      <span class="pill pink" style="position:absolute;top:24px;left:50%;transform:translateX(-50%)">Clearspace = height of the W</span>
+      <span class="tiny" style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);opacity:.6">
+        In CSS: padding: calc(logo-width &times; 0.22)</span>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+      <div class="panel f-cyan">
+        <p class="eyebrow" style="margin-bottom:12px">Minimum sizes</p>
+        <table>
+          <tr><td class="k">Logo, screen</td><td class="mono">120 px wide</td></tr>
+          <tr><td class="k">Logo, print</td><td class="mono">25 mm wide</td></tr>
+          <tr><td class="k">Icon</td><td class="mono">32 px</td></tr>
+        </table>
+        <p class="small" style="margin-top:12px">Below the minimum, use the symbol instead of
+          squeezing the full lock-up.</p>
+      </div>
+      <div class="panel">
+        <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Scaling</p>
+        <p class="small">Scale proportionally only. Never stretch, squash, skew or rotate the mark,
+          and never rebuild it by hand — always place the supplied file.</p>
+      </div>
+      <div class="panel f-cocoa">
+        <p class="eyebrow" style="margin-bottom:10px;opacity:.75">Favicon &amp; app icon</p>
+        <p class="small" style="opacity:.9">Export <strong>Icon (rbg)</strong> at 512 / 192 / 180 /
+          32 / 16 px. Don&rsquo;t letterbox it.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
+</section>
+
+<!-- ============================ 14 · THE SYMBOL ============================ -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:480px;height:340px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">02 · Logo, symbol &amp; icon</p>
+      <h2 class="display d-pink">the symbol</h2>
+    </div>
+    <p class="note">The W monogram in a Waffle Gold circle with a cocoa outline. Use it where the
+      full lock-up would read too wide or too small.</p>
+  </div>
+  <div class="grid g3" style="flex:1;gap:26px">
+    <div class="tile">
+      <div class="frame f-cream" style="min-height:300px"><img src="img/symbol-rgb.png" alt="RGB symbol"></div>
+      <div class="cap">Symbol — RGB · screens</div>
+    </div>
+    <div class="tile">
+      <div class="frame f-cream" style="min-height:300px"><img src="img/symbol-cmyk.png" alt="CMYK symbol"></div>
+      <div class="cap">Symbol — CMYK · print</div>
+    </div>
+    <div class="tile">
+      <div class="frame f-cyan" style="min-height:300px"><img src="img/symbol-button.png" alt="Button symbol"></div>
+      <div class="cap">Brand icon — button / UI</div>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:24px;display:flex;gap:34px;align-items:center">
+    <p class="small" style="flex:1">Correct uses: app tiles, buttons, stickers, cup lids, socials
+      avatars at small sizes, embroidery, and anywhere the lock-up would fall below its minimum
+      width. The monogram keeps its gold circle and cocoa outline in every one of them.</p>
+    <span class="pill gold">Never crop the circle</span>
+    <span class="pill">Never recolour the W</span>
+  </div>
+  <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
+</section>
+
+<!-- ============================= 15 · THE ICON ============================= -->
+<section class="page pad">
+  <div class="blob tl b-gold" style="width:400px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">02 · Logo, symbol &amp; icon</p>
+      <h2 class="display d-cyan">the icon</h2>
+    </div>
+    <p class="note">Five approved variants for app icons, favicons and social avatars. Pick by the
+      background it sits on.</p>
+  </div>
+  <div class="grid g5" style="gap:18px">
+    <div class="tile"><div class="frame f-cream" style="min-height:186px"><img src="img/icon-rgb.png" alt="RGB icon"></div>
+      <div class="cap">Icon (rbg)</div></div>
+    <div class="tile"><div class="frame f-cream" style="min-height:186px"><img src="img/icon-social.png" alt="Social icon"></div>
+      <div class="cap">Icon (rbg) social</div></div>
+    <div class="tile"><div class="frame f-pink" style="min-height:186px"><img src="img/icon-white.png" alt="White icon"></div>
+      <div class="cap">Icon (white)</div></div>
+    <div class="tile"><div class="frame f-cream" style="min-height:186px"><img src="img/icon-red.png" alt="Red icon"></div>
+      <div class="cap">Icon (red)</div></div>
+    <div class="tile"><div class="frame f-cream" style="min-height:186px"><img src="img/icon-cmyk.png" alt="CMYK icon"></div>
+      <div class="cap">Icon (cmyk)</div></div>
+  </div>
+  <div class="panel flat" style="margin-top:26px">
+    <table>
+      <tr><th style="width:210px">File</th><th>Use on</th></tr>
+      <tr><td class="k">Icon (rbg)</td><td>White and light backgrounds — the default for screens</td></tr>
+      <tr><td class="k">Icon (rbg) — Social</td><td>Social profile avatars; padded with its own safe area</td></tr>
+      <tr><td class="k">Icon (white)</td><td>Cyan, pink, cocoa or photographic backgrounds</td></tr>
+      <tr><td class="k">Icon (red)</td><td>Single-colour applications where pink / red is required</td></tr>
+      <tr><td class="k">Icon (cmyk)</td><td>Print</td></tr>
+    </table>
+  </div>
+  <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
+</section>
+
+<!-- =============================== 16 · DO =============================== -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:520px;height:360px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">02 · Logo, symbol &amp; icon</p>
+      <h2 class="display d-cyan">do</h2>
+    </div>
+    <p class="note">Straight from the brand guideline: even spacing, the signature wave, correct
+      colourisation — maintained across every medium and channel.</p>
+  </div>
+  <div class="grid g3" style="gap:24px">
+    <div class="tile">
+      <div class="frame f-cream" style="min-height:250px;padding:34px"><img src="img/logo-rgb.png" alt="Correct logo on light"></div>
+      <div class="cap"><span class="judge yes"><span class="mark">&#10003;</span> RGB logo on white</span></div>
+    </div>
+    <div class="tile">
+      <div class="frame f-pink" style="min-height:250px;padding:34px"><img src="img/logo-rgb.png" alt="Correct logo on pink"></div>
+      <div class="cap"><span class="judge yes"><span class="mark">&#10003;</span> Full lock-up on a brand field</span></div>
+    </div>
+    <div class="tile">
+      <div class="frame f-cocoa" style="min-height:250px;padding:52px"><img src="img/icon-white.png" alt="White icon on cocoa"></div>
+      <div class="cap"><span class="judge yes"><span class="mark">&#10003;</span> White icon on cocoa</span></div>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:24px">
+    <div class="panel f-cyan"><p class="small"><strong>Even spacing in all directions.</strong>
+      Clearspace on every side, at least the height of the W.</p></div>
+    <div class="panel f-cyan"><p class="small"><strong>The signature wave always runs through the
+      letterforms.</strong> In every size, every medium.</p></div>
+    <div class="panel f-cyan"><p class="small"><strong>Correct colourisation everywhere.</strong>
+      RGB build for digital, CMYK build for print.</p></div>
+  </div>
+  <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
+</section>
+
+<!-- ============================== 17 · DON'T ============================== -->
+<section class="page pad">
+  <div class="blob bl b-pink" style="width:520px;height:360px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">02 · Logo, symbol &amp; icon</p>
+      <h2 class="display d-pink">don&rsquo;ts</h2>
+    </div>
+    <p class="note">Every one of these has happened. None of them is acceptable, including on
+      internal decks and quick social posts.</p>
+  </div>
+  <div class="grid g3" style="gap:24px">
+    <div class="tile">
+      <div class="frame crossed f-cream" style="min-height:220px;padding:20px 8px;overflow:hidden">
+        <img src="img/logo-rgb.png" alt="Cropped logo" style="width:150%;max-width:none;margin-left:34%">
+      </div>
+      <div class="cap"><span class="judge no"><span class="mark">&times;</span> Cropped corners, uneven spacing</span></div>
+    </div>
+    <div class="tile">
+      <div class="frame crossed f-cream" style="min-height:220px;padding:24px">
+        <img src="img/logo-rgb.png" alt="Squashed logo" style="width:100%;transform:scaleY(0.58)">
+      </div>
+      <div class="cap"><span class="judge no"><span class="mark">&times;</span> Stretched or squashed</span></div>
+    </div>
+    <div class="tile">
+      <div class="frame crossed f-cream" style="min-height:220px;padding:24px">
+        <img src="img/logo-rgb.png" alt="Recoloured logo" style="width:100%;filter:grayscale(1) brightness(1.25)">
+      </div>
+      <div class="cap"><span class="judge no"><span class="mark">&times;</span> Recoloured or greyscale</span></div>
+    </div>
+  </div>
+  <div class="grid g2" style="margin-top:24px;gap:24px">
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:12px">From the guideline</p>
+      <p class="small">&times;&nbsp; Uneven spacing and cropped-out corners<br>
+        &times;&nbsp; Solid coloured letters without the signature wave<br>
+        &times;&nbsp; Single coloured letters without the signature wave<br>
+        &times;&nbsp; The logo without the registered &ldquo;&reg;&rdquo; symbol</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">And also never</p>
+      <p class="small">&times;&nbsp; Recolour to non-brand colours &nbsp;·&nbsp; &times;&nbsp; Stretch,
+        squash, skew or rotate &nbsp;·&nbsp; &times;&nbsp; Remove the gold plaque or the cocoa
+        outline &nbsp;·&nbsp; &times;&nbsp; Add your own shadows, glows or gradients &nbsp;·&nbsp;
+        &times;&nbsp; Place on a busy photo without a plaque or enough contrast &nbsp;·&nbsp;
+        &times;&nbsp; Rebuild it by hand &nbsp;·&nbsp; &times;&nbsp; AI-generate or
+        &ldquo;clean up&rdquo; the mark</p>
+    </div>
+  </div>
+  <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
+</section>
+
+<!-- ==================== 18 · DIVIDER — 03 COLOUR ==================== -->
+<section class="page divider">
+  <div class="left f-gold">
+    <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
+    <span class="num d-flat" style="opacity:.3">03</span>
+    <h2 class="display d-flat" style="font-size:74px">colour</h2>
+  </div>
+  <div class="right f-cocoa">
+    <div class="blob br b-pink" style="width:440px;height:310px"></div>
+    <p class="eyebrow" style="opacity:.7">Section three</p>
+    <p class="lede" style="max-width:38ch;color:#fff">Two primaries, two secondaries, one ink.
+      Cocoa is the only dark — pure black never appears in Waffle Up work.</p>
+    <div class="rule" style="width:120px;background:var(--gold)"></div>
+    <div style="display:flex;gap:14px;margin-top:8px">
+      <div style="width:88px;height:88px;border-radius:18px;background:var(--cyan);border:4px solid #fff"></div>
+      <div style="width:88px;height:88px;border-radius:18px;background:var(--pink);border:4px solid #fff"></div>
+      <div style="width:88px;height:88px;border-radius:18px;background:var(--gold);border:4px solid #fff"></div>
+      <div style="width:88px;height:88px;border-radius:18px;background:var(--cocoa);border:4px solid #fff"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== 19 · THE PALETTE ========================== -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:380px;height:270px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">03 · Colour</p>
+      <h2 class="display d-pink">the palette</h2>
+    </div>
+    <p class="note">The authoritative colour codes, verified against the logo artwork. Digital
+      values on the left of each pair, the print build beneath.</p>
+  </div>
+  <div class="grid g4" style="flex:1;gap:22px">
+    <div class="swatch">
+      <div class="chip" style="background:var(--cyan)"></div>
+      <div class="meta">
+        <p class="name">WaffleUp Cyan</p>
+        <dl>
+          <dt>RGB</dt><dd>#0BF9F6</dd>
+          <dt>Print</dt><dd>#70CBD3</dd>
+          <dt>CMYK</dt><dd>53 · 0 · 15 · 0</dd>
+          <dt>Pantone</dt><dd>3255 C</dd>
+          <dt>Role</dt><dd>Primary</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:var(--pink)"></div>
+      <div class="meta">
+        <p class="name">WaffleUp Pink</p>
+        <dl>
+          <dt>RGB</dt><dd>#FF629B</dd>
+          <dt>Print</dt><dd>#F0629A</dd>
+          <dt>CMYK</dt><dd>0 · 77 · 7 · 0</dd>
+          <dt>Pantone</dt><dd>212 C</dd>
+          <dt>Role</dt><dd>Primary</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:var(--gold)"></div>
+      <div class="meta">
+        <p class="name">Waffle Gold</p>
+        <dl>
+          <dt>RGB</dt><dd>#FFD56D</dd>
+          <dt>Print</dt><dd>#FFD76D</dd>
+          <dt>CMYK</dt><dd>0 · 15 · 68 · 0</dd>
+          <dt>Pantone</dt><dd>1215 C</dd>
+          <dt>Role</dt><dd>Secondary</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:var(--cocoa)"></div>
+      <div class="meta">
+        <p class="name">Deep Cocoa</p>
+        <dl>
+          <dt>RGB</dt><dd>#450001</dd>
+          <dt>Print</dt><dd>#3F1212</dd>
+          <dt>CMYK</dt><dd>47 · 85 · 76 · 71</dd>
+          <dt>Pantone</dt><dd>4975 C</dd>
+          <dt>Role</dt><dd>Ink</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="panel f-cocoa" style="margin-top:24px;display:flex;align-items:center;gap:30px">
+    <span class="pill gold">White is part of the system</span>
+    <p class="small" style="opacity:.9;flex:1">Pure white #FFFFFF carries the signature wave, the
+      logo outlines and every card surface. Deep Cocoa is the text colour —
+      <strong>never use #000000</strong>.</p>
+  </div>
+  <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 20 · DIGITAL VS PRINT ====================== -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:460px;height:330px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">03 · Colour</p>
+      <h2 class="display d-cyan">digital &amp; print</h2>
+    </div>
+    <p class="note">Three reference sheets ship with the kit. Hand the right one to the right
+      supplier and the brand stays the same colour across every surface.</p>
+  </div>
+  <div class="grid g3" style="gap:24px">
+    <div class="tile"><div class="frame f-cream" style="height:262px"><img src="img/color-rgb.jpg" alt="RGB colour sheet"></div>
+      <div class="cap">RGB — screens</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:262px"><img src="img/color-cmyk.jpg" alt="CMYK colour sheet"></div>
+      <div class="cap">CMYK — print</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:262px"><img src="img/color-pantone.jpg" alt="Pantone colour sheet"></div>
+      <div class="cap">Pantone — spot colour</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:26px;gap:24px">
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:12px">Print tolerance</p>
+      <p class="small">The specified codes must be held as strictly as the process allows. A small
+        acceptable range of variation exists in print media; anything beyond it goes back to the
+        supplier. Always supply the CMYK build together with the Pantone reference.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Legacy note</p>
+      <p class="small">The 2022 Brand Book V.1 lists #6DCBD8 / #F0639A / #FFD66D / #3E1312. Those
+        are superseded — treat any old-file colours you meet as the print/CMYK line, and rebuild
+        digital work on the current RGB values.</p>
+    </div>
+  </div>
+  <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
+</section>
+
+<!-- ==================== 21 · TINTS, SHADES & ROLES ==================== -->
+<section class="page pad">
+  <div class="blob tr b-pink" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">03 · Colour</p>
+      <h2 class="display d-gold">tints &amp; roles</h2>
+    </div>
+    <p class="note">Extended steps for interfaces and data. Ship as design tokens in
+      <strong>tokens/wup-tokens.css</strong>; never invent a new brand colour in code.</p>
+  </div>
+  <div class="panel flat" style="padding:26px 30px">
+    <div style="display:grid;grid-template-columns:120px repeat(4,1fr);gap:12px;align-items:center">
+      <span class="eyebrow" style="opacity:.6">Cyan</span>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#DFFEFD"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#8DFCFA"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#0BF9F6"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#06B5B3"></div>
+      <span class="eyebrow" style="opacity:.6">Pink</span>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#FFE7EF"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#FFA7C6"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#FF629B"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#D93C74"></div>
+      <span class="eyebrow" style="opacity:.6">Gold</span>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#FFF6E2"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#FFE6A8"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#FFD56D"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#E0AE38"></div>
+      <span class="eyebrow" style="opacity:.6">Cocoa</span>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#A56A6B"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#6B1A1B"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:#450001"></div>
+      <div style="height:64px;border-radius:12px;border:3px solid var(--cocoa);background:repeating-linear-gradient(45deg,#fff,#fff 8px,#F3E6E6 8px,#F3E6E6 16px)"></div>
+      <span class="tiny" style="opacity:.55">Step</span>
+      <span class="tiny mono" style="text-align:center">100</span>
+      <span class="tiny mono" style="text-align:center">300</span>
+      <span class="tiny mono" style="text-align:center">500 · brand</span>
+      <span class="tiny mono" style="text-align:center">700</span>
+    </div>
+  </div>
+  <div class="grid g4" style="margin-top:24px;gap:20px">
+    <div class="panel"><p class="eyebrow" style="margin-bottom:10px;opacity:.6">Surface</p>
+      <p class="tiny">bg #FFFFFF · bg-alt #DFFEFD · surface #FFFFFF</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:10px;opacity:.6">Text</p>
+      <p class="tiny">text #450001 · muted #A56A6B · invert #FFFFFF</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:10px;opacity:.6">Accent</p>
+      <p class="tiny">accent #FF629B · alt #0BF9F6 · highlight #FFD56D</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:10px;opacity:.6">Status</p>
+      <p class="tiny">success #1FBF6B · warning #E0AE38 · danger #D93C74 · info #06B5B3</p></div>
+  </div>
+  <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 22 · THE COLOUR RATIO ========================= -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:480px;height:340px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">03 · Colour</p>
+      <h2 class="display d-pink">the ratio</h2>
+    </div>
+    <p class="note">Acceptable usage of each colour across all channels. Pick one field per
+      surface — the balance is what stops the palette shouting.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:26px">
+    <div>
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Option A — cyan field</p>
+      <div style="display:flex;height:112px;border:4px solid var(--cocoa);border-radius:18px;overflow:hidden">
+        <div style="flex:68;background:var(--cyan);display:flex;align-items:center;justify-content:center"
+             class="eyebrow">60–75%</div>
+        <div style="flex:20;background:var(--pink);display:flex;align-items:center;justify-content:center;color:#fff"
+             class="eyebrow">15–25%</div>
+        <div class="eyebrow" style="flex:6;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px">3–5%</div>
+        <div style="flex:6;background:var(--cocoa)"></div>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Option B — pink field</p>
+      <div style="display:flex;height:112px;border:4px solid var(--cocoa);border-radius:18px;overflow:hidden">
+        <div style="flex:68;background:var(--pink);display:flex;align-items:center;justify-content:center;color:#fff"
+             class="eyebrow">60–75%</div>
+        <div style="flex:20;background:var(--cyan);display:flex;align-items:center;justify-content:center"
+             class="eyebrow">15–25%</div>
+        <div style="flex:6;background:var(--gold)"></div>
+        <div style="flex:6;background:#fff"></div>
+      </div>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:28px;gap:22px">
+    <div class="panel f-cyan"><p class="eyebrow" style="margin-bottom:10px">Dominant · 60–75%</p>
+      <p class="small">One colour owns the surface. Cyan or pink — never both at once.</p></div>
+    <div class="panel f-gold"><p class="eyebrow" style="margin-bottom:10px">Secondary · 15–25%</p>
+      <p class="small">The counterpoint. If cyan is the field, pink is the counterpoint, and the
+        other way round.</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:10px;opacity:.6">Accents · 3–5% each</p>
+      <p class="small">At most two accents. Gold is the highlight, cocoa is the ink and the
+        outline. White is the wave.</p></div>
+  </div>
+  <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 23 · COLOUR IN PRACTICE ====================== -->
+<section class="page pad">
+  <div class="blob tl b-pink" style="width:400px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">03 · Colour</p>
+      <h2 class="display d-cyan">colour fields</h2>
+    </div>
+    <p class="note">Four ready-made fields. Text colour is fixed by the field — do not improvise
+      new pairings.</p>
+  </div>
+  <div class="grid g4" style="flex:1;gap:22px">
+    <div class="tile f-cyan" style="padding:0">
+      <div class="frame" style="flex-direction:column;gap:12px;padding:26px">
+        <img src="img/icon-rgb.png" alt="" style="width:72px">
+        <p class="display d-flat" style="font-size:30px">cyan field</p>
+        <p class="tiny" style="text-align:center">Cocoa text · white wave · pink counterpoint</p>
+      </div>
+    </div>
+    <div class="tile f-pink" style="padding:0">
+      <div class="frame" style="flex-direction:column;gap:12px;padding:26px">
+        <img src="img/icon-white.png" alt="" style="width:72px">
+        <p class="display" style="font-size:30px;color:#fff;text-shadow:5px 5px 0 var(--cocoa)">pink field</p>
+        <p class="tiny" style="text-align:center;color:#fff">White text · gold highlight · cyan counterpoint</p>
+      </div>
+    </div>
+    <div class="tile f-gold" style="padding:0">
+      <div class="frame" style="flex-direction:column;gap:12px;padding:26px">
+        <img src="img/icon-rgb.png" alt="" style="width:72px">
+        <p class="display d-flat" style="font-size:30px">gold field</p>
+        <p class="tiny" style="text-align:center">Cocoa text · used for plaques, menus, highlights</p>
+      </div>
+    </div>
+    <div class="tile f-cocoa" style="padding:0">
+      <div class="frame" style="flex-direction:column;gap:12px;padding:26px">
+        <img src="img/icon-white.png" alt="" style="width:72px">
+        <p class="display" style="font-size:30px;color:#fff">ink field</p>
+        <p class="tiny" style="text-align:center;color:#fff">White text · gold and cyan accents only</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:24px;display:flex;gap:26px;align-items:center">
+    <span class="pill cocoa">Photo &amp; video</span>
+    <p class="small" style="flex:1">Backdrops in photography must follow the brand colour codes —
+      no off-brand backgrounds. Video grades triadically with <strong>#6DCBD8</strong> and
+      <strong>#F0639A</strong> dominating, at 30 fps.</p>
+  </div>
+  <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
+</section>
+
+<!-- ================== 24 · DIVIDER — 04 TYPOGRAPHY ================== -->
+<section class="page divider">
+  <div class="left f-cocoa">
+    <div class="blob tl b-pink" style="width:300px;height:220px"></div>
+    <span class="num" style="opacity:.4;color:var(--gold)">04</span>
+    <h2 class="display d-cyan" style="font-size:66px">typography</h2>
+  </div>
+  <div class="right f-cyan">
+    <div class="blob br b-gold" style="width:440px;height:310px"></div>
+    <p class="eyebrow">Section four</p>
+    <p class="lede" style="max-width:38ch">Four licensed faces and a library of pre-set word-marks.
+      Big, bold, and built in layers.</p>
+    <div class="rule" style="width:120px"></div>
+    <img src="img/wm-waffleistic.png" alt="Waffleistic word-mark" style="width:390px;margin-top:10px">
+  </div>
+</section>
+
+<!-- ========================= 25 · THE TYPE FAMILY ========================= -->
+<section class="page pad">
+  <div class="blob tr b-gold" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">04 · Typography</p>
+      <h2 class="display d-pink">the type family</h2>
+    </div>
+    <p class="note">Licensed and supplied in <strong>assets/fonts/</strong>. Ultra and Puffin
+      Display are also licensed for occasional display work.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div class="panel" style="display:flex;align-items:center;gap:30px;padding:16px 24px">
+      <div style="width:238px">
+        <p class="eyebrow" style="opacity:.6;margin-bottom:6px;font-size:11px">Display / hero</p>
+        <p class="display d-flat" style="font-size:26px">chum</p>
+      </div>
+      <p class="display d-flat" style="font-size:29px;flex:1;letter-spacing:0.02em">abcdefghijklmnopqrstuvwxyz 1234567890</p>
+    </div>
+    <div class="panel" style="display:flex;align-items:center;gap:30px;padding:16px 24px">
+      <div style="width:238px">
+        <p class="eyebrow" style="opacity:.6;margin-bottom:6px;font-size:11px">Headline / product names</p>
+        <p style="font-family:'FuturaXB';font-size:24px;text-transform:uppercase">Futura XB</p>
+      </div>
+      <p style="font-family:'FuturaXB';font-size:25px;flex:1;text-transform:uppercase;letter-spacing:0.01em">ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890</p>
+    </div>
+    <div class="panel" style="display:flex;align-items:center;gap:30px;padding:16px 24px">
+      <div style="width:238px">
+        <p class="eyebrow" style="opacity:.6;margin-bottom:6px;font-size:11px">Condensed / labels</p>
+        <p style="font-family:'BebasNeue';font-size:27px">Bebas Neue</p>
+      </div>
+      <p style="font-family:'BebasNeue';font-size:30px;flex:1;letter-spacing:0.04em">ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890</p>
+    </div>
+    <div class="panel" style="display:flex;align-items:center;gap:30px;padding:16px 24px">
+      <div style="width:238px">
+        <p class="eyebrow" style="opacity:.6;margin-bottom:6px;font-size:11px">UI / body</p>
+        <p style="font-size:23px;font-weight:600">General Sans</p>
+      </div>
+      <p style="font-size:22px;flex:1;font-weight:500">ABCDEFGHIJKLM abcdefghijklm 1234567890</p>
+    </div>
+  </div>
+  <div class="panel f-cyan" style="margin-top:20px;display:flex;gap:26px;align-items:center">
+    <span class="pill">Bangla</span>
+    <p class="small" style="flex:1">The display faces carry no Bangla. Set Bangla in
+      <strong>Noto Sans Bengali</strong> or <strong>Hind Siliguri</strong>, keep the strings short,
+      and prefer warm-and-plain over wordplay — humour translates badly.</p>
+  </div>
+  <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 26 · ANATOMICAL BREAKDOWN ====================== -->
+<section class="page pad">
+  <div class="blob bl b-cyan" style="width:460px;height:330px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">04 · Typography</p>
+      <h2 class="display d-cyan">four layers</h2>
+    </div>
+    <p class="note">Every hero word is built the same way: background, drop shadow, outline, text.
+      The approved combinations are below.</p>
+  </div>
+  <div class="panel flat" style="padding:26px 32px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1.6fr;gap:0">
+      <span class="eyebrow" style="opacity:.6;padding-bottom:14px;border-bottom:3px solid var(--cocoa)">Background</span>
+      <span class="eyebrow" style="opacity:.6;padding-bottom:14px;border-bottom:3px solid var(--cocoa)">Drop shadow</span>
+      <span class="eyebrow" style="opacity:.6;padding-bottom:14px;border-bottom:3px solid var(--cocoa)">Outline</span>
+      <span class="eyebrow" style="opacity:.6;padding-bottom:14px;border-bottom:3px solid var(--cocoa)">Text</span>
+
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--cyan)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:#fff"></span><span class="lyr" style="background:var(--pink)"></span></div>
+
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--pink)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:#fff"></span><span class="lyr" style="background:var(--cyan)"></span><span class="lyr" style="background:var(--gold)"></span></div>
+
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--gold)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0;border-bottom:1.5px solid rgba(69,0,1,.18)"><span class="lyr" style="background:#fff"></span><span class="lyr" style="background:var(--pink)"></span><span class="lyr" style="background:var(--cyan)"></span><span class="lyr" style="background:var(--cocoa)"></span></div>
+
+      <div style="padding:14px 0"><span class="lyr" style="background:#fff"></span></div>
+      <div style="padding:14px 0"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0"><span class="lyr" style="background:var(--cocoa)"></span></div>
+      <div style="padding:14px 0"><span class="lyr" style="background:var(--pink)"></span><span class="lyr" style="background:var(--cyan)"></span><span class="lyr" style="background:var(--cocoa)"></span></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:24px;margin-top:24px;flex:1;align-items:stretch">
+    <div class="panel f-gold" style="flex:1">
+      <p class="eyebrow" style="margin-bottom:12px">In artwork</p>
+      <p class="small">Use the supplied word-mark PNGs rather than rebuilding the effect. They are
+        the approved four-layer builds and they already carry the right shadow offsets.</p>
+    </div>
+    <div class="panel" style="flex:1">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">In code</p>
+      <p class="small">Reproduce with <strong>text-shadow</strong> for the outline and drop shadow
+        together — outline offsets at ±3px, drop shadow at roughly 10px / 11px cocoa.</p>
+    </div>
+    <div class="panel f-cocoa" style="flex:1.1;display:flex;align-items:center;justify-content:center">
+      <p class="display d-gold" style="font-size:46px">sweeeet</p>
+    </div>
+  </div>
+  <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
+</section>
+
+<!-- ======================== 27 · TYPE ON SCREEN ======================== -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">04 · Typography</p>
+      <h2 class="display d-gold">type on screen</h2>
+    </div>
+    <p class="note">Display faces are for headers and celebration moments. Dense data gets General
+      Sans, every time.</p>
+  </div>
+  <div style="display:flex;gap:30px;flex:1">
+    <div class="panel flat" style="flex:1.15">
+      <p class="eyebrow" style="opacity:.6;margin-bottom:16px">Scale</p>
+      <table>
+        <tr><th>Token</th><th>Size</th><th>Use</th></tr>
+        <tr><td class="k">hero</td><td class="mono">64 px</td><td>Splash and campaign headlines</td></tr>
+        <tr><td class="k">2xl</td><td class="mono">40 px</td><td>Page titles</td></tr>
+        <tr><td class="k">xl</td><td class="mono">28 px</td><td>Section headings</td></tr>
+        <tr><td class="k">lg</td><td class="mono">20 px</td><td>Lead paragraphs, KPI numerals</td></tr>
+        <tr><td class="k">base</td><td class="mono">16 px</td><td>Body and table text</td></tr>
+        <tr><td class="k">sm</td><td class="mono">14 px</td><td>Secondary text, captions</td></tr>
+        <tr><td class="k">xs</td><td class="mono">12 px</td><td>Labels, meta, legal</td></tr>
+      </table>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+      <div class="panel f-cyan">
+        <p class="eyebrow" style="margin-bottom:10px">Rules</p>
+        <p class="small">General Sans for anything a person reads at speed. Bebas Neue for large
+          numerals, tickers and price labels. CHUM and Futura Extra Bold for headers, splash
+          screens, printed receipts and staff-facing celebration moments — not for dense data.</p>
+      </div>
+      <div class="panel">
+        <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Numerals</p>
+        <p class="small">Use tabular figures for totals and counts so columns line up.
+          Currency is BDT with no decimals: <strong>BDT 250</strong> or <strong>&#2547;250</strong>.</p>
+      </div>
+      <div class="panel f-cocoa">
+        <p class="eyebrow" style="margin-bottom:10px;opacity:.75">Touch</p>
+        <p class="small" style="opacity:.9">Minimum touch target 48 px. Staff use these tools
+          one-handed, mid-shift, sometimes with wet hands.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
+</section>
+
+<!-- ======================= 28 · WORD-MARKS I ======================= -->
+<section class="page pad">
+  <div class="blob bl b-pink" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">04 · Typography</p>
+      <h2 class="display d-pink">word-marks</h2>
+    </div>
+    <p class="note">Pre-set hero words, supplied in all four approved colourways. Place the
+      artwork; never re-typeset it.</p>
+  </div>
+  <div class="grid g4 rows2" style="flex:1;gap:20px">
+    <div class="tile"><div class="frame"><img src="img/wm-waffleistic.png" alt="Waffleistic"></div><div class="cap">Waffleistic</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-sweet.png" alt="Sweeeet"></div><div class="cap">Sweeeet</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-obsessed.png" alt="Obsessed"></div><div class="cap">Obsessed</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-drizzle.png" alt="Drizzled with Love"></div><div class="cap">Drizzle</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-waffle-love.png" alt="Waffle Love"></div><div class="cap">Waffle Love</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-crispy.png" alt="Crispy"></div><div class="cap">Crispy</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-crunch.png" alt="Crunch Up"></div><div class="cap">Crunch Up</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-smile.png" alt="Smile"></div><div class="cap">Smile</div></div>
+  </div>
+  <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
+</section>
+
+<!-- ======================= 29 · WORD-MARKS II ======================= -->
+<section class="page pad">
+  <div class="blob tr b-gold" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">04 · Typography</p>
+      <h2 class="display d-cyan">word-marks</h2>
+    </div>
+    <p class="note">Fifteen approved word-marks ship in the kit, each in pink, cyan, gold and
+      white with the cocoa outline and drop shadow already built in.</p>
+  </div>
+  <div class="grid g4 rows2" style="flex:1;gap:20px">
+    <div class="tile"><div class="frame"><img src="img/wm-order-now.png" alt="Order Now"></div><div class="cap">Order Now</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-everyday.png" alt="Everyday"></div><div class="cap">Everyday</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-love.png" alt="Love"></div><div class="cap">Love</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-square.png" alt="Square is the new heart"></div><div class="cap">Square is the new heart</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-ashol.png" alt="Ashol WaffleUp Chinun"></div><div class="cap">Ashol WaffleUp Chinun</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-halal-1.png" alt="Halal 1"></div><div class="cap">Halal — roundel</div></div>
+    <div class="tile"><div class="frame"><img src="img/wm-halal-2.png" alt="Halal 2"></div><div class="cap">Halal — badge</div></div>
+    <div class="tile f-cocoa" style="justify-content:center;padding:22px">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.75">Where they go</p>
+      <p class="tiny" style="opacity:.9">Menu boards, packaging panels, event backdrops, social
+        posts and stickers. One hero word per surface — they compete with each other.</p>
+    </div>
+  </div>
+  <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
+</section>
+
+<!-- ================= 30 · DIVIDER — 05 THE BRAND PATTERN ================= -->
+<section class="page divider">
+  <div class="left f-cyan">
+    <div class="blob tl b-gold" style="width:300px;height:220px"></div>
+    <span class="num d-flat" style="opacity:.3">05</span>
+    <h2 class="display d-pink" style="font-size:68px">the<br>brand<br>pattern</h2>
+  </div>
+  <div class="right" style="padding:0;position:relative">
+    <img src="img/pattern.jpg" alt="Waffle Up brand pattern"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div style="position:absolute;left:56px;right:56px;bottom:56px;background:rgba(255,255,255,.94);
+                border:4px solid var(--cocoa);border-radius:22px;padding:26px 30px;z-index:3">
+      <p class="eyebrow" style="opacity:.6;margin-bottom:10px">Section five</p>
+      <p class="small">Flowing wave-blobs of cyan, pink and gold on white, scattered with white
+        dots. This is the layout device that makes a surface read as Waffle Up before anyone reads
+        a word.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 31 · THE SIGNATURE WAVE ======================= -->
+<section class="page pad">
+  <div class="blob br b-pink" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">05 · The brand pattern</p>
+      <h2 class="display d-cyan">the signature wave</h2>
+    </div>
+    <p class="note">One artwork file, one rule: keep it behind the content, never at full contrast
+      under body text.</p>
+  </div>
+  <div class="imgcard" style="height:250px"><img src="img/pattern.jpg" alt="Brand pattern artwork"></div>
+  <div class="grid g3" style="margin-top:26px;gap:22px">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:12px">Use it for</p>
+      <p class="small">Splash and login screens · dashboard headers · printed receipt headers and
+        footers · empty states behind a character · section dividers · packaging panels · event
+        backdrops.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:12px">Keep it behind</p>
+      <p class="small">Knock the pattern back or confine it to a band when text sits on top. The
+        pattern is a field, not a texture to tile over everything.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Files</p>
+      <p class="small"><strong>assets/pattern/Brand-Pattern.jpg</strong> — the supplied artwork.
+        A simplified wave divider also ships as a CSS mask in
+        <strong>tokens/wup-tokens.css</strong> for use in software.</p>
+    </div>
+  </div>
+  <div class="folio"><span>05 · The brand pattern</span><span class="no"></span></div>
+</section>
+
+<!-- ============== 32 · DIVIDER — 06 THE WAFFLE UP GANG ============== -->
+<section class="page divider">
+  <div class="left f-pink">
+    <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
+    <span class="num" style="opacity:.35;color:#fff">06</span>
+    <h2 class="display d-gold" style="font-size:62px">the<br>waffle up<br>gang</h2>
+  </div>
+  <div class="right f-gold">
+    <div class="blob br b-pink" style="width:440px;height:310px"></div>
+    <p class="eyebrow">Section six</p>
+    <p class="lede" style="max-width:38ch;color:var(--cocoa)">Nine canonical characters in
+      Bangladesh. Those nine plus Merlulu in Singapore. Created by the founder, then formalised
+      into vector art and animation rigs.</p>
+    <div class="rule" style="width:120px"></div>
+    <img src="img/char-swirly.png" alt="Swirly"
+         style="position:absolute;right:60px;bottom:48px;height:300px;z-index:2">
+  </div>
+</section>
+
+<!-- ============================ 33 · THE ROSTER ============================ -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:340px;height:240px;top:180px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-pink">the roster</h2>
+    </div>
+    <p class="note">Several of them are objects rather than people — Stovy is the oven, Icy is the
+      popsicle, Mr Waffle is the waffle.</p>
+  </div>
+  <img src="img/lineup.jpg" alt="The Waffle Up Gang lineup"
+       style="display:block;width:100%;border:4px solid var(--cocoa);border-radius:20px">
+  <div class="grid g3" style="margin-top:24px;gap:22px">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:12px">Bangladesh — nine</p>
+      <p class="small">Mr Waffle · Air Maxi · Bhoppu · Picchi · Stovy · Swirly · Tvy · Spacy · Icy.
+        This is the complete list. There are no secondary or legacy characters.</p>
+    </div>
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:12px">Singapore — ten</p>
+      <p class="small">The Bangladesh nine plus <strong>Merlulu</strong>, a pink-maned Merlion with
+        a gold W medallion. Market-specific: never present her as one of the Bangladesh nine.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Names</p>
+      <p class="small">Source files use inconsistent spellings. The approved public names are
+        <strong>Stovy</strong> (not Stovie), <strong>Tvy</strong> (not TV) and
+        <strong>Spacy</strong> (not Spacie).</p>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ===================== 34 · MR WAFFLE & AIR MAXI ===================== -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-cyan">the nine</h2>
+    </div>
+    <p class="note">Each entry carries the approved Surprise Card description — the only wording
+      used in public.</p>
+  </div>
+  <div class="grid rows2" style="flex:1;gap:22px">
+    <div class="charcard">
+      <div class="art f-cyan"><img src="img/char-mr-waffle.png" alt="Mr Waffle"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">mr waffle</h3>
+        <p>The original trendsetter of the waffle world! With a drizzle of style and a splash of
+          sass, he&rsquo;s here to prove that breakfast can be the highlight of any day.
+          &ldquo;Stay crispy, stay cool!&rdquo;</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
+          <span class="pill">A waffle square in shades and hi-tops</span></div>
+      </div>
+    </div>
+    <div class="charcard">
+      <div class="art f-gold"><img src="img/char-air-maxi.png" alt="Air Maxi"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">air maxi</h3>
+        <p>The beat of the street! With his paw on the pulse of the latest trends, he&rsquo;s the
+          go-to guy for all things trendy in the city.</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
+          <span class="pill">Pink-curled kid, headphones, varsity jacket</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ======================= 35 · BHOPPU & PICCHI ======================= -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-pink">the nine</h2>
+    </div>
+    <p class="note">Use one character per screen or campaign piece, full-colour and unmodified.</p>
+  </div>
+  <div class="grid rows2" style="flex:1;gap:22px">
+    <div class="charcard">
+      <div class="art f-pink"><img src="img/char-bhoppu.png" alt="Bhoppu"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">bhoppu</h3>
+        <p>He has a knack for finding those elevated spots where waffles seem extra flavourful.
+          Some say it&rsquo;s his natural zest for life; others think there&rsquo;s a secret
+          ingredient.</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
+          <span class="pill">Cyan bear in a pink tracksuit</span></div>
+      </div>
+    </div>
+    <div class="charcard">
+      <div class="art f-cyan"><img src="img/char-picchi.png" alt="Picchi"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">picchi</h3>
+        <p>With a flair for vibrant colors and a head full of curly dreams, Picchi dances through
+          life, sprinkling joy everywhere. Believing every day is a celebration waiting to happen,
+          Picchi spreads happiness with every step.</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
+          <span class="pill">Freckled kid in a cyan W-onesie</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ======================== 36 · STOVY & SWIRLY ======================== -->
+<section class="page pad">
+  <div class="blob tl b-pink" style="width:400px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-gold">the nine</h2>
+    </div>
+    <p class="note">Characters are for positive moments — achievements, product storytelling,
+      celebration. Never for errors, payroll or discipline.</p>
+  </div>
+  <div class="grid rows2" style="flex:1;gap:22px">
+    <div class="charcard">
+      <div class="art f-gold"><img src="img/char-stovy.png" alt="Stovy"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">stovy</h3>
+        <p>The mastermind behind every crispy edge and fluffy center. When waffles need an upgrade,
+          Stovy turns up the heat! Some say his technique is unparalleled; others believe he
+          whispers to the batter.</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span>
+          <span class="pill">The Waffle Up oven itself</span></div>
+      </div>
+    </div>
+    <div class="charcard">
+      <div class="art f-pink"><img src="img/char-swirly.png" alt="Swirly"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">swirly</h3>
+        <p>While wild colors meet wildlife flavors, don&rsquo;t be fooled by Swirly&rsquo;s zany
+          appearance; there&rsquo;s nothing more serious than our commitment to satisfy those
+          late-night waffle whims. Dare to taste the swirl?</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span>
+          <span class="pill">Candy-swirl striped bear</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 37 · TVY & SPACY ========================= -->
+<section class="page pad">
+  <div class="blob br b-gold" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-cyan">the nine</h2>
+    </div>
+    <p class="note">If a pose you need does not exist, request approved artwork. Do not fabricate
+      one, and do not redraw or recolour a supplied file.</p>
+  </div>
+  <div class="grid rows2" style="flex:1;gap:22px">
+    <div class="charcard">
+      <div class="art f-cyan"><img src="img/char-tvy.png" alt="Tvy"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">tvy</h3>
+        <p>Retro vibes and crispy delights! Tvy is here to rewind you back to the golden era while
+          you munch on our cosmic waffles. No breakfast? No worries! We&rsquo;re open till late at
+          night.</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span>
+          <span class="pill">Cyan television, antennae, pixel grin</span></div>
+      </div>
+    </div>
+    <div class="charcard">
+      <div class="art f-gold"><img src="img/char-spacy.png" alt="Spacy"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">spacy</h3>
+        <p>From the Milky Waffle Way, Spacy brings you the cosmic delight of crispy edges and
+          fluffy centers. Dive into a galactic treat with us, open till late night!</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span>
+          <span class="pill">Kid in a pink-and-cyan space helmet</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 38 · ICY & MERLULU ========================= -->
+<section class="page pad">
+  <div class="blob bl b-cyan" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-pink">the ninth &amp; the tenth</h2>
+    </div>
+    <p class="note">Merlulu is Singapore-only. She joined as a tenth Surprise Card character and
+      appears on the Singapore sticker sheets.</p>
+  </div>
+  <div class="grid rows2" style="flex:1;gap:22px">
+    <div class="charcard">
+      <div class="art f-pink"><img src="img/char-icy.png" alt="Icy"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">icy</h3>
+        <p>Swirling with cool colors and bursting with dynamic energy, Icy knows how to make a
+          splash! Always the life of the party, Icy turns any ordinary day into a refreshing
+          adventure.</p>
+        <div class="tags"><span class="pill cyan">Bangladesh</span>
+          <span class="pill">A melting popsicle on a Waffle Up stick</span></div>
+      </div>
+    </div>
+    <div class="charcard">
+      <div class="art f-cyan"><img src="img/char-merlulu.png" alt="Merlulu"></div>
+      <div class="txt">
+        <h3 class="display d-flat" style="font-size:32px">merlulu</h3>
+        <p>Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish!
+          No wonder she&rsquo;s a fan of Waffle Up&rsquo;s bold flavors with a smooth twist.</p>
+        <div class="tags"><span class="pill pink">Singapore only</span>
+          <span class="pill">Pink-maned Merlion with a gold W medallion</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 39 · THE CHARACTER CARDS ====================== -->
+<section class="page pad">
+  <div class="blob br b-pink" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-gold">character cards</h2>
+    </div>
+    <p class="note">The printed Surprise Cards: bio on the front, colour-in line art on the back.
+      Ten designs, each with its own serial.</p>
+  </div>
+  <div class="grid g5 rows2" style="flex:1;gap:18px">
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-mr-waffle.png" alt="Mr Waffle card"></div><div class="cap">Mr Waffle</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-air-maxi.png" alt="Air Maxi card"></div><div class="cap">Air Maxi</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-bhoppu.png" alt="Bhoppu card"></div><div class="cap">Bhoppu</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-picchi.png" alt="Picchi card"></div><div class="cap">Picchi</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-stovy.png" alt="Stovy card"></div><div class="cap">Stovy</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-swirly.png" alt="Swirly card"></div><div class="cap">Swirly</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-tvy.png" alt="Tvy card"></div><div class="cap">Tvy</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-spacy.png" alt="Spacy card"></div><div class="cap">Spacy</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-icy.png" alt="Icy card"></div><div class="cap">Icy</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sc-merlulu.png" alt="Merlulu card"></div><div class="cap">Merlulu · Singapore</div></div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ======================== 40 · EXPRESSION SHEETS ======================== -->
+<section class="page pad">
+  <div class="blob tl b-gold" style="width:400px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-cyan">expressions</h2>
+    </div>
+    <p class="note">Every character ships with an expression sheet. Pick a supplied face; never
+      redraw one.</p>
+  </div>
+  <div class="grid g3 rows2" style="flex:1;gap:18px">
+    <div class="tile"><div class="frame f-cream"><img src="img/expr-mr-waffle.jpg" alt="Mr Waffle expressions"></div><div class="cap">Mr Waffle</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/expr-air-maxi.jpg" alt="Air Maxi expressions"></div><div class="cap">Air Maxi</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/expr-bhoppu.jpg" alt="Bhoppu expressions"></div><div class="cap">Bhoppu</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/expr-picchi.jpg" alt="Picchi expressions"></div><div class="cap">Picchi</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/expr-stovy.jpg" alt="Stovy expressions"></div><div class="cap">Stovy</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/expr-swirly.jpg" alt="Swirly expressions"></div><div class="cap">Swirly</div></div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- =================== 41 · CARD ART & TURNAROUNDS =================== -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-pink">art &amp; references</h2>
+    </div>
+    <p class="note">Card plaques for stickers and badges, T-pose turnarounds for animation, and
+      the Singapore sticker sheet.</p>
+  </div>
+  <div class="grid g4" style="gap:18px">
+    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-mr-waffle.png" alt="Mr Waffle card art"></div><div class="cap">Card art — Mr Waffle</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-air-maxi.png" alt="Air Maxi card art"></div><div class="cap">Card art — Air Maxi</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-bhoppu.png" alt="Bhoppu card art"></div><div class="cap">Card art — Bhoppu</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-picchi.png" alt="Picchi card art"></div><div class="cap">Card art — Picchi</div></div>
+  </div>
+  <div class="grid" style="grid-template-columns:1fr 1fr 1.35fr;gap:18px;margin-top:18px;flex:1">
+    <div class="tile"><div class="frame f-cream"><img src="img/tpose-air-maxi.jpg" alt="Air Maxi turnaround"></div><div class="cap">T-pose turnaround — Air Maxi</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/tpose-picchi.jpg" alt="Picchi turnaround"></div><div class="cap">T-pose turnaround — Picchi</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/sg-sheet.jpg" alt="Singapore sticker sheet"></div><div class="cap">Singapore sticker sheet</div></div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ============================ 42 · 3D MODELS ============================ -->
+<section class="page f-cocoa pad">
+  <div class="blob br b-pink" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.7">06 · The Waffle Up Gang</p>
+      <h2 class="display d-cyan">3d models</h2>
+    </div>
+    <p class="note" style="color:#fff;opacity:.85">Exactly four printable models exist. T-pose
+      artwork in the 2D folders is animation reference — it does not mean a model exists.</p>
+  </div>
+  <div class="grid g4 rows2" style="flex:1;gap:18px">
+    <div class="tile"><div class="frame f-cream"><img src="img/model-mr-waffle.jpg" alt="Mr Waffle 3D reference"></div><div class="cap">Mr Waffle · model.stl</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/model-air-maxi.jpg" alt="Air Maxi 3D reference"></div><div class="cap">Air Maxi · model.stl</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/model-picchi.jpg" alt="Picchi 3D reference"></div><div class="cap">Picchi · model.stl</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/model-bhoppu.jpg" alt="Bhoppu reference"></div><div class="cap">Bhoppu · model.stl</div></div>
+    <div class="panel" style="grid-column:span 2">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Where they are</p>
+      <p class="small">Stored under each character folder as
+        <strong>assets/characters/bangladesh/&lt;character&gt;/3d/model.stl</strong>. They are
+        source STL files and need a slicer or 3D software — they are not browser-viewable images.</p>
+    </div>
+    <div class="panel f-gold" style="grid-column:span 2">
+      <p class="eyebrow" style="margin-bottom:10px">Printing them</p>
+      <p class="small">Print in brand colours or in a single colour with painted detail. Keep the
+        proportions of the supplied mesh; do not re-sculpt, re-pose or add accessories.</p>
+    </div>
+  </div>
+  <div class="folio" style="color:#fff"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ======================= 43 · CHARACTER USAGE ======================= -->
+<section class="page pad">
+  <div class="blob bl b-pink" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-gold">using the gang</h2>
+    </div>
+    <p class="note">The characters are Waffle Up-owned artwork. Use the supplied files only.</p>
+  </div>
+  <div class="grid g2" style="gap:24px">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:14px">Do</p>
+      <p class="small">
+        &#10003;&nbsp; One character per screen or campaign piece, full colour, unmodified<br>
+        &#10003;&nbsp; Use them for achievements, celebrations and product storytelling<br>
+        &#10003;&nbsp; Use the line-art versions as icons and colouring artwork<br>
+        &#10003;&nbsp; Keep Bangladesh and Singapore treatments market-specific<br>
+        &#10003;&nbsp; Quote the approved Surprise Card description word for word</p>
+    </div>
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:14px">Don&rsquo;t</p>
+      <p class="small">
+        &times;&nbsp; Redraw, recolour, restyle or generate a new pose<br>
+        &times;&nbsp; Crowd several characters into one small piece<br>
+        &times;&nbsp; Put a character on an error, a payroll screen or a disciplinary notice<br>
+        &times;&nbsp; Use a character on dense data views<br>
+        &times;&nbsp; Rewrite a character&rsquo;s description or invent a new backstory</p>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:22px;gap:22px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Source of truth</p>
+      <p class="small"><strong>data/characters.json</strong> is the machine-readable register of
+        approved names and descriptions. Software should read from it rather than hard-coding
+        copy.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">One per module</p>
+      <p class="small">Several characters map naturally onto parts of the business — Stovy for
+        production, Icy for beverages, Mr Waffle for the waffle range.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:10px">Missing artwork</p>
+      <p class="small">If the pose or expression you need is not in the kit, request approved
+        artwork. Never fabricate one — including with AI tools.</p>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ================ 44 · DIVIDER — 07 VOICE & TONE ================ -->
+<section class="page divider">
+  <div class="left f-gold">
+    <div class="blob tl b-pink" style="width:300px;height:220px"></div>
+    <span class="num d-flat" style="opacity:.3">07</span>
+    <h2 class="display d-flat" style="font-size:66px">voice<br>&amp; tone</h2>
+  </div>
+  <div class="right f-pink">
+    <div class="blob br b-gold" style="width:440px;height:310px"></div>
+    <p class="eyebrow">Section seven</p>
+    <p class="lede" style="max-width:38ch">The Jester. Casual, friendly, humorous — and never
+      funny at the wrong moment.</p>
+    <div class="rule" style="width:120px;background:#fff"></div>
+    <img src="img/char-tvy.png" alt="Tvy"
+         style="position:absolute;right:64px;bottom:48px;height:270px;z-index:2">
+  </div>
+</section>
+
+<!-- ========================= 45 · THE ARCHETYPE ========================= -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:340px;height:240px;top:170px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">07 · Voice &amp; tone</p>
+      <h2 class="display d-pink">the jester</h2>
+    </div>
+    <p class="note">Jester brands use humour and wit to engage. Puns, jokes and wordplay are
+      explicitly part of the identity.</p>
+  </div>
+  <div class="panel f-cocoa" style="display:flex;gap:34px;align-items:center">
+    <p class="lede" style="color:#fff;flex:1;font-size:21px">The whole company exists to take
+      waffles down from the luxury dessert trolley and put them on a stick, on the street. The
+      voice does the same job: <strong>never precious, never corporate</strong>.</p>
+    <img src="img/wm-obsessed.png" alt="Obsessed" style="height:150px">
+  </div>
+  <div class="grid g3" style="margin-top:22px;gap:22px">
+    <div class="panel f-cyan">
+      <h3 class="display d-flat" style="font-size:26px;margin-bottom:10px">funny, not silly</h3>
+      <p class="small">The joke never gets in the way of the information. If a reader has to decode
+        the sentence to find the fact, rewrite it.</p>
+    </div>
+    <div class="panel f-gold">
+      <h3 class="display d-flat" style="font-size:26px;margin-bottom:10px">warm, not soft</h3>
+      <p class="small">Direct, quick, no hedging. Short sentences. No &ldquo;please kindly be
+        informed&rdquo;, ever.</p>
+    </div>
+    <div class="panel f-pink">
+      <h3 class="display" style="font-size:26px;margin-bottom:10px;color:#fff;text-shadow:4px 4px 0 var(--cocoa)">bangladeshi and global</h3>
+      <p class="small">Bangla and English mix freely — <em>Ashol WaffleUp Chinun</em>,
+        <em>Bangla Pizza</em>, <em>Square is the new heart</em>.</p>
+    </div>
+  </div>
+  <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 46 · WHERE HUMOUR GOES ====================== -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">07 · Voice &amp; tone</p>
+      <h2 class="display d-cyan">where humour goes</h2>
+    </div>
+    <p class="note">Rule of thumb: if someone is stuck, stressed or handling money, be plain. If
+      they&rsquo;re fine or they&rsquo;ve just won, be funny.</p>
+  </div>
+  <div class="panel flat" style="flex:1">
+    <table>
+      <tr><th style="width:290px">Context</th><th style="width:150px">Register</th><th>Why</th></tr>
+      <tr><td class="k">Labels, table headers, buttons</td><td><span class="pill">Literal</span></td><td>People are mid-shift and scanning</td></tr>
+      <tr><td class="k">Errors, validation, compliance, money</td><td><span class="pill">Literal</span></td><td>Never make someone decode a joke while something is broken</td></tr>
+      <tr><td class="k">Empty states</td><td><span class="pill cyan">Playful</span></td><td>Nobody is blocked; it is a free moment</td></tr>
+      <tr><td class="k">Success and completion</td><td><span class="pill cyan">Playful</span></td><td>Reward the person</td></tr>
+      <tr><td class="k">Nudges, streaks, reminders</td><td><span class="pill cyan">Playful</span></td><td>Motivation, not instruction</td></tr>
+      <tr><td class="k">Onboarding, first run</td><td><span class="pill cyan">Playful</span></td><td>Sets the tone</td></tr>
+      <tr><td class="k">Loading</td><td><span class="pill gold">Light</span></td><td>Short, and never annoying on repeat</td></tr>
+    </table>
+  </div>
+  <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
+</section>
+
+<!-- ======================== 47 · MICROCOPY BANK ======================== -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">07 · Voice &amp; tone</p>
+      <h2 class="display d-gold">microcopy bank</h2>
+    </div>
+    <p class="note">Paste-ready lines. Extend the bank rather than inventing a new tone.</p>
+  </div>
+  <div class="grid g3" style="gap:20px">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:12px">Empty states</p>
+      <p class="small">&ldquo;Nothing here yet. Suspiciously clean.&rdquo;<br>
+        &ldquo;No orders yet today. The calm before the crunch.&rdquo;<br>
+        &ldquo;No wastage logged. Either a perfect day or a forgotten form.&rdquo;<br>
+        &ldquo;No items match that. Even the search is stumped.&rdquo;</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:12px">Success</p>
+      <p class="small">&ldquo;Shutter down. Go home, legend.&rdquo;<br>
+        &ldquo;Open for business. Go get &rsquo;em.&rdquo;<br>
+        &ldquo;Counted. Every last stick.&rdquo;<br>
+        &ldquo;Saved. Crisp.&rdquo;<br>
+        &ldquo;Sent. Off it goes.&rdquo;</p>
+    </div>
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:12px">Nudges &amp; loading</p>
+      <p class="small">&ldquo;7 days, zero missed checklists. Somebody&rsquo;s on a roll.&rdquo;<br>
+        &ldquo;Two items below par. Worth a look before the evening rush.&rdquo;<br>
+        &ldquo;Warming the iron&hellip;&rdquo; &nbsp;&ldquo;Stacking the squares&hellip;&rdquo;
+        &nbsp;&ldquo;Counting sticks&hellip;&rdquo;</p>
+    </div>
+  </div>
+  <div class="grid g2" style="margin-top:20px;gap:20px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Errors — always literal</p>
+      <p class="small">&ldquo;Count can&rsquo;t be negative.&rdquo;<br>
+        &ldquo;Couldn&rsquo;t save. You&rsquo;re offline — we&rsquo;ll retry automatically.&rdquo;<br>
+        &ldquo;This item isn&rsquo;t on this outlet&rsquo;s stock list.&rdquo;<br>
+        &ldquo;Photo required before submitting.&rdquo;</p>
+    </div>
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.75">Never write</p>
+      <p class="small" style="opacity:.92">&times;&nbsp; &ldquo;Oops! Something went wrong :(&rdquo;
+        — say what went wrong and what happens next<br>
+        &times;&nbsp; &ldquo;Please kindly be informed that&hellip;&rdquo; — corporate stiffness<br>
+        &times;&nbsp; &ldquo;Indulge in our premium artisanal experience&rdquo; — wrong register<br>
+        &times;&nbsp; Jokes inside an error, a legal notice, or anything about someone&rsquo;s pay</p>
+    </div>
+  </div>
+  <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 48 · BILINGUAL ========================= -->
+<section class="page pad">
+  <div class="blob tl b-cyan" style="width:400px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">07 · Voice &amp; tone</p>
+      <h2 class="display d-pink">two languages</h2>
+    </div>
+    <p class="note">Bangla is not a translation afterthought. Outlet teams may work in it
+      primarily; management dashboards run in English.</p>
+  </div>
+  <div class="grid g2" style="gap:24px">
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:12px">Writing Bangla</p>
+      <p class="small">Keep strings short — the display faces carry no Bangla, so set it in Noto
+        Sans Bengali or Hind Siliguri. Humour translates badly: prefer warm-and-plain over
+        pun-based. Numbers and currency stay in Western numerals with BDT or the taka sign.</p>
+    </div>
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:12px">Writing English</p>
+      <p class="small">Sensory and a little over the top for product copy — &ldquo;Death by
+        Nutella&hellip; RIP.&rdquo; Plain and quick for anything functional. Code-switching between
+        the two languages is on-brand, not a mistake.</p>
+    </div>
+  </div>
+  <div class="panel f-cocoa" style="margin-top:22px;flex:1;display:flex;align-items:center;gap:40px">
+    <div style="flex:1">
+      <p class="eyebrow" style="margin-bottom:14px;opacity:.75">The authenticity line</p>
+      <p class="lede" style="color:#fff;font-size:22px">Ashol WaffleUp Chinun — &ldquo;know the
+        real Waffle Up&rdquo;. Used on menus, packaging and signage as the Bangla mark of the
+        genuine article.</p>
+    </div>
+    <img src="img/wm-ashol.png" alt="Ashol WaffleUp Chinun word-mark" style="height:180px">
+  </div>
+  <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
+</section>
+
+<!-- ========== 49 · DIVIDER — 08 PRODUCT & PHOTOGRAPHY ========== -->
+<section class="page divider">
+  <div class="left f-cocoa">
+    <div class="blob tl b-gold" style="width:300px;height:220px"></div>
+    <span class="num" style="opacity:.4;color:var(--cyan)">08</span>
+    <h2 class="display d-pink" style="font-size:62px">product<br>&amp; photo&shy;graphy</h2>
+  </div>
+  <div class="right" style="padding:0;position:relative">
+    <img src="img/prod-01-woas-nutella.jpg" alt="Waffle on a stick"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div style="position:absolute;left:56px;right:56px;bottom:56px;background:rgba(255,255,255,.94);
+                border:4px solid var(--cocoa);border-radius:22px;padding:24px 28px;z-index:3">
+      <p class="eyebrow" style="opacity:.6;margin-bottom:10px">Section eight</p>
+      <p class="small">Hard light, stark contrast, brand-coloured backdrops and an accurate
+        representation of the product. That is the whole photographic persona.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 50 · PRODUCT PHOTOGRAPHY I ==================== -->
+<section class="page pad">
+  <div class="blob tr b-gold" style="width:340px;height:240px;top:170px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">08 · Product &amp; photography</p>
+      <h2 class="display d-pink">waffle on a stick</h2>
+    </div>
+    <p class="note">The signature format. Shot against brand-coloured backdrops with the product
+      caught mid-air or mid-drizzle.</p>
+  </div>
+  <div class="grid g5 rows2" style="flex:1;gap:18px">
+    <div class="tile photo"><div class="frame"><img src="img/prod-01-woas-nutella.jpg" alt="WOAS Nutella"></div><div class="cap">Nutella</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-02-woas-red-velvet.jpg" alt="WOAS Red Velvet"></div><div class="cap">Red Velvet</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-03-woas-tri-chocolate.jpg" alt="WOAS Tri Chocolate"></div><div class="cap">Tri-Chocolate</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-04-woas-mad-mango.jpg" alt="WOAS Mad Mango"></div><div class="cap">Mad Mango</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-05-woas-kunaffle.jpg" alt="WOAS Kunaffle"></div><div class="cap">Kunaffle</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-06-death-by-nutella.jpg" alt="Death by Nutella"></div><div class="cap">Death by Nutella</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-07-bananatella-and-nuts.jpg" alt="Bananatella and Nuts"></div><div class="cap">Bananatella &amp; Nuts</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-08-strawberry-banana-and-nutella.jpg" alt="Strawberry Banana and Nutella"></div><div class="cap">Strawberry Banana</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-09-very-very-strawberry.jpg" alt="Very Very Strawberry"></div><div class="cap">Very Very Strawberry</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-10-fruity-bliss.jpg" alt="Fruity Bliss"></div><div class="cap">Fruity Bliss</div></div>
+  </div>
+  <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
+</section>
+
+<!-- =================== 51 · PRODUCT PHOTOGRAPHY II =================== -->
+<section class="page pad">
+  <div class="blob bl b-cyan" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">08 · Product &amp; photography</p>
+      <h2 class="display d-cyan">drinks &amp; the rest</h2>
+    </div>
+    <p class="note">Cheese drinks, shakes, hot chocolate and the savoury outlier. Same lighting,
+      same backdrops, same rules.</p>
+  </div>
+  <div class="grid g5" style="gap:18px;flex:1">
+    <div class="tile photo"><div class="frame"><img src="img/prod-11-bangla-pizza.jpg" alt="Bangla Pizza"></div><div class="cap">Bangla Pizza</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-choco-choco-cheese.jpg" alt="Choco Choco Cheese"></div><div class="cap">Choco Choco Cheese</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-delivery-platform---cheese-drink.jpg" alt="Cheese drink"></div><div class="cap">Cheese drink</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-hot-chocolate-new.jpg" alt="Hot Chocolate"></div><div class="cap">Hot Chocolate</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/prod-mango-drink.jpg" alt="Mango drink"></div><div class="cap">Mango drink</div></div>
+  </div>
+  <div class="panel f-gold" style="margin-top:22px;display:flex;gap:30px;align-items:center">
+    <span class="pill">Accuracy first</span>
+    <p class="small" style="flex:1">An accurate representation of the product must be the priority.
+      Styling makes it look its best; it never shows something the customer will not receive.</p>
+  </div>
+  <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 52 · PHOTOGRAPHY RULES ====================== -->
+<section class="page pad">
+  <div class="blob br b-pink" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">08 · Product &amp; photography</p>
+      <h2 class="display d-gold">shooting it</h2>
+    </div>
+    <p class="note">Key elements and general specifications, straight from the guideline.</p>
+  </div>
+  <div class="grid g4" style="gap:20px">
+    <div class="panel f-cyan"><p class="eyebrow" style="margin-bottom:10px">Backdrops</p>
+      <p class="small">Must follow the brand colour codes. No off-brand backgrounds, ever.</p></div>
+    <div class="panel f-pink"><p class="eyebrow" style="margin-bottom:10px">Light</p>
+      <p class="small">Hard light with stark contrast — that is the brand persona, not a style
+        choice.</p></div>
+    <div class="panel f-gold"><p class="eyebrow" style="margin-bottom:10px">Product</p>
+      <p class="small">Accurate representation of the product is the priority in every frame.</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:10px;opacity:.6">Story</p>
+      <p class="small">Dynamic shots with a storytelling approach — motion, splash, mid-air, hands
+        in frame.</p></div>
+  </div>
+  <div class="panel flat" style="margin-top:22px">
+    <p class="eyebrow" style="opacity:.6;margin-bottom:14px">General specifications</p>
+    <table>
+      <tr><td class="k" style="width:270px">Minimum resolution</td><td>Portrait 1080 &times; 1350 px · Square 1080 &times; 1080 px</td></tr>
+      <tr><td class="k">Supported aspect ratios</td><td>Between 1.91:1 and 4:5</td></tr>
+      <tr><td class="k">Recommended image size</td><td>1080 px wide, 566–1350 px tall depending on orientation</td></tr>
+      <tr><td class="k">Recommended aperture</td><td>f/4 and above</td></tr>
+    </table>
+  </div>
+  <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
+</section>
+
+<!-- ============================ 53 · VIDEO ============================ -->
+<section class="page pad">
+  <div class="blob tl b-gold" style="width:400px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">08 · Product &amp; photography</p>
+      <h2 class="display d-cyan">video</h2>
+    </div>
+    <p class="note">Four beats: opening, content, closing, editing. Graded to the brand, always.</p>
+  </div>
+  <div class="grid g2" style="gap:24px">
+    <div class="panel flat">
+      <p class="eyebrow" style="opacity:.6;margin-bottom:14px">Specifications</p>
+      <table>
+        <tr><td class="k" style="width:180px">Resolution</td><td>1280 &times; 720 landscape · 720 &times; 1280 portrait · 720 &times; 720 square</td></tr>
+        <tr><td class="k">Colour grade</td><td>Triadic, with #6DCBD8 and #F0639A dominating</td></tr>
+        <tr><td class="k">Frame rate</td><td>30 fps</td></tr>
+        <tr><td class="k">Shutter</td><td>Adjust FPS and shutter speed together to avoid light flicker</td></tr>
+      </table>
+    </div>
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:14px;opacity:.75">Content</p>
+      <p class="small" style="opacity:.92">High-quality footage showing waffles being prepared and
+        served. Attention-grabbing visuals that carry the flavour combinations. Clear, concise
+        narration or text overlays covering ingredients and process. An upbeat, engaging soundtrack
+        that fits the brand.</p>
+    </div>
+  </div>
+  <div class="grid g4" style="margin-top:22px;gap:20px">
+    <div class="panel f-cyan"><p class="eyebrow" style="margin-bottom:8px">01 · Opening</p>
+      <p class="small">Hook in the first seconds — the product, the colour, the logo.</p></div>
+    <div class="panel f-pink"><p class="eyebrow" style="margin-bottom:8px">02 · Content</p>
+      <p class="small">Preparation and serving, shot close and lit hard.</p></div>
+    <div class="panel f-gold"><p class="eyebrow" style="margin-bottom:8px">03 · Closing</p>
+      <p class="small">Logo, handle and a call to action. Never a fade to a black frame — use cocoa.</p></div>
+    <div class="panel"><p class="eyebrow" style="margin-bottom:8px;opacity:.6">04 · Editing</p>
+      <p class="small">Cut on the beat. Keep the grade consistent across the whole campaign.</p></div>
+  </div>
+  <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
+</section>
+
+<!-- ========= 54 · DIVIDER — 09 PACKAGING & ENVIRONMENT ========= -->
+<section class="page divider">
+  <div class="left f-cyan">
+    <div class="blob tl b-pink" style="width:300px;height:220px"></div>
+    <span class="num d-flat" style="opacity:.3">09</span>
+    <h2 class="display d-pink" style="font-size:60px">packaging<br>&amp; environ&shy;ment</h2>
+  </div>
+  <div class="right" style="padding:0;position:relative">
+    <img src="img/ev-wup-event-backdrop-10ft-x-8ft.jpg" alt="Waffle Up event backdrop"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center">
+    <div style="position:absolute;left:56px;right:56px;bottom:56px;background:rgba(255,255,255,.94);
+                border:4px solid var(--cocoa);border-radius:22px;padding:24px 28px;z-index:3">
+      <p class="eyebrow" style="opacity:.6;margin-bottom:10px">Section nine</p>
+      <p class="small">Boxes, trays, cups and bags carry the pattern, the word-marks and the
+        characters. So do backdrops, side-drops, table fronts and banners.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== 55 · PACKAGING =========================== -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:340px;height:240px;top:170px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">09 · Packaging &amp; environment</p>
+      <h2 class="display d-pink">packaging</h2>
+    </div>
+    <p class="note">Print artwork uses the CMYK build. Every panel carries a word-mark, the
+      pattern, or a character — never a bare surface.</p>
+  </div>
+  <div class="grid g4 rows2" style="flex:1;gap:18px">
+    <div class="tile photo"><div class="frame"><img src="img/pack-bd-box-a.jpg" alt="BD Box A"></div><div class="cap">BD Box A</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/pack-bd-box-b.jpg" alt="BD Box B"></div><div class="cap">BD Box B</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/pack-bd-box-c.jpg" alt="BD Box C"></div><div class="cap">BD Box C</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/pack-sg-bag-25x14x30.jpg" alt="Singapore bag"></div><div class="cap">Singapore bag</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/pack-bd-tray---event.jpg" alt="Event tray"></div><div class="cap">Event tray</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/pack-bd-tray---outlet.jpg" alt="Outlet tray"></div><div class="cap">Outlet tray</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/pack-round-cup-design.jpg" alt="Round cup design"></div><div class="cap">Round cup — artwork</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/pack-round-cup-mockup.jpg" alt="Round cup mockup"></div><div class="cap">Round cup — mock-up</div></div>
+  </div>
+  <div class="folio"><span>09 · Packaging &amp; environment</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 56 · EVENT MATERIAL ========================= -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">09 · Packaging &amp; environment</p>
+      <h2 class="display d-cyan">events</h2>
+    </div>
+    <p class="note">Backdrops, side-drops, table fronts and X-banners. Sizes are in the file names
+      — order to those dimensions.</p>
+  </div>
+  <div class="grid g5 rows2" style="flex:1;gap:18px">
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-backdrop-10ft-x-8ft.jpg" alt="Backdrop 10ft x 8ft"></div><div class="cap">Backdrop 10 &times; 8 ft</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-backdrop-8ft-x-8ft.jpg" alt="Backdrop 8ft x 8ft"></div><div class="cap">Backdrop 8 &times; 8 ft</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-sidedrop-1-10ft-x-8ft.jpg" alt="Sidedrop 1"></div><div class="cap">Side-drop 1</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-sidedrop-2-10ft-x-8ft.jpg" alt="Sidedrop 2"></div><div class="cap">Side-drop 2</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-table-front-(11ft-x-3ft).jpg" alt="Table front"></div><div class="cap">Table front 11 &times; 3 ft</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-x-banner---nutella.jpg" alt="Nutella banner"></div><div class="cap">X-banner · Nutella</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-x-banner---trichocolate.jpg" alt="Tri Chocolate banner"></div><div class="cap">X-banner · Tri-Chocolate</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-x-banner---cheese-drink.jpg" alt="Cheese drink banner"></div><div class="cap">X-banner · Cheese drink</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-x-banner---kunaffle-(limited-edition).jpg" alt="Kunaffle limited edition banner"></div><div class="cap">X-banner · Kunaffle LE</div></div>
+    <div class="tile photo"><div class="frame"><img src="img/ev-wup-event-x-banner---kunaffle-(ramadan).jpg" alt="Kunaffle Ramadan banner"></div><div class="cap">X-banner · Kunaffle Ramadan</div></div>
+  </div>
+  <div class="folio"><span>09 · Packaging &amp; environment</span><span class="no"></span></div>
+</section>
+
+<!-- ============ 57 · DIVIDER — 10 MERCHANDISE ============ -->
+<section class="page divider">
+  <div class="left f-gold">
+    <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
+    <span class="num d-flat" style="opacity:.3">10</span>
+    <h2 class="display d-pink" style="font-size:62px">merchandise</h2>
+  </div>
+  <div class="right f-pink">
+    <div class="blob br b-gold" style="width:440px;height:310px"></div>
+    <p class="eyebrow">Section ten</p>
+    <p class="lede" style="max-width:38ch">Stationery, giveaways and branded objects. The rules
+      that govern a screen govern a sock, a flask and a business card too.</p>
+    <div class="rule" style="width:120px;background:#fff"></div>
+    <p class="small" style="max-width:44ch">Business cards · notebook · letterhead · gift bag ·
+      socks and socks box · water flask · calendar · pop socket · balloon · pen and pen box · mug.</p>
+    <img src="img/char-swirly.png" alt="Swirly"
+         style="position:absolute;right:58px;bottom:46px;height:264px;z-index:2">
+  </div>
+</section>
+
+<!-- ======================= 58 · MERCH ON AN OBJECT ======================= -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:340px;height:240px;top:170px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">10 · Merchandise</p>
+      <h2 class="display d-pink">on an object</h2>
+    </div>
+    <p class="note">Merchandise is the brand at arm&rsquo;s length from a shop. It has to be
+      recognisable across a room and survive being sat on.</p>
+  </div>
+  <div class="grid g3" style="gap:22px">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:10px">One field per item</p>
+      <p class="small">Pick cyan <em>or</em> pink as the dominant colour of the object, the other
+        as the counterpoint, gold as the highlight and cocoa as the ink. The 60–75 / 15–25 / 3–5
+        ratio applies to a flask exactly as it does to a screen.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:10px">One brand device</p>
+      <p class="small">Every piece carries <strong>one</strong> of the four devices — the logo, the
+        symbol, a word-mark or a character. Never a bare surface, and never all four fighting on
+        the same face.</p>
+    </div>
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:10px">The pattern wraps</p>
+      <p class="small">The signature wave is the default ground for anything that wraps — bags,
+        cups, boxes, sock cuffs, balloon bodies. Keep it behind the mark, never at full contrast
+        under type.</p>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:22px;gap:22px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Small items use the symbol</p>
+      <p class="small">Below the logo minimum — 120 px on screen, 25 mm in print — drop to the
+        W monogram in its gold circle. Pop sockets, pin badges, sock cuffs, pen clips and zip pulls
+        all take the symbol, not the lock-up.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Textile &amp; single colour</p>
+      <p class="small">Embroidery, debossing and one-colour print break thin cocoa keylines. Use
+        the line-art character or the symbol, scale the outline weight up with the artwork, and
+        never fake the four-layer type effect in thread.</p>
+    </div>
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.75">Colour build</p>
+      <p class="small" style="opacity:.92">Everything physical is produced from the
+        <strong>CMYK</strong> artwork with the Pantone references attached. Only the e-commerce
+        photography and the listing graphics use the RGB build.</p>
+    </div>
+  </div>
+  <div class="panel f-cyan" style="margin-top:22px;display:flex;align-items:center;gap:30px">
+    <span class="pill">Approvals</span>
+    <p class="small" style="flex:1">New merchandise artwork goes back to the brand owner before
+      production. Characters are never redrawn, re-posed, recoloured or AI-generated for a product
+      — if the pose you need does not exist, request approved artwork.</p>
+  </div>
+  <div class="folio"><span>10 · Merchandise</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 59 · THE CORE RANGE ========================= -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">10 · Merchandise</p>
+      <h2 class="display d-cyan">the core range</h2>
+    </div>
+    <p class="note">What each item carries. Anything not on this list is a new product and needs
+      artwork approval before it is quoted.</p>
+  </div>
+  <div style="display:flex;gap:28px;flex:1">
+    <div class="panel flat" style="flex:1.45">
+      <table>
+        <tr><th style="width:190px">Item</th><th>Carries</th></tr>
+        <tr><td class="k">Business card</td><td>Front: a character, the name, the role and a QR code on a pink field. Back: the symbol and the lock-up with <em>Est. 2021</em> on cyan</td></tr>
+        <tr><td class="k">Letterhead</td><td>Lock-up, the pattern as a band, the handle and the Dhaka address</td></tr>
+        <tr><td class="k">Notebook</td><td>Full-bleed pattern or one character on the cover; symbol blind on the back</td></tr>
+        <tr><td class="k">Gift bag</td><td>Pattern ground, lock-up on the face, one character on the reverse</td></tr>
+        <tr><td class="k">Socks &amp; socks box</td><td>Character repeat on the sock; a single character face on the tube</td></tr>
+        <tr><td class="k">Water flask</td><td>One colour field, symbol or word-mark — no full lock-up on the curve</td></tr>
+        <tr><td class="k">Calendar</td><td>A different character per month; cocoa figures, pink weekends</td></tr>
+        <tr><td class="k">Pop socket · pin</td><td>Symbol only</td></tr>
+        <tr><td class="k">Balloon</td><td>Single-colour lock-up or symbol on cyan, pink or gold latex</td></tr>
+        <tr><td class="k">Pen &amp; pen box</td><td>Word-mark on the barrel, pattern inside the lid</td></tr>
+        <tr><td class="k">Mug</td><td>Pattern wrap with one character; symbol on the base</td></tr>
+      </table>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:18px">
+      <div class="panel f-gold">
+        <p class="eyebrow" style="margin-bottom:12px">Notebook — production spec</p>
+        <table>
+          <tr><td class="k" style="width:112px">Size</td><td>5.5&Prime; &times; 8.5&Prime;</td></tr>
+          <tr><td class="k">Cover</td><td>900 gsm Swedish board, 4-colour print back to back</td></tr>
+          <tr><td class="k">Inner</td><td>80 gsm offset paper, 1-colour print</td></tr>
+          <tr><td class="k">Lamination</td><td>Matte, spot</td></tr>
+          <tr><td class="k">Binding</td><td>Spiral, with wrapping</td></tr>
+        </table>
+      </div>
+      <div class="panel">
+        <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Standing details</p>
+        <p class="small">Stationery carries <strong>@waffleup.online</strong> and
+          <strong>Road 11, House 67/C, Block E, Banani, Dhaka-1213</strong>. Food-adjacent items
+          carry the Halal roundel. Packaging-facing items may carry <em>Every Waffle Day</em> or
+          <em>For immediate consumption</em>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>10 · Merchandise</span><span class="no"></span></div>
+</section>
+
+<!-- ============ 60 · DIVIDER — 11 THE SURPRISE CARD ============ -->
+<section class="page divider">
+  <div class="left f-pink">
+    <div class="blob tl b-gold" style="width:300px;height:220px"></div>
+    <span class="num" style="opacity:.35;color:#fff">11</span>
+    <h2 class="display d-cyan" style="font-size:66px">the<br>surprise<br>card</h2>
+  </div>
+  <div class="right f-cyan">
+    <div class="blob br b-pink" style="width:440px;height:310px"></div>
+    <p class="eyebrow">Section eleven</p>
+    <p class="lede" style="max-width:38ch;color:var(--cocoa)">One card per BDT 500 spent. A
+      collectible character card, or a rarer scratch card that wins something on the spot.</p>
+    <div class="rule" style="width:120px"></div>
+    <img src="img/extra-scratch-card---ice-cream.png" alt="Scratch card"
+         style="position:absolute;right:74px;bottom:52px;height:300px;z-index:2">
+  </div>
+</section>
+
+<!-- ======================== 58 · THE PROGRAMME ======================== -->
+<section class="page pad">
+  <div class="blob tr b-gold" style="width:340px;height:240px;top:170px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">11 · The Surprise Card</p>
+      <h2 class="display d-pink">how it works</h2>
+    </div>
+    <p class="note">Two card types come out of the same envelope. Every card carries a unique
+      serial.</p>
+  </div>
+  <div class="grid g2" style="gap:24px">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:12px">Character card</p>
+      <p class="small">Collectible. The character&rsquo;s approved bio on the front, colour-in line
+        art on the back, and an invitation to share the finished drawing. Ten designs.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:12px">Scratch card</p>
+      <p class="small">Rarer. An instant win — a free item or a piece of merchandise — redeemable
+        at designated outlets, with a printed validity date.</p>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:22px;gap:22px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Earning</p>
+      <p class="small">One card per <strong>BDT 500</strong> spent, handed over at the till with the
+        order.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Serials</p>
+      <p class="small">Every card carries a unique serial, in the form <strong>FLL-9525656492</strong>.
+        Batches are tracked centrally.</p>
+    </div>
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.75">At the till</p>
+      <p class="small" style="opacity:.92">Issue and redemption are two separate zero-value
+        categories. Any system touching the programme must keep that distinction — it is the only
+        thing that makes it measurable.</p>
+    </div>
+  </div>
+  <div class="folio"><span>11 · The Surprise Card</span><span class="no"></span></div>
+</section>
+
+<!-- ==================== 59 · CARD ARTWORK & SOUND ==================== -->
+<section class="page pad">
+  <div class="blob bl b-cyan" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">11 · The Surprise Card</p>
+      <h2 class="display d-gold">artwork &amp; sound</h2>
+    </div>
+    <p class="note">Additional card artwork in the kit, plus the house track supplied for
+      campaign use.</p>
+  </div>
+  <div class="grid g6" style="gap:16px">
+    <div class="tile"><div class="frame f-cream" style="height:230px"><img src="img/extra-mr-waffle-01.png" alt="Mr Waffle card front"></div><div class="cap">Mr Waffle · front</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:230px"><img src="img/extra-mr-waffle-02.png" alt="Mr Waffle card back"></div><div class="cap">Mr Waffle · back</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:230px"><img src="img/extra-spacy-02.png" alt="Spacy card"></div><div class="cap">Spacy</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:230px"><img src="img/extra-stovy-02.png" alt="Stovy card"></div><div class="cap">Stovy</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:230px"><img src="img/extra-tvy-01.png" alt="Tvy card"></div><div class="cap">Tvy</div></div>
+    <div class="tile"><div class="frame f-cream" style="height:230px"><img src="img/extra-scratch-card---ice-cream.png" alt="Ice cream scratch card"></div><div class="cap">Scratch · ice cream</div></div>
+  </div>
+  <div style="display:flex;gap:24px;margin-top:22px;flex:1">
+    <div class="imgcard" style="width:300px"><img src="img/ytcover.jpg" alt="Sweet Night Bites cover"></div>
+    <div class="panel" style="flex:1">
+      <p class="eyebrow" style="margin-bottom:12px;opacity:.6">House track — Sweet Night Bites</p>
+      <p class="small">Supplied in three lengths: 30 seconds, 60 seconds and 90 seconds, in
+        <strong>assets/marketing/audio/</strong>. Use it for reels, in-store loops and event
+        stings.</p>
+      <p class="small" style="margin-top:12px"><strong>Rights:</strong> the included audio has no
+        verified commercial-rights record in this kit. Obtain approval before publishing it.</p>
+    </div>
+  </div>
+  <div class="folio"><span>11 · The Surprise Card</span><span class="no"></span></div>
+</section>
+
+<!-- ============ 60 · DIVIDER — 11 THE ASSET LIBRARY ============ -->
+<section class="page divider">
+  <div class="left f-gold">
+    <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
+    <span class="num d-flat" style="opacity:.3">12</span>
+    <h2 class="display d-flat" style="font-size:62px">the<br>asset<br>library</h2>
+  </div>
+  <div class="right f-cocoa">
+    <div class="blob br b-cyan" style="width:440px;height:310px"></div>
+    <p class="eyebrow" style="opacity:.7">Section twelve</p>
+    <p class="lede" style="max-width:38ch;color:#fff">Everything in this book ships as a file. Here
+      is where each of them lives and what format it is in.</p>
+    <div class="rule" style="width:120px;background:var(--cyan)"></div>
+    <img src="img/symbol-rgb.png" alt="Waffle Up symbol"
+         style="position:absolute;right:80px;bottom:64px;width:250px;z-index:2">
+  </div>
+</section>
+
+<!-- ======================= 61 · WHAT'S IN THE KIT ======================= -->
+<section class="page pad">
+  <div class="blob tr b-pink" style="width:340px;height:240px;top:170px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">12 · The asset library</p>
+      <h2 class="display d-cyan">what&rsquo;s in the kit</h2>
+    </div>
+    <p class="note">A portable working library. Open <strong>preview.html</strong> in a browser to
+      browse everything visually.</p>
+  </div>
+  <div class="grid g2" style="gap:30px;flex:1">
+    <div class="panel flat">
+      <table>
+        <tr><th style="width:210px">Folder</th><th>Contents</th></tr>
+        <tr><td class="k">assets/logo</td><td>Logo, RGB and CMYK, .png and .eps</td></tr>
+        <tr><td class="k">assets/symbol</td><td>W monogram, RGB and CMYK, plus the button mark</td></tr>
+        <tr><td class="k">assets/icon</td><td>Five icon variants, .ai and .png</td></tr>
+        <tr><td class="k">assets/typography</td><td>Fifteen pre-set word-marks in four colourways</td></tr>
+        <tr><td class="k">assets/fonts</td><td>CHUM · Futura · Ultra · Bebas Neue · Puffin Display · General Sans</td></tr>
+        <tr><td class="k">assets/pattern</td><td>The brand pattern artwork</td></tr>
+        <tr><td class="k">assets/characters</td><td>Bangladesh nine and Singapore Merlulu; 2D art and four STL models</td></tr>
+        <tr><td class="k">assets/marketing</td><td>Product, packaging, event, Surprise Card and audio</td></tr>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div class="panel f-cyan">
+        <p class="eyebrow" style="margin-bottom:10px">Written guidance</p>
+        <p class="small"><strong>brand/BRAND.md</strong> the system reference ·
+          <strong>brand/LOGO-RULES.md</strong> mark usage ·
+          <strong>brand/VOICE.md</strong> voice and microcopy ·
+          <strong>brand/CHARACTERS.md</strong> the roster.</p>
+      </div>
+      <div class="panel f-gold">
+        <p class="eyebrow" style="margin-bottom:10px">For software</p>
+        <p class="small"><strong>tokens/wup-tokens.json</strong> is canonical;
+          <strong>tokens/wup-tokens.css</strong> is generated from it.
+          <strong>components/wup-components.css</strong> carries the reusable pieces, and
+          <strong>data/characters.json</strong> the approved character copy.</p>
+      </div>
+      <div class="panel">
+        <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Reference PDFs</p>
+        <p class="small"><strong>docs/brand-guides/</strong> holds the original Brand Book V.1,
+          Brand Guideline 1 and the 2024 company profile. They are historical records — this book
+          supersedes them.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>12 · The asset library</span><span class="no"></span></div>
+</section>
+
+<!-- ======================= 62 · FORMATS & LIMITS ======================= -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">12 · The asset library</p>
+      <h2 class="display d-pink">formats</h2>
+    </div>
+    <p class="note">Pick the format by the job. When in doubt, send vector to print and raster to
+      screens.</p>
+  </div>
+  <div class="grid g2" style="gap:30px">
+    <div class="panel flat">
+      <table>
+        <tr><th style="width:130px">Format</th><th>Use for</th></tr>
+        <tr><td class="k">.eps / .ai</td><td>Print, signage, packaging, large-format — hand to the supplier</td></tr>
+        <tr><td class="k">.png</td><td>Screens, decks, documents, social — transparent where needed</td></tr>
+        <tr><td class="k">.jpg</td><td>Photography and mock-ups only, never a mark on a flat colour</td></tr>
+        <tr><td class="k">.stl</td><td>The four printable character models</td></tr>
+        <tr><td class="k">.otf / .ttf</td><td>The licensed typefaces</td></tr>
+      </table>
+    </div>
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:14px;opacity:.75">Before you publish</p>
+      <p class="small" style="opacity:.92">
+        &#10003;&nbsp; Right build — RGB for screens, CMYK for print<br>
+        &#10003;&nbsp; Signature wave present in the mark<br>
+        &#10003;&nbsp; Clearspace clear on all four sides<br>
+        &#10003;&nbsp; Ink is cocoa, not black<br>
+        &#10003;&nbsp; One dominant colour, one counterpoint, at most two accents<br>
+        &#10003;&nbsp; Character artwork unmodified and market-correct<br>
+        &#10003;&nbsp; Copy plain where it matters, playful where it is safe</p>
+    </div>
+  </div>
+  <div class="panel f-cyan" style="margin-top:22px;flex:1;display:flex;align-items:center;gap:34px">
+    <div style="flex:1">
+      <p class="eyebrow" style="margin-bottom:12px">Keeping this book current</p>
+      <p class="small">The book is generated from the library itself:
+        <strong>brand-guidelines/index.html</strong> is the source and
+        <strong>brand-guidelines/build.py</strong> rebuilds the PDF. Add artwork to
+        <strong>assets/</strong>, update the page, re-run the build — the book and the library stay
+        in step.</p>
+    </div>
+    <img src="img/char-picchi.png" alt="Picchi" style="height:160px">
+  </div>
+  <div class="folio"><span>12 · The asset library</span><span class="no"></span></div>
+</section>
+
+<!-- ============================ 63 · BACK COVER ============================ -->
+<section class="page f-cocoa">
+  <div class="blob tl b-pink" style="width:520px;height:380px"></div>
+  <div class="blob br b-cyan" style="width:560px;height:400px"></div>
+  <div class="dot" style="top:300px;left:470px;width:32px;height:32px"></div>
+  <div class="dot" style="bottom:330px;right:520px;width:22px;height:22px"></div>
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+              justify-content:center;gap:34px;z-index:2">
+    <img src="img/symbol-rgb.png" alt="Waffle Up symbol" style="width:220px">
+    <h2 class="display d-gold" style="font-size:60px;text-align:center">square is the new heart</h2>
+    <div class="rule" style="width:140px;background:var(--gold)"></div>
+    <p class="eyebrow" style="color:#fff;opacity:.85;text-align:center">Waffle Up Global Pte. Ltd.</p>
+    <p class="small" style="color:#fff;opacity:.6;text-align:center;max-width:52ch">
+      33A Pagoda Street, Singapore 059192 &nbsp;·&nbsp; Road 11, House 67/C, Block E, Banani,
+      Dhaka-1213<br>waffleup.global &nbsp;·&nbsp; @waffleup.online</p>
+    <p class="tiny" style="color:#fff;opacity:.4;text-align:center;margin-top:10px">
+      Visual brand guidelines, edition 2026 · generated from the Waffle Up brand asset library</p>
+  </div>
+</section>
+</body>
+</html>
