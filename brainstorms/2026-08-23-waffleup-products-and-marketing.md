@@ -236,3 +236,128 @@ Rationale for this batch: Sessions 1 covered *what marketing is for* and *the lo
 ### Q10 — The real competitive set (ASKED, awaiting answer)
 - **Asked:** Who do you actually lose the evening-dessert occasion to? Has anyone copied waffle-on-a-stick in BD? Should marketing ever acknowledge a competitor?
 - **My recommendation:** the competitor is not another waffle shop — it is ice cream (Polar/Igloo/Movenpick), mall dessert (Cinnabon-type), the neighbourhood cake and pastry shop, and coffee-chain dessert counters. My stance: creative territory 4 ("square beats round") should play against **the category's form factor**, never a named brand.
+
+---
+
+### Q7–Q10 — ANSWERED (2026-08-23)
+
+**COGS — RESOLVED.** *"Our COGS is 38%."* Point figure, mid-range of the 30–45% band given at Q5. **The Surprise Card budget model can now run on a real number instead of an assumed 30%.** Every reward-ladder cost in `programs/SURPRISE-CARD-GUIDELINE.md` should be re-checked against 38%, not 30% — that's a ~27% understatement of giveaway cost wherever 30% was assumed.
+
+**⭐ Q9 — MY ASSUMPTION WAS WRONG, AND THIS IS THE BIGGEST CORRECTION OF THE SESSION.**
+*"We get customer numbers even in foodpanda orders."*
+
+I asserted that Foodpanda gives you nothing. It does. **WaffleUp has phone numbers across every channel** — Foodpanda, WhatsApp, walk-in/POS. That means:
+- ~~The frequency objective does **not** depend on broadcast social reaching the right person. It can be pursued **directly and 1:1**.~~ **OVERRULED AT Q14** — outbound promotional messaging is near a red line. Transactional confirmations only. The database is a *measurement* asset, not a distribution channel.
+- Surprise Card registration is no longer the *reason* to build the engine — a customer database already exists. Registration becomes a way to *enrich and connect* records that are already there.
+- The strategic question flips from *"how do we get customer data?"* to *"we already have it — why isn't it being used?"*
+- Direct messaging is a no-discount-friendly channel: a 1:1 message can carry a surprise, a card completion nudge, or a new-product note without ever naming a price.
+
+**Q10 — Competitors: RESOLVED, and the answer is to ignore them.**
+*"there are few copies of ours, we could not stop all, some of those has become familiar and are competing against us, we dont actually care much about them."*
+- Copycats of the waffle-on-a-stick format **do exist** in BD, some now established. Enforcement was attempted and only partly succeeded.
+- Jawat's stance is deliberate indifference. **Confirms my recommendation: never acknowledge a competitor in creative.** Territory 4 ("square beats round") plays against the *category's form factor*, never a named brand.
+- Note the strategic logic: with copies in market, the defensible asset is no longer the format — it's **the brand, the characters and the loyalty layer**, none of which can be copied. That is a strong argument for the Surprise Card and the character cast being the priority, not product novelty.
+
+**⭐ The real objective, stated plainly.**
+*"we have got customers, we want to make them connected to our brand, and flourish waffle up internationally as soon as possible."*
+Two jobs, and they are not the same job:
+1. **Connect existing customers to the brand** — this is the frequency objective from Q1, but framed as *attachment*, not transactions. Consistent with 70/30 and with the no-discount rule.
+2. **International expansion, as soon as possible** — new, and elevated. At Q1 outlet expansion was deprioritised; that referred to *domestic* outlets. International is urgent. **Needs its own question — see Q13.**
+
+**Q7 — Production capacity: there is no pipeline yet.**
+*"There is no current fixed social media pipeline. We are building it, that is why i am talking with you."*
+- So there is no ceiling to discover — **the ceiling is being designed right now, in this session.** `programs/SOCIAL-ENGINE.md` isn't describing an existing operation; it's specifying one that doesn't exist yet. It must therefore be written as something a small team can actually start on Monday, not an ideal-state calendar.
+- *"We might use both AI generated and actual shot, whenever whatever would be relevant."* → Confirms the hybrid model in `programs/AI-PRODUCTION.md`. No dogma either way; relevance decides.
+
+**⭐ WHO THE WORK IS FOR — changes what I should be producing.**
+*"I am actually the tech guy, but working on these to help the brand team (2-3 person) kickstart their journey."*
+- Jawat is **not** the person who will execute this. A **2–3 person brand team** is, and they are at the *start* of their journey.
+- **Consequence for every deliverable in this repo:** these documents must work as **operating manuals for a small, new team without Jawat in the room** — templates, checklists, worked examples, decision rules. Not strategy essays that assume the reader already has judgement.
+- This retroactively raises the bar on `programs/SOCIAL-ENGINE.md` and `programs/SURPRISE-CARD-GUIDELINE.md`. **I should re-read both and ask whether a new brand hire could run them unaided.** If not, they need rewriting.
+- It also explains the tech framing of the Surprise Card engine brief — Jawat's instinct is to build the system; the brand team's need is to run the routine.
+
+**Q8 — NOT ANSWERED.** Paid media budget, ownership, and Foodpanda in-app placement all still open. Re-asked below.
+
+### Q11–Q14 (ASKED, awaiting answer)
+
+**Q11 — Paid media (re-ask from Q8, unanswered).** Is there a paid budget, roughly what monthly range, who runs it, and is Foodpanda in-app placement being bought? Recommendation unchanged: Foodpanda in-app is likely the most under-bought surface, because it reaches the customer at the moment of dessert choice.
+
+**Q12 — The brand team.** Who are the 2–3 people and what can each actually do — design, video edit, write, shoot, community-manage? What's their experience level? This now determines the *form* of every deliverable: a team with a designer and an editor needs briefs; a team without needs templates and a much heavier lean on AI generation.
+- Recommendation: assume one designer, one social/community person, possibly one generalist; junior-to-mid; no dedicated videographer. Write everything as runnable routine with worked examples.
+
+**Q13 — "Flourish internationally as soon as possible" — what does marketing owe this?** Three different jobs hide inside that sentence and they produce opposite content:
+  (a) make the BD brand visible enough that **franchise partners** come to you (franchising ~Aug 2027, per Q5);
+  (b) **drive the Singapore outlet's** actual sales at Clarke Quay;
+  (c) build a **global-looking brand presence** so Dubai / Thailand / Indonesia "coming soon" is credible.
+- Recommendation: (a) is the real one, and it is served almost entirely by the *same* content that serves BD frequency — a brand that looks alive, loved and systematised is what attracts partners. (b) is a separate, small, local job. (c) is a by-product, not a workstream. Needs confirming, because if (b) or (c) is the priority the whole content plan changes.
+- **Tension to resolve:** at Q1 expansion was deprioritised and frequency chosen. That referred to domestic outlets. If international is now urgent, does it outrank frequency for share of the calendar?
+
+**Q14 — The customer database (follow-through now that Q9 is corrected).** Roughly how many phone numbers exist? Where do they live — POS, Excel, Foodpanda dashboard, admin panel? Is WhatsApp Business / broadcast already in use? And is there consent to message them?
+- Recommendation: this is now the highest-leverage unexploited asset in the business, ahead of the Surprise Card. Consent and channel mechanics are the gating questions, not the data.
+
+---
+
+### Q11–Q14 — ANSWERED (2026-08-23)
+
+**Q11 — Paid media: NONE, and none planned.**
+*"Till now, no paid media. No plans of it. We need to discuss in the office if we might ever do that."*
+- **Everything is organic.** There is no budget safety net and no plan to create one. Foodpanda in-app placement is therefore off the table for now.
+- **Consequence — this is a hard planning constraint, not a detail.** Content must earn its own distribution. Reach comes from saves, shares and sends, not spend. That makes the 70/30 split from Q6 *more* important, not less: the 70% brand-heat content is the entire distribution engine, and if it doesn't get shared, nothing reaches anyone.
+- It also means **formats that travel** (surprising, funny, collectible, screenshot-able) beat formats that inform. And it raises the value of the Surprise Card enormously — a physical object in a customer's hand is *owned reach* that costs no media budget.
+- → **Flag for the office discussion:** even a small test budget would de-risk the first 90 days. Worth revisiting once the pipeline is producing.
+
+**Q12 — The team: one MTO, one intern.**
+*"one is MTO, and one is intern. They both are good with ideas, they are fast learners, I can teach them use AI. They can operate cameras. None is pro."*
+- Two people, both junior, neither a specialist. Strong on ideas, fast learners, **can operate cameras**, will be taught AI tooling by Jawat.
+- **What this enables:** real footage is genuinely available — not just AI plates. That's better than I assumed at Q12.
+- **What this rules out:** anything whose quality depends on craft. Polished hero film, complex motion design, and precision retouching will expose two non-pros. Formats that *read as authentic* — POV, hands, street, phone-shot UGC, reaction, unboxing — hide inexperience and are on-brand anyway.
+- **Consequence for deliverables:** every document must be a runnable routine — templates, checklists, worked examples, "do this, then this". Nothing that assumes existing judgement. **`programs/SOCIAL-ENGINE.md` and `programs/SURPRISE-CARD-GUIDELINE.md` must be re-read against the test: could an MTO and an intern run this on Monday without Jawat?**
+
+**Q13 — International: recommendation accepted.**
+*"on Q13 - your recommendation."*
+- Confirmed **(a)**: marketing's job toward international is to make the brand visible, alive and systematised enough that **franchise partners come to you** (franchising ~Aug 2027).
+- **This resolves the Q1 tension.** International does *not* take calendar share from frequency. The same content serves both — a brand that looks loved and well-run is the franchise pitch. Singapore-outlet sales is a separate small local job; a "global-looking presence" is a by-product, not a workstream.
+
+**⭐ Q14 — THE DATABASE IS FOR MEASUREMENT, NOT MESSAGING. I over-claimed last turn.**
+*"We send order confirmation message. But apart from that, sending promotional msgs would be the last thing we would want to do. We are using that to see who are our repeat customers and how many."*
+- **Correction to my own note at Q9.** I wrote that frequency "can be pursued directly and 1:1." **That is now overruled.** Outbound promotional messaging is close to a red line for Jawat. Transactional order confirmations only.
+- The reasoning is consistent with everything else in this brand: unsolicited promo messages feel cheap, exactly as "free" and "discount" do. **The no-discount rule and the no-promo-messaging rule are the same instinct.** I should treat them as one principle: *WaffleUp does not chase the customer.*
+- **What the database is actually for — and it is more valuable than I gave it credit for:** *"to see who are our repeat customers and how many."* This is a **repeat-rate measurement capability**, and it is the missing piece of the entire plan.
+- **Why that matters so much:** at Q6 we agreed 70% of posts carry no CTA and can't be judged on orders. That created a measurement hole — how do you prove brand-heat content worked? **The phone-number data closes it.** Repeat rate and repeat frequency, tracked over time across the whole base, is the correct success metric for the frequency objective. Not likes, not orders-per-post.
+- → **Recommendation for the engine work:** the admin panel should surface a **repeat-customer cohort view** (unique numbers, orders per number, time between orders, trend). That is the single most useful dashboard for the brand team, and it is a tech job Jawat can actually do.
+
+**Session paused by agreement.** *"I would leave this session here and come back later to answer the rest of the questions in this session."* Remaining questions preserved below.
+
+---
+
+## Open flags — consolidated as of end of Session 2 (2026-08-23)
+
+**Resolved this session:** COGS (38%), customer numbers exist on all channels including Foodpanda, competitors ignored by choice, no paid media, team composition, international = franchise-visibility, database is for measurement not messaging.
+
+**Still genuinely open — carried to Session 3:**
+
+*Numbers I need and don't have:*
+- **Card printing cost per unit** → Operations lead (Jawat requested at Q5, still pending)
+- **Item-level COGS** — needed to weight the scratch reward mix toward high-margin items. The blended 38% isn't enough for this → Jawat / finance
+- **Current repeat rate and repeat frequency** — the data exists now that numbers are captured. This is the *baseline* for the whole frequency objective; without it there's nothing to measure improvement against → Jawat / admin panel
+
+*Decisions not yet made:*
+- **Season calendar, season expiry, print MOQs** for the Surprise Card → Jawat
+- **Paid media** — office discussion pending. Recommendation: revisit once the pipeline produces, even a small test budget → Jawat / office
+- **Weekday elasticity experiment** — green-lit in principle at Q6, never designed. Needs a control, a fixed window, one variable → Jawat
+- **Merlulu's pronouns** — card bio says she/her, still unconfirmed → Jawat
+
+*Questions never asked (Session 3 agenda):*
+- **The occasions calendar** — Ramadan, Eid, Pohela Boishakh, Valentine's, exam season, monsoon. Which ones does WaffleUp actually play in, and which are off-limits?
+- **Chef's Table** — is it a different brand experience or the same brand in a nicer room? It has no delivery, higher prices, and no distinct marketing position yet.
+- **New product launches** — what's coming, and how much notice does the brand team get?
+- **In-outlet as a medium** — 15 sites, staff who know regulars by name, packaging in every hand. Currently unused as a channel and it costs nothing, which matters a lot given there is no paid budget.
+- **UGC and creators** — no roster exists. With no paid budget, is gifted/seeded creator content acceptable, and does the no-discount rule extend to how creators are compensated?
+- **What does the brand team do all day** — approval flow, who signs off a post, how fast can they turn one around?
+
+## Actions for me, before Session 3
+
+1. **Re-read `programs/SOCIAL-ENGINE.md` and `programs/SURPRISE-CARD-GUIDELINE.md` against the new bar:** could an MTO and an intern run this on Monday without Jawat? Both were written for a reader with existing judgement. They likely need converting into templates, checklists and worked examples.
+2. **Re-check every cost figure in `programs/SURPRISE-CARD-GUIDELINE.md` against 38% COGS**, not the 30% previously assumed — a ~27% understatement wherever it appears.
+3. **Reflect the organic-only constraint** in `programs/SOCIAL-ENGINE.md`. Formats must be chosen for shareability, because sharing *is* the distribution.
+4. **Propose the repeat-cohort dashboard** (unique numbers, orders per number, days between orders, trend) as the measurement layer for the 70/30 split.
