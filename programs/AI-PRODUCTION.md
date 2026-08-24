@@ -5,16 +5,70 @@ How to produce WaffleUp content using the Google AI Pro subscription plus this b
 
 ---
 
+## 0. The shape of the whole thing
+
+**Flow never sees the assets, and it doesn't need to.** The finished video is a sandwich, and Flow only makes the bottom slice.
+
+| Layer | Who makes it | Where it comes from |
+|---|---|---|
+| **Top** — logo, hero word, end card | Nobody. Supplied files. | `assets/logo/` · `assets/typography/` |
+| **Middle** — the product, the character | Nobody. Real photos and supplied art. | `assets/marketing/product-hero/` · `assets/characters/` |
+| **Bottom** — the room it all sits in | **Flow** | generated from a prompt |
+| **The assembly** | **CapCut** | you, ten minutes |
+
+### One shot, traced end to end
+
+Take THE DROP — a Nutella waffle floating against a gold-and-mint backdrop.
+
+1. **Flow** generates an *empty* backdrop: two-tone colour block, hard key light from upper left, one crisp shadow, slow push in, 8s. No product in it. There is no waffle anywhere in that generation. → `plate.mp4`
+2. **Cut out** the real waffle from `assets/marketing/product-hero/01-woas-nutella.jpg`. → `product.png`
+3. **CapCut**: `plate.mp4` as the base, `product.png` as an overlay. Keyframe a slow 6px float, duplicate-blur-darken a shadow underneath it.
+4. **Overlay** `assets/typography/Waffleistic (rgb).png` — the four-layer treatment is already built into that file.
+5. **End card** from `assets/logo/`. Export 1080×1920, 30fps.
+
+Flow made the room. Everything the audience recognises as WaffleUp was a real file the whole time.
+
+### Why this is the feature, not the workaround
+
+A composited PNG is pixel-perfect in **every frame, forever**. A generated waffle is wrong in a **new way every time** — and the grid, the stick and the crumb are the one thing this audience knows by heart. Same for the logo's signature wave, same for every character.
+
+### Yes, Flow accepts images — and that's the trap
+
+Flow has **Ingredients to Video** (upload up to three reference images for characters, objects or style) and **Frames to Video** (a start and end frame it animates between). So you *can* technically drop Bhoppu into Flow.
+
+**Don't.** Ingredients to Video works by generating *new poses* from the reference — which is redrawing him, the exact thing the character rules forbid. It will come back with four fingers, a wrong tracksuit and a dumbbell that changes shape mid-shot.
+
+| Flow image input | Verdict |
+|---|---|
+| A **generated** backdrop still as a start frame, to animate it | ✅ Fine — no brand art involved |
+| Frames to Video between two **generated** stills, for a controlled move | ✅ Fine |
+| A character PNG as an "ingredient" | ❌ Never |
+| A product photo as an "ingredient" | ❌ Never |
+| The logo, or packaging artwork, as a style reference | ❌ Never |
+
+Motion for supplied art comes from **moving the layer in CapCut**, never from regenerating the art. §6 has the technique.
+
+---
+
 ## 1. The toolchain
 
 | Tool | What it's for | Where |
 |---|---|---|
-| **Flow** | Video plates. Veo under the hood, with camera controls, negative prompt field, clip extension. **The main tool.** | labs.google/flow |
+| **Flow** | Video plates. Veo under the hood, with camera controls, clip extension, Frames and Ingredients modes. **The main tool.** | labs.google/flow |
 | **Gemini app** | Quick stills, copy drafting, caption variants | gemini.google.com |
-| **Whisk** | Fast image riffing from references — good for mood, not for final plates | labs.google/whisk |
-| **CapCut** | Compositing, camera moves on stills, text, export. Free. | desktop app |
+| **CapCut** | Compositing, camera moves on stills, text, export. No cost. | desktop app |
+| **Claude Code** | Writes the prompts, the shot lists and the copy. Holds the brand rules. | this repo |
 
-> **[CONFIRM]** Generation quotas on Google AI Pro. Check your limits in Flow before planning a big batch — don't assume unlimited.
+**Brand context for the Google side lives in `GEMINI.md`** at the repo root — the paste block, the positive-phrasing conversion table and the hard fences. Paste it in before the first prompt of any session.
+
+### Two corrections to earlier versions of this doc
+
+- **Whisk no longer exists separately.** Whisk, ImageFX and the original Flow were merged into one Flow workspace in February 2026. Everything routes through Flow now.
+- **Gemini CLI is not a route to video, and for individual accounts it is retired.** Google stopped serving Gemini CLI and the Code Assist IDE extensions for individual, AI Pro and AI Ultra tiers on **18 June 2026**, pointing users at **Antigravity CLI** instead. Neither CLI has ever generated video — they are coding agents. Video is Flow and Google Vids. Antigravity CLI does read `GEMINI.md`, so the context file works there if you want it for text drafting.
+
+### Credits `[CONFIRM] against your own Flow counter`
+
+Google AI Pro is roughly **1,000 credits/month**; a 10s Veo 3.1 clip at Quality costs about **125 credits**. That is ~10 Quality, ~50 Fast or ~100 Lite clips a month, capped at 8s per clip. **Draft at Lite, promote only the keeper to Quality.** Third-party figures move — check the counter before planning a batch.
 
 ---
 
@@ -54,27 +108,22 @@ This isn't a limitation to work around — it's what keeps the brand exact. A co
 
 Veo wants **cinematic prose**, not keyword lists. Rewrite accordingly.
 
-**The negative-prompt problem.** Flow has a negative prompt field. The Gemini app doesn't. So:
+**⚠ Correction to v1.0 of this doc.** It claimed Flow has a negative prompt field. **It does not.** Flow takes plain English in a single prompt box — no negative field, no keywords, no weighting. Neither does the Gemini app. Anything written as "no X" lands inside the prompt, where it tends to summon the very thing it names.
 
-- **In Flow** — put exclusions in the negative field
-- **In the Gemini app** — phrase every exclusion *positively*, because naming a thing tends to summon it
+**So every exclusion is phrased positively, in both tools, always.** Say what IS true about the frame.
 
 | Don't write | Write instead |
 |---|---|
 | "no people" | "completely deserted" |
-| "no text, no signage" | "bare unmarked concrete" |
+| "no product, no waffle, no food" | "a bare, clean, completely empty surface — an unoccupied set photographed before anything was placed on it" |
+| "no text, no signage" | "bare unmarked concrete" · "a plain unmarked wall" |
 | "no soft lighting" | "harsh direct sunlight, sharp-edged shadows" |
-| "no grey palette" | "richly saturated colour" |
+| "no grey palette" | "richly saturated colour, high contrast" |
 | "no clutter on the ledge" | "a clean empty ledge surface" |
+| "no camera shake" | "locked off, perfectly steady" |
+| "no cartoon characters" | *(say nothing — don't plant the idea)* |
 
-**Standard negative field** (paste into Flow every time):
-
-```
-people, human figures, crowds, cartoon characters, mascots, animals, text,
-letters, words, signage, logos, watermarks, brand marks, soft diffuse
-lighting, overcast sky, grey and beige tones, lens flare, drone shot,
-camera shake, time lapse
-```
+The full conversion table lives in `GEMINI.md` §2.
 
 ---
 

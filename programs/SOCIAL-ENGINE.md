@@ -61,7 +61,7 @@ Each format below carries its own layout, copy pattern, production route, Higgsf
 
 ```
 Studio product backdrop, no product present. Two-tone colour block:
-upper two-thirds a flat wall in warm gold #FFD56D, lower third a pale
+upper two-thirds a flat wall in warm honey gold, lower third a pale
 seamless surface in soft mint. Hard directional key light from upper
 left casting one crisp, well-defined shadow across the surface.
 Saturated, clean, high contrast, no texture noise. Shot on 50mm,
@@ -124,8 +124,8 @@ Handheld POV walking shot moving forward along a busy urban street at
 dusk, South Asian city, warm streetlights beginning to glow, shop
 signage bokeh, light foot traffic, motion blur at the edges. Camera at
 chest height, natural handheld sway, 28mm wide. Hard mixed lighting,
-high contrast, saturated. Colour grade pushed toward cyan #0BF9F6 and
-pink #FF629B in the highlights and signage. 9:16 vertical, 30fps, 8
+high contrast, saturated. Colour grade pushed toward electric cyan and
+hot bubblegum pink in the highlights and signage. 9:16 vertical, 30fps, 8
 seconds.
 
 Negative: no food, no product, no dessert, no logo, no text, no
@@ -230,7 +230,7 @@ no soft lighting, no grey or beige palette, no watermark.
 
 ### 7 · THE LATE SHIFT
 
-**Job.** Claim the evening. Your rush is evening through late night, three of your nine characters have "late night" written into their approved bios, and no competitor owns that slot in Dhaka. This format plants the flag.
+**Job.** Claim the evening. Your rush is evening through late night, three of your ten characters have "late night" written into their approved bios, and no competitor owns that slot in Dhaka. This format plants the flag.
 
 **Looks like.** Night. City lights, neon, the glow of a window-format outlet. Product present but not hero — the *time* is the hero.
 
@@ -253,7 +253,7 @@ no soft lighting, no grey or beige palette, no watermark.
 Night street scene in a South Asian city, wet asphalt reflecting neon
 signage, warm shop-window glow, deep shadows, a few blurred figures in
 the far background. Hard practical lighting, very high contrast,
-saturated. Cyan #0BF9F6 and pink #FF629B dominate the reflections and
+saturated. Electric cyan and hot bubblegum pink dominate the reflections and
 signage glow; deep cocoa-brown shadows, never pure black. 35mm, low
 angle, 9:16 vertical, 30fps, 6 seconds.
 
@@ -294,12 +294,12 @@ The rule is **local weekend**, never one global calendar.
 |---|---|---|
 | Peak days | Thu · Fri · Sat | Sat · Sun · then Fri ≈ Wed |
 | Occasion window | Evening → late night | Evening → late night |
-| Character roster | The canonical nine | The nine **+ Merlulu** |
+| Character roster | **All ten** | **All ten** — roster unified 24 Aug 2026 |
 | Language | Bangla/English mix, freely | English-led |
 
 **[OPEN]** Singapore shows a genuine midweek **Wednesday** peak that Bangladesh doesn't. CQ @ Clarke Quay is a nightlife and office district, so an after-work occasion is the working hypothesis — unconfirmed. If it holds, SG should get a dedicated Wednesday LATE SHIFT slot that BD doesn't run.
 
-**Never mix the rosters.** Merlulu is Singapore-only and must never appear as one of the Bangladesh nine.
+**There is one roster.** All ten characters, Merlulu included, work in every market (unified 24 Aug 2026). What still differs by market is **pricing, outlets and delivery CTAs** — never the cast.
 
 ---
 

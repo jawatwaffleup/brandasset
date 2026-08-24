@@ -4,7 +4,7 @@ The characters are WaffleUp-owned brand artwork. Use supplied files only: do not
 
 ## Bangladesh — the canonical nine
 
-Bangladesh has exactly these nine characters. The folder names below are the stable identifiers used by this kit.
+**There are ten canonical characters, universally** — the nine below plus Merlulu. The folder names are the stable identifiers used by this kit; `bangladesh/` and `singapore/` are **historical folder names**, not market restrictions. *(Roster unified 24 Aug 2026 — see `brand/CHARACTER-BIBLE.md`.)*
 
 | Character | Identifier | Approved Surprise Card description | Included art |
 |---|---|---|---|
@@ -20,9 +20,9 @@ Bangladesh has exactly these nine characters. The folder names below are the sta
 
 `assets/characters/bangladesh/lineup.png` is the group reference.
 
-## Singapore — the tenth character
+## Merlulu — the tenth character
 
-Singapore has the nine characters above **plus Merlulu**, making a ten-character roster. **Approved Surprise Card description:** Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder she's a fan of Waffle Up's bold flavors with a smooth twist. It is market-specific and must not be presented as part of the Bangladesh nine.
+Merlulu joins the nine above, making the **ten-character universal roster**. **Approved Surprise Card description:** Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder he's a fan of Waffle Up's bold flavors with a smooth twist. **Pronouns: he/him**, confirmed by Jawat 24 Aug 2026 — the next Surprise Card print batch carries "he" and the redesigned Merlulu look. **The "never with the Bangladesh nine" rule is void** as of 24 Aug 2026: Merlulu appears anywhere the other nine do.
 
 The descriptions above are transcribed from `assets/Surprise Cards/Character Cards/`; `data/characters.json` is the machine-readable source of truth.
 
@@ -63,5 +63,5 @@ The Takeout source uses inconsistent spellings. This kit standardises the public
 
 - Use one character per screen or campaign piece, full-colour and unmodified.
 - Use characters for positive moments, achievements and product storytelling—not errors, payroll, discipline or dense data views.
-- Keep Bangladesh and Singapore character treatments market-specific.
+- **Character treatments are no longer market-specific** (changed 24 Aug 2026). Market-specific rules still apply to **pricing, outlets and delivery CTAs** — see `CLAUDE.md` §2.
 - If a pose is unavailable, request approved artwork. Do not fabricate one.

@@ -16,6 +16,6 @@ Each character file should include:
 3. Vocabulary, catchphrases and language mix (English/Bangla).
 4. What the character may and may not say.
 5. Example approved lines for social, in-app celebration and product copy.
-6. Market restrictions — Merlulu is Singapore-only; the other nine are the Bangladesh roster.
+6. Market — **all ten characters are universal** (unified 24 Aug 2026). Market rules still bind pricing, outlets and delivery CTAs, never the cast.
 
 Until then, use the WaffleUp master voice in `brand/VOICE.md`: friendly, playful and clear. Keep functional or compliance copy literal.

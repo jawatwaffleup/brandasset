@@ -1,38 +1,43 @@
 # Bhoppu — Voice
 
 **Status: DRAFT — awaiting approval** · Approved by: ______ · Date: ______
-Bio: *"He has a knack for finding those elevated spots where waffles seem extra flavourful. Some say it's his natural zest for life; others think there's a secret ingredient."*
+**Rewritten 24 Aug 2026.** Character source: `brand/CHARACTER-BIBLE.md` §2.
+Card bio: *"He has a knack for finding those elevated spots where waffles seem extra flavourful. Some say it's his natural zest for life; others think there's a secret ingredient."*
+
+> ⚠ The previous version of this file built an entire personality about climbing and rooftops out of the phrase *"elevated spots"* in the card bio. **That was wrong.** Bhoppu is about food and the losing battle to resist it. The card bio is printed marketing copy, not a character spec.
 
 ## 1. Voice in one sentence
-Always somewhere higher than you, and convinced it tastes better up there.
+Absolutely committed to the workout, right after this waffle.
 
 ## 2. Personality and energy
-Big, physical, exuberant. His joy has **a destination** — a roof, a ledge, a bridge, the top of something. Faintly conspiratorial about the "secret ingredient", which he will never confirm.
-**Energy 5/5 · Warmth 4/5**
+Big, warm, funny, deeply relatable. His whole comedy is the gap between **intention and appetite** — he genuinely means to train, and food genuinely wins, every time, and he is completely at peace with it. Nothing about him is bitter. He is the most likeable character in the cast and the writing should never make him pathetic.
+**Energy 5/5 · Warmth 5/5**
 
 ## 3. Vocabulary, catchphrases, language mix
-- Physical verbs: climb, jump, haul, made it, got up here.
-- Spatial words constantly: up, top, above, higher, the view.
-- Speaks in discoveries — he's always just found somewhere.
+- Food is the reward for everything, including exercise. Especially exercise.
+- Bargaining with himself, out loud. Counting sets. Making deals he will not honour.
+- Slightly out of breath — short bursts, then a big finish.
+- Physical, unpretentious words: heavy, one more, worth it, earned.
 - Bangla/English mix welcome, warm and plain.
+- **Pronouns: he/him.** Card bio.
 - No approved catchphrase. **Don't invent one.**
 
 ## 4. May / may not
-**May:** enthuse, discover, recommend a spot, hint at the secret ingredient, be out of breath.
-**May not:** sit still, be cynical, be world-weary, **confirm what the secret ingredient is** (the mystery is in the bio), or be joyful about nothing in particular — his joy always attaches to a place.
+**May:** enthuse about food, plan a workout, abandon a workout, negotiate with himself, be out of breath, be openly delighted.
+**May not:** succeed at fitness · be cynical · be mean about anyone · reference weight, calories, dieting, guilt or shame **in any register, including as a joke**. The audience starts at 10 and the brand makes no nutrition claims. **The joke is willpower. It is never his body.**
 
 ## 5. Audition
 | Situation | Line |
 |---|---|
-| Greeting | "Up here! Told you it's better up here." |
-| New flavour lands | "New one. Taking it to the roof. Obviously." |
-| Late at night | "City looks unreal from up here right now." |
-| Card set completed | "Whole set! That deserves a view." |
-| Long queue | "Worth it. I'd queue twice." |
-| Sign-off | "Find a higher spot." |
+| Greeting | "One more set. Then we eat. Okay, we eat now." |
+| New flavour lands | "New one? That's basically cardio. I'm going." |
+| Late at night | "Gym's shut. Kitchen isn't. Balance." |
+| Card set completed | "All of them! You worked harder than me today." |
+| Long queue | "I'll wait. Waiting builds character. And appetite." |
+| Sign-off | "Earned it. Probably." |
 
 ## 6. Market
-Bangladesh. Singapore acceptable.
+**Universal.** All ten characters work in every market (unified 24 Aug 2026).
 
 ## 7. Nearest neighbour
-**Picchi.** Both hyper and warm. **Bhoppu's joy is about the place; Picchi's is about the moment.** If a Bhoppu line has no location in it, it's probably a Picchi line.
+**Picchi.** Both hyper, warm and sincere. **Bhoppu's joy is about the reward; Picchi's is about the discovery.** Bhoppu wants the thing. Picchi wants to know what the thing is.

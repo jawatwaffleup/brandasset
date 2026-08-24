@@ -128,7 +128,7 @@ Font files: `[WUP-01-05] Fonts` — `01 chum` · `02 futura` · `03 ultra` · `0
 
 ## 6. Characters — "The Waffle Up Gang"
 
-**Created by founder Mohammad Salman**, then formalised into polished vector art and animation rigs with outside (likely freelance) help — the website's "renowned French-Australian artist" line describes that later stage. **Bangladesh has exactly nine canonical characters:** Mr Waffle, Air Maxi, Bhoppu, Picchi, Stovy, Swirly, Tvy, Spacy and Icy.
+**Created by founder Mohammad Salman**, then formalised into polished vector art and animation rigs with outside (likely freelance) help — the website's "renowned French-Australian artist" line describes that later stage. **There are ten canonical characters, universally:** Mr Waffle, Air Maxi, Bhoppu, Picchi, Stovy, Swirly, Tvy, Spacy, Icy and Merlulu. *(Updated 24 Aug 2026 — the previous "Bangladesh nine" framing is void; see `brand/CHARACTER-BIBLE.md`.)*
 
 | # | Character | What it is | Approved Surprise Card description |
 |---|---|---|---|
@@ -142,7 +142,7 @@ Font files: `[WUP-01-05] Fonts` — `01 chum` · `02 futura` · `03 ultra` · `0
 | 8 | **Stovy** | The WaffleUp waffle oven itself | The mastermind behind every crispy edge and fluffy center. When waffles need an upgrade, Stovy turns up the heat! Some say his technique is unparalleled; others believe he whispers to the batter. |
 | 9 | **Spacy** | Kid in a pink-and-cyan space helmet, floating | From the Milky Waffle Way, Spacy brings you the cosmic delight of crispy edges and fluffy centers. Dive into a galactic treat with us, open till late night! |
 
-**Singapore variant: Merlulu** — a pink-maned Merlion with a gold W medallion. Singapore therefore has ten characters: the Bangladesh nine plus Merlulu. Its approved Surprise Card description is: “Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder she's a fan of Waffle Up's bold flavors with a smooth twist.” On the SG sticker sheets, and as a tenth Surprise Card character in Batch 11 (May 26).
+**Merlulu** — a pink-maned Merlion with a gold W medallion, and the tenth character. **Universal since 24 Aug 2026** — he was originally Singapore-only, which is now historical. Singapore origin is part of his story, not a limit on where he appears. Its approved Surprise Card description is: “Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder he's a fan of Waffle Up's bold flavors with a smooth twist.” On the SG sticker sheets, and as a tenth Surprise Card character in Batch 11 (May 26).
 
 Several characters are *objects*, not people — Stovy is the oven, Icy is the popsicle and Mr Waffle is the waffle. That maps unusually well onto software modules: Stovy for manufacturing, Icy for beverages and Mr Waffle for the waffle SKUs.
 

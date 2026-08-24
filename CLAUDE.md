@@ -162,20 +162,25 @@ Hero words are built in **four layers: background → drop shadow → outline �
 
 ## 5. The characters — "The Waffle Up Gang"
 
-Nine canonical Bangladesh characters, plus Merlulu for Singapore only.
+**Ten canonical characters, one universal roster.** Confirmed by Jawat, 24 Aug 2026: the old "Bangladesh nine / Singapore ten" split is **void**. All ten characters, Merlulu included, work in every market.
 
-**Bangladesh nine:** Mr Waffle (the waffle in shades and hi-tops — the original trendsetter) · Air Maxi (pink-curled kid, headphones, varsity jacket — the beat of the street) · Bhoppu (cyan bear in a pink tracksuit, dumbbell) · Picchi (small freckled kid in a cyan W-onesie) · Stovy (the waffle oven itself) · Swirly (candy-swirl striped bear) · Tvy (cyan TV with antennae) · Spacy (kid in a space helmet) · Icy (melting popsicle on a WaffleUp stick).
+> This changed the **character roster only.** The market facts in §2 are untouched — Singapore is still a separate market with its own price book and outlet, and Chef's Table still has no delivery. Merlulu may now appear in Bangladesh content; a Bangladesh CTA still may not appear in Singapore content.
 
-**Singapore only:** Merlulu (pink-maned Merlion, gold W medallion; **she/her** per the card bio — pronoun pending confirmation from Jawat, see `brand/character-voices/merlulu.md`). Never present her as part of the Bangladesh nine.
+**The ten:** Mr Waffle (the waffle in shades and hi-tops — the original trendsetter) · Air Maxi (pink-curled kid, headphones, varsity jacket — the beat of the street) · Bhoppu (cyan bear in a pink tracksuit, dumbbell) · Picchi (small freckled kid in a cyan W-onesie) · Stovy (the waffle oven itself) · Swirly (candy-swirl striped bear) · Tvy (cyan TV with antennae) · Spacy (kid in a space helmet) · Icy (melting popsicle on a WaffleUp stick) · Merlulu (pink-maned Merlion, gold W medallion).
 
-Approved bios: `data/characters.json` (machine-readable source of truth) and `brand/CHARACTERS.md`.
+**Merlulu** — **he/him**, confirmed by Jawat 24 Aug 2026; the card bio and all canon files now read "he". Redesigned Aug 2026: more polished, human-like face, sporty and headphoned. **No longer Singapore-only** — he is one of the ten everywhere, and is front and centre in the Aug 2026 hero gang illustration. Singapore origin remains part of who he is; it is no longer a restriction on where he appears.
+
+**Source of truth for who they are: `brand/CHARACTER-BIBLE.md`** (24 Aug 2026) — archetype, motivation, movement, silhouette, powers, relationships, asset status. `data/characters.json` and `brand/CHARACTERS.md` hold the **printed card bios**, which are a record of what's on the cards, not a character spec.
+
+**Priority order in the fiction:** Bhoppu · Air Maxi · Mr Waffle · Picchi · Swirly · Merlulu · Spacy · Stovy · Tvy · Icy. Mr Waffle remains the brand mascot and ambassador — a different job, both true.
 
 ### Character rules — non-negotiable
 - **Use supplied artwork only.** Do not redraw, recolour, restyle, or generate a new pose. If a needed pose doesn't exist, I say so and request approved artwork.
 - **This includes AI generation.** Higgsfield/Midjourney/etc. must not be asked to render a WaffleUp character. Composite the supplied PNG over an AI-generated background instead — that's the approved workflow.
 - One character per piece, full-colour and unmodified.
 - Characters are for **positive moments** — joy, achievement, product storytelling. Never for complaints, errors, or anything negative.
-- **Character dialogue is not yet approved.** `brand/character-voices/` is an empty placeholder. Until those files exist, characters may appear visually but **must not speak in first person**. If Jawat wants character voices, defining them properly is a real piece of work I should offer to do — not something I improvise mid-caption.
+- **Character dialogue is drafted, not yet approved.** `brand/character-voices/` holds ten voice files plus `CAST-MAP.md`, all marked DRAFT. Until Jawat signs them off, characters may appear visually but **must not speak in first person** in published work.
+- **Hard movement rules:** Spacy is **never shown on the ground** · Mr Waffle **floats** (R2-D2 reference) · **Swirly never speaks** — sounds and reactions only, and written captions read as *thought*, never speech, never a speech bubble.
 
 ---
 
@@ -201,7 +206,7 @@ Every image/video prompt I write states, explicitly:
 1. **Aspect + duration** (9:16 · 6s, etc.)
 2. **Camera** — lens feel, move, handheld vs locked
 3. **Light** — always some form of *hard directional light, stark contrast, crisp shadow*
-4. **Palette** named with hex — cyan `#0BF9F6`, pink `#FF629B`, gold `#FFD56D`, cocoa `#450001`
+4. **Palette** named **in words, never hex** — *electric cyan · hot bubblegum pink · warm honey gold · deep cocoa brown · pale ice blue*. A hex code inside a prompt gets rendered into the picture as literal text (proven 23 Aug 2026 — Veo printed `C5DBE4` into a frame). Exact values `#0BF9F6` / `#FF629B` / `#FFD56D` / `#450001` are matched afterwards in the grade. See `GEMINI.md` §1.
 5. **A negative list** — no logos, no text, no brand marks, no cartoon characters, no soft diffuse lighting, no grey/beige backgrounds, no watermark
 6. **A compositing note** — which supplied asset gets layered in afterwards, and where
 
@@ -221,7 +226,9 @@ Delivered as copy-pasteable blocks, one per shot, plus a shot list.
 | Programme-level strategy (loyalty, etc.) | `programs/` |
 | Raw discovery / interview captures | `brainstorms/` |
 
-**Key existing docs:** `programs/AI-PRODUCTION.md` — the Gemini/Veo production pipeline: what AI may and may not generate, prompt conversion for Veo, and CapCut compositing. `programs/SOCIAL-ENGINE.md` — the eight repeatable content formats, the 70/30 split, the monthly calendar and the Higgsfield prompt templates. **Start here for any social or content request.** `programs/SURPRISE-CARD-GUIDELINE.md` — the Surprise Card utilisation strategy (seasons, registration, trading, reward ladder, engine schema deltas). Read it before proposing anything loyalty-related. `brainstorms/2026-08-23-waffleup-products-and-marketing.md` — Jawat's own words on objectives, occasions and constraints.
+**Key existing docs:** `programs/AI-PRODUCTION.md` — the Gemini/Veo production pipeline: what AI may and may not generate, prompt conversion for Veo, and CapCut compositing. `programs/SOCIAL-ENGINE.md` — the eight repeatable content formats, the 70/30 split, the monthly calendar and the Higgsfield prompt templates. **Start here for any social or content request.** `programs/SURPRISE-CARD-GUIDELINE.md` — the Surprise Card utilisation strategy (seasons, registration, trading, reward ladder, engine schema deltas). Read it before proposing anything loyalty-related. `programs/CHANNEL-MAP.md` — every touchpoint on one page (ATL, delivery, tech/rewards, BTL), transcribed from the 27 Jun 2026 internal sheet, plus my read on the gaps. `brainstorms/2026-08-23-waffleup-products-and-marketing.md` — Jawat's own words on objectives, occasions and constraints.
+
+**`GEMINI.md`** (repo root) is the brand-context payload for Google surfaces — Flow, the Gemini app, Antigravity CLI. It carries the paste block, the standing negative field and the hard fences. When I write generation prompts, they are written to be pasted into Flow *after* that block.
 
 **I never write into `assets/`, `brand/`, `tokens/`, `components/` or `data/`** unless asked — those are the identity library. `brand/character-voices/` is the one place I'd add to, and only with Jawat's approval on the content.
 
@@ -267,8 +274,13 @@ assets/
 ├── typography/      15 pre-set word-marks, full four-layer treatment (rgb)
 ├── fonts/           chum · futura · ultra · bebas-neue · puffin-display · general-sans
 ├── characters/
-│   ├── bangladesh/  lineup.png + 9 chars × {2d/hero, expressions, card, t-pose · 3d/}
-│   └── singapore/   merlulu/ (SG only)
+│   ├── bangladesh/  lineup.png + 9 chars — 2d/hero & expressions complete;
+│   │                card 6/9, t-pose 4/9, 3d ref 3/9. No pose variants.
+│   ├── singapore/   merlulu/ (folder name is historical — Merlulu is universal)
+│   └── _source/     MANIFEST.md — index of Jeremy Lord's Drive masters
+│                    (109 files, 2.7 GB: .ai vectors, T-poses, 37 poses).
+│                    Indexed only, not mirrored — read it before saying
+│                    a pose or T-pose "doesn't exist".
 ├── Surprise Cards/  Character Cards ×10
 └── marketing/
     ├── product-hero/   15 shots — the house photography reference

@@ -1,39 +1,47 @@
 # Tvy — Voice
 
 **Status: DRAFT — awaiting approval** · Approved by: ______ · Date: ______
-Bio: *"Retro vibes and crispy delights! Tvy is here to rewind you back to the golden era while you munch on our cosmic waffles. No breakfast? No worries! We're open till late at night."*
+**Rewritten 24 Aug 2026.** Character source: `brand/CHARACTER-BIBLE.md` §2.
+Card bio: *"Retro vibes and crispy delights! Tvy is here to rewind you back to the golden era while you munch on our cosmic waffles. No breakfast? No worries! We're open till late at night."*
+
+> ⚠ The previous version read Tvy as a **gentle retro broadcaster** — stay tuned, the golden era, don't touch that dial. The sketch sheet is a spray can, a drawn slingshot, a skateboard and X-ed-out eyes. Tvy is a **rebel**. The CRT body is retro; the character is not.
 
 ## 1. Voice in one sentence
-Broadcasting from a better decade, and in no hurry to come back.
+Has never once done what it was told, and is very relaxed about it.
 
 ## 2. Personality and energy
-Gentle, warm, deliberately dated. Speaks in the language of old broadcast — announcements, programming, tuning in. Out of step with the present on purpose, and completely at ease about it.
-**Energy 2/5 · Warmth 3/5**
+Independent, defiant, fearless, free-spirited. Questions everything, does what it likes, and is on your side while doing it. Funny rather than angry — the defiance is delivered with a shrug, not a shout.
+**Energy 4/5 · Warmth 3/5**
 
 ## 3. Vocabulary, catchphrases, language mix
-- Broadcast register: stay tuned, we now return, coming up next, don't touch that dial.
-- Nostalgic framing — "back when", "the golden era".
-- Measured, unhurried rhythm. Slightly formal.
-- English-led. Bangla plain and warm.
-- **Pronouns: it/its.** Confirmed by Jawat, 23 Aug 2026 (not stated in the card bio). Tvy is a television — "it" is deliberate, not impersonal.
-- **Note:** the bio speaks as the brand ("our cosmic waffles", "we're open"). Tvy speaks as Tvy.
+- Refusals and counter-suggestions: nah, why though, says who, or don't.
+- Short. Often the shortest line on the page.
+- Dry, deadpan, never explains the joke.
+- Gaming and street references — skating, tagging, staying out.
+- English-led. Bangla for the good refusals; it lands harder short.
+- **Pronouns: it/its.** Confirmed by Jawat, 23 Aug 2026 — Tvy is a television. Characterful, never dismissive.
+- No approved catchphrase. **Don't invent one.**
 
 ## 4. May / may not
-**May:** narrate like a broadcast, be nostalgic, be gently out of date, announce things.
-**May not:** be current, reference anything contemporary, chase a trend, be fast, be cynical, or **reference a real show, song, film or brand** — evoke the era, never name someone else's property.
+**May:** refuse, question a rule, stay out late, tag a wall with a W, skate, game, be fearless, be funny about small defiance.
+**May not:** carry a **political cause of any kind** · reference real politics, protest movements, authority figures, police, government or activism · be genuinely destructive · vandalise anything real · be cruel · be gentle and nostalgic *(that was the previous, incorrect reading)*.
+
+> **Register — confirmed by Jawat, 24 Aug 2026: playful mischief.** The rebellion is **anti-boring, anti-bedtime, anti-being-told**. The graffiti is a W tag. The protest is refusing to go home. The oppression is homework. **Nothing beyond that.** The audience starts at 10, in Dhaka, for a food brand — this is a hard brand-safety boundary, not a stylistic preference.
 
 ## 5. Audition
 | Situation | Line |
 |---|---|
-| Greeting | "Ah — you tuned in. Good." |
-| New flavour lands | "Now showing: something new. Same crisp picture." |
-| Late at night | "Late programming continues. It always did." |
-| Card set completed | "The full set. We'd have run a special about this." |
-| Long queue | "Quite an audience tonight." |
-| Sign-off | "Stay tuned." |
+| Greeting | "You came. Rebellious of you." |
+| New flavour lands | "New one. Nobody asked me. I'm having it anyway." |
+| Late at night | "It's late. And?" |
+| Card set completed | "All of them. Somebody didn't follow instructions. Respect." |
+| Long queue | "Everyone's just standing there. Wild." |
+| Sign-off | "Don't go home yet." |
 
 ## 6. Market
-Bangladesh. Singapore acceptable.
+**Universal.** All ten characters work in every market (unified 24 Aug 2026).
 
 ## 7. Nearest neighbour
-**Spacy.** Both gentle and out of step. **Tvy looks backward in time; Spacy looks outward in space.** Tvy is nostalgic. Spacy is amazed.
+**Stovy.** Rule-breaker and rule-keeper. **Tvy crosses the line; Stovy holds it.** Comedy, never conflict — Tvy is never actually in trouble.
+
+Second neighbour, **Air Maxi**: both fast and dry. **Air Maxi wants to win the game. Tvy doesn't accept there's a game.**

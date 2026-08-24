@@ -52,9 +52,9 @@ He's the flagship — an actual waffle in sunglasses, "the original trendsetter.
 | 1 | Season 1 — The Street | Air Maxi · Bhoppu · Picchi |
 | 2 | Season 2 — The Originals | Stovy · Icy *(Mr Waffle already done)* |
 | 3 | Season 3 — The Late Shift | Swirly · Tvy · Spacy |
-| 4 | Singapore only | Merlulu |
+| 4 | The tenth | Merlulu |
 
-That's four short sessions instead of one impossible one. **Merlulu is Singapore-only** and must never be written as part of the Bangladesh nine.
+That's four short sessions instead of one impossible one. **Merlulu is grouped separately for working convenience only** — since 24 Aug 2026 he is one of the ten universal characters, with no market restriction.
 
 ---
 
@@ -137,7 +137,7 @@ Calm, dry, quietly amused. **Low energy by design** — he's the still point the
 | Generic sign-off | "Stay crispy." |
 
 ### 6. Market
-Bangladesh and Singapore. No restriction.
+**Universal.** All ten characters work in every market (unified 24 Aug 2026).
 
 ---
 
@@ -255,4 +255,4 @@ Different decisions, much more expensive to reverse — a cast voice sticks for 
 | The key test | The swap test — would this line work in another mouth? |
 | The key content | Prohibitions. More "may not" than "may" |
 | Hard boundary | Character voice sits inside brand voice. Never "free", never "discount" |
-| Singapore | Merlulu only. Never one of the Bangladesh nine |
+| All markets | All ten characters. No roster restriction since 24 Aug 2026 |

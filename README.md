@@ -20,7 +20,7 @@ regenerate the print-weight artwork and re-render the PDF (needs pillow, numpy, 
 
 ## Character set
 
-Bangladesh has nine canonical characters: Mr Waffle, Air Maxi, Bhoppu, Picchi, Stovy, Swirly, Tvy, Spacy and Icy. Singapore adds Merlulu. Printable 3D models are supplied only for Mr Waffle, Air Maxi, Bhoppu and Picchi.
+There are ten canonical characters, universally: Mr Waffle, Air Maxi, Bhoppu, Picchi, Stovy, Swirly, Tvy, Spacy, Icy and Merlulu. *(Roster unified 24 Aug 2026 — the previous Bangladesh-nine / Singapore-ten split is void.)* Printable 3D models are supplied only for Mr Waffle, Air Maxi, Bhoppu and Picchi.
 
 ## Using the assets
 
