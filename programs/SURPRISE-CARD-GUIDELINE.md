@@ -153,7 +153,7 @@ Completing the Gang takes about 16 cards and earns roughly **435 points** all in
 | Points, once awarded | **Never**, unless the account is completely inactive for 12 months — and then only with 30 days' notice |
 | Progress toward any milestone | **Never** |
 | An occasion edition | **Never expires once held.** It simply stops being printed |
-| **A scratch card's food reward** | **`scratch_validity_days` — 180.** The one real expiry in the programme |
+| **A scratch card's food reward** | **`scratch_validity_days` — 180 by default, set per launch.** The one real expiry in the programme. Every run states its own validity when it is ordered — a short seasonal run and a long gift run are both normal. Counted **from batch activation**, not from printing, so a box that sat in storage is not silently shortened. **A live run can be extended or cut short**: cards are re-dated from the activation date, an extension revives any that had already lapsed, and a redeemed card is never touched |
 
 **The scratch card is the exception, and it always was.** A scratch card is a coupon for a food item, and a coupon that never lapses is an open-ended kitchen liability. Batch 9's cards were printed December 2025 and Ops report them out of use by August 2026, which is where the 180-day standard comes from — **[DECISION NEEDED]** for Ops to confirm.
 
@@ -1086,6 +1086,7 @@ This is the deliberate middle path. Activating each card at the till would be st
 | `pin_expiry_days` *(counter)* | 14 | 3–30 | Ops |
 | **`pin_expiry_days_order_attach`** | **60** | 14–90 | Ops |
 | **`scratch_validity_days`** | **180** | 30–730 | Ops |
+| `loyalty_batches.scratch_validity_days` | **null** = use the default | 1–3650 | Ops |
 | **`allow_duplicate_serial_registration`** | **On** | on / off | Jawat |
 | **`serial_check_digit_required`** | **On** | on / off | Jawat |
 | **`scratch_cogs_pct`** | **38** *(of selling price)* | 25–50 | Finance |
@@ -1318,7 +1319,7 @@ Researched 24 August 2026.
 | 1 point | **BDT 1.00 production cost.** An item's point price **is** its production cost in taka |
 | Shop price | ~**2.6× production cost** [recommended] |
 | Batch point cap | **3,300** per 297 cards — **pro-rated to the order**, enforced by the generator |
-| What expires | **Nothing a customer holds**, and no points, ever. A scratch card's food reward lapses at 180 days — the one real expiry |
+| What expires | **Nothing a customer holds**, and no points, ever. A scratch card's food reward lapses at 180 days by default, set per batch, counted from activation — the one real expiry |
 | Card printing | **BDT 3.00 character · BDT 3.40 scratch, cover included** = BDT 902/batch = **0.61%** |
 | **Giveaway ceiling** (points + scratch) | **3.5% of qualifying revenue** |
 | **All-in programme ceiling** | **4.15%** |
