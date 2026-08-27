@@ -1018,3 +1018,192 @@ marketing gets a calendar that already exists.
 
 **Deliverable rewritten in full** — patching would have left inconsistencies across §§1–4, 11–17 and the
 appendix.
+
+### Q17 — Real costs from the vendor list
+
+**Source:** `D:\Waffleup Download\Merchandise and Vendor List (with price).xlsx` (Item Info + Vendor Info),
+supplied by Jawat 24 Aug 2026. Merchandise proper = rows 2–27 (items 1–26, ending at Pen & Box);
+rows 28+ are packaging, employee and event items.
+
+**[CONFIRMED] Card printing** — Bijoy / Asha Printers:
+- Character card **BDT 3.00** · Scratch card **BDT 3.40**
+- Per 297-batch: 270×3.00 + 27×3.40 = **BDT 901.80 = 0.61%** of qualifying spend
+- ~**BDT 29,300/month** at current volume
+- ⚠ **Surprise Card Cover and Surprise Card Box are unpriced on the sheet** — printing figure is a floor.
+
+**[CONFIRMED] Jawat's instructions on the catalogue:**
+- Water bottle + its box priced as one (190 + 5 = 195), not separated
+- Pop socket wrapping skipped
+- **Every item ships in its box** — box costs folded into point prices
+- **Paper gift bag (35) excluded from the catalogue entirely** — *"We provide the bag only when we offer
+  goodies to new employees or any important guest"*
+- More products coming
+
+⭐ **THE PRICING RULE THAT FELL OUT OF THE REAL DATA:**
+> **A point costs BDT 1.00 to produce, so an item's point price *is* its production cost in taka.**
+
+No conversion table, no per-item judgement, and a new product prices itself the moment a vendor quotes
+it. `merch_catalogue.point_price` pre-fills from `production_cost` rounded to the nearest 5, overridable.
+
+| Item | Points | ~Cards | Cost (boxed) | MRP @2.6× |
+|---|---|---|---|---|
+| **Sticker** | **10** | **~1** | 5.50 | 30 |
+| Pen & box | 35 | ~3 | 35 | 100 |
+| Pop socket (10 designs) | 40 | ~3 | 37 | 100 |
+| Calendar | 65 | ~6 | 50+15 | 170 |
+| **Notebook** (3 designs) | **95** | **~8** | 95 | 250 |
+| Socks — kids | 140 | ~12 | 90–100+40 | 350 |
+| Socks — adult | 175 | ~15 | 135+40 | 450 |
+| Water bottle | 195 | ~17 | 190+5 | 500 |
+| Cap — mesh | 300 | ~26 | 235+62 | 750 |
+| Cap — AOP | 310 | ~27 | 250+62 | 800 |
+| T-shirt | 350 | ~30 | 350 | 900 |
+| Hoodie | 580 | ~50 | 581 | 1,500 |
+
+- **Notebook lands at ~8 cards** — inside Jawat's originally stated 6–8. The model holds against his own intuition.
+- **MRP multiple is a consistent ~2.6×**, validated by his notebook figure (95 cost → 200–300 MRP).
+- **The sticker at ~1 card is the most valuable line in the table** — first redemption is what converts a
+  cardholder into a collector, and redeemers spend 3.1×.
+
+⭐ **Adding the boxes does not change programme cost.** Points are minted at a fixed rate per batch, and
+because point price = production cost, every point redeemed costs BDT 1.00 whatever it buys. The box
+raises the SKU's point price so cost-per-point holds. **The giveaway ceiling is set by points minted, not
+by what they are spent on.** Only reach changes — the cap moved from ~20 cards to ~26.
+
+**Budget restructured into two ceilings** (they behave differently — printing costs money whether or not
+anyone plays):
+
+| | Ceiling |
+|---|---|
+| Giveaway (points + scratch) | **3.0%** |
+| Card printing | **0.65%** |
+| **All-in programme** | **3.75%** |
+
+Realistic all-in run-rate: **1.75–2.11%** (~BDT 84,000–102,000/month).
+
+**Schema addition — `merch_variants`, mandatory.** Pop sockets have 10 designs, notebooks 3, socks differ
+in cost by colour (90 vs 100), and apparel is colour **× size**. **`merch_stock` is keyed on `variant_id`,
+never `sku_id`** — reserving "T-shirt" and finding only XXL at the counter is exactly the failure §6.1
+exists to prevent.
+
+**[CONFIRMED] Occasions:** character is **not fixed** — chosen fresh per occasion, may be more than one.
+**Artwork owner: Junaid.**
+
+**Vendors on record:** Bijoy/Asha Printers (cards, notebooks, stickers, pen) · Monir/F. Rahman (bags,
+calendar) · Toco (caps, socks) · Gorur Ghash (apparel) · Customized & Crafts (bottles) · Case Corner
+(pop sockets).
+
+---
+
+## Session 3 — 26 Aug 2026 · six decisions from Jawat
+
+### Q18 — Card printing: the cover is already in the price
+
+**[CONFIRMED]** BDT 3.00 / 3.40 **include the sealed cover.** Verified against the vendor sheet: rows 57–58
+(`Surprise Card (Scratch)` / `(Character)`) both specify *Card Size 2″×3.5″, 600gsm swedish board, matte spot
+lamination* **and** *Cover Size 2.5″×4″* in the same spec. Row 59 `Surprise Card Cover` (150gsm art paper) is
+the cover's **material spec, not a second charge**.
+
+→ **BDT 901.80/batch = 0.61% is a total, not a floor.** Flag closed.
+
+**"Box of what?"** — row 60, `Surprise Card Box`, typed **Others** (not Branding), Bijoy, no dimensions, no
+price. Only sensible reading: **the outer carton a print run ships to an outlet in** — the box staff open and
+mark activated (§13.7). Ops consumable, one per few hundred cards, fractions of a taka each, never touches a
+customer. Left open for completeness; not a budget line.
+
+### Q19 — Scratch COGS: 38% of selling price, flat
+
+**[CONFIRMED]** No item-level COGS available. Budget the whole reward mix at **38% of the standard-price-book
+menu price.**
+
+| | Per batch |
+|---|---|
+| Menu value, 27 scratch rewards | 5,935 |
+| At 38% | **2,255** |
+| At 38%, 60% redemption (planning) | **1,353** |
+
+⚠ **This broke the 3.0% giveaway ceiling on paper.** 38% flat is dearer than the 30% bottom of the old
+modelled range, so:
+
+| Scenario | Giveaway | All-in |
+|---|---|---|
+| Realistic — 40% reg × 50% burn, 60% scratch | 1,984 · 1.34% | 2,886 · **1.94%** |
+| Every point spent, 60% scratch | 4,509 · 3.04% | 5,411 · 3.64% |
+| Every point spent, 81% scratch *(top observed)* | 4,983 · 3.36% | 5,885 · **3.96%** |
+| Theoretical max | 5,411 · 3.64% | 6,313 · 4.25% |
+
+⭐ **Ceiling reset: giveaway 3.0% → 3.5%, all-in 3.75% → 4.15%.** Justified by the programme's own rule 2 —
+*a breached ceiling means you reset the ceiling, not the reward.* The breach was arithmetic, not behaviour.
+**At 3.5% the ceiling cannot be breached unless scratch redemption passes ~90% while every point is also
+spent.** Observed max is 81%; burn runs ~50%. Realistic run-rate 1.94% ≈ **BDT 94,000/month**.
+
+Lever if it ever happens: `batch_point_cap` 3,160 → **2,940** (≈0.8 points/card). Better first lever is still
+item-level COGS.
+
+⚠ **Consequence to hold onto:** a flat 38% makes every reward mix look equally efficient by construction, so
+**it cannot see the §7.2 optimisation at all.** The 15–25% saving is real in the kitchen; the assumption is
+blind to it. Open item 1 stays open, re-scoped: *38% is a number to budget with, not to design the mix with.*
+
+### Q20 — Delivery-only customers
+
+Jawat floated: deliver merch via the platform, customer covers the extra with **points** or **cash on
+delivery** — explicitly "if not the right way, scrap it, use best practices."
+
+**Both rejected.**
+- **COD on a reward** → the customer pays BDT 70 and has just been *told what the reward is worth.* Exactly
+  what §8 exists to prevent, and a reward you pay for stops being a reward. Plus COD reconciliation,
+  refusals and returns on an order with no sale value.
+- **Points for delivery** → "delivery: 70 points" states a taka value the moment they know what delivery
+  costs; spends reward budget on logistics rather than product; deletes the redemption halo, which is the
+  entire commercial reason in-person collection is worth its friction.
+
+⭐ **Instead — the reward rides along with a paid order.** Customer picks *"send it with my next order"*;
+item reserved immediately; goes in the bag next time they order.
+
+Costs nothing (the van was going anyway) · names no value · **still requires a purchase** · reuses the
+§13.6 bag-seal step exactly · **small items only** (sticker, pen, pop socket, calendar, notebook — apparel
+and bottles need size/colour handover and don't fit the bag).
+
+Schema deltas: `merch_stock.location_id` replaces `redemption_point_id` (a cloud kitchen holds attach stock
+without being a counter; `is_redemption_point` / `is_attach_point` independent) · `merch_redemptions` gains
+`fulfilment_method`, `attached_order_id`, status `awaiting_attach` · `merch_catalogue.is_order_attachable` ·
+`pin_expiry_days_order_attach` = **60** (can't require an order inside a fortnight) · **on lapse, points
+return to the ledger** (`reservation_lapsed`) — nothing a customer holds is taken away. Rollout **Phase 2b**.
+
+Jawat reaffirmed the original position: outlet-only redemption *"would also increase our customer to some
+extent"* — correct, and it's why ride-along is the backstop, not the default.
+
+### Q21 — Merlulu ships on the base design
+
+**[CONFIRMED]** *"no need to worry, we would proceed with base.. We have the design."*
+
+`is_print_ready = true`, `roster_state = 'live'`, in generation from launch. **The Full Gang is ten from day
+one.** Locked-slot mechanic stays in the engine for future characters but is no longer used. **Merlulu comes
+off the critical path entirely** — was the only item blocking first completions ~4 months post-Phase 1.
+
+Circulating cards still read "she" → `merlulu_first_ed`, `is_retired = true`. Genuine First Edition acquired
+for nothing. Content beat, not a problem.
+
+### Q22 — Shop prices: launch at the recommendation, editable thereafter
+
+**[CONFIRMED]** Not fixed. List at the ~2.6× column and adjust once the Dhaka market answers. Status changed
+from [DECISION NEEDED] to a launch position.
+
+### Q23 — ⭐ The no-deploy rule (new §15.1)
+
+**[CONFIRMED]** *"everything should be front end change friendly."* Everything a customer sees is **data, not
+code**: add/edit/retire products · point price, production cost, MRP independently · name, description, sort
+order, visibility · **product images — upload, replace, reorder, set primary** · variants and per-location
+stock · characters, designs, occasions, milestones · every §14 parameter.
+
+Three build consequences: **images are uploads to object storage, not repo files** (if a new product needs a
+code change to show its picture, the panel isn't finished) · prices must be first-class and versioned, safe
+to change while customers are mid-save (invariant 8) · **editable ≠ untraceable** — every change logged with
+who and when.
+
+### Housekeeping done this session
+
+Stale references corrected after the sticker replaced the 25-point entry item: §2 "first reward in ~2 cards"
+→ first card · §10 "reaches 25 points in two visits" → sticker on card one · §19 "ladder starts at 25 points"
+→ 10 points · §3.1 "enough for a tee, most of the way to a plush" → T-shirt/hoodie (no plush in the
+catalogue) · §15 dashboard ceiling 3.0% → 3.5%/4.15% · §13.2 Merlulu-locked note.

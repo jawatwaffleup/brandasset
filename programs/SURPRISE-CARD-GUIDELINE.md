@@ -74,7 +74,7 @@ This is the heart of the design. A customer always has something close and somet
 | Loop | Speed | What it is |
 |---|---|---|
 | **The reveal** | Every single card | Points revealed at registration, 5–18. A small win, every time |
-| **Points → merchandise** | First reward in **~2 cards** | The fast loop. Something real in hand almost immediately |
+| **Points → merchandise** | First reward on the **first card** | The fast loop. Something real in hand almost immediately |
 | **The Full Gang** | **~16 cards, ~4 months** | The long goal. All ten characters |
 
 **[CONFIRMED]** On top of those, four **limited-edition cards a year**, tied to real occasions — §3.2.
@@ -103,13 +103,13 @@ This is the heart of the design. A customer always has something close and somet
 
 Singapore is where Waffle Up Global was founded, and the rarest card in the deck being the Merlion is a story that tells itself.
 
-### When Merlulu arrives
+### Merlulu ships with everyone else
 
-**[CONFIRMED]** Merlulu enters card generation only once his redesigned artwork is print-ready. Until then the website shows him as a **locked tenth slot** — present in the roster, silhouetted, uncollectable.
+**[CONFIRMED 26 Aug 2026]** Merlulu goes to print on the **base design** — the artwork we already have. He is `live` and in card generation from launch, and **the Full Gang is ten from day one.** No locked slot, no phased reveal, nothing on the critical path.
 
-A locked slot is a better hook than an absent one. Nine characters and nothing else reads as a complete set; nine plus a locked tenth reads as an unanswered question, and the customer carries that question around until we answer it.
+The cards already in circulation carry the old art and read "she". New print runs read "he", and the old ones are never reprinted — which makes them a genuine First Edition acquired for nothing (§12.1a). That is a content beat, not a problem to solve.
 
-Every character has a **roster state** — `hidden`, `locked` or `live` — set independently of print readiness, so we time the reveal rather than the print schedule doing it for us. A locked character does not count toward the Full Gang target.
+The **roster state** mechanism stays in the engine — `hidden`, `locked`, `live`, set independently of print readiness — because it is how any *future* character gets introduced, and a locked slot is a better hook than an absent one. It is simply not needed for Merlulu. A locked character does not count toward the Full Gang target.
 
 ### The milestones
 
@@ -121,7 +121,7 @@ Every character has a **roster state** — `hidden`, `locked` or `live` — set 
 | **The Full Gang** — all 10 | **+200 points** + the collector's folder |
 | **The Year's Four** — all four occasion editions in a calendar year | **+200 points**, repeatable every year |
 
-Completing the Gang takes about 16 cards and earns roughly **435 points** all in — enough for a tee, most of the way to a plush. It is a four-month goal for a weekly customer, and a genuine year's project for a monthly one.
+Completing the Gang takes about 16 cards and earns roughly **435 points** all in — a T-shirt with change, or most of the way to a hoodie. It is a four-month goal for a weekly customer, and a genuine year's project for a monthly one.
 
 ### 3.2 Occasions, not seasons
 
@@ -221,20 +221,44 @@ The weighting is one dial in the admin panel. **Turning it up or down does not c
 
 ### 5.1 The merchandise ladder
 
-**[RECOMMENDED]** Points buy WaffleUp merchandise. Every item is also genuinely sold in the shop at a real price.
+**[CONFIRMED]** Points buy WaffleUp merchandise. Every item is also genuinely sold in the shop at a real price. Costs below are actuals from the vendor list, August 2026.
 
-| Item | Points | Cards needed | Production cost | Shop price |
-|---|---|---|---|---|
-| Sticker sheet / pin | **25** | ~2 | ~BDT 25 | ~BDT 80 |
-| Notebook | **80** | ~7 | BDT 80 | BDT 250 |
-| Water bottle | **150** | ~13 | ~BDT 150 | ~BDT 450 |
-| Tote | **200** | ~17 | ~BDT 200 | ~BDT 600 |
-| Tee | **350** | ~30 | ~BDT 350 | ~BDT 1,000 |
-| Character plush | **600** | ~52 | ~BDT 600 | ~BDT 1,800 |
+> ### One rule sets the whole ladder
+> **A point costs one taka to produce, so an item's point price is simply its production cost in taka.**
+> No conversion table, no judgement call per item, and a new product prices itself the moment a vendor quotes it.
 
-**[DECISION NEEDED]** Real production costs and shop prices from a supplier. The table holds the ratios; the notebook line is the anchor everything else is built from.
+| Item | Points | ~Cards | Production cost | Suggested shop price | Vendor |
+|---|---|---|---|---|---|
+| **Sticker** — character or page | **10** | **~1** | 5.50 | 30 | Bijoy |
+| Pen & box | 35 | ~3 | 35 *(box included)* | 100 | Bijoy |
+| Pop socket — 10 designs | 40 | ~3 | 37 | 100 | Case Corner |
+| Calendar | 65 | ~6 | 50 + 15 box | 170 | Monir |
+| **Notebook** — 3 designs | **95** | **~8** | 95 *(wrapping included)* | 250 | Bijoy / Asha |
+| Socks — kids, 2 colours | 140 | ~12 | 90–100 + 40 box | 350 | Toco |
+| Socks — adult, 2 colours | 175 | ~15 | 135 + 40 box | 450 | Toco |
+| Water bottle | 195 | ~17 | 190 + 5 box | 500 | Customized & Crafts |
+| Cap — mesh | 300 | ~26 | 235 + 62 box | 750 | Toco |
+| Cap — all-over print | 310 | ~27 | 250 + 62 box | 800 | Toco |
+| T-shirt — pink or black | 350 | ~30 | 350 | 900 | Gorur Ghash |
+| Hoodie — pink or black | 580 | ~50 | 581 | 1,500 | Gorur Ghash |
 
-**The cheapest item matters more than it looks.** A customer's *first* redemption is the moment they stop being someone holding a card and become a collector. The data is blunt about this: people who redeem spend **3.1× more** than people who don't. Nothing should launch without something reachable in two cards.
+**[CONFIRMED] Every item ships in its box.** Where a product has its own packaging on the vendor list, that cost is inside the point price above — so a cap arrives boxed, socks arrive in their tube, the calendar in its pink box. Pop socket wrapping is not used.
+
+**The paper gift bag (BDT 35) is not part of this catalogue at all.** [CONFIRMED] It is reserved for goodies given to new employees and important guests, and it should never be costed into a point redemption or a shop sale.
+
+> **Adding the boxes does not change what the programme costs.** Points are minted at a fixed rate per batch, and because a point price *is* the production cost, every point redeemed costs BDT 1.00 whatever it buys. The box raises the SKU's point price so the cost per point holds steady. What changes is how far a customer's points go — the cap moved from ~20 cards to ~26.
+
+**[CONFIRMED 26 Aug 2026] Shop prices are not fixed — these are the launch values.** The column above runs at a consistent **~2.6× production cost, boxed**, a multiple validated by Jawat's own notebook figure of BDT 200–300 against a BDT 95 cost. We list at these and adjust once we see what the Dhaka market actually pays. The two caps at BDT 750–800 are the pair to watch.
+
+> **Every price in this table is a field in the admin panel, not a number in the code.** So is every name, image, variant and stock figure. See **§15.1 — the no-deploy rule.** Nothing in this catalogue needs a developer to change.
+
+**The sticker is the most important line in this table.** At 10 points it is reachable on a customer's *first card*. The industry evidence is blunt: people who redeem spend **3.1× more** than people who don't, and the first redemption is the moment someone stops holding a card and becomes a collector. A one-card entry point is the cheapest customer conversion available anywhere in this programme.
+
+Completing the Full Gang earns about **435 points** — a T-shirt with change, or most of the way to a hoodie.
+
+**Not in the catalogue:** the **collector's folder** (§5.2) does not yet exist and has no quote. It is a print job and should be quoted by Bijoy at Asha Printers, who already produce the cards.
+
+**[CONFIRMED]** More products are coming. Adding one is a row in the admin panel — name, production cost, shop price, stock — and the point price follows from the cost automatically.
 
 ### 5.2 What cannot be bought
 
@@ -263,7 +287,7 @@ The weighting is one dial in the admin panel. **Turning it up or down does not c
 | **Merchandise** | Collected in person at a **Redemption Point** — a named list of standard outlets, chosen for footfall and storage |
 | Cloud kitchens | Not Redemption Points — there is no counter |
 | Chef's Table | Not initially — handing over merchandise is wrong for that service |
-| **Delivery of merchandise** | **Never for point redemptions.** Available when merchandise is bought with money |
+| **Delivery of merchandise** | **Never as a paid delivery of a point redemption.** Either collected at a Redemption Point, or **sent along with a paid order** — §6.2. Merchandise *bought with money* delivers normally |
 | **Scratch card food** | Claimable at **every** outlet, Chef's Table included |
 | **Price book** | Every reward is valued at the **standard price book**, wherever it is claimed |
 
@@ -279,7 +303,27 @@ The weighting is one dial in the admin panel. **Turning it up or down does not c
 4. They collect. Staff check the PIN and the **last four digits of the registered phone number** — a PIN on its own can be sold.
 5. PINs expire after 14 days and the stock goes back on the shelf.
 
-**[DECISION NEEDED]** Redemption Point coverage for delivery-only customers. Someone who only ever orders from a cloud kitchen can earn points and never have a counter to reach.
+### 6.2 The delivery-only customer
+
+**[CONFIRMED 26 Aug 2026]** In-person collection stays the default, for the reason above — the visit *is* the mechanic, and it wins us counter customers we would otherwise never see. But someone who only ever orders from a cloud kitchen can earn points and never have a counter to reach, and that has to be answered.
+
+**The answer: the reward rides along with a paid order.** At redemption the customer chooses *"send it with my next order"* instead of a Redemption Point. The item is reserved immediately, exactly as at a counter, and goes into the bag the next time they order.
+
+| | |
+|---|---|
+| **Costs nothing** | The order was already being delivered. There is no delivery charge to pay, absorb or argue about |
+| **Names no value** | No cash changes hands at the moment a reward arrives |
+| **Still requires a purchase** | Which is the commercial point of collection in the first place — and it preserves the programme's own logic: **a reward arrives with a purchase the customer already chose to make** |
+| **No new operation** | §13.6 already has the packer entering a card serial against the `order_id` at bag-seal. The order ticket simply also shows "reward to attach" |
+| **Small items only** | Sticker · pen · pop socket · calendar · notebook. Apparel, caps, socks and bottles stay counter-only — they do not fit the bag, and colour-and-size handover needs a human |
+
+**Two ideas considered and rejected.**
+
+> **Cash on delivery for the shipping charge.** Rejected. A customer paying BDT 70 to receive their reward has just been told what the reward is worth — precisely what §8 exists to prevent — and a reward you pay for stops being a reward. It also puts COD reconciliation, refusals and returns onto an order with no sale value behind it.
+>
+> **Paying the delivery charge with points.** Rejected. "Delivery: 70 points" states a taka value the moment a customer knows what delivery costs, it spends the reward budget on logistics instead of on a product, and it deletes the redemption halo — the one thing that makes in-person collection commercially worth its friction.
+
+**Still [DECISION NEEDED]:** the Redemption Point list itself, chosen for footfall, storage *and* coverage against the cloud-kitchen catchments. Ride-along is the backstop, not a substitute for a reachable counter.
 
 ---
 
@@ -301,43 +345,85 @@ The weighting is one dial in the admin panel. **Turning it up or down does not c
 | Choco Choco Cheese | 5 | 320 | 1,600 |
 | **Total** | **27** | | **BDT 5,935** |
 
-**Menu price is revenue foregone, not money spent.** A free ice cream costs us the ice cream, not BDT 135.
+**Menu price is revenue foregone, not money spent.** An ice cream given away costs us the ice cream, not BDT 135.
 
-**[CONFIRMED]** Food COGS runs **30–45%, depending on the product.**
+**[CONFIRMED 26 Aug 2026] Budget the reward mix at a flat 38% of selling price.** Item-level COGS is not to hand, so 38% of the standard-price-book menu price is the working figure across every reward.
 
-### 7.2 A free saving worth taking
+| | Per batch |
+|---|---|
+| Menu value of the 27 scratch rewards | BDT 5,935 |
+| **At 38% of selling price** | **BDT 2,255** |
+| At 38%, planning at 60% redemption | **BDT 1,353** |
 
-Because COGS varies by item but the customer judges a gift by its **menu price**, there is an optimisation sitting in the reward mix: **pick rewards where menu price is high relative to what they cost us.**
+### 7.2 The saving the flat figure hides
 
-A Hot Chocolate feels like a BDT 320 gift; at 25% COGS it costs BDT 80. A Kunaffle feels like BDT 280 and at 45% COGS costs BDT 126 — **less perceived generosity for more real cost.**
+Real COGS varies by item, and the customer judges a gift by its **menu price** — so there is an optimisation sitting in the reward mix: **pick rewards where menu price is high relative to what they actually cost us.** Illustratively: a Hot Chocolate that feels like a BDT 320 gift but costs BDT 80 to make is a better reward than a Kunaffle™ that feels like BDT 280 and costs BDT 126 — less perceived generosity for more real cost. *(Those two figures are plausible, not measured — which is exactly the problem.)*
 
-**[DECISION NEEDED]** Item-level COGS. With it we can hold the headline menu value at BDT 5,935 per batch — so the programme feels exactly as generous — while cutting real cost by an estimated **15–25%**. It requires no change the customer can see and it is the cheapest saving available anywhere in this document.
+> **A flat 38% cannot see this.** Under a flat assumption every item costs exactly 38% of its menu price by construction, so every possible reward mix looks equally efficient. **The saving is real in the kitchen; it is the assumption that is blind to it.**
 
-### 7.3 The whole programme
+**[DECISION NEEDED — still open]** Item-level COGS. It changes nothing the customer can see, and it lets us hold the headline menu value at BDT 5,935 per batch — so the programme feels exactly as generous — while cutting real cost by an estimated **15–25%**. 38% is a sound number to *budget* against. It is not a number to *design the reward mix* with.
+
+### 7.3 Card printing
+
+**[CONFIRMED]** Actual costs, August 2026, from Bijoy at Asha Printers:
+
+| | Per card | Per 297-card batch |
+|---|---|---|
+| Character card | BDT 3.00 | 270 × 3.00 = 810.00 |
+| Scratch card | BDT 3.40 | 27 × 3.40 = 91.80 |
+| **Total** | | **BDT 901.80** — **0.61%** of qualifying spend |
+
+At current volume that is about **BDT 29,300 a month.**
+
+> **[CONFIRMED 26 Aug 2026] BDT 3.00 and 3.40 are the printed-and-sealed cost — the cover is inside them.** The vendor sheet backs this up: both card lines specify a 600gsm Swedish board card at 2″×3.5″ **and** a 2.5″×4″ cover in the same spec, with the separate "Surprise Card Cover" line (150gsm art paper, matte lamination) describing that cover rather than pricing an extra item.
+>
+> **This closes the flag.** The printing figure is a **total, not a floor.** §7.4 stands as written, and card printing sits comfortably inside its 0.65% ceiling.
+
+**The one line still genuinely unpriced is the Surprise Card Box** — the outer carton the cards ship to outlets in, typed *Others* on the vendor sheet, not *Branding*. It is a logistics item: one box per few hundred cards, amortised at fractions of a taka per card, and it never touches a customer's hand. **[DECISION NEEDED]** — worth getting quoted for completeness, but it is not a material budget line and it does not hold up anything.
+
+### 7.4 The whole programme
 
 Each batch of 297 cards represents **BDT 148,500** of qualifying spend.
 
+**The three cost lines, at face value:**
+
 | | Per batch | % of qualifying spend |
 |---|---|---|
-| Points minted (~269.7 character cards × 11.59, plus Golden Waffles) | **3,156** | 2.13% |
-| Scratch rewards, at cost | 1,068–1,602 | 0.72–1.08% |
-| **If every single point is spent** | 4,224–4,758 | 2.85–3.21% |
-| **Realistic — 40% register, 50% spend** | **~1,900** | **~1.33%** |
+| Points minted — 3,156 × BDT 1.00 | 3,156 | 2.13% |
+| Scratch rewards at cost — 38% of BDT 5,935 menu | 2,255 | 1.52% |
+| Card printing — cover included | 902 | 0.61% |
 
-The 50% figure is not a guess. **About half of all loyalty rewards go unclaimed across every industry measured** — we are planning conservatively.
+**What it actually costs depends on two behaviours:** how many of those points get registered and spent, and how many scratch cards get redeemed. Printing costs the same either way.
+
+| Scenario | Giveaway | All-in | |
+|---|---|---|---|
+| **Realistic** — 40% register, 50% of those points spent, 60% of scratch redeemed | 1,984 · **1.34%** | 2,886 · **1.94%** | ← plan against this |
+| Every point spent, 60% of scratch redeemed | 4,509 · 3.04% | 5,411 · 3.64% | |
+| Every point spent, **81%** scratch — the highest rate ever observed here | 4,983 · 3.36% | 5,885 · **3.96%** | ← the real worst case |
+| Theoretical maximum — every point, every scratch card | 5,411 · 3.64% | 6,313 · 4.25% | never occurred anywhere |
+
+The 50% burn figure is not a guess. **About half of all loyalty rewards go unclaimed across every industry measured** — we are planning conservatively. The 60% scratch figure sits inside our own observed 40–81% band.
 
 **[ASSUMPTION]** At current volume — about 9,639 cards a month, **BDT 4,819,500** of qualifying revenue:
 
-| Scenario | Monthly cost |
+| Scenario | Monthly, all-in |
 |---|---|
-| Realistic | ~BDT 64,000 |
-| Everything registered and spent | ~BDT 155,000 |
-| **Ceiling** | **~BDT 145,000** |
+| **Realistic** | **~BDT 94,000** |
+| Every point spent, 60% scratch | ~BDT 176,000 |
+| Every point spent, 81% scratch | ~BDT 191,000 |
+| Theoretical maximum | ~BDT 205,000 |
 
-### 7.4 The budget rule
+### 7.5 The budget rule
 
-> ### **Ceiling: 3.0% of qualifying revenue**
-> — meaning the spending that actually generates cards, not total revenue.
+**[RECOMMENDED]** Two ceilings, not one, because they behave differently. Printing is a fixed production cost that scales with cards whether or not anyone plays; the giveaway only costs money when a customer actually receives something.
+
+> | | Ceiling |
+> |---|---|
+> | **Giveaway** — points + scratch rewards | **3.5% of qualifying revenue** |
+> | **Card printing** | **0.65%** |
+> | **All-in programme** | **4.15%** |
+
+**The giveaway ceiling moved from 3.0% to 3.5%, and it is worth being explicit why.** 3.0% was set when the reward mix was modelled against a 30–45% COGS *range*. The confirmed working figure is a flat **38% of selling price** — dearer than the bottom of that range, applied to every item. So the old ceiling was breached on paper by arithmetic, not by anybody's behaviour. Per rule 2 below, **the response to a ceiling the design breaches is to reset the ceiling, not to shrink the reward.**
 
 **[CONFIRMED]** Three rules that make this behave:
 
@@ -345,11 +431,13 @@ The 50% figure is not a guess. **About half of all loyalty rewards go unclaimed 
 2. **If we breach the ceiling, we raise it — we do not cut the reward.** A breach means people are completing collections, which means the mechanic is working. Cutting rewards at that exact moment kills the thing we just proved.
 3. **We never devalue points already issued.** If costs need managing, the lever is the catalogue going forward — which items are listed and at what price. Never a balance someone already holds. Re-pricing issued points is how loyalty programmes lose people permanently.
 
-**Note the top of that range.** At 100% registration, 100% burn *and* the top of the COGS range simultaneously, the programme reaches 3.21% — just over the ceiling. That scenario has never occurred in any measured loyalty programme, but the lever exists: **lower `batch_point_cap`.** Because points are minted at print time, the ceiling is enforced by arithmetic rather than by watching a dashboard.
+**How much headroom 3.5% actually buys.** Quite a lot, and it is worth knowing the exact shape of it. Points are held to `batch_point_cap` — 3,160, against an expected mint of 3,156 — by the generator, so the only variable left is scratch redemption. **The giveaway ceiling cannot be breached unless scratch redemption passes ~90% while every single point issued is also spent.** The highest rate we have ever observed is 81%, and points burn at nearer 50% everywhere it has been measured. Realistic run-rate is 1.94% all-in — a little under half the ceiling, which is where a ceiling should sit.
 
-**[DECISION NEEDED]** Card printing cost — still not in any budget line.
+**If that combination ever did arrive**, the lever exists and it is exact: **lower `batch_point_cap`.** Dropping it from 3,160 to **2,940** guarantees the 3.5% giveaway ceiling even at 100% scratch redemption and 100% point burn simultaneously, at a cost of about **0.8 points per card**. Because points are minted at print time, the ceiling is enforced by arithmetic rather than by watching a dashboard.
 
-**Note on merchandise:** merchandise given away for points counts against the 3.0% ceiling at production cost. Merchandise **sold** for money is a separate business line with its own margin and does not touch this budget.
+**The better first lever, though, is §7.2** — item-level COGS and a reward mix built on it recovers an estimated 15–25% of scratch cost with nothing the customer can see. Reach for that before touching anyone's points.
+
+**Note on merchandise:** merchandise given away for points counts against the giveaway ceiling at production cost. Merchandise **sold** for money is a separate business line with its own margin and does not touch this budget.
 
 ---
 
@@ -446,7 +534,7 @@ Our BDT 500 threshold is a natural brake — hoarding is expensive here in a way
 | What the card must do | Give today a purpose | Shorten the gap |
 | The Full Gang means | ~4 months — a real project | ~a year — the long arc |
 | The lever | Milestones, the points ladder, the Golden Waffle | **The occasion window.** A card that stops printing |
-| First redemption | Reaches 25 points in two visits | **25 points is why they come back a third time** |
+| First redemption | The sticker is in reach on their **first card** | **A reward reachable on card one is why they come back at all** |
 
 **The treat buyer is where frequency growth lives.** The two levers that reach them are the occasion window and a cheap first redemption — not more content.
 
@@ -577,7 +665,7 @@ draw_design(character, occasion_id):
 
 **`rarity_weight` calibration.** With nine characters at 1.0, Merlulu's weight for a 1-in-30 rate is **9/29 = 0.3103**. The general formula for a target rate `r` against `n` ordinary characters is `w = n·r / (1 − r)`. *(Getting this wrong is easy — a weight of 0.033 yields 1 in 92, not 1 in 30.)*
 
-Merlulu is excluded from the pool entirely until `is_print_ready = true`.
+The `is_print_ready` gate stays in the draw as the mechanism for introducing future characters. **All ten current characters are print-ready**, Merlulu included.
 
 ### 11.4 Batch cap normalisation
 
@@ -636,8 +724,8 @@ Additions to the existing schema. Existing tables and controls are unchanged.
 | `point_rank` | int 1–10 | **Drives the point skew. Defaults to `priority_rank`, overridable.** Merlulu: priority 6, point rank **2** |
 | `is_standing_rare` | bool | Merlulu only |
 | `rarity_weight` | decimal | Ordinary characters 1.0; **Merlulu 0.3103** (= 1 in 30) |
-| `is_print_ready` | bool | **Gates card generation.** Merlulu is `false` until artwork is approved |
-| `roster_state` | enum | **Gates website visibility, independently of print readiness.** `hidden` = absent · `locked` = silhouetted, uncollectable, does not count toward the Full Gang · `live`. Merlulu is `locked` until his card rolls out |
+| `is_print_ready` | bool | **Gates card generation.** All ten are `true` — Merlulu ships on the base design |
+| `roster_state` | enum | **Gates website visibility, independently of print readiness.** `hidden` = absent · `locked` = silhouetted, uncollectable, does not count toward the Full Gang · `live`. **All ten are `live` at launch**; the states exist for introducing future characters |
 | `pronouns` | enum | Picchi **she**, Merlulu **he** |
 | `speaks` | bool | **Swirly is `false`.** Blocks any quoted line in generated copy |
 | `description` | text | The printed card bio, from `data/characters.json`. **Not rewritten** |
@@ -672,6 +760,8 @@ Additions to the existing schema. Existing tables and controls are unchanged.
 ### 12.2 `occasions`
 
 `occasion_id` (PK) · `occasion_name` ("Eid ul-Fitr 2027") · `starts_at` · `ends_at` · `edition_share` (proportion of character cards carrying the edition during the window) · `status` (upcoming / active / closed)
+
+**No character is tied to an occasion.** [CONFIRMED] Which character carries an edition is chosen fresh each time, so the pairing stays a creative decision rather than a rule the schema enforces. An occasion may carry more than one character's edition.
 
 When an occasion closes, every design carrying its `occasion_id` is set `is_retired = true` automatically.
 
@@ -718,19 +808,46 @@ Standard rows: Half the Gang (5, +50) · The Full Gang (10, +200, folder) · The
 
 ### 12.10 `merch_catalogue`
 
-`sku_id` (PK) · `name` · `point_price` · `production_cost` · `mrp` · `status` (available / out_of_stock / retired) · `is_purchasable_with_cash` · `is_earned_only` · `image_path`
+`sku_id` (PK) · `name` · `description` · `point_price` · `production_cost` · `mrp` · `vendor` · `status` (available / out_of_stock / retired) · `is_purchasable_with_cash` · `is_earned_only` · **`is_order_attachable`** (§6.2) · **`images[]`** (ordered, one primary) · **`sort_order`** · **`is_visible`**
 
+- **`point_price` defaults to `production_cost` rounded to the nearest 5.** The panel pre-fills it on entry and allows an override — so adding a product is one quote, not a pricing decision.
 - Collector's folder: `is_earned_only = true`, no `point_price`, no `mrp`.
 - `point_price` is **versioned** — a price change never affects a PIN already issued.
-- **A SKU with outstanding customer intent is never hard-deleted.** Retire it.
+- **A SKU with outstanding customer intent is never hard-deleted.** Retire it, or set `is_visible = false` to pull it from the shop without touching anyone's saved progress toward it.
+- **Every field on this table is editable from the panel, images included.** See §15.1.
+
+### 12.10a `merch_variants` — required, not optional
+
+Almost every real item has variants the customer must choose between, and stock is held per variant, not per SKU.
+
+`variant_id` (PK) · `sku_id` · `variant_name` · `variant_type` (`colour` / `size` / `design`) · `production_cost_override` (nullable) · `active`
+
+| SKU | Variants |
+|---|---|
+| Notebook | 3 designs |
+| Pop socket | **10 designs** |
+| Sticker | page · character type 1 · character type 2 |
+| Socks — kids | pink · teal *(different costs: 90 / 100)* |
+| Socks — adult | pink · white |
+| Cap | mesh · all-over print |
+| T-shirt | pink · black — **× sizes** |
+| Hoodie | pink · black — **× sizes** |
+
+> **Apparel needs size, and size is where this goes wrong.** A redemption must reserve a specific *variant*, not a SKU. Reserving "T-shirt" and discovering at the counter that only XXL is left is the failure §6.1 exists to prevent. `merch_stock` is keyed on `variant_id`.
 
 ### 12.11 `merch_stock`
 
-`sku_id` · `redemption_point_id` · `on_hand` · `reserved` · `reorder_threshold` (default 30%) · `updated_at`. `available = on_hand − reserved`.
+**`variant_id`** · **`location_id`** · `on_hand` · `reserved` · `reorder_threshold` (default 30%) · `updated_at`. `available = on_hand − reserved`. **Keyed on variant, never on SKU.**
+
+**`location_id`, not `redemption_point_id`** — because §6.2 means a cloud kitchen holds attachable stock without ever being a counter. A location carries `is_redemption_point` and `is_attach_point` independently.
 
 ### 12.12 `merch_redemptions`
 
-`redemption_id` (PK) · `customer_id` · `sku_id` · `points_spent` · `pin` · `pin_expires_at` · `redemption_point_id` · `stock_reserved` (bool) · `status` (pending / collected / expired / cancelled) · `collected_at` · `collected_by_staff_id`
+`redemption_id` (PK) · `customer_id` · `sku_id` · **`variant_id`** · `points_spent` · `pin` · `pin_expires_at` · **`fulfilment_method`** (`counter` / `order_attach`) · **`location_id`** · **`attached_order_id`** (nullable) · `stock_reserved` (bool) · `status` (pending / **awaiting_attach** / collected / expired / cancelled) · `collected_at` · `collected_by_staff_id`
+
+- `counter` reservations hold for `pin_expiry_days` — 14.
+- **`order_attach` reservations hold for `pin_expiry_days_order_attach` — 60.** You cannot require someone to place an order inside a fortnight.
+- **On lapse, stock is released and the points go back to the ledger**, reason `reservation_lapsed`. Nothing a customer holds is ever taken away, and that includes a reward they have not managed to collect yet.
 
 ### 12.13 `pos_reconciliation`
 
@@ -781,7 +898,7 @@ if held == count(all live characters)          → award +200 + folder
 if all of this year's occasion editions held   → award +200  (repeatable per year)
 ```
 
-**Uses the live roster, not a hardcoded 10.** A `locked` character is displayed but excluded from the target, so while Merlulu is locked the Gang is nine. When he goes live the target becomes ten — but **a milestone already awarded is never revoked** (invariant 3).
+**Uses the live roster, not a hardcoded 10.** All ten are `live` at launch, so the Full Gang target is ten from day one. The indirection exists for future characters: a `locked` character is displayed but excluded from the target, and when one goes live the target grows — but **a milestone already awarded is never revoked** (invariant 3).
 
 ### 13.3 Hard invariants
 
@@ -877,12 +994,19 @@ This is the deliberate middle path. Activating each card at the till would be st
 | `occasion_edition_share` | 0.30 | 0.1–0.6 | Marketing |
 | `occasions_per_year` | 4 | 2–6 | Marketing |
 | `batch_point_cap` | **3160** | derived from the ceiling | Finance |
-| `giveaway_ceiling_pct` | **3.0** | 1.5–5.0 | Jawat |
-| `point_to_cost_bdt` | 1.00 | 0.50–2.00 | Finance |
+| `point_to_cost_bdt` | **1.00** | 0.50–2.00 | Finance |
+| `card_cost_character_bdt` | **3.00** | actual — cover included | Ops |
+| `card_cost_scratch_bdt` | **3.40** | actual — cover included | Ops |
+| **`scratch_cogs_pct`** | **38** *(of selling price)* | 25–50 | Finance |
+| **`scratch_redemption_planning_pct`** | **60** | 40–85 | Finance |
+| `giveaway_ceiling_pct` *(points + scratch)* | **3.5** | 1.5–5.0 | Jawat |
+| `printing_ceiling_pct` | **0.65** | 0.4–1.5 | Finance |
+| **`all_in_ceiling_pct`** | **4.15** | derived | Finance |
 | `legacy_point_pool` | **50000** | 0–200,000 | Jawat |
 | `point_inactivity_expiry_months` | 12 | 6–24 | Jawat |
 | `point_expiry_notice_days` | 30 | **never below 30** | fixed floor |
-| `pin_expiry_days` | 14 | 3–30 | Ops |
+| `pin_expiry_days` *(counter)* | 14 | 3–30 | Ops |
+| **`pin_expiry_days_order_attach`** | **60** | 14–90 | Ops |
 | `minor_age_threshold` | 16 | 13–18 | Legal |
 | `cap_cards_per_phone_per_day` | 10 | 3–50 | Ops |
 | `cap_cards_per_phone_per_month` | 60 | 20–200 | Ops |
@@ -902,19 +1026,39 @@ This is the deliberate middle path. Activating each card at the till would be st
 
 | Screen | Does |
 |---|---|
-| **Dashboard** | Cards issued · registration rate · point burn · **outstanding liability** · spend as % of qualifying revenue against the 3.0% ceiling |
+| **Dashboard** | Cards issued · registration rate · point burn · **outstanding liability** · giveaway and all-in spend as % of qualifying revenue against the **3.5% / 4.15%** ceilings |
 | **Characters** | Priority rank, **point rank**, rarity weight, print-ready, **roster state (hidden/locked/live)**, `speaks`, pronouns |
 | **Card designs** | **Add a pose, occasion edition or foil for any character.** Set rarity within that character, upload art, mark print-ready, retire. **New cards are a data change, not a code change** |
 | **Occasions** | Create an occasion, set the window and edition share, attach designs. Closing it auto-retires its designs |
 | **Batches** | Generate, view point totals against cap, assign to outlets, track activation |
 | **Milestones** | Thresholds, point rewards, physical rewards, repeatability |
-| **Merchandise** | Add/edit/retire SKUs, point price, production cost, MRP, per-outlet stock, reorder alerts |
-| **Redemptions** | Pending PINs, reservations, collection confirmation, expiries |
+| **Merchandise** | Add/edit/retire SKUs and variants · point price, production cost, MRP · **upload, replace and reorder product images** · name, description, sort order, visibility · per-location stock, reorder alerts |
+| **Redemptions** | Pending PINs, reservations, collection confirmation, expiries · **order-attach queue** — which rewards are waiting to ride along with an order |
 | **Customers** | Collection state, duplicate credits, ledger, caps, review flags, guardian consent |
 | **POS reconciliation** | Per outlet, per channel: qualifying transactions vs cards issued vs registered. **Issue rate league table** |
 | **Review queue** | Anomaly hits and cap breaches awaiting a human decision |
 | **Configuration** | Everything in §14, with change history |
 | **Reports** | §16 |
+
+### 15.1 ⭐ The no-deploy rule
+
+**[CONFIRMED 26 Aug 2026]** Everything a customer sees is **data, not code.** Nothing in the list below may require a developer, a code change or a release.
+
+| Editable from the panel |
+|---|
+| Add a product · edit it · pull it from the shop · retire it |
+| Point price · production cost · shop price — each independently of the others |
+| Product name, description, sort order, and whether it is listed at all |
+| **Product images** — upload, replace, reorder, set the primary |
+| Variants, and stock per variant per location |
+| Characters, card designs, occasions, milestones |
+| Every parameter in §14 |
+
+Three consequences for whoever builds this:
+
+1. **Images are uploads, not repository files.** A product photo goes to object storage through the panel and is referenced by URL. If adding a new product needs a code change to show its picture, the panel is not finished.
+2. **Prices are expected to move.** The §5.1 column is a launch position, not a decision — so the price field must be first-class, versioned, and safe to change while customers are mid-save (invariant 8: a PIN already issued keeps its price).
+3. **Editable is not the same as untraceable.** Every price and configuration change is logged with who made it and when.
 
 ---
 
@@ -954,6 +1098,7 @@ This is the deliberate middle path. Activating each card at the till would be st
 | **0** | ⭐ **Retro-activation.** Launch accounts and the merch shop. Let the **~38,556 cards already in customers' hands** register against the numbers already printed on them | Account build. **No card redesign, no reprint** |
 | **1** | Duplicate conversion, milestones, the collection scoreboard | Phase 0 |
 | **2** | Redemption Points live — PIN fulfilment, stock reservation | Merch stock |
+| **2b** | **Order-attach fulfilment** (§6.2) — small items ride along with a paid order | Phase 2 + the bag-seal step |
 | **3** | POS reconciliation and the issue-rate report | POS integration |
 | **4** | Batch activation, serial-range binding, anomaly detection | Engine |
 | **5** | First occasion edition | Artwork + print run |
@@ -991,18 +1136,27 @@ But it is also why staff will never proactively encourage redemption during the 
 
 | # | Item | Owner |
 |---|---|---|
-| 1 | **Item-level COGS** for the scratch reward mix. Worth an estimated 15–25% off reward cost with no visible change | Finance |
-| 2 | **Card printing cost** — not in any budget line | Ops |
-| 3 | **Merchandise production costs and shop prices** from a supplier | Ops |
-| 4 | **Redemption Point list**, and coverage for delivery-only customers | Ops |
-| 5 | **Merchandise ownership** — who holds stock, who reorders, working capital | Ops |
-| 6 | **Occasion artwork** — which character carries each of the four editions, and who draws them | Jawat + Sadbin Ahmed |
+| 1 | **Item-level COGS** for the scratch reward mix. Budgeted at a flat 38% of selling price, which is enough to plan against — but the real numbers are still worth an estimated 15–25% off reward cost with nothing the customer can see (§7.2) | Finance |
+| 2 | **Collector's folder** — does not exist and has no quote. Print job, should go to Bijoy at Asha Printers | Ops |
+| 3 | **Redemption Point list** — footfall, storage, *and* coverage against the cloud-kitchen catchments (§6.2) | Ops |
+| 4 | **Merchandise ownership** — who holds stock, who reorders, working capital. Now also: which locations hold order-attach stock | Ops |
+| 5 | **Occasion editions** — which character carries each of the four. Not fixed, chosen per occasion. **Artwork: Junaid** | Jawat + Junaid |
+| 6 | **Surprise Card Box** — the outer shipping carton is unpriced on Bijoy's sheet. A rounding item, not a budget line (§7.3). Worth getting on the next quote | Ops / Bijoy |
+
+### Closed
+
+| Item | |
+|---|---|
+| ~~Merchandise packaging~~ | ✅ **24 Aug 2026.** Every item ships in its box; costs are inside the point prices in §5.1. The gift bag is excluded from the catalogue |
+| ~~Surprise Card Cover unpriced~~ | ✅ **26 Aug 2026.** The cover is inside the BDT 3.00 / 3.40 card price. **Printing is a total, not a floor** |
+| ~~Shop prices~~ | ✅ **26 Aug 2026.** Launch at the ~2.6× column in §5.1 and adjust from the panel thereafter (§15.1). Not a fixed decision — a starting position |
+| ~~Item-level COGS blocking the budget~~ | ✅ **26 Aug 2026.** Budgeting at a flat 38% of selling price. Giveaway ceiling reset to 3.5% as a consequence (§7.5). The optimisation stays open as item 1 |
+| ~~Delivery-only redemption~~ | ✅ **26 Aug 2026.** Order-attach (§6.2). Cash-on-delivery and points-for-delivery both considered and rejected |
+| ~~Merlulu's artwork~~ | ✅ **26 Aug 2026.** Shipping on the base design. All ten live from launch, **the Full Gang is ten from day one**, nothing on the critical path |
 
 ### Needs someone outside the company
 
-**7 · Merlulu's artwork.** Four head options exist; only one is coloured. None is approved, there is no vector master and no T-pose, and the current card art shows the old design and says "she". Merlulu is excluded from card generation and shown as a locked slot until this is resolved. He does not block launch — but the Full Gang cannot be completed by anyone while he is locked, so he is on the critical path for the first completions, roughly four months after Phase 1. *Owner: Jawat to choose the head; Sadbin Ahmed to produce the masters.*
-
-**8 · Legal review.** Points change what this programme legally is. Counsel should be asked:
+**7 · Legal review.** Points change what this programme legally is. Counsel should be asked:
 
 > - ✅ **ANSWERED — Jawat, 24 Aug 2026: a points balance redeemable for merchandise does NOT constitute regulated stored value or e-money under Bangladesh law.** No registration, reporting or ring-fencing obligation follows. *(Bangladesh only. Singapore's Payment Services Act treats stored-value facilities separately and must be answered independently before any Singapore launch. And "not regulated" does not mean "not a liability" — unspent points remain an accounting provision, per §16.)*
 > - Our position is that the programme falls outside loot-box and gambling rules because **cards are never sold and no chance is ever purchasable** (§9). Confirm this holds in Bangladesh, and flag where it would not in Singapore, UAE, Thailand or Indonesia.
@@ -1011,9 +1165,9 @@ But it is also why staff will never proactively encourage redemption during the 
 > - Does any of this conflict with Foodpanda or Pathao platform policy where cards are issued on delivery orders?
 > - Confirm that publishing the odds (§19) creates no additional obligation we would not otherwise have.
 
-**9 · Singapore.** Bangladesh launches first. CQ @ Clarke Quay is a single site and cannot produce meaningful data on its own. Before any Singapore launch: an SGD earning threshold, the SG price book for liability, an SG print run and customs, an SG merchandise catalogue, and a separate legal review. **Bangladesh CTAs must never appear on Singapore content.**
+**8 · Singapore.** Bangladesh launches first. CQ @ Clarke Quay is a single site and cannot produce meaningful data on its own. Before any Singapore launch: an SGD earning threshold, the SG price book for liability, an SG print run and customs, an SG merchandise catalogue, and a separate legal review. **Bangladesh CTAs must never appear on Singapore content.**
 
-**10 · Franchising, from ~Aug 2027.** **[RECOMMENDED] principle: the entity that issued the card funds the reward.** Every card carries its issuing outlet, so a franchisee fulfilling a reward against a company-issued card is reimbursed at production cost, netted monthly between entities. The same applies to the Chef's Table price-book difference, which stops being an internal transfer the moment outlets are separately owned. *Owner: Jawat + finance.*
+**9 · Franchising, from ~Aug 2027.** **[RECOMMENDED] principle: the entity that issued the card funds the reward.** Every card carries its issuing outlet, so a franchisee fulfilling a reward against a company-issued card is reimbursed at production cost, netted monthly between entities. The same applies to the Chef's Table price-book difference, which stops being an internal transfer the moment outlets are separately owned. *Owner: Jawat + finance.*
 
 ### Housekeeping
 
@@ -1032,7 +1186,7 @@ Researched 24 August 2026.
 
 **In-person redemption genuinely drives visits.** Members returning to collect a reward buy other things while they are there; the industry calls it the redemption halo. One measured convenience chain got **one extra visit per member per month** from it. Brands with physical locations also see *higher* redemption than online-only ones, because staff can explain it.
 
-**Rewards must be reachable in weeks, not months.** This is stated explicitly as a condition for in-person redemption producing incremental visits, and it is why the merchandise ladder starts at 25 points — about two cards — rather than making a customer wait for the full collection.
+**Rewards must be reachable in weeks, not months.** This is stated explicitly as a condition for in-person redemption producing incremental visits, and it is why the merchandise ladder starts at 10 points — about **one card** — rather than making a customer wait for the full collection.
 
 **Planning benchmarks used in §7:**
 
@@ -1068,15 +1222,19 @@ Researched 24 August 2026.
 | To complete all 10 | **~16 cards · ~BDT 7,900 · ~4 months weekly** |
 | Milestones | 5/10 = **+50** · 10/10 = **+200** + folder · all four editions = **+200**/year |
 | Occasions | **4 a year** — Pohela Boishakh · both Eids · Victory Day |
-| 1 point | **BDT 1.00 production cost ≈ BDT 3.00 shop price** |
+| 1 point | **BDT 1.00 production cost.** An item's point price **is** its production cost in taka |
+| Shop price | ~**2.6× production cost** [recommended] |
 | Batch point cap | **3,160** — enforced by the generator |
-| **Giveaway ceiling** | **3.0% of qualifying revenue** |
-| Realistic all-in cost | **~1.33%** of qualifying revenue |
+| Card printing | **BDT 3.00 character · BDT 3.40 scratch, cover included** = BDT 902/batch = **0.61%** |
+| **Giveaway ceiling** (points + scratch) | **3.5% of qualifying revenue** |
+| **All-in programme ceiling** | **4.15%** |
+| Realistic all-in cost | **1.94%** of qualifying revenue ≈ **BDT 94,000/month** |
 | Legacy pool | **50,000 points** — maximum exposure BDT 50,000 |
-| Cheapest merch item | **25 points (~2 cards)** |
+| Cheapest merch item | **Sticker, 10 points (~1 card)** |
+| Redemption | **In person at a Redemption Point** · small items may **ride along with a paid order** (§6.2) |
 | Scratch redemption rate | 40–81%; **plan at 60%** |
-| Scratch reward value per batch | BDT 5,935 (average BDT 220) |
-| Food COGS | 30–45%, varies by product |
+| Scratch reward value per batch | BDT 5,935 menu · **BDT 2,255 at cost** (average BDT 220 menu) |
+| Food COGS | **38% of selling price** — flat working figure |
 | Benchmark: redeemers vs non | **3.1× spend** |
 | Benchmark: breakage | ~50% |
 | What expires | **Nothing a customer holds.** Editions stop printing; that is all |
