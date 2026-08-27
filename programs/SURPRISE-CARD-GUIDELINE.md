@@ -2,7 +2,7 @@
 
 ### Programme design and engine specification
 
-**24 August 2026 · Waffle Up Global PTE Ltd.**
+**24 August 2026 · revised 26 and 27 August 2026 · Waffle Up Global PTE Ltd.**
 **Owner: Mohammad Jawat · Prepared by: Marketing**
 
 ---
@@ -97,11 +97,11 @@ This is the heart of the design. A customer always has something close and somet
 
 **Bhoppu · Air Maxi · Mr Waffle · Picchi · Swirly · Merlulu · Spacy · Stovy · Tvy · Icy**
 
-**Merlulu is the standing rare — about 1 in 30 cards.** Everyone else is equally common.
+**All ten are equally common. [CONFIRMED 27 Aug 2026 — Jawat]** The print run carries Merlulu at the same quantity as everyone else, so his `rarity_weight` is **1.0** and he arrives about **1 in 10** — not the 1 in 30 this section specified until 27 August 2026.
 
-> **Merlulu is not precious, he is unique.** His point value is set at the same level as Air Maxi's — a good card, not a jackpot. What makes him worth chasing is that he is hard to find and he completes the Gang. **[CONFIRMED]**
+> **Merlulu is not precious, he is unique.** His point value is set at the same level as Air Maxi's — a good card, not a jackpot. What makes him worth having is that he completes the Gang, and that he is the Merlion: Singapore is where Waffle Up Global was founded, and that story tells itself whether or not the card is scarce. **[CONFIRMED]**
 
-Singapore is where Waffle Up Global was founded, and the rarest card in the deck being the Merlion is a story that tells itself.
+> **What changed, and what did not.** Scarcity was doing less work than it looked. Re-modelled at 40,000 trials (§11.5), the standard three-duplicate conversion rule finishes the Gang in a **median of 16 cards either way** — 15.8 mean at 1 in 30, 15.5 at equal weight. Conversion absorbs the difference almost entirely. Scarcity only bites without conversion, where the mean falls from 39.8 cards to 29.4. **The chase was never really about how rare Merlulu was; it was about the swap rule.** What the change does cost is this design pillar and the published-odds line, and it raises the expected mint per character card from 11.59 to **11.71**, which forced `batch_point_cap` up with it — see §7.5 and §11.2.
 
 ### Merlulu ships with everyone else
 
@@ -153,6 +153,11 @@ Completing the Gang takes about 16 cards and earns roughly **435 points** all in
 | Points, once awarded | **Never**, unless the account is completely inactive for 12 months — and then only with 30 days' notice |
 | Progress toward any milestone | **Never** |
 | An occasion edition | **Never expires once held.** It simply stops being printed |
+| **A scratch card's food reward** | **`scratch_validity_days` — 180.** The one real expiry in the programme |
+
+**The scratch card is the exception, and it always was.** A scratch card is a coupon for a food item, and a coupon that never lapses is an open-ended kitchen liability. Batch 9's cards were printed December 2025 and Ops report them out of use by August 2026, which is where the 180-day standard comes from — **[DECISION NEEDED]** for Ops to confirm.
+
+> This does not weaken anything above it. **A character card and the points on it never expire**, which is enforced by a constraint rather than by convention: only a scratch card may carry an expiry at all (invariant 15). And an expiry is never a message we send — the card says what it says, and nothing in §8's language changes.
 
 > The urgency in this programme comes from **supply, not deadlines.** The Eid card stops being made. Nothing a customer already holds is ever taken away from them, and no message we send ever threatens to.
 >
@@ -208,7 +213,7 @@ The weighting is one dial in the admin panel. **Turning it up or down does not c
 |---|---|---|
 | **The reveal** | Every card | 5–18 points |
 | **Scratch card** | 1 in 11 | A food item |
-| **Merlulu** | **~1 in 30** | Completes the Gang. Air Maxi's point value |
+| **Merlulu** | **~1 in 10** | Completes the Gang. Air Maxi's point value. *No longer a standing rare — see §3.1* |
 | **The Golden Waffle** | **~1 in 1,000** | **+100 points** — double any milestone, roughly nine ordinary cards in one find |
 
 **The Golden Waffle is the rarest object we print** — about ten found a month across the whole business. It is precious because of what it is, not only what it pays. **[RECOMMENDED]** every find is worth a post: the customer, the card, the reaction.
@@ -431,9 +436,9 @@ The 50% burn figure is not a guess. **About half of all loyalty rewards go uncla
 2. **If we breach the ceiling, we raise it — we do not cut the reward.** A breach means people are completing collections, which means the mechanic is working. Cutting rewards at that exact moment kills the thing we just proved.
 3. **We never devalue points already issued.** If costs need managing, the lever is the catalogue going forward — which items are listed and at what price. Never a balance someone already holds. Re-pricing issued points is how loyalty programmes lose people permanently.
 
-**How much headroom 3.5% actually buys.** Quite a lot, and it is worth knowing the exact shape of it. Points are held to `batch_point_cap` — 3,160, against an expected mint of 3,156 — by the generator, so the only variable left is scratch redemption. **The giveaway ceiling cannot be breached unless scratch redemption passes ~90% while every single point issued is also spent.** The highest rate we have ever observed is 81%, and points burn at nearer 50% everywhere it has been measured. Realistic run-rate is 1.94% all-in — a little under half the ceiling, which is where a ceiling should sit.
+**How much headroom 3.5% actually buys.** Quite a lot, and it is worth knowing the exact shape of it. Points are held to `batch_point_cap` — **3,300**, against an expected mint of ~3,164 — by the generator, so the only variable left is scratch redemption. **The giveaway ceiling cannot be breached unless scratch redemption passes ~90% while every single point issued is also spent.** The highest rate we have ever observed is 81%, and points burn at nearer 50% everywhere it has been measured. Realistic run-rate is 1.94% all-in — a little under half the ceiling, which is where a ceiling should sit.
 
-**If that combination ever did arrive**, the lever exists and it is exact: **lower `batch_point_cap`.** Dropping it from 3,160 to **2,940** guarantees the 3.5% giveaway ceiling even at 100% scratch redemption and 100% point burn simultaneously, at a cost of about **0.8 points per card**. Because points are minted at print time, the ceiling is enforced by arithmetic rather than by watching a dashboard.
+**If that combination ever did arrive**, the lever exists and it is exact: **lower `batch_point_cap`.** Dropping it from 3,300 to **2,940** guarantees the 3.5% giveaway ceiling even at 100% scratch redemption and 100% point burn simultaneously, at a cost of about **0.8 points per card**. Because points are minted at print time, the ceiling is enforced by arithmetic rather than by watching a dashboard.
 
 **The better first lever, though, is §7.2** — item-level COGS and a reward mix built on it recovers an estimated 15–25% of scratch cost with nothing the customer can see. Reach for that before touching anyone's points.
 
@@ -557,7 +562,7 @@ A batch is generated as a unit. **Point values are assigned at generation, not a
 
 ```
 generate_batch(batch_size=297, scratch_ratio=0.0909,
-               golden_rate=0.001, point_cap=3160, occasion_id=None):
+               golden_rate=0.001, point_cap=3300, occasion_id=None):
 
     n_scratch   = round(batch_size * scratch_ratio)          # 27
     n_golden    = seeded_from_print_run(batch_size, golden_rate)   # usually 0, sometimes 1
@@ -638,7 +643,7 @@ draw_point_value(point_rank, design):
 | 9 | Tvy | 9.64 | 13.9% | 2.9% | 14.1% |
 | 10 | Icy | 9.18 | 16.1% | 2.2% | 11.2% |
 
-**Expected value per character card, accounting for Merlulu's rarity: 11.59 points.**
+**Expected value per character card: 11.71 points.** The roster is not ranks 1–10 once each — Merlulu carries point rank 2 as an override, so rank 2 appears twice and nothing sits at rank 6, which is why this sits above the 11.5 band midpoint. It was **11.59** while he was a 1-in-30 standing rare; equal print quantity gives that rank-2 value ten times the weight. The engine derives this figure rather than quoting it (`expectedPointsPerCharacterCard`), so it tracks `merlulu_rarity_weight` automatically.
 
 At `s = 0` every character is identical. At `s = 2.5` Icy averages 7.07 and starts reading as a card nobody wants — hence the hard cap.
 
@@ -663,7 +668,9 @@ draw_design(character, occasion_id):
 
 **Character first, then design within that character.** Outside an occasion window stage two returns the character's standard design and is effectively a no-op.
 
-**`rarity_weight` calibration.** With nine characters at 1.0, Merlulu's weight for a 1-in-30 rate is **9/29 = 0.3103**. The general formula for a target rate `r` against `n` ordinary characters is `w = n·r / (1 − r)`. *(Getting this wrong is easy — a weight of 0.033 yields 1 in 92, not 1 in 30.)*
+**`rarity_weight` calibration.** **All ten characters ship at 1.0**, so stage one is a flat draw and every character is 1 in 10. The formula below is retained because it is what any *future* standing rare must be calibrated with — it is not currently in use.
+
+For a target rate `r` against `n` ordinary characters at 1.0, `w = n·r / (1 − r)`. A 1-in-30 rate against nine ordinary characters is **9/29 = 0.3103**, which is what Merlulu carried until 27 August 2026. *(Getting this wrong is easy — a weight of 0.033 yields 1 in 274 against nine ordinary characters, not the 1 in 92 an earlier draft of this section claimed; 1 in 92 is what three ordinary characters would give. The formula and the 0.3103 result were always correct.)*
 
 The `is_print_ready` gate stays in the draw as the mechanism for introducing future characters. **All ten current characters are print-ready**, Merlulu included.
 
@@ -679,6 +686,44 @@ normalise_down(cards, cap):
 ```
 
 Log every normalisation. Frequent normalisation means the cap is set too low for the band.
+
+> **⚠ `batch_point_cap` is a RATE, not a number — pro-rate it to the order.** 3,300 is the ceiling for **297 cards**, about 11.11 points a card. A real print order is nothing like 297: batch 11 was 33,500 cards. Applied flat, the generator would demand a 33,500-card run fit inside 3,300 points, drive every card to the band floor and then throw. The engine computes `ceil(cards × batch_point_cap ÷ batch_size)`. §7.5's promise that "the ceiling is enforced by arithmetic" only holds if the arithmetic knows how big the order is.
+
+### 11.6 The printed card number
+
+**[CONFIRMED 26 Aug 2026 — Jawat]** From **batch 14 onward** every card carries a number in one format:
+
+```
+B14F-7201647537
+│ │ │ └────────── ten digits
+│ │ └──────────── where the card is meant to be handed out
+│ └────────────── the batch number
+└──────────────── literally B, for batch
+```
+
+| Letter | Where the card goes |
+|---|---|
+| **F** | Flagship outlets |
+| **C** | Chef's Table |
+| **3** | Third party |
+| **E** | Event |
+| **G** | Gift |
+
+**`3` rather than `T` for third party**, because Tvy exists and a card number gets read aloud across a counter more often than anyone expects.
+
+This **formalises what batch 13 already did in its filing.** That workbook splits by channel in the sheet names — "Flagship - Character", "3rd Party - Scratch" — so the fact existed but lived in a spreadsheet. Now it is on the card, where a staff member can read it and a box can be checked against its label without consulting a summary.
+
+> **The tenth digit is a check digit, not a random one.**
+>
+> Nine digits are random; the tenth is a **Luhn mod 10** check over the other nine — the same scheme every payment terminal implements. The printed format is unchanged and the space is still a billion per batch and type, so a 40,000-card order fills 0.004% of it.
+>
+> What it buys: a customer who mistypes one digit, or swaps two adjacent ones, is **told it is a typo** instead of being told we do not recognise their card. *"We don't recognise that number"* reads as an accusation when someone is holding a real card and simply fat-fingered it, and that is the single most common thing that will happen on the registration screen. It catches every single-digit error and every adjacent transposition except the 09/90 pair Luhn is known to miss.
+>
+> **The check digit shapes the message, never the verdict.** The register is the authority on whether a card exists, because a number keyed in through the import screen is a real card whether or not it carries our check digit.
+
+**Batch numbers are 1–999 and never reused.** Reusing one is how batch 12 came to carry batch 11's serials, which is the worst data problem in the whole thirteen-batch history (§13.8). The panel offers the next free number and refuses one already recorded.
+
+**Sub-batches have no format yet.** The history has 4.1, 5.1 and 5.2; `B14.1` would put a full stop in a card number. **[DECISION NEEDED]** — or simply take the next whole number, which costs nothing.
 
 ### 11.5 Duplicate conversion
 
@@ -699,14 +744,16 @@ convert_duplicates(customer, target_character_id):
 
 A registration where `is_duplicate_for_customer = true` increments `duplicate_credits` by 1 — **in addition to** awarding its points. Duplicates do both jobs.
 
-**Modelled outcome** (40,000 trials, Merlulu at 1 in 30):
+**Modelled outcome** (40,000 trials), re-run on 27 Aug 2026 at equal rarity alongside the original:
 
-| Rule | Mean cards to all 10 | Median |
+| Rule | Merlulu 1 in 30 (old)<br>Mean / Median | Merlulu 1 in 10 (current)<br>Mean / Median |
 |---|---|---|
-| No conversion | 39.7 | 32 |
-| 8 duplicates → pick any | 21.6 | 23 |
-| **3 duplicates → pick any** *(standard)* | **15.7** | **16** |
-| 2 duplicates → pick any | 13.5 | 13 |
+| No conversion | 39.8 / 32 | **29.4 / 27** |
+| 8 duplicates → pick any | 21.7 / 24 | 20.6 / 20 |
+| **3 duplicates → pick any** *(standard)* | 15.8 / 16 | **15.5 / 16** |
+| 2 duplicates → pick any | 13.5 / 13 | 13.4 / 13 |
+
+> **The standard rule barely moved, and that is the finding.** Dropping Merlulu from 1 in 30 to 1 in 10 changes the median at the standard three-duplicate rule **not at all** — 16 either way — because conversion already absorbs a missing character. Scarcity only bites in the *no conversion* row, which is the rule we do not use. **The chase is created by `duplicates_per_swap`, not by rarity.** That also means the swap rule is the lever to reach for if the Gang ever needs to feel harder, and rarity is not.
 
 ---
 
@@ -722,8 +769,8 @@ Additions to the existing schema. Existing tables and controls are unchanged.
 | `character_name` | string | |
 | `priority_rank` | int 1–10 | Importance in the fiction, from `CHARACTER-BIBLE.md` |
 | `point_rank` | int 1–10 | **Drives the point skew. Defaults to `priority_rank`, overridable.** Merlulu: priority 6, point rank **2** |
-| `is_standing_rare` | bool | Merlulu only |
-| `rarity_weight` | decimal | Ordinary characters 1.0; **Merlulu 0.3103** (= 1 in 30) |
+| `is_standing_rare` | bool | **Nobody, since 27 Aug 2026.** Merlulu was the only one; the column stays for a future rare |
+| `rarity_weight` | decimal | **All ten at 1.0** (= 1 in 10 each). Merlulu carried 0.3103 until 27 Aug 2026 |
 | `is_print_ready` | bool | **Gates card generation.** All ten are `true` — Merlulu ships on the base design |
 | `roster_state` | enum | **Gates website visibility, independently of print readiness.** `hidden` = absent · `locked` = silhouetted, uncollectable, does not count toward the Full Gang · `live`. **All ten are `live` at launch**; the states exist for introducing future characters |
 | `pronouns` | enum | Picchi **she**, Merlulu **he** |
@@ -767,7 +814,9 @@ When an occasion closes, every design carrying its `occasion_id` is set `is_reti
 
 ### 12.3 `batches`
 
-`batch_id` (PK) · `occasion_id` (nullable) · `card_count` · `point_total` · `point_cap` · `assigned_outlet_id` · `serial_range_start` · `serial_range_end` · `status` (generated / printed / shipped / **activated**) · `activated_at` · `activated_by_staff_id`
+`batch_id` (PK) · **`batch_number`** (1–999, never reused — the number printed on every card in the order) · `occasion_id` (nullable) · `card_count` · `point_total` · `point_cap` · `assigned_outlet_id` · `serial_range_start` · `serial_range_end` · `status` (generated / printed / shipped / **activated**) · `activated_at` · `activated_by_staff_id` · **`duplicate_registration_allowed`** (§13.8)
+
+**`batch_number` is not `batch_reference`.** The reference carries the month and the campaign — "Batch 5.1 GGxWUP Special (Jan 25)". The number is what goes on the card.
 
 ### 12.4 `cards` — added fields
 
@@ -777,10 +826,13 @@ When an occasion closes, every design carrying its `occasion_id` is set `is_reti
 | `batch_id` | |
 | **`design_id`** | FK to `card_designs` |
 | **`point_value`** | Assigned at generation, revealed at registration |
+| **`distribution_type`** | `flagship` / `chefs_table` / `third_party` / `event` / `gift` — §11.6. Null for batches 1–12, which recorded no type, and derived from the sheet name for batch 13 |
+| **`expires_at`** | **Scratch cards only.** A character card never expires and neither do its points — §3.3. Enforced by a constraint, not by convention |
+| **`registration_count`** | Normally 0 or 1. Capped at 2, and only under §13.8 |
 | `assigned_outlet_id` | For serial-range binding |
 | `order_id` | Nullable. Set at packing for delivery orders |
 | `registered_at`, `registered_by_customer_id` | |
-| `status` | `generated → printed → shipped → distributed → registered → redeemed` |
+| `status` | `generated → printed → shipped → distributed → registered → redeemed`, plus `expired` for a lapsed scratch card |
 
 ### 12.5 `customers`
 
@@ -906,10 +958,10 @@ The engine must enforce these, not merely report on them.
 
 | # | Invariant |
 |---|---|
-| **1** | A card can be registered exactly once, ever |
+| **1** | A card can be registered exactly once, ever — **except under §13.8**, where a serial printed twice may register twice, by two different people, and never more |
 | **2** | `sum(point_ledger.delta)` for a customer **always equals** their balance. Balances are never written directly |
 | **3** | A ledger entry is never updated or deleted; a milestone once awarded is never revoked |
-| **4** | `batch.point_total ≤ batch.point_cap` at generation |
+| **4** | `batch.point_total ≤ batch.point_cap` at generation, where the cap is pro-rated to the size of the order (§11.4) |
 | **5** | A card in a non-activated batch cannot register |
 | **6** | `merch_stock.reserved ≤ on_hand` at all times |
 | **7** | A redemption cannot be created without a successful stock reservation |
@@ -918,6 +970,32 @@ The engine must enforce these, not merely report on them.
 | **10** | No card record may have a sale price field. **Cards are never sold** |
 | **11** | `cards_registered ≤ cards_issued` per outlet per period |
 | **12** | ⭐ `cards_registered ≤ qualifying_txn_count` per outlet per period |
+| **13** | An entitlement is consumed exactly once |
+| **14** | An entitlement never expires |
+| **15** | **A scratch card may carry an expiry; a character card may not.** Enforced by a constraint, because §3.3 is a promise to customers |
+
+### 13.8 The duplicate serials — batches 11 and 12
+
+**[CONFIRMED 26 Aug 2026 — Kaushik could not confirm, so the engine assumes the worse case]**
+
+`Batch 12 (Jul 26)` contains **the same 33,500 serials** as `Batch 11 (May 26)` — identical values, identical `MAY-` prefix — while its summary sheet reads "SURPRISE CARD BATCH-12 JULY". It is the only collision in 340,064 cells across all thirteen workbooks, so it is not a systemic numbering problem. Ops cannot confirm whether batch 12 was a filing error or was genuinely printed with batch 11's numbers.
+
+**If it was printed, two customers are holding the same number.** Under invariant 1 as originally written, the first to register wins and the second is told *"someone's already claimed this one"* while holding a genuine card. That is the wrong answer to give someone whose card is real.
+
+So the invariant is relaxed **by exactly one, in one place, under four conditions that must all hold:**
+
+| | |
+|---|---|
+| `unique (card_id, customer_id)` | One person can never register a serial twice |
+| `cards.registration_count ≤ 2` | No serial can ever register more than twice |
+| `batches.duplicate_registration_allowed` | And only on a batch flagged as printed twice |
+| `allow_duplicate_serial_registration` | And only while Ops leave the master switch on |
+
+The first two are **schema constraints, not function logic**, so the property that actually matters — nobody can farm points by re-registering a card — holds even if the registration function is wrong.
+
+**Every second registration queues for review.** Not because it is suspicious, but because **the count of them is the only evidence that will ever exist** about how many duplicate physical cards actually reached customers. The workbooks cannot answer it; the register can.
+
+**The master switch is in Configuration**, so it can be turned off everywhere at once without anyone hunting for affected batches under pressure.
 
 ### 13.4 ⭐ POS reconciliation — the primary integrity control
 
@@ -986,14 +1064,14 @@ This is the deliberate middle path. Activating each card at the till would be st
 | `golden_waffle_points` | **100** | 50–500 | Jawat |
 | `point_band` | **5–18** | 1–50 | Jawat |
 | `tier_skew_strength` | **1.0** | 0–1.5 (hard cap 2.5) | Jawat |
-| `merlulu_rarity_weight` | **0.3103** (1 in 30) | 0.1–1.0 | Marketing |
+| `merlulu_rarity_weight` | **1.0** (1 in 10) | 0.1–1.0 | Marketing |
 | **`duplicates_per_swap`** | **3** | 2–8 | Jawat |
 | `milestone_half_gang` | 50 | 25–100 | Marketing |
 | `milestone_full_gang` | 200 | 100–500 | Marketing |
 | `milestone_occasion_year` | 200 | 100–500 | Marketing |
 | `occasion_edition_share` | 0.30 | 0.1–0.6 | Marketing |
 | `occasions_per_year` | 4 | 2–6 | Marketing |
-| `batch_point_cap` | **3160** | derived from the ceiling | Finance |
+| `batch_point_cap` | **3300** | derived from the ceiling | Finance |
 | `point_to_cost_bdt` | **1.00** | 0.50–2.00 | Finance |
 | `card_cost_character_bdt` | **3.00** | actual — cover included | Ops |
 | `card_cost_scratch_bdt` | **3.40** | actual — cover included | Ops |
@@ -1007,6 +1085,13 @@ This is the deliberate middle path. Activating each card at the till would be st
 | `point_expiry_notice_days` | 30 | **never below 30** | fixed floor |
 | `pin_expiry_days` *(counter)* | 14 | 3–30 | Ops |
 | **`pin_expiry_days_order_attach`** | **60** | 14–90 | Ops |
+| **`scratch_validity_days`** | **180** | 30–730 | Ops |
+| **`allow_duplicate_serial_registration`** | **On** | on / off | Jawat |
+| **`serial_check_digit_required`** | **On** | on / off | Jawat |
+| **`scratch_cogs_pct`** | **38** *(of selling price)* | 25–50 | Finance |
+| **`scratch_redemption_planning_pct`** | **60** | 40–85 | Finance |
+| **`card_cost_character_bdt`** | **3.00** | actual — cover included | Ops |
+| **`card_cost_scratch_bdt`** | **3.40** | actual — cover included | Ops |
 | `minor_age_threshold` | 16 | 13–18 | Legal |
 | `cap_cards_per_phone_per_day` | 10 | 3–50 | Ops |
 | `cap_cards_per_phone_per_month` | 60 | 20–200 | Ops |
@@ -1030,7 +1115,7 @@ This is the deliberate middle path. Activating each card at the till would be st
 | **Characters** | Priority rank, **point rank**, rarity weight, print-ready, **roster state (hidden/locked/live)**, `speaks`, pronouns |
 | **Card designs** | **Add a pose, occasion edition or foil for any character.** Set rarity within that character, upload art, mark print-ready, retire. **New cards are a data change, not a code change** |
 | **Occasions** | Create an occasion, set the window and edition share, attach designs. Closing it auto-retires its designs |
-| **Batches** | Generate, view point totals against cap, assign to outlets, track activation |
+| **Batches** | **Generate a print order** — batch number, then per distribution type a character count and a quantity for each scratch product. **Previews before it commits**: per-character counts, scratch share against 9.09%, point total against the ceiling, values trimmed. **Exports the printer's workbook** — Summary, Character Card, Scratch Card, laid out exactly as the previous thirteen. **Imports a batch from the same layout.** Assign to outlets, track activation |
 | **Milestones** | Thresholds, point rewards, physical rewards, repeatability |
 | **Merchandise** | Add/edit/retire SKUs and variants · point price, production cost, MRP · **upload, replace and reorder product images** · name, description, sort order, visibility · per-location stock, reorder alerts |
 | **Redemptions** | Pending PINs, reservations, collection confirmation, expiries · **order-attach queue** — which rewards are waiting to ride along with an order |
@@ -1142,17 +1227,24 @@ But it is also why staff will never proactively encourage redemption during the 
 | 4 | **Merchandise ownership** — who holds stock, who reorders, working capital. Now also: which locations hold order-attach stock | Ops |
 | 5 | **Occasion editions** — which character carries each of the four. Not fixed, chosen per occasion. **Artwork: Junaid** | Jawat + Junaid |
 | 6 | **Surprise Card Box** — the outer shipping carton is unpriced on Bijoy's sheet. A rounding item, not a budget line (§7.3). Worth getting on the next quote | Ops / Bijoy |
+| 7 | **Sub-batch numbering** — the history has 4.1, 5.1 and 5.2, and `B14.1` would put a full stop in a card number (§11.6). Either a format, or a standing rule to take the next whole number | Ops |
 
 ### Closed
 
 | Item | |
 |---|---|
+| ~~Merlulu's rarity contradicting his print run~~ | ✅ **27 Aug 2026, Jawat.** The print run carries him at the **same quantity as everyone else**, so `rarity_weight` is **1.0**, he is **1 in 10**, and `is_standing_rare` is off. §3.1's standing-rare pillar is deleted, not softened. **The earlier estimate that this would drop the Full Gang from ~16 cards to ~13 was wrong** — re-modelled at 40,000 trials the standard three-duplicate rule gives a median of **16 either way** (§11.5). Conversion, not scarcity, is what makes the Gang finishable |
+| ~~`batch_point_cap` binding too often~~ | ✅ **27 Aug 2026.** Raised **3,160 → 3,300**, as this item proposed. It stopped being optional: equal-weight Merlulu lifts expected mint to ~3,164, *above* the old cap, which trimmed **51.6%** of measured batches against 2.4% at 3,300. Per §7.5 rule 2, the response to a ceiling the design breaches is to raise the ceiling. **Finance owns the number and can move it back from the panel** — but the Merlulu weight must move back with it |
 | ~~Merchandise packaging~~ | ✅ **24 Aug 2026.** Every item ships in its box; costs are inside the point prices in §5.1. The gift bag is excluded from the catalogue |
 | ~~Surprise Card Cover unpriced~~ | ✅ **26 Aug 2026.** The cover is inside the BDT 3.00 / 3.40 card price. **Printing is a total, not a floor** |
 | ~~Shop prices~~ | ✅ **26 Aug 2026.** Launch at the ~2.6× column in §5.1 and adjust from the panel thereafter (§15.1). Not a fixed decision — a starting position |
 | ~~Item-level COGS blocking the budget~~ | ✅ **26 Aug 2026.** Budgeting at a flat 38% of selling price. Giveaway ceiling reset to 3.5% as a consequence (§7.5). The optimisation stays open as item 1 |
 | ~~Delivery-only redemption~~ | ✅ **26 Aug 2026.** Order-attach (§6.2). Cash-on-delivery and points-for-delivery both considered and rejected |
 | ~~Merlulu's artwork~~ | ✅ **26 Aug 2026.** Shipping on the base design. All ten live from launch, **the Full Gang is ten from day one**, nothing on the critical path |
+| ~~The 300 Matcha-launch cards of unknown type~~ | ✅ **26 Aug 2026, Jawat.** All 300 are **scratch cards** and all carry the new **Matcha** product. Four sheets named only by channel; the parser refused to guess and the answer resolved it |
+| ~~Batch 9's unnamed column~~ | ✅ **26 Aug 2026, Salman via Jawat.** 1,000 serials under a blank heading, believed to be socks but unconfirmed — so the reward is recorded as **"Socks Maybe"**, which says out loud that we do not know. Ops report the batch out of use, so those cards import **already lapsed**: no liability, and nobody can be handed the wrong thing on the strength of a guess |
+| ~~Batch 12 duplicating batch 11~~ | ✅ **26 Aug 2026.** Kaushik could not confirm it either way, so the engine assumes the worse case and allows a **second registration on those serials only**, by a different person, with a master switch to stop it everywhere. §13.8 |
+| ~~The card number format~~ | ✅ **26 Aug 2026, Jawat.** `B14F-7201647537` from batch 14 onward, five distribution types. §11.6 |
 
 ### Needs someone outside the company
 
@@ -1199,7 +1291,7 @@ Researched 24 August 2026.
 
 **The compliance position.** Every country that has restricted this kind of mechanic has restricted **paid** randomness. Belgium and the Netherlands ban paid loot boxes as gambling. PEGI applies a minimum 16 rating to paid random items. Brazil's 2025 law prohibits selling them to under-18s from March 2026. The US FTC required parental consent for under-16 purchases and accurate odds disclosure. The EU's Digital Fairness Act is expected to go further. **Our cards come free with a purchase the customer already chose to make and are never sold, which places us outside all of it.**
 
-**[RECOMMENDED] Publish the odds anyway.** Scratch 9.09% · Merlulu ~1 in 30 · Golden Waffle ~1 in 1,000. Doing it voluntarily costs nothing, builds trust, makes the chase legible, is good content in itself, and puts us ahead of where regulation is clearly heading.
+**[RECOMMENDED] Publish the odds anyway.** Scratch 9.09% · every character ~1 in 10 · Golden Waffle ~1 in 1,000. Doing it voluntarily costs nothing, builds trust, makes the chase legible, is good content in itself, and puts us ahead of where regulation is clearly heading.
 
 **A warning worth taking seriously.** **McDonald's Japan ended a Pokémon Happy Meal promotion early in August 2025** because customers bought meals purely for the cards and discarded the food. Resale and hoarding drove it. They now cap purchases per group and block delivery apps for the first three days of a card promotion. Our BDT 500 threshold makes hoarding far more expensive than a Happy Meal — but a limited edition that stops printing is exactly the mechanic that produces this behaviour, which is why the caps in §9.2 are mandatory and not advisory.
 
@@ -1213,10 +1305,11 @@ Researched 24 August 2026.
 |---|---|
 | Earning threshold | **BDT 500** per transaction (480 subtotal on delivery portals) |
 | Batch | **297 cards** — 27 scratch, the rest character |
+| **Card number** | **`B14F-7201647537`** from batch 14 — batch, type letter (F·C·3·E·G), ten digits, the last a Luhn check |
 | Characters | **All 10, always in circulation** |
-| Merlulu | **~1 in 30 cards** · rarity weight **0.3103** · point rank **2** |
+| Merlulu | **~1 in 10 cards** · rarity weight **1.0** · point rank **2** · no longer a standing rare |
 | Golden Waffle | **~1 in 1,000 cards** · **+100 points** |
-| Point band | **5–18**, weighted by character, average per card **11.59** |
+| Point band | **5–18**, weighted by character, average per card **11.71** |
 | Skew strength | **1.0** (0–1.5, hard cap 2.5) |
 | **Duplicate swap** | **3 duplicates → any character you're missing** |
 | To complete all 10 | **~16 cards · ~BDT 7,900 · ~4 months weekly** |
@@ -1224,7 +1317,8 @@ Researched 24 August 2026.
 | Occasions | **4 a year** — Pohela Boishakh · both Eids · Victory Day |
 | 1 point | **BDT 1.00 production cost.** An item's point price **is** its production cost in taka |
 | Shop price | ~**2.6× production cost** [recommended] |
-| Batch point cap | **3,160** — enforced by the generator |
+| Batch point cap | **3,300** per 297 cards — **pro-rated to the order**, enforced by the generator |
+| What expires | **Nothing a customer holds**, and no points, ever. A scratch card's food reward lapses at 180 days — the one real expiry |
 | Card printing | **BDT 3.00 character · BDT 3.40 scratch, cover included** = BDT 902/batch = **0.61%** |
 | **Giveaway ceiling** (points + scratch) | **3.5% of qualifying revenue** |
 | **All-in programme ceiling** | **4.15%** |
@@ -1237,7 +1331,6 @@ Researched 24 August 2026.
 | Food COGS | **38% of selling price** — flat working figure |
 | Benchmark: redeemers vs non | **3.1× spend** |
 | Benchmark: breakage | ~50% |
-| What expires | **Nothing a customer holds.** Editions stop printing; that is all |
 | Possession proof | **The sealed yellow pack** |
 | Primary integrity control | **POS reconciliation** — qualifying transactions vs cards registered |
 | Value language | Never "free", never "discount", never state what a gift is worth |
