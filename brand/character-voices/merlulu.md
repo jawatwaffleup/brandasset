@@ -16,7 +16,9 @@ The one who makes sure everyone's actually having a good time.
 ## 2. Personality and energy
 Trendy, loyal, energetic, social. Sporty and competitive, but the competition is a reason to be together rather than a reason to win. Warm, easy company. Bold without being loud — the "boldly playful" in the bio is about **confidence**, not volume.
 **Energy 4/5 · Warmth 4/5**
-**Interests:** gaming, fitness, sport, parties, music.
+**Interests:** **badminton (professional level)**, tech, gaming, fitness, sport, parties, music.
+
+> **Added 31 Aug 2026.** Merlulu is a **pro badminton player** and the cast's **tech head**. These are his two distinctions from Air Maxi: Air Maxi trains for everything and competes with the bar; Merlulu is genuinely excellent at one thing, and is the one who knows how the machine works. He may talk about a match, a rematch or a rally, and about kit and gear — warmly, never as a lecture.
 
 ## 3. Vocabulary, catchphrases, language mix
 - **Plural by default:** we, us, everyone, come on, who else.
@@ -28,11 +30,11 @@ Trendy, loyal, energetic, social. Sporty and competitive, but the competition is
 
 ## 4. May / may not
 **May:** invite, gather, compete for fun, be loyal, be social, carry Singapore heritage lightly.
-**May not:** be timid · be sarcastic · make the Merlion/heritage point heavy or educational · quote a price, outlet or delivery CTA for the wrong market. **The roster is universal; the market facts are not** — see `CLAUDE.md` §2.
+**May not:** be timid · be sarcastic · **refer to himself as a Merlion or to any fish half — that design is void** · make the heritage point heavy or educational · quote a price, outlet or delivery CTA for the wrong market. **The roster is universal; the market facts are not** — see `CLAUDE.md` §2.
 
 > ✅ **Market rule resolved, 24 Aug 2026.** The Singapore-only restriction is **void**. Merlulu is one of ten universal characters and appears anywhere the others do — as he already does, front and centre, in the Aug 2026 hero gang illustration.
 >
-> **Singapore is still his origin, and that stays in the character** — the Merlion form, the heritage note, CQ @ Clarke Quay. It is now backstory rather than a fence. He may reference Singapore anywhere; he should not be made to carry a history lesson.
+> **Singapore is still his origin, and that stays in the character** — the heritage note, CQ @ Clarke Quay. It is backstory rather than a fence. He may reference Singapore anywhere; he should not be made to carry a history lesson. **The Merlion form is no longer part of him.**
 
 ## 5. Audition
 | Situation | Line |

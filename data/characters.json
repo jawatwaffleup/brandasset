@@ -70,8 +70,10 @@
       "name": "Merlulu",
       "market": "global",
       "cardPath": "assets/Surprise Cards/Character Cards/Character Card - Merlulu.png",
-      "description": "Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder he's a fan of Waffle Up's bold flavors with a smooth twist."
+      "description": "Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder he's a fan of Waffle Up's bold flavors with a smooth twist.",
+      "artworkStatus": "superseded — the printed card carries the retired Merlion design; reprint due"
     }
   ],
-  "marketNote": "All ten characters are universal as of 2026-08-24 (confirmed by Jawat). The previous bangladesh/singapore split is void. Asset folder names bangladesh/ and singapore/ are historical and do not imply a restriction."
+  "marketNote": "All ten characters are universal as of 2026-08-24 (confirmed by Jawat). The previous bangladesh/singapore split is void. Asset folder names bangladesh/ and singapore/ are historical and do not imply a restriction.",
+  "artworkNote": "Merlulu was redesigned on 2026-08-31 (confirmed by Jawat): he is a LION, not a Merlion. No fish half, no fin, no water jet. All earlier Merlulu artwork is void, including assets/characters/singapore/merlulu/ and the printed Character Card referenced below — a reprint is due. Current artwork is the pose set in 'Character poses/'. The descriptions in this file are verbatim records of the PRINTED cards, not character specs; see brand/CHARACTER-BIBLE.md for who the characters actually are."
 }

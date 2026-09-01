@@ -22,7 +22,7 @@ The characters are WaffleUp-owned brand artwork. Use supplied files only: do not
 
 ## Merlulu — the tenth character
 
-Merlulu joins the nine above, making the **ten-character universal roster**. **Approved Surprise Card description:** Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder he's a fan of Waffle Up's bold flavors with a smooth twist. **Pronouns: he/him**, confirmed by Jawat 24 Aug 2026 — the next Surprise Card print batch carries "he" and the redesigned Merlulu look. **The "never with the Bangladesh nine" rule is void** as of 24 Aug 2026: Merlulu appears anywhere the other nine do.
+Merlulu joins the nine above, making the **ten-character universal roster**. **Approved Surprise Card description:** Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish! No wonder he's a fan of Waffle Up's bold flavors with a smooth twist. **Pronouns: he/him**, confirmed by Jawat 24 Aug 2026 — the next Surprise Card print batch carries "he" and the redesigned Merlulu look. **Redesigned 31 Aug 2026: he is a lion, not a Merlion** — no fish half, no fin, no water jet. All earlier artwork is void; the printed card above still carries it and is due a reprint. He is a **pro badminton player** and the cast’s **tech head**. **The "never with the Bangladesh nine" rule is void** as of 24 Aug 2026: Merlulu appears anywhere the other nine do.
 
 The descriptions above are transcribed from `assets/Surprise Cards/Character Cards/`; `data/characters.json` is the machine-readable source of truth.
 

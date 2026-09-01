@@ -130,21 +130,23 @@ The order is visible in the artwork: Bhoppu, Air Maxi, Mr Waffle and Picchi are 
 
 ---
 
-### 6 · Merlulu — Singapore's sporty lion
+### 6 · Merlulu — the sporty lion
 > *Where the brand started, with the energy of where it's going.*
 
 **Pronouns: he/him** — confirmed by Jawat, 24 Aug 2026. The next Surprise Card print batch carries "he" and the redesigned look.
 **Motivation:** Belonging, and being good at things. Very close to Air Maxi in appetite, further from him in ego.
 **Energy 4/5 · Warmth 4/5**
-**Interests:** gaming, fitness, sport, parties, music.
+**Interests:** **badminton — at a professional level**, gaming, tech, fitness, sport, parties, music.
 
-**Redesigned Aug 2026.** The face is now **more polished and human-like** — noticeably less plush than the previous Singapore artwork. Four head options exist (see §6). Previous assets in `assets/characters/singapore/merlulu/` are **outdated**.
+> **Two distinctions from Air Maxi, confirmed by Jawat 31 Aug 2026.** Merlulu is a **pro badminton player** — the only character in the cast with a sport of his own — and he is the **tech head** of the group. Air Maxi trains for everything and competes with the bar; Merlulu has one discipline he is actually excellent at, and a laptop. That is the difference, not ego.
 
-**Movement & silhouette.** Lion above, fish below — the Merlion form. Sporty and grounded; crouches, leans, sits low. In the hero illustration he is **front and centre, crouching**, and the closest character to camera.
+**Redesigned Aug 2026, and redesigned again for the current pose set.** He is now drawn as a **lion — full stop.** The Merlion form is gone: no fish half, no scaled body, no fin, no water jet. The face is polished and human-like. **All previous Merlulu artwork is void**, including everything in `assets/characters/singapore/merlulu/` and the old sticker sheets. Current artwork is the five poses in `Character poses/` (`Merlulu Main`, `Merlulu 001`–`004`).
 
-**Signatures:** hot-pink mane · yellow-gold face · fangs and lolling tongue · **gold W medallion on a chain** · cyan headphones · shades · cyan scaled body and gold fin in the full Merlion form · a spat jet of water (the Merlion tribute).
-**Does:** compete, socialise, game, represent Singapore, carry brand heritage lightly.
-**Doesn't:** be timid · be sarcastic · be presented as Bangladesh-*origin* (Singapore is where he's from) · carry the heritage point heavily.
+**Movement & silhouette.** A lion on two legs — athletic, low-centred, grounded. Crouches, leans, sits cross-legged. Explosive when he plays and completely still when he doesn't; the pose set runs from a badminton smash mid-air to sitting on the floor with a laptop. He is the closest character to camera in the hero illustration, crouching.
+
+**Signatures:** flowing hot-pink mane · yellow-gold face and limbs · fangs and lolling tongue · **lightning-bolt shades** · **gold W medallion on a chain** · cyan headphones · cyan tee, pink shorts with cyan-and-white stripes, pink sneakers · cyan paw gloves · a bandaid on one knee · **a badminton racket with the W bolt on the head**.
+**Does:** play badminton, compete for fun, socialise, game, tinker with tech, gather people, carry brand heritage lightly.
+**Doesn't:** be timid · be sarcastic · be drawn as a Merlion or with any fish anatomy · be presented as Bangladesh-*origin* (Singapore is where he's from) · carry the heritage point heavily.
 
 **Symbolic role:** Singapore is where Waffle Up Global was founded. Merlulu carries that, and should read as heritage worn as streetwear, not as a history lesson.
 
@@ -234,7 +236,7 @@ The order is visible in the artwork: Bhoppu, Air Maxi, Mr Waffle and Picchi are 
 | **Bhoppu + Picchi** | The classic duo. Big and small, both open-hearted. Drawn structurally: Picchi rides on Bhoppu. |
 | **Picchi → Spacy** | The same person, two ages, two timelines. The universe's one piece of real lore. |
 | **Air Maxi ↔ Mr Waffle** | Ambition vs steadiness. Air Maxi charges; Mr Waffle holds the line. The healthiest tension in the cast. |
-| **Air Maxi ↔ Merlulu** | Near-twins in appetite — sport, music, parties, headphones. **Air Maxi chases a standard; Merlulu builds a group.** Neither is selfish or rude — that is not the difference. Air Maxi says *go further*; Merlulu says *come along*. |
+| **Air Maxi ↔ Merlulu** | Near-twins in appetite — sport, music, parties, headphones. **Air Maxi chases a standard; Merlulu builds a group.** Neither is selfish or rude — that is not the difference. Air Maxi trains for everything; **Merlulu is a pro badminton player and the cast's tech head** — one discipline, done properly. Air Maxi says *go further*; Merlulu says *come along*. |
 | **Swirly + everyone** | Loyal to all, attached to no one in particular. The chaos that happens *to* a scene. |
 | **Stovy → the group** | Protector. The others don't ask; he just stands there. |
 | **Tvy ↔ Stovy** | Rule-breaker and rule-keeper. The cleanest comedy pairing in the cast, and completely unexploited. |
@@ -273,7 +275,7 @@ Unchanged from `CLAUDE.md` §5 and `LOGO-RULES.md`, restated because they bind e
 | Mr Waffle | yes | yes | yes | **yes** | — |
 | Picchi | yes | yes | yes | **yes** | 6 |
 | Swirly | yes | yes | yes | — | 3 |
-| Merlulu | **redesign, 4 options** | partial | — | — | — |
+| Merlulu | **yes (lion redesign)** | **missing** | — | — | 5 |
 | Spacy | yes | **missing** | yes | — | 5 |
 | Stovy | yes | **missing** | yes | — | 5 |
 | Tvy | yes | **missing** | yes | — | 6 |
@@ -289,7 +291,7 @@ Two production tracks now exist: **Jeremy Lord's** masters (indexed in `assets/c
 
 1. ~~**Merlulu in Bangladesh content.**~~ **Resolved 24 Aug 2026** — roster unified, ten characters universally.
 2. **Air Maxi — rabbit or fox?** Long ears read rabbit, brush tail reads fox. Which is canon, and does the other feature stay?
-3. **Merlulu head option.** Four exist; only #1 is coloured. #2 has a W cap, #3 the medallion and a wink, #4 a fanged snarl. Which is approved, and do the others become variants?
+3. ~~**Merlulu head option.**~~ **Resolved 31 Aug 2026** — the lion redesign is approved and final. The Merlion form and all earlier heads are void. Open in its place: **Merlulu has no expression sheet**, the only character with poses but no faces.
 4. **Swirly's hands.** The profile says no hands; the pose sketches draw gripping paws (honey pot, unicycle) while the expression sheet draws none. The art contradicts itself.
 5. **Does Mr Waffle speak?** R2-D2 is a non-verbal reference, but the printed card gives him a spoken catchphrase.
 6. **Spacy's grounded pose.** One pose on the sheet has her standing. Kill it, or is the rule "never grounded in finished work"?

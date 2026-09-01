@@ -32,21 +32,32 @@ Flow made the room. Everything the audience recognises as WaffleUp was a real fi
 
 A composited PNG is pixel-perfect in **every frame, forever**. A generated waffle is wrong in a **new way every time** — and the grid, the stick and the crumb are the one thing this audience knows by heart. Same for the logo's signature wave, same for every character.
 
-### Yes, Flow accepts images — and that's the trap
+### Reference images — what may go in
 
-Flow has **Ingredients to Video** (upload up to three reference images for characters, objects or style) and **Frames to Video** (a start and end frame it animates between). So you *can* technically drop Bhoppu into Flow.
+> **Amended 31 Aug 2026 (Jawat).** The Merlulu poses `001`–`004` were generated with ChatGPT from the approved main pose, and they hold the line weight, the palette and the silhouette. **AI may now pose an approved character from reference.** The rule it replaces — *never AI a character* — is retired.
 
-**Don't.** Ingredients to Video works by generating *new poses* from the reference — which is redrawing him, the exact thing the character rules forbid. It will come back with four fingers, a wrong tracksuit and a dumbbell that changes shape mid-shot.
+Flow has **Ingredients to Video** (up to three reference images) and **Frames to Video** (a start and end frame it animates between). Both are now in play for characters, on conditions.
 
-| Flow image input | Verdict |
+| Image input | Verdict |
 |---|---|
-| A **generated** backdrop still as a start frame, to animate it | ✅ Fine — no brand art involved |
-| Frames to Video between two **generated** stills, for a controlled move | ✅ Fine |
-| A character PNG as an "ingredient" | ❌ Never |
-| A product photo as an "ingredient" | ❌ Never |
-| The logo, or packaging artwork, as a style reference | ❌ Never |
+| A **generated** backdrop still as a start frame | ✅ Fine |
+| Frames to Video between two **generated** stills | ✅ Fine |
+| A **character identity sheet** — two or three approved poses of one character | ✅ Fine, and required |
+| A single character PNG as the only reference | ⚠ Weak — identity drifts. Give it three angles. |
+| A **photograph** of real packaging, defocused, as background dressing | ⚠ Fine, but see the palette note below |
+| A product photo, to generate the product in hero position | ❌ Never — use the real shot |
+| The logo, as reference or as something to render | ❌ Never — composite the file |
 
-Motion for supplied art comes from **moving the layer in CapCut**, never from regenerating the art. §6 has the technique.
+**Conditions on character generation:**
+
+1. **Approved characters only, from approved reference.** A generator may re-pose one of the ten. It may not invent an eleventh, restyle one, or change a costume.
+2. **Three angles minimum** in the identity sheet, and **the same sheet on every shot** for that character across a piece.
+3. **Clips of 3–4 seconds.** Design drifts *inside* a clip — the mark, the medallion and any lettering go first.
+4. **Check the last frame, not the first.** If the last frame is off-model, the clip is off-model.
+5. **Grade back to the palette afterwards.** Generators run warm and desaturate the cyan.
+6. **Anything a generation gets wrong, composite instead.** The fallback in §6 has not gone away — it is now the repair, not the default.
+
+**The packaging palette trap.** The real boxes print in a hotter magenta and mint green than the brand palette. Feed a box photo as reference and the model pulls the whole frame that way, and the printed characters on the panels are superseded designs. Keep any box defocused, and grade back. The **branded stick** is the safe brand cue — clean, on-palette, nothing to drift.
 
 ---
 
@@ -74,16 +85,19 @@ Google AI Pro is roughly **1,000 credits/month**; a 10s Veo 3.1 clip at Quality 
 
 ## 2. The golden rule
 
-> **AI makes the stage. It never makes the actors.**
+> **AI makes the stage, and may pose the actors. It never makes the props that carry the brand mark.**
 
 | AI generates | Never AI — use the supplied file |
 |---|---|
-| Backgrounds, sets, rooftops, streets | **The logo** — `assets/logo/` |
-| Night city, motion plates, weather | **Any character** — `assets/characters/` |
-| Abstract texture: splash, drip, steam | **The product in hero position** — `assets/marketing/product-hero/` |
-| Colour-blocked studio backdrops | **Packaging artwork** — `assets/marketing/packaging/` |
+| Backgrounds, sets, rooftops, streets | **The logo, symbol and icon** — `assets/logo/` |
+| Night city, motion plates, weather | **The product in hero position** — `assets/marketing/product-hero/` |
+| Abstract texture: splash, drip, steam | **Packaging artwork** — `assets/marketing/packaging/` |
+| Colour-blocked studio backdrops | **Any lettering, wordmark or signage** |
+| **Approved characters, re-posed from reference** *(amended 31 Aug 2026)* | |
 
-This isn't a limitation to work around — it's what keeps the brand exact. A composited PNG is pixel-perfect in every frame, forever. A generated character is wrong in a new way every time.
+The line moved, and it moved for a reason: a re-posed character can be checked against the reference and regenerated until it is right. **The logo cannot** — the signature wave through the letterforms is the thing generators reliably destroy, and a broken mark is worse than no mark. Same for the product: the grid, the stick and the crumb are what this audience knows by heart.
+
+When a generated character does come back wrong, the composite route in §6 is the repair.
 
 **Also never generate:** implied claims — "fastest delivery", "best in Bangladesh", health or nutrition claims.
 
@@ -182,7 +196,7 @@ smooth steady tracking, high contrast. Vertical 9:16.
 4. **The shadow** — duplicate the PNG, fill black, flatten, blur, drop opacity to ~30%, place under his feet, bob it in sync.
 5. Background slides, he bobs → he's walking.
 
-> ⚠ **Never feed a character PNG into Veo, Flow, Whisk or any image-to-video tool.** That generates new poses from his artwork, which is redrawing him — the same hard rule as generating him from scratch. Motion comes from moving the *layer*, never regenerating the art.
+> **Amended 31 Aug 2026.** Feeding character reference into an image-to-video tool is now allowed — see §0 for the conditions. The layer-bob technique above has not gone away: it is still the most reliable way to move a character, it costs nothing, and it is exactly on-model in every frame. **Use it whenever a shot doesn't need the character to do anything a flat overlay can't do.** Reach for generation when the shot needs a walk cycle, a head turn or a real interaction with the scene.
 
 **Camera moves on stills** (if you generate images rather than video):
 
@@ -206,7 +220,7 @@ For real parallax, mask the foreground off the background as two layers and slid
 | **SOUND ON** | ❌ **No AI.** Real macro footage, real audio. Phone + quiet room. |
 | **ON THE MOVE** | Generate street plate → composite real hand + product, or just film it |
 | **NOT-SO-FACTS** | ❌ No AI needed. Typography on brand pattern. |
-| **GANG SIGHTING** | Generate environment with empty space → composite character PNG |
+| **GANG SIGHTING** | Generate the character in the environment from an identity sheet, or generate the environment with empty space and composite |
 | **CAUGHT CRISPY** | ❌ No AI. Customer's own content. |
 | **THE LATE SHIFT** | Generate night city plate → composite product |
 | **ORDER UP** | Generate clean backdrop → composite real product |
@@ -220,7 +234,7 @@ For real parallax, mask the foreground off the background as two layers and slid
 Every rule in `CLAUDE.md` §3 and §6 still applies, whichever tool is generating:
 
 - Never **"free"** or **"discount"** — in any language, any channel
-- Characters: supplied art only, **no first-person speech** until voices are approved
+- Characters: approved characters only, posed from an approved identity sheet; **no first-person speech** until voices are approved
 - Ink is `#450001`, never pure black
 - Hard light, brand-colour backdrops, 30fps
 - No Foodpanda/Pathao CTA on Chef's Table content

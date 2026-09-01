@@ -37,3 +37,6 @@ brand-guidelines/__pycache__/
 
 # Character source masters: CMYK print separations (2.2 GB, printer-only)
 assets/characters/_source/poses-cmyk/
+
+# Office lock/owner files
+~$*

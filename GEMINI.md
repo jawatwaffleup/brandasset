@@ -63,8 +63,8 @@ FORMAT unless told otherwise: vertical 9:16, 30fps, clean and uncluttered.
 
 WRITE PROMPTS AS CINEMATIC PROSE, not keyword lists. Every prompt states, in
 this order: shot and camera move, lens, subject and environment, light
-direction and hardness, palette with hex, and what the frame deliberately
-keeps empty.
+direction and hardness, palette in plain colour words, and what the frame
+deliberately keeps empty.
 
 PHRASE EXCLUSIONS POSITIVELY. Naming a thing tends to summon it.
   "no people"      ->  "completely deserted"
