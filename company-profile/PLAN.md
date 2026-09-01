@@ -157,8 +157,12 @@ What this settles:
 
 ---
 
-## 7. Files in this campaign
+## 7. Files in this workspace
 
 - `PLAN.md` — this document
 - `CAPTURE-BRIEF.md` — every photograph and clip to be captured, by location, with specs
 - `GATHER.md` — every fact, document, logo and existing asset to be collected, with owners
+
+Later, as the build starts: `copy/` for the page-by-page copy deck, `src/` for the HTML, rendering to `WaffleUp Company Profile.pdf` at the repo root — the same route `brand-guidelines/` takes.
+
+**This is a standing brand document, not a campaign.** It has no month in its name because it will be revised for years, the way the Brand Guidelines are.

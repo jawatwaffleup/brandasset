@@ -225,6 +225,9 @@ Delivered as copy-pasteable blocks, one per shot, plus a shot list.
 | Anything rendered or exported | `output/` |
 | Programme-level strategy (loyalty, etc.) | `programs/` |
 | Raw discovery / interview captures | `brainstorms/` |
+| **Long-running brand documents** | own top-level folder — `brand-guidelines/`, `company-profile/` |
+
+**Brand documents are not campaigns.** A campaign has a date, a run and an end. The Brand Guidelines and the Company Profile are standing brand assets that get revised for years, and each one owns a top-level folder holding its planning, copy and HTML source, rendering its PDF to the repo root through `brand-guidelines/build.py`. Don't file them under `campaigns/<yyyy-mm>-…` — they have no month.
 
 **Key existing docs:** `programs/AI-PRODUCTION.md` — the Gemini/Veo production pipeline: what AI may and may not generate, prompt conversion for Veo, and CapCut compositing. `programs/SOCIAL-ENGINE.md` — the eight repeatable content formats, the 70/30 split, the monthly calendar and the Higgsfield prompt templates. **Start here for any social or content request.** `programs/SURPRISE-CARD-GUIDELINE.md` — the Surprise Card utilisation strategy (seasons, registration, trading, reward ladder, engine schema deltas). Read it before proposing anything loyalty-related. `programs/CHANNEL-MAP.md` — every touchpoint on one page (ATL, delivery, tech/rewards, BTL), transcribed from the 27 Jun 2026 internal sheet, plus my read on the gaps. `brainstorms/2026-08-23-waffleup-products-and-marketing.md` — Jawat's own words on objectives, occasions and constraints.
 
