@@ -152,6 +152,8 @@ td{ padding:9px 14px; border-bottom:1.5px solid rgba(69,0,1,0.18); vertical-alig
 tr:last-child td{ border-bottom:none; }
 td.k{ font-weight:600; white-space:nowrap; }
 .mono{ font-family:"BebasNeue",sans-serif; letter-spacing:0.06em; font-size:19px; }
+table.tight td{ padding:5px 14px; }
+table.tight th{ padding:0 14px 7px; }
 
 /* ---- divider pages ---- */
 .divider{ flex-direction:row; }
@@ -200,14 +202,17 @@ td.k{ font-weight:600; white-space:nowrap; }
       var(--pink) calc(50% + 2.5px), transparent calc(50% + 2.5px));
 }
 
+.poserow .cap{ font-size:11px; letter-spacing:0.055em; padding:8px 11px; }
+
 /* ---- character profile ---- */
 .charcard{ display:flex; gap:26px; align-items:stretch; border:4px solid var(--cocoa);
   border-radius:26px; background:#fff; overflow:hidden; box-shadow:0 8px 0 var(--cocoa); }
 .charcard .art{ width:44%; display:flex; align-items:center; justify-content:center; padding:14px; }
-.charcard .art img{ max-width:100%; max-height:224px; object-fit:contain; }
-.charcard .txt{ flex:1; padding:26px 28px 24px 0; display:flex; flex-direction:column; gap:12px; justify-content:center; }
+.charcard .art img{ max-width:100%; max-height:236px; object-fit:contain; }
+.charcard .txt{ flex:1; padding:18px 26px 16px 0; display:flex; flex-direction:column; gap:9px; justify-content:center; }
 .charcard .txt p{ font-size:15px; line-height:1.55; }
-.charcard .tags{ display:flex; gap:8px; flex-wrap:wrap; }
+.charcard .tags{ display:flex; gap:7px; flex-wrap:wrap; }
+.charcard .tags .pill{ padding:4px 12px; font-size:11px; letter-spacing:0.1em; }
 
 .lyr{ display:inline-block; width:42px; height:42px; border-radius:11px;
   border:3px solid var(--cocoa); margin-right:10px; vertical-align:middle; }
@@ -236,7 +241,7 @@ td.k{ font-weight:600; white-space:nowrap; }
 </head>
 <body>
 
-<!-- ============================= 1 · COVER ============================= -->
+<!-- =============================== 1 · COVER =============================== -->
 <section class="page" style="background:var(--cyan)">
   <div class="blob tl b-gold" style="width:620px;height:430px"></div>
   <div class="blob tr b-pink" style="width:560px;height:390px"></div>
@@ -261,7 +266,7 @@ td.k{ font-weight:600; white-space:nowrap; }
     <img src="img/char-icy.png" alt="Icy" style="height:159px">
     <img src="img/char-picchi.png" alt="Picchi" style="height:125px">
     <img src="img/char-swirly.png" alt="Swirly" style="height:177px">
-    <img src="img/char-merlulu.png" alt="Merlulu" style="height:166px">
+    <img src="img/pose-merlulu-main.png" alt="Merlulu" style="height:166px">
   </div>
   <div style="position:absolute;bottom:0;left:0;width:1440px;height:56px;background:var(--cocoa);color:#fff;
               display:flex;align-items:center;justify-content:space-between;padding:0 96px">
@@ -272,7 +277,7 @@ td.k{ font-weight:600; white-space:nowrap; }
 
 <!-- ============================= 2 · CONTENTS ============================= -->
 <section class="page pad">
-  <div class="blob tr b-cyan" style="width:360px;height:250px;top:150px"></div>
+  <div class="blob tr b-cyan" style="width:360px;height:250px"></div>
   <div class="blob bl b-pink" style="width:400px;height:290px"></div>
   <div class="dot" style="top:64px;right:432px;width:26px;height:26px"></div>
   <div class="head" style="margin-bottom:30px">
@@ -288,21 +293,21 @@ td.k{ font-weight:600; white-space:nowrap; }
     <div>
       <table>
         <tr><td class="mono" style="width:56px">01</td><td class="k">The brand</td><td class="mono" style="text-align:right">04</td></tr>
-        <tr><td class="mono">02</td><td class="k">Logo, symbol &amp; icon</td><td class="mono" style="text-align:right">10</td></tr>
-        <tr><td class="mono">03</td><td class="k">Colour</td><td class="mono" style="text-align:right">18</td></tr>
-        <tr><td class="mono">04</td><td class="k">Typography</td><td class="mono" style="text-align:right">24</td></tr>
-        <tr><td class="mono">05</td><td class="k">The brand pattern</td><td class="mono" style="text-align:right">30</td></tr>
-        <tr><td class="mono">06</td><td class="k">The Waffle Up Gang</td><td class="mono" style="text-align:right">32</td></tr>
+        <tr><td class="mono">02</td><td class="k">Logo, symbol &amp; icon</td><td class="mono" style="text-align:right">11</td></tr>
+        <tr><td class="mono">03</td><td class="k">Colour</td><td class="mono" style="text-align:right">19</td></tr>
+        <tr><td class="mono">04</td><td class="k">Typography</td><td class="mono" style="text-align:right">25</td></tr>
+        <tr><td class="mono">05</td><td class="k">The brand pattern</td><td class="mono" style="text-align:right">31</td></tr>
+        <tr><td class="mono">06</td><td class="k">The Waffle Up Gang</td><td class="mono" style="text-align:right">33</td></tr>
       </table>
     </div>
     <div>
       <table>
-        <tr><td class="mono" style="width:56px">07</td><td class="k">Voice &amp; tone</td><td class="mono" style="text-align:right">44</td></tr>
-        <tr><td class="mono">08</td><td class="k">Product &amp; photography</td><td class="mono" style="text-align:right">49</td></tr>
-        <tr><td class="mono">09</td><td class="k">Packaging &amp; environment</td><td class="mono" style="text-align:right">54</td></tr>
-        <tr><td class="mono">10</td><td class="k">Merchandise</td><td class="mono" style="text-align:right">57</td></tr>
-        <tr><td class="mono">11</td><td class="k">The Surprise Card</td><td class="mono" style="text-align:right">60</td></tr>
-        <tr><td class="mono">12</td><td class="k">The asset library</td><td class="mono" style="text-align:right">63</td></tr>
+        <tr><td class="mono" style="width:56px">07</td><td class="k">Voice &amp; tone</td><td class="mono" style="text-align:right">55</td></tr>
+        <tr><td class="mono">08</td><td class="k">Product &amp; photography</td><td class="mono" style="text-align:right">61</td></tr>
+        <tr><td class="mono">09</td><td class="k">Packaging &amp; environment</td><td class="mono" style="text-align:right">66</td></tr>
+        <tr><td class="mono">10</td><td class="k">Merchandise</td><td class="mono" style="text-align:right">69</td></tr>
+        <tr><td class="mono">11</td><td class="k">The Surprise Card</td><td class="mono" style="text-align:right">72</td></tr>
+        <tr><td class="mono">12</td><td class="k">The asset library</td><td class="mono" style="text-align:right">75</td></tr>
       </table>
     </div>
   </div>
@@ -315,9 +320,9 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>Waffle Up · Visual brand guidelines</span><span class="no"></span></div>
 </section>
 
-<!-- ============================= 3 · HOW TO USE ============================= -->
+<!-- ============================ 3 · HOW TO USE ============================ -->
 <section class="page pad">
-  <div class="blob br b-gold" style="width:560px;height:380px"></div>
+  <div class="blob tr b-gold" style="width:460px;height:320px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">Before you start</p>
@@ -361,11 +366,11 @@ td.k{ font-weight:600; white-space:nowrap; }
     </div>
   </div>
   <img src="img/pattern.jpg" alt="Brand pattern"
-       style="position:absolute;left:0;bottom:56px;width:1440px;height:118px;object-fit:cover">
-  <div class="folio"><span>Waffle Up · Visual brand guidelines</span><span class="no"></span></div>
+       style="position:absolute;left:0;bottom:0;width:1440px;height:112px;object-fit:cover">
+  <div class="folio" style="bottom:128px"><span>Waffle Up · Visual brand guidelines</span><span class="no"></span></div>
 </section>
 
-<!-- ===================== 4 · DIVIDER — 01 THE BRAND ===================== -->
+<!-- ====================== 4 · DIVIDER — 01 THE BRAND ====================== -->
 <section class="page divider">
   <div class="left f-cyan">
     <div class="blob tl b-pink" style="width:300px;height:220px"></div>
@@ -387,7 +392,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ============================= 5 · WHO WE ARE ============================= -->
+<!-- ============================ 5 · WHO WE ARE ============================ -->
 <section class="page pad">
   <div class="blob tr b-gold" style="width:400px;height:280px"></div>
   <div class="head">
@@ -410,7 +415,7 @@ td.k{ font-weight:600; white-space:nowrap; }
         <tr><td class="k">Handles</td><td>@waffleup.online (Instagram · Facebook · TikTok) · waffleup.global</td></tr>
         <tr><td class="k">Tagline</td><td>Square is the new heart</td></tr>
         <tr><td class="k">Archetype</td><td>The Jester — casual, friendly, humorous</td></tr>
-        <tr><td class="k">Characters</td><td>Nine in Bangladesh; those nine plus Merlulu in Singapore</td></tr>
+        <tr><td class="k">Characters</td><td>Ten canonical characters &mdash; one universal roster in both markets</td></tr>
       </table>
     </div>
     <div style="display:flex;flex-direction:column;gap:20px">
@@ -432,7 +437,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
 </section>
 
-<!-- ============================= 6 · MISSION ============================= -->
+<!-- ============================== 6 · MISSION ============================== -->
 <section class="page f-cyan pad">
   <div class="blob bl b-white" style="width:660px;height:450px"></div>
   <div class="blob tr b-pink" style="width:380px;height:270px"></div>
@@ -452,7 +457,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
 </section>
 
-<!-- ============================= 7 · VISION ============================= -->
+<!-- ============================== 7 · VISION ============================== -->
 <section class="page pad">
   <div class="blob br b-cyan" style="width:520px;height:360px"></div>
   <div class="head">
@@ -495,7 +500,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
 </section>
 
-<!-- ============================= 8 · VALUES ============================= -->
+<!-- ============================== 8 · VALUES ============================== -->
 <section class="page pad">
   <div class="blob tl b-gold" style="width:420px;height:300px"></div>
   <div class="head">
@@ -529,7 +534,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
 </section>
 
-<!-- ====================== 9 · AUDIENCE & LINES ====================== -->
+<!-- ========================= 9 · AUDIENCE & LINES ========================= -->
 <section class="page pad">
   <div class="blob bl b-cyan" style="width:520px;height:360px"></div>
   <div class="head">
@@ -571,7 +576,67 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>01 · The brand</span><span class="no"></span></div>
 </section>
 
-<!-- ================ 10 · DIVIDER — 02 LOGO, SYMBOL & ICON ================ -->
+<!-- =========================== 10 · THE PROMISE =========================== -->
+<section class="page pad">
+  <div class="blob tr b-pink" style="width:400px;height:280px"></div>
+  <div class="blob bl b-cyan" style="width:420px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">01 &middot; The brand</p>
+      <h2 class="display d-cyan">the promise</h2>
+    </div>
+    <p class="note">One line the whole brand answers to, and the four pieces of the product that
+      make it true rather than aspirational.</p>
+  </div>
+  <div class="grid g3" style="gap:22px;margin-bottom:24px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:11px;opacity:.6">Who it&rsquo;s for</p>
+      <p class="small">A style-aware urban teenager-to-twentysomething with money in their pocket
+        and a phone in their hand, who treats dessert as <strong>something to post, not something
+        to plan</strong>.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:11px;opacity:.6">What was wrong</p>
+      <p class="small">Dessert was an occasion you had to travel to and eat at a table &mdash; and
+        when it finally started travelling to you, it arrived soggy, melted and obviously
+        &ldquo;delivery-friendly&rdquo;.</p>
+    </div>
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:11px">The promise</p>
+      <p class="display d-gold" style="font-size:44px;line-height:1;margin-top:6px">joy that<br>travels</p>
+    </div>
+  </div>
+  <div class="grid g4" style="gap:20px;flex:1;min-height:0">
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:10px">The stick</p>
+      <p class="small">A handle. Dessert you can walk, ride, queue and pose with. No table, no
+        fork, no sitting down.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:10px">The square</p>
+      <p class="small">Packs flat, stacks, doesn&rsquo;t roll, doesn&rsquo;t crush.
+        <strong>Square is the new heart</strong> is an engineering claim before it is a tagline.</p>
+    </div>
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:10px">The box</p>
+      <p class="small">It arrives as an object worth filming, not a sad container. The packaging is
+        part of the product.</p>
+    </div>
+    <div class="panel f-cream">
+      <p class="eyebrow" style="margin-bottom:10px">Late night</p>
+      <p class="small">Joy travels <em>when</em> you want it, not when a restaurant is seating.
+        No occasion required.</p>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:16px">
+    <p class="small"><strong>Never sell it as</strong> artisanal, indulgent, premium patisserie or
+      &ldquo;treat yourself&rdquo; luxury. The brand exists to take the luxury <em>off</em> the
+      waffle. That register is a hard fail, in copy and in art direction alike.</p>
+  </div>
+  <div class="folio"><span>01 &middot; The brand</span><span class="no"></span></div>
+</section>
+
+<!-- ================= 11 · DIVIDER — 02 LOGO, SYMBOL & ICON ================= -->
 <section class="page divider">
   <div class="left f-pink">
     <div class="blob tl b-gold" style="width:300px;height:220px"></div>
@@ -588,7 +653,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ============================= 11 · THE LOGO ============================= -->
+<!-- ============================= 12 · THE LOGO ============================= -->
 <section class="page pad">
   <div class="blob tr b-cyan" style="width:420px;height:290px"></div>
   <div class="head">
@@ -623,7 +688,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
 </section>
 
-<!-- ========================= 12 · THE TWO BUILDS ========================= -->
+<!-- ========================== 13 · THE TWO BUILDS ========================== -->
 <section class="page pad">
   <div class="blob bl b-gold" style="width:460px;height:330px"></div>
   <div class="head">
@@ -657,7 +722,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
 </section>
 
-<!-- ==================== 13 · CLEARSPACE & MINIMUM SIZE ==================== -->
+<!-- ==================== 14 · CLEARSPACE & MINIMUM SIZE ==================== -->
 <section class="page pad">
   <div class="blob tr b-pink" style="width:400px;height:280px"></div>
   <div class="head">
@@ -703,7 +768,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
 </section>
 
-<!-- ============================ 14 · THE SYMBOL ============================ -->
+<!-- ============================ 15 · THE SYMBOL ============================ -->
 <section class="page pad">
   <div class="blob br b-cyan" style="width:480px;height:340px"></div>
   <div class="head">
@@ -738,7 +803,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
 </section>
 
-<!-- ============================= 15 · THE ICON ============================= -->
+<!-- ============================= 16 · THE ICON ============================= -->
 <section class="page pad">
   <div class="blob tl b-gold" style="width:400px;height:290px"></div>
   <div class="head">
@@ -774,7 +839,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
 </section>
 
-<!-- =============================== 16 · DO =============================== -->
+<!-- ================================ 17 · DO ================================ -->
 <section class="page pad">
   <div class="blob br b-cyan" style="width:520px;height:360px"></div>
   <div class="head">
@@ -810,7 +875,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
 </section>
 
-<!-- ============================== 17 · DON'T ============================== -->
+<!-- ============================== 18 · DON'T ============================== -->
 <section class="page pad">
   <div class="blob bl b-pink" style="width:520px;height:360px"></div>
   <div class="head">
@@ -862,7 +927,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>02 · Logo, symbol &amp; icon</span><span class="no"></span></div>
 </section>
 
-<!-- ==================== 18 · DIVIDER — 03 COLOUR ==================== -->
+<!-- ======================= 19 · DIVIDER — 03 COLOUR ======================= -->
 <section class="page divider">
   <div class="left f-gold">
     <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
@@ -884,7 +949,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ========================== 19 · THE PALETTE ========================== -->
+<!-- =========================== 20 · THE PALETTE =========================== -->
 <section class="page pad">
   <div class="blob tr b-cyan" style="width:380px;height:270px"></div>
   <div class="head">
@@ -958,7 +1023,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
 </section>
 
-<!-- ====================== 20 · DIGITAL VS PRINT ====================== -->
+<!-- ========================= 21 · DIGITAL VS PRINT ========================= -->
 <section class="page pad">
   <div class="blob bl b-gold" style="width:460px;height:330px"></div>
   <div class="head">
@@ -988,13 +1053,15 @@ td.k{ font-weight:600; white-space:nowrap; }
       <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Legacy note</p>
       <p class="small">The 2022 Brand Book V.1 lists #6DCBD8 / #F0639A / #FFD66D / #3E1312. Those
         are superseded — treat any old-file colours you meet as the print/CMYK line, and rebuild
-        digital work on the current RGB values.</p>
+        digital work on the current RGB values. <strong>Some packaging artwork prints in a hotter
+        magenta and mint green.</strong> That artwork is off-palette: never sample from it, never
+        grade a photograph toward it.</p>
     </div>
   </div>
   <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
 </section>
 
-<!-- ==================== 21 · TINTS, SHADES & ROLES ==================== -->
+<!-- ====================== 22 · TINTS, SHADES & ROLES ====================== -->
 <section class="page pad">
   <div class="blob tr b-pink" style="width:400px;height:280px"></div>
   <div class="head">
@@ -1047,7 +1114,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
 </section>
 
-<!-- ========================= 22 · THE COLOUR RATIO ========================= -->
+<!-- ========================= 23 · THE COLOUR RATIO ========================= -->
 <section class="page pad">
   <div class="blob br b-cyan" style="width:480px;height:340px"></div>
   <div class="head">
@@ -1095,7 +1162,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
 </section>
 
-<!-- ====================== 23 · COLOUR IN PRACTICE ====================== -->
+<!-- ======================== 24 · COLOUR IN PRACTICE ======================== -->
 <section class="page pad">
   <div class="blob tl b-pink" style="width:400px;height:290px"></div>
   <div class="head">
@@ -1145,7 +1212,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>03 · Colour</span><span class="no"></span></div>
 </section>
 
-<!-- ================== 24 · DIVIDER — 04 TYPOGRAPHY ================== -->
+<!-- ===================== 25 · DIVIDER — 04 TYPOGRAPHY ===================== -->
 <section class="page divider">
   <div class="left f-cocoa">
     <div class="blob tl b-pink" style="width:300px;height:220px"></div>
@@ -1162,7 +1229,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ========================= 25 · THE TYPE FAMILY ========================= -->
+<!-- ========================= 26 · THE TYPE FAMILY ========================= -->
 <section class="page pad">
   <div class="blob tr b-gold" style="width:400px;height:280px"></div>
   <div class="head">
@@ -1212,7 +1279,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
 </section>
 
-<!-- ====================== 26 · ANATOMICAL BREAKDOWN ====================== -->
+<!-- ======================= 27 · ANATOMICAL BREAKDOWN ======================= -->
 <section class="page pad">
   <div class="blob bl b-cyan" style="width:460px;height:330px"></div>
   <div class="head">
@@ -1269,7 +1336,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
 </section>
 
-<!-- ======================== 27 · TYPE ON SCREEN ======================== -->
+<!-- ========================== 28 · TYPE ON SCREEN ========================== -->
 <section class="page pad">
   <div class="blob tr b-cyan" style="width:400px;height:280px"></div>
   <div class="head">
@@ -1316,7 +1383,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
 </section>
 
-<!-- ======================= 28 · WORD-MARKS I ======================= -->
+<!-- =========================== 29 · WORD-MARKS I =========================== -->
 <section class="page pad">
   <div class="blob bl b-pink" style="width:440px;height:310px"></div>
   <div class="head">
@@ -1340,7 +1407,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
 </section>
 
-<!-- ======================= 29 · WORD-MARKS II ======================= -->
+<!-- ========================== 30 · WORD-MARKS II ========================== -->
 <section class="page pad">
   <div class="blob tr b-gold" style="width:400px;height:280px"></div>
   <div class="head">
@@ -1368,7 +1435,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>04 · Typography</span><span class="no"></span></div>
 </section>
 
-<!-- ================= 30 · DIVIDER — 05 THE BRAND PATTERN ================= -->
+<!-- ================== 31 · DIVIDER — 05 THE BRAND PATTERN ================== -->
 <section class="page divider">
   <div class="left f-cyan">
     <div class="blob tl b-gold" style="width:300px;height:220px"></div>
@@ -1388,7 +1455,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ======================= 31 · THE SIGNATURE WAVE ======================= -->
+<!-- ======================== 32 · THE SIGNATURE WAVE ======================== -->
 <section class="page pad">
   <div class="blob br b-pink" style="width:440px;height:310px"></div>
   <div class="head">
@@ -1422,7 +1489,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>05 · The brand pattern</span><span class="no"></span></div>
 </section>
 
-<!-- ============== 32 · DIVIDER — 06 THE WAFFLE UP GANG ============== -->
+<!-- ================= 33 · DIVIDER — 06 THE WAFFLE UP GANG ================= -->
 <section class="page divider">
   <div class="left f-pink">
     <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
@@ -1432,237 +1499,627 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="right f-gold">
     <div class="blob br b-pink" style="width:440px;height:310px"></div>
     <p class="eyebrow">Section six</p>
-    <p class="lede" style="max-width:38ch;color:var(--cocoa)">Ten canonical characters in
-      Bangladesh. Those nine plus Merlulu in Singapore. Created by the founder, then formalised
-      into vector art and animation rigs.</p>
+    <p class="lede" style="max-width:38ch;color:var(--cocoa)">Ten canonical characters, one
+      universal roster. Created by the founder, formalised into vector art and animation rigs,
+      and extended in August 2026 with a full sheet of poses.</p>
     <div class="rule" style="width:120px"></div>
-    <img src="img/char-swirly.png" alt="Swirly"
-         style="position:absolute;right:60px;bottom:48px;height:300px;z-index:2">
+    <img src="img/pose-swirly-main.png" alt="Swirly"
+         style="position:absolute;right:52px;bottom:40px;height:300px;z-index:2">
   </div>
 </section>
 
-<!-- ============================ 33 · THE ROSTER ============================ -->
+<!-- ============================ 34 · THE ROSTER ============================ -->
 <section class="page pad">
-  <div class="blob tr b-cyan" style="width:340px;height:240px;top:180px"></div>
+  <div class="blob tr b-cyan" style="width:340px;height:240px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
       <h2 class="display d-pink">the roster</h2>
     </div>
-    <p class="note">Several of them are objects rather than people — Stovy is the oven, Icy is the
-      popsicle, Mr Waffle is the waffle.</p>
+    <p class="note">Several of them are objects rather than people &mdash; Stovy is the oven, Icy is
+      the popsicle, Mr Waffle is the waffle.</p>
   </div>
-  <img src="img/lineup.jpg" alt="The Waffle Up Gang lineup"
+  <img src="img/gang-banner.jpg" alt="The Waffle Up Gang"
        style="display:block;width:100%;border:4px solid var(--cocoa);border-radius:20px">
-  <div class="grid g3" style="margin-top:24px;gap:22px">
+  <div class="grid g3" style="margin-top:26px;gap:22px">
     <div class="panel f-cyan">
-      <p class="eyebrow" style="margin-bottom:12px">Bangladesh — nine</p>
-      <p class="small">Mr Waffle · Air Maxi · Bhoppu · Picchi · Stovy · Swirly · Tvy · Spacy · Icy.
-        This is the complete list. There are no secondary or legacy characters.</p>
+      <p class="eyebrow" style="margin-bottom:12px">Ten, everywhere</p>
+      <p class="small">Bhoppu &middot; Air Maxi &middot; Mr Waffle &middot; Picchi &middot; Swirly
+        &middot; Merlulu &middot; Spacy &middot; Stovy &middot; Tvy &middot; Icy. This is the
+        complete list. There are no secondary, regional or legacy characters.</p>
     </div>
     <div class="panel f-pink">
-      <p class="eyebrow" style="margin-bottom:12px">Singapore — ten</p>
-      <p class="small">The nine plus <strong>Merlulu</strong>, a pink-maned Merlion with a gold W
-        medallion. Universal since August 2026 &mdash; he appears anywhere the others do. Singapore
-        is his origin, not a restriction.</p>
+      <p class="eyebrow" style="margin-bottom:12px">One roster, two markets</p>
+      <p class="small">The old <strong>Bangladesh nine / Singapore ten</strong> split is void
+        (Aug 2026). <strong>Merlulu</strong> appears anywhere the others do &mdash; Singapore is
+        his origin, not a fence. Market rules still bind <strong>price and CTA</strong>, never
+        cast.</p>
     </div>
     <div class="panel">
       <p class="eyebrow" style="margin-bottom:12px;opacity:.6">Names</p>
       <p class="small">Source files use inconsistent spellings. The approved public names are
-        <strong>Stovy</strong> (not Stovie), <strong>Tvy</strong> (not TV) and
-        <strong>Spacy</strong> (not Spacie).</p>
+        <strong>Stovy</strong> (not Stovie), <strong>Tvy</strong> (not TV or TVy),
+        <strong>Spacy</strong> (not Spacie) and <strong>Icy</strong> (filed as
+        &ldquo;popsicle&rdquo;).</p>
     </div>
   </div>
   <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ===================== 34 · MR WAFFLE & AIR MAXI ===================== -->
+<!-- ======================= 35 · THE ORDER & THE JOBS ======================= -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:430px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <h2 class="display d-cyan">the order</h2>
+    </div>
+    <p class="note">Importance inside the fiction, confirmed August 2026. It decides who leads a
+      story, not who is allowed to appear.</p>
+  </div>
+  <div class="grid g5" style="gap:14px">
+    <div class="tile f-cyan"><div class="frame" style="height:112px"><img src="img/pose-bhoppu-main.png" alt="Bhoppu"></div><div class="cap">01 &middot; Bhoppu</div></div>
+    <div class="tile f-pink"><div class="frame" style="height:112px"><img src="img/pose-air-maxi-main.png" alt="Air Maxi"></div><div class="cap">02 &middot; Air Maxi</div></div>
+    <div class="tile f-gold"><div class="frame" style="height:112px"><img src="img/pose-mr-waffle-main.png" alt="Mr Waffle"></div><div class="cap">03 &middot; Mr Waffle</div></div>
+    <div class="tile f-cyan"><div class="frame" style="height:112px"><img src="img/pose-picchi-main.png" alt="Picchi"></div><div class="cap">04 &middot; Picchi</div></div>
+    <div class="tile f-pink"><div class="frame" style="height:112px"><img src="img/pose-swirly-main.png" alt="Swirly"></div><div class="cap">05 &middot; Swirly</div></div>
+  </div>
+  <div class="grid g5" style="gap:14px;margin-top:12px">
+    <div class="tile f-gold"><div class="frame" style="height:112px"><img src="img/pose-merlulu-main.png" alt="Merlulu"></div><div class="cap">06 &middot; Merlulu</div></div>
+    <div class="tile f-cyan"><div class="frame" style="height:112px"><img src="img/pose-spacy-main.png" alt="Spacy"></div><div class="cap">07 &middot; Spacy</div></div>
+    <div class="tile f-pink"><div class="frame" style="height:112px"><img src="img/pose-stovy-main.png" alt="Stovy"></div><div class="cap">08 &middot; Stovy</div></div>
+    <div class="tile f-gold"><div class="frame" style="height:112px"><img src="img/pose-tvy-main.png" alt="Tvy"></div><div class="cap">09 &middot; Tvy</div></div>
+    <div class="tile f-cyan"><div class="frame" style="height:112px"><img src="img/pose-icy-main.png" alt="Icy"></div><div class="cap">10 &middot; Icy</div></div>
+  </div>
+  <div class="grid g2" style="gap:22px;margin-top:18px">
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:10px">Two different jobs, both true</p>
+      <p class="small"><strong>Bhoppu</strong> is the centre of the fiction &mdash; the character
+        the stories are built around. <strong>Mr Waffle</strong> is the mascot and ambassador
+        &mdash; the character who represents Waffle Up to the outside world, and the one on the
+        packaging. Neither displaces the other.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:10px">Three movement languages</p>
+      <p class="small"><strong>Bhoppu is mass. Air Maxi is motion. Mr Waffle is stillness.</strong>
+        Everyone else sits between them. If two characters are moving the same way in one frame,
+        one of them is wrong.</p>
+    </div>
+  </div>
+  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ================= 36 · THE GANG — BHOPPU &amp; AIR MAXI ================= -->
 <section class="page pad">
   <div class="blob bl b-gold" style="width:420px;height:300px"></div>
   <div class="head">
     <div class="kicker">
-      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
       <h2 class="display d-cyan">the gang</h2>
     </div>
-    <p class="note">Each entry carries the approved Surprise Card description — the only wording
-      used in public.</p>
+    <p class="note">Profiles follow <strong>brand/CHARACTER-BIBLE.md</strong> &mdash; who they are and how they move. The printed card bios are quoted separately, on the Surprise Card pages.</p>
   </div>
   <div class="grid rows2" style="flex:1;gap:22px">
     <div class="charcard">
-      <div class="art f-cyan"><img src="img/char-mr-waffle.png" alt="Mr Waffle"></div>
+      <div class="art f-cyan"><img src="img/pose-bhoppu-main.png" alt="Bhoppu"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">mr waffle</h3>
-        <p>The original trendsetter of the waffle world! With a drizzle of style and a splash of
-          sass, he&rsquo;s here to prove that breakfast can be the highlight of any day.
-          &ldquo;Stay crispy, stay cool!&rdquo;</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
-          <span class="pill">A waffle square in shades and hi-tops</span></div>
+        <h3 class="display d-flat" style="font-size:29px">bhoppu</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Loves food more than anything. Goes to the gym anyway. Loses, every time, happily.</p>
+        <p style="font-size:12.7px;line-height:1.45">Enormous top-heavy mass on small feet, always leaning back to counterweight the belly &mdash; he is the <strong>mass</strong> of the group, the anchor the others stack on and bounce off. In every pose the dumbbell and the food are in opposite hands. That structure &mdash; effort and appetite in the same frame, never resolving &mdash; <em>is</em> the character. <strong>The joke is willpower, never his body.</strong></p>
+        <div class="tags"><span class="pill">Energy 5/5</span><span class="pill">Warmth 5/5</span><span class="pill">he/him</span><span class="pill">Headband &middot; dumbbell &middot; sweat</span></div>
       </div>
     </div>
     <div class="charcard">
-      <div class="art f-gold"><img src="img/char-air-maxi.png" alt="Air Maxi"></div>
+      <div class="art f-gold"><img src="img/pose-air-maxi-main.png" alt="Air Maxi"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">air maxi</h3>
-        <p>The beat of the street! With his paw on the pulse of the latest trends, he&rsquo;s the
-          go-to guy for all things trendy in the city.</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
-          <span class="pill">Pink-curled kid, headphones, varsity jacket</span></div>
+        <h3 class="display d-flat" style="font-size:29px">air maxi</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Wants to conquer the world, and is training for it.</p>
+        <p style="font-size:12.7px;line-height:1.45">Fast, sharp, athletic, explosive starts &mdash; he is the <strong>motion</strong> of the group. <strong>His ambition points at a standard, never at a person:</strong> he competes with the bar and with yesterday, not with his friends and never at their expense. He raises the level and expects company. Not selfish, not rude, nothing possessive.</p>
+        <div class="tags"><span class="pill">Energy 5/5</span><span class="pill">Warmth 3/5</span><span class="pill">he/him</span><span class="pill">Rabbit ears &middot; fox tail &middot; headphones</span></div>
       </div>
     </div>
   </div>
-  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ======================= 35 · BHOPPU & PICCHI ======================= -->
+<!-- ================ 37 · THE GANG — MR WAFFLE &amp; PICCHI ================ -->
 <section class="page pad">
   <div class="blob br b-cyan" style="width:420px;height:300px"></div>
   <div class="head">
     <div class="kicker">
-      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
       <h2 class="display d-pink">the gang</h2>
     </div>
     <p class="note">Use one character per screen or campaign piece, full-colour and unmodified.</p>
   </div>
   <div class="grid rows2" style="flex:1;gap:22px">
     <div class="charcard">
-      <div class="art f-pink"><img src="img/char-bhoppu.png" alt="Bhoppu"></div>
+      <div class="art f-pink"><img src="img/pose-mr-waffle-main.png" alt="Mr Waffle"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">bhoppu</h3>
-        <p>He has a knack for finding those elevated spots where waffles seem extra flavourful.
-          Some say it&rsquo;s his natural zest for life; others think there&rsquo;s a secret
-          ingredient.</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
-          <span class="pill">Cyan bear in a pink tracksuit</span></div>
+        <h3 class="display d-flat" style="font-size:29px">mr waffle</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Not the strongest. The one who holds it together.</p>
+        <p style="font-size:12.7px;line-height:1.45"><strong>He can float</strong> &mdash; hovering, deliberate, small precise adjustments, R2-D2 as the reference. It is a power he has, not a limit on him; he stands and walks too. The <strong>stillness</strong> of the group and its moral centre: the one everyone defers to without being told to. The &ldquo;sass&rdquo; on the card is a raised eyebrow, not a punchline.</p>
+        <div class="tags"><span class="pill">Energy 2/5</span><span class="pill">Warmth 4/5 to the gang</span><span class="pill">he/him</span><span class="pill">Shades &middot; bitten corner &middot; drip glaze</span></div>
       </div>
     </div>
     <div class="charcard">
-      <div class="art f-cyan"><img src="img/char-picchi.png" alt="Picchi"></div>
+      <div class="art f-cyan-100"><img src="img/pose-picchi-main.png" alt="Picchi"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">picchi</h3>
-        <p>With a flair for vibrant colors and a head full of curly dreams, Picchi dances through
-          life, sprinkling joy everywhere. Believing every day is a celebration waiting to happen,
-          Picchi spreads happiness with every step.</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span><span class="pill gold">3D model</span>
-          <span class="pill">Freckled kid in a cyan W-onesie</span></div>
+        <h3 class="display d-flat" style="font-size:29px">picchi</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Laughs easily. Cries just as easily. Draws everything.</p>
+        <p style="font-size:12.7px;line-height:1.45">The smallest silhouette in the cast &mdash; bouncy, unstable, runs at things, sits on the floor. Every object is a question. <strong>Total sincerity is her differentiator:</strong> in a brand where nearly everything is deadpan, Picchi never gets the joke, and that is correct. Her sadness is small, immediate and over in the same beat.</p>
+        <div class="tags"><span class="pill">Energy 5/5</span><span class="pill">Warmth 5/5</span><span class="pill">she/her</span><span class="pill">Curl mass &middot; freckles &middot; W-onesie</span></div>
       </div>
     </div>
   </div>
-  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ======================== 36 · STOVY & SWIRLY ======================== -->
+<!-- ================= 38 · THE GANG — SWIRLY &amp; MERLULU ================= -->
 <section class="page pad">
-  <div class="blob tl b-pink" style="width:400px;height:290px"></div>
+  <div class="blob tl b-pink" style="width:420px;height:300px"></div>
   <div class="head">
     <div class="kicker">
-      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
       <h2 class="display d-gold">the gang</h2>
     </div>
-    <p class="note">Characters are for positive moments — achievements, product storytelling,
-      celebration. Never for errors, payroll or discipline.</p>
+    <p class="note">Swirly never speaks &mdash; sounds and reactions only. Merlulu is the only one in the cast with a sport of his own.</p>
   </div>
   <div class="grid rows2" style="flex:1;gap:22px">
     <div class="charcard">
-      <div class="art f-gold"><img src="img/char-stovy.png" alt="Stovy"></div>
+      <div class="art f-cream"><img src="img/pose-swirly-main.png" alt="Swirly"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">stovy</h3>
-        <p>The mastermind behind every crispy edge and fluffy center. When waffles need an upgrade,
-          Stovy turns up the heat! Some say his technique is unparalleled; others believe he
-          whispers to the batter.</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span>
-          <span class="pill">The Waffle Up oven itself</span></div>
+        <h3 class="display d-flat" style="font-size:29px">swirly</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Dog energy. No words. Somehow always at the centre of the mess.</p>
+        <p style="font-size:12.7px;line-height:1.45">Jumps, bounces and swirls &mdash; never a normal walking gait. A single rolling silhouette with no waist, which is why the movement reads as bouncing rather than striding. Loyal to everyone, attached to no one in particular, and the chaos that happens <em>to</em> a scene. Harmless, always.</p>
+        <div class="tags"><span class="pill">Energy 4/5</span><span class="pill">Warmth 4/5</span><span class="pill">she/her</span><span class="pill">Never speaks &mdash; sounds only</span></div>
       </div>
     </div>
     <div class="charcard">
-      <div class="art f-pink"><img src="img/char-swirly.png" alt="Swirly"></div>
+      <div class="art f-cyan"><img src="img/pose-merlulu-main.png" alt="Merlulu"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">swirly</h3>
-        <p>While wild colors meet wildlife flavors, don&rsquo;t be fooled by Swirly&rsquo;s zany
-          appearance; there&rsquo;s nothing more serious than our commitment to satisfy those
-          late-night waffle whims. Dare to taste the swirl?</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span>
-          <span class="pill">Candy-swirl striped bear</span></div>
+        <h3 class="display d-flat" style="font-size:29px">merlulu</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Where the brand started, with the energy of where it&rsquo;s going.</p>
+        <p style="font-size:12.7px;line-height:1.45">A lion &mdash; pink mane, gold W medallion, lightning-bolt shades, headphones always on. Sporty and grounded: crouches, leans, sits low. <strong>A pro badminton player</strong>, and the most <strong>tech-fluent</strong> of the ten. He gathers rather than announces &mdash; the competition is a reason to be together, not a reason to win. Singapore is his origin, worn as streetwear, never as a history lesson.</p>
+        <div class="tags"><span class="pill">Energy 4/5</span><span class="pill">Warmth 4/5</span><span class="pill">he/him</span><span class="pill">Mane &middot; medallion &middot; racket</span></div>
       </div>
     </div>
   </div>
-  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ========================= 37 · TVY & SPACY ========================= -->
+<!-- =================== 39 · THE GANG — SPACY &amp; STOVY =================== -->
 <section class="page pad">
-  <div class="blob br b-gold" style="width:420px;height:300px"></div>
+  <div class="blob tr b-pink" style="width:420px;height:300px"></div>
   <div class="head">
     <div class="kicker">
-      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
       <h2 class="display d-cyan">the gang</h2>
     </div>
-    <p class="note">If a pose you need does not exist, request approved artwork. Do not fabricate
-      one, and do not redraw or recolour a supplied file.</p>
+    <p class="note">Spacy is never shown standing on the ground. Stovy never jokes about anything to do with food safety.</p>
   </div>
   <div class="grid rows2" style="flex:1;gap:22px">
     <div class="charcard">
-      <div class="art f-cyan"><img src="img/char-tvy.png" alt="Tvy"></div>
+      <div class="art f-gold"><img src="img/pose-spacy-main.png" alt="Spacy"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">tvy</h3>
-        <p>Retro vibes and crispy delights! Tvy is here to rewind you back to the golden era while
-          you munch on our cosmic waffles. No breakfast? No worries! We&rsquo;re open till late at
-          night.</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span>
-          <span class="pill">Cyan television, antennae, pixel grin</span></div>
+        <h3 class="display d-flat" style="font-size:29px">spacy</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Picchi, older, from a timeline where she kept going.</p>
+        <p style="font-size:12.7px;line-height:1.45"><strong>Never grounded on Earth</strong> &mdash; here she floats, drifts or flies. Where her feet are down, she is on another world, and that is how the reader should take it. Picchi&rsquo;s curiosity, grown up and equipped: she has <em>been</em> there, so the wonder is earned rather than wide-eyed. The Picchi link is the universe&rsquo;s one piece of real lore.</p>
+        <div class="tags"><span class="pill">Energy 3/5</span><span class="pill">Warmth 4/5</span><span class="pill">she/her</span><span class="pill">Off-world when grounded</span></div>
       </div>
     </div>
     <div class="charcard">
-      <div class="art f-gold"><img src="img/char-spacy.png" alt="Spacy"></div>
+      <div class="art f-pink"><img src="img/pose-stovy-main.png" alt="Stovy"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">spacy</h3>
-        <p>From the Milky Waffle Way, Spacy brings you the cosmic delight of crispy edges and
-          fluffy centers. Dive into a galactic treat with us, open till late night!</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span>
-          <span class="pill">Kid in a pink-and-cyan space helmet</span></div>
+        <h3 class="display d-flat" style="font-size:29px">stovy</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Carries the name, and takes that seriously.</p>
+        <p style="font-size:12.7px;line-height:1.45">Heavy, planted, deliberate &mdash; squares up rather than dodges. <strong>A guardian, not a cook.</strong> Controlled anger is his emotional signature: always present, always held, never spent carelessly. He is the character closest to food safety, hygiene, allergens and halal &mdash; and <strong>those subjects stay literal, always.</strong></p>
+        <div class="tags"><span class="pill">Energy 3/5</span><span class="pill">Warmth 3/5</span><span class="pill">he/him</span><span class="pill">Dragon wings &middot; flame &middot; parachute</span></div>
       </div>
     </div>
   </div>
-  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ========================= 38 · ICY & MERLULU ========================= -->
+<!-- ===================== 40 · THE GANG — TVY &amp; ICY ===================== -->
 <section class="page pad">
   <div class="blob bl b-cyan" style="width:420px;height:300px"></div>
   <div class="head">
     <div class="kicker">
-      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
-      <h2 class="display d-pink">the ninth &amp; the tenth</h2>
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-pink">the gang</h2>
     </div>
-    <p class="note">Merlulu is the tenth character, universal since August 2026. He joined as a tenth Surprise Card character and
-      appears on the Singapore sticker sheets.</p>
+    <p class="note">The two objects with pronouns of their own &mdash; characterful, never dismissive.</p>
   </div>
   <div class="grid rows2" style="flex:1;gap:22px">
     <div class="charcard">
-      <div class="art f-pink"><img src="img/char-icy.png" alt="Icy"></div>
+      <div class="art f-cyan-100"><img src="img/pose-tvy-main.png" alt="Tvy"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">icy</h3>
-        <p>Swirling with cool colors and bursting with dynamic energy, Icy knows how to make a
-          splash! Always the life of the party, Icy turns any ordinary day into a refreshing
-          adventure.</p>
-        <div class="tags"><span class="pill cyan">Bangladesh</span>
-          <span class="pill">A melting popsicle on a Waffle Up stick</span></div>
+        <h3 class="display d-flat" style="font-size:29px">tvy</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Anti-boring. Anti-bedtime. Anti-being-told.</p>
+        <p style="font-size:12.7px;line-height:1.45">Restless and kinetic &mdash; skates, climbs, dodges, never at rest for long. The CRT body is retro; the character is not. The rebellion is <strong>playful mischief</strong>: the graffiti is a W tag, the protest is refusing to go home, the oppression is homework. <strong>No real-world politics, no cause.</strong></p>
+        <div class="tags"><span class="pill">Energy 4/5</span><span class="pill">Warmth 3/5</span><span class="pill">it/its</span><span class="pill">CRT head &middot; X eyes &middot; spray can</span></div>
       </div>
     </div>
     <div class="charcard">
-      <div class="art f-cyan"><img src="img/char-merlulu.png" alt="Merlulu"></div>
+      <div class="art f-cream"><img src="img/pose-icy-main.png" alt="Icy"></div>
       <div class="txt">
-        <h3 class="display d-flat" style="font-size:32px">merlulu</h3>
-        <p>Boldly be playful, Merlulu loves making worlds together. Just like a lion and a fish!
-          No wonder he&rsquo;s a fan of Waffle Up&rsquo;s bold flavors with a smooth twist.</p>
-        <div class="tags"><span class="pill pink">All markets</span>
-          <span class="pill">Pink-maned Merlion with a gold W medallion</span></div>
+        <h3 class="display d-flat" style="font-size:29px">icy</h3>
+        <p style="font-size:13.5px;font-weight:600;font-style:italic;opacity:.85">Goes everywhere. Survives almost none of it. Goes again tomorrow.</p>
+        <p style="font-size:12.7px;line-height:1.45">No legs to speak of, so movement is a hop, a lean, a wobble. Melts in heat, cracks in cold, and keeps going regardless &mdash; that contradiction is the whole character. A <strong>solo</strong> adventurer: always the one making the joke about its own fragility, never the butt of it.</p>
+        <div class="tags"><span class="pill">Energy 4/5</span><span class="pill">Warmth 4/5</span><span class="pill">it/its</span><span class="pill">Swirl &middot; branded stick &middot; an early drip</span></div>
       </div>
     </div>
   </div>
-  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ====================== 39 · THE CHARACTER CARDS ====================== -->
+<!-- ==================== 41 · POSES — BHOPPU / AIR-MAXI ==================== -->
+<section class="page pad">
+  <div class="blob tr b-cyan" style="width:400px;height:280px"></div>
+  <div class="head" style="margin-bottom:20px">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-pink">poses</h2>
+    </div>
+    <p class="note">Every pose here is <strong>approved artwork</strong> &mdash; and the reference an AI tool needs if you ask it for a new pose. Composite it, or generate from it. Never redraw it by hand.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:20px">
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">bhoppu</p>
+        <p class="tiny muted" style="font-style:italic">Absolutely committed to the workout, right after this waffle.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-bhoppu-main.png" alt="Dumbbell down, waffle up"></div><div class="cap">Dumbbell down, waffle up</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-bhoppu-1.png" alt="Jogging, waffle in hand"></div><div class="cap">Jogging, waffle in hand</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-bhoppu-2.png" alt="Spin class, shake included"></div><div class="cap">Spin class, shake included</div></div>
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-bhoppu-3.png" alt="Face down, dreaming waffles"></div><div class="cap">Face down, dreaming waffles</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-bhoppu-4.png" alt="Push-up, dessert waiting"></div><div class="cap">Push-up, dessert waiting</div></div>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">air maxi</p>
+        <p class="tiny muted" style="font-style:italic">Aiming higher than the situation requires, and expecting you to come with him.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-air-maxi-main.png" alt="Chin up, going further"></div><div class="cap">Chin up, going further</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-air-maxi-1.png" alt="Flag on the summit"></div><div class="cap">Flag on the summit</div></div>
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-air-maxi-2.png" alt="Airborne, fist raised"></div><div class="cap">Airborne, fist raised</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-air-maxi-3.png" alt="Full speed, no brakes"></div><div class="cap">Full speed, no brakes</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-air-maxi-4.png" alt="Belt over the shoulder"></div><div class="cap">Belt over the shoulder</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ==================== 42 · POSES — MR-WAFFLE / PICCHI ==================== -->
+<section class="page pad">
+  <div class="blob bl b-pink" style="width:400px;height:280px"></div>
+  <div class="head" style="margin-bottom:20px">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-cyan">poses</h2>
+    </div>
+    <p class="note">The caption under each pose is the link between the drawing and the voice. Voices are <strong>drafted, not signed off</strong> &mdash; see &ldquo;how they speak&rdquo;.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:20px">
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">mr waffle</p>
+        <p class="tiny muted" style="font-style:italic">The one who was here first and has never once needed to mention it.</p>
+      </div>
+      <div class="grid g6 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-mr-waffle-main.png" alt="Thumbs up. That&rsquo;s all"></div><div class="cap">Thumbs up. That&rsquo;s all</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-mr-waffle-1.png" alt="Feet off the ground"></div><div class="cap">Feet off the ground</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-mr-waffle-2.png" alt="Football, no hurry"></div><div class="cap">Football, no hurry</div></div>
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-mr-waffle-3.png" alt="Deck chair, shades on"></div><div class="cap">Deck chair, shades on</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-mr-waffle-4.png" alt="Holding the mark up"></div><div class="cap">Holding the mark up</div></div>
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-mr-waffle-5.png" alt="Leaning on the W"></div><div class="cap">Leaning on the W</div></div>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">picchi</p>
+        <p class="tiny muted" style="font-style:italic">The only one in the cast with no irony at all.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-picchi-main.png" alt="Hands on hips, ready"></div><div class="cap">Hands on hips, ready</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-picchi-1.png" alt="Tricycle, full speed"></div><div class="cap">Tricycle, full speed</div></div>
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-picchi-2.png" alt="Lollipop, sitting down"></div><div class="cap">Lollipop, sitting down</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-picchi-3.png" alt="On the floor, drawing"></div><div class="cap">On the floor, drawing</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-picchi-4.png" alt="Ice cream, eyes shut"></div><div class="cap">Ice cream, eyes shut</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ===================== 43 · POSES — SWIRLY / MERLULU ===================== -->
+<section class="page pad">
+  <div class="blob tl b-pink" style="width:400px;height:280px"></div>
+  <div class="head" style="margin-bottom:20px">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-gold">poses</h2>
+    </div>
+    <p class="note">Merlulu&rsquo;s set carries both of his distinctions: <strong>the racket and the laptop</strong>.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:20px">
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">swirly</p>
+        <p class="tiny muted" style="font-style:italic">A loyal, bouncing mess who is thrilled you&rsquo;re here and has already knocked something over.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-swirly-main.png" alt="Seated, reacting hugely"></div><div class="cap">Seated, reacting hugely</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-swirly-1.png" alt="Bounding in, no brakes"></div><div class="cap">Bounding in, no brakes</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-swirly-2.png" alt="Honey pot, no regrets"></div><div class="cap">Honey pot, no regrets</div></div>
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-swirly-3.png" alt="Asleep on a cloud"></div><div class="cap">Asleep on a cloud</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-swirly-4.png" alt="Unicycle, briefly upright"></div><div class="cap">Unicycle, briefly upright</div></div>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">merlulu</p>
+        <p class="tiny muted" style="font-style:italic">The one who makes sure everyone&rsquo;s actually having a good time.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-merlulu-main.png" alt="Crouched, sizing it up"></div><div class="cap">Crouched, sizing it up</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-merlulu-1.png" alt="Football, mid-strike"></div><div class="cap">Football, mid-strike</div></div>
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-merlulu-2.png" alt="Badminton smash, airborne"></div><div class="cap">Badminton smash, airborne</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-merlulu-3.png" alt="Laptop, cross-legged"></div><div class="cap">Laptop, cross-legged</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-merlulu-4.png" alt="Sat down, drink in hand"></div><div class="cap">Sat down, drink in hand</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ====================== 44 · POSES — SPACY / STOVY ====================== -->
+<section class="page pad">
+  <div class="blob br b-cyan" style="width:400px;height:280px"></div>
+  <div class="head" style="margin-bottom:20px">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-cyan">poses</h2>
+    </div>
+    <p class="note">Where Spacy has her feet down, read it as another world. On Earth she floats.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:20px">
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">spacy</p>
+        <p class="tiny muted" style="font-style:italic">Picchi, ten years on, having actually gone and looked.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-spacy-main.png" alt="Floating, peace sign"></div><div class="cap">Floating, peace sign</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-spacy-1.png" alt="Rocket, hand up"></div><div class="cap">Rocket, hand up</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-spacy-2.png" alt="Drifting, snacks orbiting"></div><div class="cap">Drifting, snacks orbiting</div></div>
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-spacy-3.png" alt="Flag planted, planet claimed"></div><div class="cap">Flag planted, planet claimed</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-spacy-4.png" alt="Feet down, somewhere else"></div><div class="cap">Feet down, somewhere else</div></div>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">stovy</p>
+        <p class="tiny muted" style="font-style:italic">Standing between you and the thing you didn&rsquo;t see coming.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-stovy-main.png" alt="Flame breath, controlled"></div><div class="cap">Flame breath, controlled</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-stovy-1.png" alt="Lid up, flames out"></div><div class="cap">Lid up, flames out</div></div>
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-stovy-2.png" alt="Mouth open, food incoming"></div><div class="cap">Mouth open, food incoming</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-stovy-3.png" alt="Squaring up, unimpressed"></div><div class="cap">Squaring up, unimpressed</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-stovy-4.png" alt="Parachute down, still frowning"></div><div class="cap">Parachute down, still frowning</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ======================== 45 · POSES — TVY / ICY ======================== -->
+<section class="page pad">
+  <div class="blob bl b-gold" style="width:400px;height:280px"></div>
+  <div class="head" style="margin-bottom:20px">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-pink">poses</h2>
+    </div>
+    <p class="note">Two characters, ten poses, and not a single one of them standing still.</p>
+  </div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:20px">
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">tvy</p>
+        <p class="tiny muted" style="font-style:italic">Has never once done what it was told, and is very relaxed about it.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-tvy-main.png" alt="Board underfoot, thumbs up"></div><div class="cap">Board underfoot, thumbs up</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-tvy-1.png" alt="Tagging a W"></div><div class="cap">Tagging a W</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-tvy-2.png" alt="Slingshot drawn, winking"></div><div class="cap">Slingshot drawn, winking</div></div>
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-tvy-3.png" alt="Pool float, defiantly relaxed"></div><div class="cap">Pool float, defiantly relaxed</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-tvy-4.png" alt="Skating off, waving"></div><div class="cap">Skating off, waving</div></div>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <p class="eyebrow">icy</p>
+        <p class="tiny muted" style="font-style:italic">Cheerfully going somewhere that will absolutely destroy it.</p>
+      </div>
+      <div class="grid g5 poserow" style="flex:1;min-height:0;gap:13px">
+        <div class="tile f-cyan-100"><div class="frame"><img src="img/pose-icy-main.png" alt="Mid-stride, already dripping"></div><div class="cap">Mid-stride, already dripping</div></div>
+        <div class="tile f-cream"><div class="frame"><img src="img/pose-icy-1.png" alt="F1 cockpit, screaming"></div><div class="cap">F1 cockpit, screaming</div></div>
+        <div class="tile f-cyan"><div class="frame"><img src="img/pose-icy-2.png" alt="Surfing, shades on"></div><div class="cap">Surfing, shades on</div></div>
+        <div class="tile f-gold"><div class="frame"><img src="img/pose-icy-3.png" alt="Beach towel, melting flat"></div><div class="cap">Beach towel, melting flat</div></div>
+        <div class="tile f-pink"><div class="frame"><img src="img/pose-icy-4.png" alt="Ski slope, still dripping"></div><div class="cap">Ski slope, still dripping</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ========================== 46 · HOW THEY MOVE ========================== -->
+<section class="page pad">
+  <div class="blob tr b-gold" style="width:400px;height:290px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-cyan">how they move</h2>
+    </div>
+    <p class="note">Movement is part of the identity, not a director&rsquo;s choice. Two of these are powers the character has; the third is a hard limit.</p>
+  </div>
+  <div class="grid g3" style="gap:20px;flex:1;min-height:0;align-content:start">
+    <div style="display:flex;flex-direction:column;gap:14px;min-height:0">
+      <div class="tile f-cyan" style="flex:1;min-height:0">
+        <div class="frame"><img src="img/pose-spacy-2.png" alt="Spacy floating"></div>
+        <div class="cap">Spacy &mdash; not grounded on Earth</div>
+      </div>
+      <div class="panel">
+        <p class="small"><strong>On Earth, Spacy never touches the ground.</strong> She
+          floats, drifts or flies. Feet planted means she is somewhere else entirely &mdash; another
+          planet, an asteroid, a deck.</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;min-height:0">
+      <div class="tile f-gold" style="flex:1;min-height:0">
+        <div class="frame"><img src="img/pose-mr-waffle-1.png" alt="Mr Waffle floating"></div>
+        <div class="cap">Mr Waffle &mdash; can float</div>
+      </div>
+      <div class="panel">
+        <p class="small"><strong>Mr Waffle can float &mdash; it is a feature, not a
+          limitation.</strong> Hovering, deliberate, small precise adjustments; R2-D2 is the
+          reference. He also stands, walks and kicks a ball. Float him when it earns the shot.</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;min-height:0">
+      <div class="tile f-pink" style="flex:1;min-height:0">
+        <div class="frame"><img src="img/pose-swirly-main.png" alt="Swirly"></div>
+        <div class="cap">Swirly &mdash; never speaks</div>
+      </div>
+      <div class="panel">
+        <p class="small"><strong>Swirly never speaks aloud</strong> and never appears with a speech
+          bubble. Sounds and reactions only. A written caption is allowed, and reads as
+          <em>thought</em>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid g2" style="gap:22px;margin-top:16px">
+    <div class="panel f-pink" style="display:flex;gap:20px;align-items:center">
+      <img src="img/pose-spacy-4.png" alt="Spacy standing — not for use"
+           style="height:104px;object-fit:contain">
+      <div>
+        <p class="eyebrow" style="margin-bottom:9px">Feet down means off-world</p>
+        <p class="small">In the planet-spinning pose Spacy is <strong>standing</strong> &mdash; and
+          that is the tell. Ground under Spacy is the reader&rsquo;s cue that the scene has left
+          Earth. Set it against sky, stars or an alien surface, never a Dhaka street.</p>
+      </div>
+    </div>
+    <div class="panel f-cocoa">
+      <p class="eyebrow" style="margin-bottom:10px">And the rule underneath all three</p>
+      <p class="small">Bhoppu is <strong>mass</strong>, Air Maxi is <strong>motion</strong>,
+        Mr Waffle is <strong>stillness</strong>, and everyone else sits between them. If two
+        characters are moving the same way in one frame, one of them is wrong.</p>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 47 · HOW THEY RELATE ========================= -->
+<section class="page pad">
+  <div class="blob bl b-cyan" style="width:430px;height:300px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-pink">how they relate</h2>
+    </div>
+    <p class="note">Pairings that already work. Two characters in one frame need a reason, and
+      this is where the reasons are.</p>
+  </div>
+  <div class="grid g2" style="gap:26px 46px;flex:1;min-height:0">
+    <div style="display:flex">
+      <table style="height:100%">
+        <tr><td class="k">Bhoppu + Picchi</td><td>The classic duo. Big and small, both open-hearted. Drawn structurally &mdash; Picchi rides on Bhoppu.</td></tr>
+        <tr><td class="k">Picchi &rarr; Spacy</td><td>The same person, two ages, two timelines. The universe&rsquo;s one piece of real lore.</td></tr>
+        <tr><td class="k">Air Maxi &harr; Mr&nbsp;Waffle</td><td>Ambition against steadiness. Air Maxi charges; Mr Waffle holds the line. The healthiest tension in the cast.</td></tr>
+        <tr><td class="k">Air Maxi &harr; Merlulu</td><td>Near-twins in appetite. <strong>Air Maxi chases a standard; Merlulu builds a group.</strong> Air Maxi trains for everything; Merlulu plays <strong>badminton</strong> at a professional level and is the cast&rsquo;s tech head. Neither is selfish &mdash; that is not the difference.</td></tr>
+      </table>
+    </div>
+    <div style="display:flex">
+      <table style="height:100%">
+        <tr><td class="k">Swirly + everyone</td><td>Loyal to all, attached to no one in particular. The chaos that happens <em>to</em> a scene.</td></tr>
+        <tr><td class="k">Stovy &rarr; the group</td><td>Protector. The others don&rsquo;t ask; he just stands there.</td></tr>
+        <tr><td class="k">Tvy &harr; Stovy</td><td>Rule-breaker and rule-keeper. The cleanest comedy pairing in the cast, and almost entirely unused.</td></tr>
+        <tr><td class="k">Swirly &harr; Icy</td><td>Big and fragile. <strong>Cartoon slapstick with instant recovery only</strong> &mdash; never bullying, and never one character holding power over another.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="panel f-gold" style="margin-top:20px">
+    <p class="small"><strong>Positive moments only.</strong> Characters carry joy, achievement and
+      product storytelling. They never appear on a complaint, an error, an outage, an apology or a
+      price dispute &mdash; alone or paired.</p>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ========================== 48 · HOW THEY SPEAK ========================== -->
+<section class="page pad">
+  <div class="blob br b-pink" style="width:440px;height:310px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-gold">how they speak</h2>
+    </div>
+    <p class="note">Ten voice files exist at <strong>brand/character-voices/</strong>. All ten are
+      marked DRAFT.</p>
+  </div>
+  <div class="panel f-pink" style="margin-bottom:20px">
+    <p class="eyebrow" style="margin-bottom:9px">Standing rule until sign-off</p>
+    <p class="small">Characters may appear <strong>visually</strong> in published work today. They
+      <strong>may not speak in first person</strong> &mdash; no dialogue, no quoted line, no speech
+      bubble &mdash; until the voice files are approved. The single exception is Mr Waffle&rsquo;s
+      printed catchphrase, <em>&ldquo;Stay crispy, stay cool.&rdquo;</em>, which is already on the
+      card.</p>
+  </div>
+  <div class="grid g2" style="gap:26px;flex:1;min-height:0">
+    <table>
+      <tr><td class="k">Bhoppu</td><td>Absolutely committed to the workout, right after this waffle.</td></tr>
+      <tr><td class="k">Air Maxi</td><td>Aiming higher than the situation requires, and expecting you to come with him.</td></tr>
+      <tr><td class="k">Mr Waffle</td><td>The one who was here first and has never once needed to mention it.</td></tr>
+      <tr><td class="k">Picchi</td><td>The only one in the cast with no irony at all.</td></tr>
+      <tr><td class="k">Swirly</td><td><strong>Non-verbal.</strong> Sounds and reactions only.</td></tr>
+    </table>
+    <table>
+      <tr><td class="k">Merlulu</td><td>The one who makes sure everyone&rsquo;s actually having a good time.</td></tr>
+      <tr><td class="k">Spacy</td><td>Picchi, ten years on, having actually gone and looked.</td></tr>
+      <tr><td class="k">Stovy</td><td>Standing between you and the thing you didn&rsquo;t see coming.</td></tr>
+      <tr><td class="k">Tvy</td><td>Has never once done what it was told, and is very relaxed about it.</td></tr>
+      <tr><td class="k">Icy</td><td>Cheerfully going somewhere that will absolutely destroy it.</td></tr>
+    </table>
+  </div>
+  <div class="grid g3" style="gap:20px;margin-top:18px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:9px;opacity:.6">No invented catchphrases</p>
+      <p class="small">Only Mr Waffle has an approved one. Nobody else gets a line written for
+        them and repeated until it looks official.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:9px;opacity:.6">Card bios are artefacts</p>
+      <p class="small">The Surprise Card wording is printed marketing copy. Quote it as a quote;
+        do not read a personality out of it. Five voice files were rewritten for exactly that
+        reason.</p>
+    </div>
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:9px">Hard subjects stay literal</p>
+      <p class="small">Safety, allergens, hygiene, halal status, price disputes and refunds carry
+        no character and no joke &mdash; in any voice, in any language.</p>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ======================= 49 · THE CHARACTER CARDS ======================= -->
 <section class="page pad">
   <div class="blob br b-pink" style="width:420px;height:300px"></div>
   <div class="head">
@@ -1671,7 +2128,8 @@ td.k{ font-weight:600; white-space:nowrap; }
       <h2 class="display d-gold">character cards</h2>
     </div>
     <p class="note">The printed Surprise Cards: bio on the front, colour-in line art on the back.
-      Ten designs, each with its own serial.</p>
+      Ten designs, each with its own serial. <strong>The bios are printed marketing copy, not a
+      character spec</strong> &mdash; quote them, don&rsquo;t read a personality out of them.</p>
   </div>
   <div class="grid g5 rows2" style="flex:1;gap:18px">
     <div class="tile"><div class="frame f-cream"><img src="img/sc-mr-waffle.png" alt="Mr Waffle card"></div><div class="cap">Mr Waffle</div></div>
@@ -1683,12 +2141,15 @@ td.k{ font-weight:600; white-space:nowrap; }
     <div class="tile"><div class="frame f-cream"><img src="img/sc-tvy.png" alt="Tvy card"></div><div class="cap">Tvy</div></div>
     <div class="tile"><div class="frame f-cream"><img src="img/sc-spacy.png" alt="Spacy card"></div><div class="cap">Spacy</div></div>
     <div class="tile"><div class="frame f-cream"><img src="img/sc-icy.png" alt="Icy card"></div><div class="cap">Icy</div></div>
-    <div class="tile"><div class="frame f-cream"><img src="img/sc-merlulu.png" alt="Merlulu card"></div><div class="cap">Merlulu · Singapore</div></div>
+    <div class="panel f-gold" style="display:flex;flex-direction:column;justify-content:center">
+      <p class="eyebrow" style="margin-bottom:9px">Merlulu &mdash; reprint due</p>
+      <p class="small">His card is being redrawn to the current design. The old artwork is withdrawn and is not shown here; cards already in circulation stay valid.</p>
+    </div>
   </div>
   <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ======================== 40 · EXPRESSION SHEETS ======================== -->
+<!-- ======================== 50 · EXPRESSION SHEETS ======================== -->
 <section class="page pad">
   <div class="blob tl b-gold" style="width:400px;height:290px"></div>
   <div class="head">
@@ -1696,8 +2157,9 @@ td.k{ font-weight:600; white-space:nowrap; }
       <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
       <h2 class="display d-cyan">expressions</h2>
     </div>
-    <p class="note">Every character ships with an expression sheet. Pick a supplied face; never
-      redraw one.</p>
+    <p class="note">Six expression sheets exist. Pick a supplied face; never redraw one.
+      <strong>Icy, Spacy, Stovy and Tvy have none</strong> &mdash; work from their pose sheets, or
+      commission.</p>
   </div>
   <div class="grid g3 rows2" style="flex:1;gap:18px">
     <div class="tile"><div class="frame f-cream"><img src="img/expr-mr-waffle.jpg" alt="Mr Waffle expressions"></div><div class="cap">Mr Waffle</div></div>
@@ -1710,32 +2172,35 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- =================== 41 · CARD ART & TURNAROUNDS =================== -->
+<!-- =========================== 51 · TURNAROUNDS =========================== -->
 <section class="page pad">
   <div class="blob br b-cyan" style="width:440px;height:310px"></div>
   <div class="head">
     <div class="kicker">
-      <p class="eyebrow" style="opacity:.6">06 · The Waffle Up Gang</p>
-      <h2 class="display d-pink">art &amp; references</h2>
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-pink">turnarounds</h2>
     </div>
-    <p class="note">Card plaques for stickers and badges, T-pose turnarounds for animation, and
-      the Singapore sticker sheet.</p>
+    <p class="note">T-pose sheets for animation and modelling. Four exist &mdash; two of them
+      full multi-view turnarounds. Technical reference, not artwork to publish.</p>
   </div>
-  <div class="grid g4" style="gap:18px">
-    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-mr-waffle.png" alt="Mr Waffle card art"></div><div class="cap">Card art — Mr Waffle</div></div>
-    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-air-maxi.png" alt="Air Maxi card art"></div><div class="cap">Card art — Air Maxi</div></div>
-    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-bhoppu.png" alt="Bhoppu card art"></div><div class="cap">Card art — Bhoppu</div></div>
-    <div class="tile"><div class="frame f-cream" style="height:196px"><img src="img/cardart-picchi.png" alt="Picchi card art"></div><div class="cap">Card art — Picchi</div></div>
+  <div class="grid g2" style="gap:20px;flex:1;min-height:0">
+    <div class="tile"><div class="frame f-cream"><img src="img/tpose-picchi.jpg" alt="Picchi turnaround"></div><div class="cap">Picchi &mdash; four views</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/tpose-swirly.jpg" alt="Swirly turnaround"></div><div class="cap">Swirly &mdash; four views</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/tpose-air-maxi.jpg" alt="Air Maxi T-pose"></div><div class="cap">Air Maxi &mdash; front only</div></div>
+    <div class="tile"><div class="frame f-cream"><img src="img/tpose-bhoppu.jpg" alt="Bhoppu T-pose"></div><div class="cap">Bhoppu &mdash; front only</div></div>
   </div>
-  <div class="grid" style="grid-template-columns:1fr 1fr 1.35fr;gap:18px;margin-top:18px;flex:1">
-    <div class="tile"><div class="frame f-cream"><img src="img/tpose-air-maxi.jpg" alt="Air Maxi turnaround"></div><div class="cap">T-pose turnaround — Air Maxi</div></div>
-    <div class="tile"><div class="frame f-cream"><img src="img/tpose-picchi.jpg" alt="Picchi turnaround"></div><div class="cap">T-pose turnaround — Picchi</div></div>
-    <div class="tile"><div class="frame f-cream"><img src="img/sg-sheet.jpg" alt="Singapore sticker sheet"></div><div class="cap">Singapore sticker sheet</div></div>
+  <div class="panel f-cyan" style="margin-top:18px">
+    <p class="small"><strong>A turnaround is for rigging and modelling</strong> &mdash; keeping
+      proportions consistent between artists. It is not a pose you publish, and it is not evidence
+      that a 3D model exists. <strong>Six characters have no sheet at all.</strong> The old
+      card-plaque artwork that used to sit on this page has been withdrawn: it showed earlier
+      versions of the characters. Use the current poses in this section as the reference for how
+      each character looks now.</p>
   </div>
-  <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ============================ 42 · 3D MODELS ============================ -->
+<!-- ============================ 52 · 3D MODELS ============================ -->
 <section class="page f-cocoa pad">
   <div class="blob br b-pink" style="width:440px;height:310px"></div>
   <div class="head">
@@ -1766,7 +2231,57 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio" style="color:#fff"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ======================= 43 · CHARACTER USAGE ======================= -->
+<!-- =========================== 53 · ASSET STATUS =========================== -->
+<section class="page pad">
+  <div class="blob tr b-pink" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">06 &middot; The Waffle Up Gang</p>
+      <h2 class="display d-cyan">what exists</h2>
+    </div>
+    <p class="note">Check this before promising content. Fifty-one poses now cover all ten
+      characters; expression sheets are the real gap.</p>
+  </div>
+  <div class="panel flat" style="flex:1;min-height:0;padding-top:12px">
+    <table class="tight" style="font-size:13.5px">
+      <tr><th style="width:150px">Character</th><th>Poses</th><th>Expressions</th><th>Turnaround</th>
+        <th>3D sculpt</th><th>Surprise Card</th></tr>
+      <tr><td class="k">Bhoppu</td><td>5</td><td>yes</td><td>yes</td><td><strong>yes</strong></td><td>printed</td></tr>
+      <tr><td class="k">Air Maxi</td><td>5</td><td>yes</td><td>yes</td><td><strong>yes</strong></td><td>printed</td></tr>
+      <tr><td class="k">Mr Waffle</td><td>6</td><td>yes</td><td>&mdash;</td><td><strong>yes</strong></td><td>printed</td></tr>
+      <tr><td class="k">Picchi</td><td>5</td><td>yes</td><td>yes</td><td><strong>yes</strong></td><td>printed</td></tr>
+      <tr><td class="k">Swirly</td><td>5</td><td>yes</td><td>yes</td><td>&mdash;</td><td>printed</td></tr>
+      <tr><td class="k">Merlulu</td><td>5</td><td><strong>missing</strong></td><td>&mdash;</td><td>&mdash;</td><td><strong>reprint due</strong></td></tr>
+      <tr><td class="k">Spacy</td><td>5</td><td><strong>missing</strong></td><td>yes</td><td>&mdash;</td><td>printed</td></tr>
+      <tr><td class="k">Stovy</td><td>5</td><td><strong>missing</strong></td><td>yes</td><td>&mdash;</td><td>printed</td></tr>
+      <tr><td class="k">Tvy</td><td>5</td><td><strong>missing</strong></td><td>yes</td><td>&mdash;</td><td>printed</td></tr>
+      <tr><td class="k">Icy</td><td>5</td><td><strong>missing</strong></td><td>yes</td><td>&mdash;</td><td>printed</td></tr>
+    </table>
+  </div>
+  <div class="grid g3" style="gap:20px;margin-top:16px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Look before commissioning</p>
+      <p class="small">Older masters are indexed at
+        <strong>assets/characters/_source/MANIFEST.md</strong> &mdash; 109 files of vectors,
+        turnarounds and poses. Read the manifest before saying a pose doesn&rsquo;t exist.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:10px">The pose files need cutting out</p>
+      <p class="small">The sheets ship as A4 canvases with a baked grey or white background and a
+        reference thumbnail in the corner. Cut them out before compositing &mdash; never place one
+        raw over a coloured field.</p>
+    </div>
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:10px">Missing masters</p>
+      <p class="small">The layered <strong>.ai / .psd</strong> files for the current pose batch are
+        not in the library &mdash; only flattened exports. Request them before any print or
+        animation work.</p>
+    </div>
+  </div>
+  <div class="folio"><span>06 &middot; The Waffle Up Gang</span><span class="no"></span></div>
+</section>
+
+<!-- ========================= 54 · CHARACTER USAGE ========================= -->
 <section class="page pad">
   <div class="blob bl b-pink" style="width:440px;height:310px"></div>
   <div class="head">
@@ -1784,24 +2299,26 @@ td.k{ font-weight:600; white-space:nowrap; }
         &#10003;&nbsp; Use them for achievements, celebrations and product storytelling<br>
         &#10003;&nbsp; Use the line-art versions as icons and colouring artwork<br>
         &#10003;&nbsp; One character roster everywhere; market rules bind price and CTA, not cast<br>
+        &#10003;&nbsp; Composite the supplied PNG, or re-pose it from an approved <em>identity sheet</em><br>
         &#10003;&nbsp; Quote the approved Surprise Card description word for word</p>
     </div>
     <div class="panel f-pink">
       <p class="eyebrow" style="margin-bottom:14px">Don&rsquo;t</p>
       <p class="small">
         &times;&nbsp; Redraw, recolour, restyle or generate a new pose<br>
+        &times;&nbsp; Ask a generator for a character <strong>without giving it approved reference</strong><br>
         &times;&nbsp; Crowd several characters into one small piece<br>
         &times;&nbsp; Put a character on an error, a payroll screen or a disciplinary notice<br>
-        &times;&nbsp; Use a character on dense data views<br>
+        &times;&nbsp; Give a character a first-person line before the voices are signed off<br>
         &times;&nbsp; Rewrite a character&rsquo;s description or invent a new backstory</p>
     </div>
   </div>
   <div class="grid g3" style="margin-top:22px;gap:22px">
     <div class="panel">
       <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Source of truth</p>
-      <p class="small"><strong>data/characters.json</strong> is the machine-readable register of
-        approved names and descriptions. Software should read from it rather than hard-coding
-        copy.</p>
+      <p class="small"><strong>brand/CHARACTER-BIBLE.md</strong> is the source of truth for who
+        they are. <strong>data/characters.json</strong> is the machine-readable register of the
+        printed card copy &mdash; software reads from it rather than hard-coding strings.</p>
     </div>
     <div class="panel">
       <p class="eyebrow" style="margin-bottom:10px;opacity:.6">One per module</p>
@@ -1810,14 +2327,15 @@ td.k{ font-weight:600; white-space:nowrap; }
     </div>
     <div class="panel f-gold">
       <p class="eyebrow" style="margin-bottom:10px">Missing artwork</p>
-      <p class="small">If the pose or expression you need is not in the kit, request approved
-        artwork. Never fabricate one — including with AI tools.</p>
+      <p class="small">If the pose you need is not in the kit, it may be generated from an
+        <strong>identity sheet of two or three approved poses</strong> of that character
+        <em>(amended Aug 2026)</em>. A new <strong>design</strong> still comes from the artist.</p>
     </div>
   </div>
   <div class="folio"><span>06 · The Waffle Up Gang</span><span class="no"></span></div>
 </section>
 
-<!-- ================ 44 · DIVIDER — 07 VOICE & TONE ================ -->
+<!-- ==================== 55 · DIVIDER — 07 VOICE & TONE ==================== -->
 <section class="page divider">
   <div class="left f-gold">
     <div class="blob tl b-pink" style="width:300px;height:220px"></div>
@@ -1835,9 +2353,9 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ========================= 45 · THE ARCHETYPE ========================= -->
+<!-- ========================== 56 · THE ARCHETYPE ========================== -->
 <section class="page pad">
-  <div class="blob tr b-cyan" style="width:340px;height:240px;top:170px"></div>
+  <div class="blob tr b-cyan" style="width:340px;height:240px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">07 · Voice &amp; tone</p>
@@ -1872,7 +2390,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
 </section>
 
-<!-- ====================== 46 · WHERE HUMOUR GOES ====================== -->
+<!-- ======================== 57 · WHERE HUMOUR GOES ======================== -->
 <section class="page pad">
   <div class="blob bl b-gold" style="width:440px;height:310px"></div>
   <div class="head">
@@ -1898,7 +2416,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
 </section>
 
-<!-- ======================== 47 · MICROCOPY BANK ======================== -->
+<!-- ========================== 58 · MICROCOPY BANK ========================== -->
 <section class="page pad">
   <div class="blob br b-cyan" style="width:440px;height:310px"></div>
   <div class="head">
@@ -1952,7 +2470,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
 </section>
 
-<!-- ========================= 48 · BILINGUAL ========================= -->
+<!-- ============================ 59 · BILINGUAL ============================ -->
 <section class="page pad">
   <div class="blob tl b-cyan" style="width:400px;height:290px"></div>
   <div class="head">
@@ -1989,7 +2507,64 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>07 · Voice &amp; tone</span><span class="no"></span></div>
 </section>
 
-<!-- ========== 49 · DIVIDER — 08 PRODUCT & PHOTOGRAPHY ========== -->
+<!-- ======================= 60 · TALKING ABOUT VALUE ======================= -->
+<section class="page pad">
+  <div class="blob tr b-gold" style="width:400px;height:280px"></div>
+  <div class="head">
+    <div class="kicker">
+      <p class="eyebrow" style="opacity:.6">07 &middot; Voice &amp; tone</p>
+      <h2 class="display d-pink">talking about value</h2>
+    </div>
+    <p class="note">The one rule in this section with no exceptions, in any channel, in any
+      language. Confirmed August 2026.</p>
+  </div>
+  <div class="panel f-cocoa" style="margin-bottom:24px">
+    <p class="lede" style="font-size:27px;line-height:1.3;max-width:none">Waffle Up may give value
+      away. It must never <em>name</em> it, quantify it, or label it.</p>
+  </div>
+  <div class="grid g2" style="gap:24px;flex:1;min-height:0">
+    <div class="panel f-pink">
+      <p class="eyebrow" style="margin-bottom:13px">Never</p>
+      <p class="small">
+        &times;&nbsp; The words <strong>&ldquo;free&rdquo;</strong> and
+        <strong>&ldquo;discount&rdquo;</strong> &mdash; any copy, any channel, any language<br>
+        &times;&nbsp; Marking a menu price down. A 380 item is not sold at 280<br>
+        &times;&nbsp; &ldquo;% off&rdquo;, &ldquo;save BDT X&rdquo;, &ldquo;was / now&rdquo;,
+        &ldquo;deal&rdquo;, &ldquo;offer&rdquo;, &ldquo;cheap&rdquo;, &ldquo;bargain&rdquo;<br>
+        &times;&nbsp; Countdown urgency pointed at a price drop<br>
+        &times;&nbsp; &ldquo;On the house&rdquo; &mdash; it still names the thing</p>
+    </div>
+    <div class="panel f-cyan">
+      <p class="eyebrow" style="margin-bottom:13px">Instead</p>
+      <p class="small">
+        &#10003;&nbsp; Combos and set pricing &mdash; Waffle Madness 1:4 at 720. The saving exists,
+        unnamed<br>
+        &#10003;&nbsp; Surprise Card scratch rewards &mdash; value arrives as <strong>luck</strong>,
+        not as a markdown<br>
+        &#10003;&nbsp; Gifts framed as <strong>earned, unlocked, won or surprising</strong><br>
+        &#10003;&nbsp; Scarcity of a <em>thing</em> &mdash; limited edition, season ending<br>
+        &#10003;&nbsp; &ldquo;Comes with&rdquo;, &ldquo;your reward&rdquo;, &ldquo;the
+        surprise&rdquo;, &ldquo;collect&rdquo;</p>
+    </div>
+  </div>
+  <div class="grid g2" style="gap:24px;margin-top:24px">
+    <div class="panel">
+      <p class="eyebrow" style="margin-bottom:10px;opacity:.6">Why it matters</p>
+      <p class="small">Discount language makes Waffle Up feel cheap, and the whole brand is built
+        on being <strong>street without being cheap</strong>. Those are different things. The
+        scratch card exists precisely because it delivers value without starting a price
+        conversation.</p>
+    </div>
+    <div class="panel f-gold">
+      <p class="eyebrow" style="margin-bottom:10px">When in doubt</p>
+      <p class="small">If the customer could work out the taka value from the words on screen,
+        rewrite it.</p>
+    </div>
+  </div>
+  <div class="folio"><span>07 &middot; Voice &amp; tone</span><span class="no"></span></div>
+</section>
+
+<!-- ================ 61 · DIVIDER — 08 PRODUCT & PHOTOGRAPHY ================ -->
 <section class="page divider">
   <div class="left f-cocoa">
     <div class="blob tl b-gold" style="width:300px;height:220px"></div>
@@ -2008,9 +2583,9 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ==================== 50 · PRODUCT PHOTOGRAPHY I ==================== -->
+<!-- ====================== 62 · PRODUCT PHOTOGRAPHY I ====================== -->
 <section class="page pad">
-  <div class="blob tr b-gold" style="width:340px;height:240px;top:170px"></div>
+  <div class="blob tr b-gold" style="width:340px;height:240px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">08 · Product &amp; photography</p>
@@ -2034,7 +2609,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
 </section>
 
-<!-- =================== 51 · PRODUCT PHOTOGRAPHY II =================== -->
+<!-- ====================== 63 · PRODUCT PHOTOGRAPHY II ====================== -->
 <section class="page pad">
   <div class="blob bl b-cyan" style="width:420px;height:300px"></div>
   <div class="head">
@@ -2060,7 +2635,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
 </section>
 
-<!-- ====================== 52 · PHOTOGRAPHY RULES ====================== -->
+<!-- ======================== 64 · PHOTOGRAPHY RULES ======================== -->
 <section class="page pad">
   <div class="blob br b-pink" style="width:440px;height:310px"></div>
   <div class="head">
@@ -2094,7 +2669,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
 </section>
 
-<!-- ============================ 53 · VIDEO ============================ -->
+<!-- ============================== 65 · VIDEO ============================== -->
 <section class="page pad">
   <div class="blob tl b-gold" style="width:400px;height:290px"></div>
   <div class="head">
@@ -2135,7 +2710,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>08 · Product &amp; photography</span><span class="no"></span></div>
 </section>
 
-<!-- ========= 54 · DIVIDER — 09 PACKAGING & ENVIRONMENT ========= -->
+<!-- =============== 66 · DIVIDER — 09 PACKAGING & ENVIRONMENT =============== -->
 <section class="page divider">
   <div class="left f-cyan">
     <div class="blob tl b-pink" style="width:300px;height:220px"></div>
@@ -2154,9 +2729,9 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- =========================== 55 · PACKAGING =========================== -->
+<!-- ============================ 67 · PACKAGING ============================ -->
 <section class="page pad">
-  <div class="blob tr b-cyan" style="width:340px;height:240px;top:170px"></div>
+  <div class="blob tr b-cyan" style="width:340px;height:240px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">09 · Packaging &amp; environment</p>
@@ -2175,10 +2750,18 @@ td.k{ font-weight:600; white-space:nowrap; }
     <div class="tile photo"><div class="frame"><img src="img/pack-round-cup-design.jpg" alt="Round cup design"></div><div class="cap">Round cup — artwork</div></div>
     <div class="tile photo"><div class="frame"><img src="img/pack-round-cup-mockup.jpg" alt="Round cup mockup"></div><div class="cap">Round cup — mock-up</div></div>
   </div>
+  <div class="panel f-pink" style="margin-top:20px">
+    <p class="eyebrow" style="margin-bottom:9px">The boxes are not a colour reference</p>
+    <p class="small">Some of this artwork &mdash; clearest on <strong>BD Box A</strong> &mdash;
+      prints in a hotter magenta and mint green than the palette in Section 03. The palette is
+      right and the artwork is the thing that drifted. Never colour-match to a box, never sample a
+      hex from one, and never grade a product photograph toward the packaging in frame. If someone
+      asks to &ldquo;match the packaging colours&rdquo;, this is the answer.</p>
+  </div>
   <div class="folio"><span>09 · Packaging &amp; environment</span><span class="no"></span></div>
 </section>
 
-<!-- ========================= 56 · EVENT MATERIAL ========================= -->
+<!-- ========================== 68 · EVENT MATERIAL ========================== -->
 <section class="page pad">
   <div class="blob bl b-gold" style="width:420px;height:300px"></div>
   <div class="head">
@@ -2204,7 +2787,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>09 · Packaging &amp; environment</span><span class="no"></span></div>
 </section>
 
-<!-- ============ 57 · DIVIDER — 10 MERCHANDISE ============ -->
+<!-- ===================== 69 · DIVIDER — 10 MERCHANDISE ===================== -->
 <section class="page divider">
   <div class="left f-gold">
     <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
@@ -2224,9 +2807,9 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ======================= 58 · MERCH ON AN OBJECT ======================= -->
+<!-- ======================== 70 · MERCH ON AN OBJECT ======================== -->
 <section class="page pad">
-  <div class="blob tr b-cyan" style="width:340px;height:240px;top:170px"></div>
+  <div class="blob tr b-cyan" style="width:340px;height:240px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">10 · Merchandise</p>
@@ -2284,7 +2867,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>10 · Merchandise</span><span class="no"></span></div>
 </section>
 
-<!-- ========================= 59 · THE CORE RANGE ========================= -->
+<!-- ========================== 71 · THE CORE RANGE ========================== -->
 <section class="page pad">
   <div class="blob bl b-gold" style="width:420px;height:300px"></div>
   <div class="head">
@@ -2335,7 +2918,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>10 · Merchandise</span><span class="no"></span></div>
 </section>
 
-<!-- ============ 60 · DIVIDER — 11 THE SURPRISE CARD ============ -->
+<!-- ================== 72 · DIVIDER — 11 THE SURPRISE CARD ================== -->
 <section class="page divider">
   <div class="left f-pink">
     <div class="blob tl b-gold" style="width:300px;height:220px"></div>
@@ -2353,9 +2936,9 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ======================== 58 · THE PROGRAMME ======================== -->
+<!-- ========================== 73 · THE PROGRAMME ========================== -->
 <section class="page pad">
-  <div class="blob tr b-gold" style="width:340px;height:240px;top:170px"></div>
+  <div class="blob tr b-gold" style="width:340px;height:240px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">11 · The Surprise Card</p>
@@ -2397,7 +2980,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>11 · The Surprise Card</span><span class="no"></span></div>
 </section>
 
-<!-- ==================== 59 · CARD ARTWORK & SOUND ==================== -->
+<!-- ======================= 74 · CARD ARTWORK & SOUND ======================= -->
 <section class="page pad">
   <div class="blob bl b-cyan" style="width:420px;height:300px"></div>
   <div class="head">
@@ -2430,7 +3013,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>11 · The Surprise Card</span><span class="no"></span></div>
 </section>
 
-<!-- ============ 60 · DIVIDER — 11 THE ASSET LIBRARY ============ -->
+<!-- ================== 75 · DIVIDER — 12 THE ASSET LIBRARY ================== -->
 <section class="page divider">
   <div class="left f-gold">
     <div class="blob tl b-cyan" style="width:300px;height:220px"></div>
@@ -2448,9 +3031,9 @@ td.k{ font-weight:600; white-space:nowrap; }
   </div>
 </section>
 
-<!-- ======================= 61 · WHAT'S IN THE KIT ======================= -->
+<!-- ======================== 76 · WHAT'S IN THE KIT ======================== -->
 <section class="page pad">
-  <div class="blob tr b-pink" style="width:340px;height:240px;top:170px"></div>
+  <div class="blob tr b-pink" style="width:340px;height:240px"></div>
   <div class="head">
     <div class="kicker">
       <p class="eyebrow" style="opacity:.6">12 · The asset library</p>
@@ -2479,7 +3062,9 @@ td.k{ font-weight:600; white-space:nowrap; }
         <p class="small"><strong>brand/BRAND.md</strong> the system reference ·
           <strong>brand/LOGO-RULES.md</strong> mark usage ·
           <strong>brand/VOICE.md</strong> voice and microcopy ·
-          <strong>brand/CHARACTERS.md</strong> the roster.</p>
+          <strong>brand/CHARACTER-BIBLE.md</strong> who the characters are and how they move ·
+          <strong>brand/character-voices/</strong> ten voice files, all DRAFT ·
+          <strong>brand/CHARACTERS.md</strong> the printed card bios.</p>
       </div>
       <div class="panel f-gold">
         <p class="eyebrow" style="margin-bottom:10px">For software</p>
@@ -2499,7 +3084,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>12 · The asset library</span><span class="no"></span></div>
 </section>
 
-<!-- ======================= 62 · FORMATS & LIMITS ======================= -->
+<!-- ========================= 77 · FORMATS & LIMITS ========================= -->
 <section class="page pad">
   <div class="blob bl b-gold" style="width:420px;height:300px"></div>
   <div class="head">
@@ -2547,7 +3132,7 @@ td.k{ font-weight:600; white-space:nowrap; }
   <div class="folio"><span>12 · The asset library</span><span class="no"></span></div>
 </section>
 
-<!-- ============================ 63 · BACK COVER ============================ -->
+<!-- ============================ 78 · BACK COVER ============================ -->
 <section class="page f-cocoa">
   <div class="blob tl b-pink" style="width:520px;height:380px"></div>
   <div class="blob br b-cyan" style="width:560px;height:400px"></div>
@@ -2564,6 +3149,8 @@ td.k{ font-weight:600; white-space:nowrap; }
       Dhaka-1213<br>waffleup.global &nbsp;·&nbsp; @waffleup.online</p>
     <p class="tiny" style="color:#fff;opacity:.4;text-align:center;margin-top:10px">
       Visual brand guidelines, edition 2026 · generated from the Waffle Up brand asset library</p>
+    <p class="tiny" style="color:var(--gold);opacity:.75;text-align:center;letter-spacing:.16em;
+              text-transform:uppercase;margin-top:2px">Jawat</p>
   </div>
 </section>
 </body>

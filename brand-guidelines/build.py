@@ -71,29 +71,26 @@ def trim(source, name, size):
     save(im, name + ".png")
 
 
-def cutout_field(source, name, size, crop, seeds, tol=100):
-    """Lift flat artwork off a coloured field — used for the Merlulu sticker.
+def scan(source, name, size, quality=86):
+    """Crop a scanned reference sheet down to the drawing.
 
-    Flood-fills the named background colours from the crop edge, then keeps the
-    largest remaining blob and fills it, so the sticker's white keyline survives.
+    The sheets are ruled paper, so a plain white-margin trim keeps the whole
+    page — every column crosses the same ruling. Score columns and rows by ink
+    density instead and keep only the band the linework actually occupies.
     """
-    im = Image.open(src(source)).convert("RGB").crop(crop)
-    a = np.asarray(im).astype(np.int16)
-    bg = np.zeros(a.shape[:2], bool)
-    for colour in seeds:
-        bg |= np.abs(a - np.array(colour, np.int16).reshape(1, 1, 3)).sum(axis=2) < tol
-    lab, _ = ndimage.label(bg)
-    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
-    ink = ~np.isin(lab, edge[edge != 0])
-    parts, count = ndimage.label(ink)
-    sizes = np.array(ndimage.sum(ink, parts, range(1, count + 1)))
-    mask = ndimage.binary_fill_holes(parts == int(sizes.argmax()) + 1)
-    ys, xs = np.where(mask)
-    out = np.dstack([np.asarray(im), (mask * 255).astype(np.uint8)])
-    out = out[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
-    im = Image.fromarray(out, "RGBA")
+    im = Image.open(src(source)).convert("RGB")
+    a = np.asarray(im)
+    ink = a.min(axis=2) < 150
+    cols = ink.sum(axis=0).astype(float)
+    rows = ink.sum(axis=1).astype(float)
+    xs = np.where(cols > cols.max() * 0.10)[0]
+    ys = np.where(rows > rows.max() * 0.10)[0]
+    if len(xs) and len(ys):
+        pad = int(min(im.size) * 0.02)
+        im = im.crop((max(0, xs.min() - pad), max(0, ys.min() - pad),
+                      min(im.width, xs.max() + pad), min(im.height, ys.max() + pad)))
     im.thumbnail((size, size), Image.LANCZOS)
-    save(im, name + ".png")
+    save(im, name + ".jpg", quality)
 
 
 def cutout(source, name, size, thresh=243, work=1100):
@@ -140,6 +137,73 @@ def cutout(source, name, size, thresh=243, work=1100):
     save(im, name + ".png")
 
 
+def pose(source, name, size=900, work=1400, tol=26):
+    """Lift a character pose off its baked backdrop.
+
+    The Aug 2026 pose sheets ship as A4 canvases with a flat white or grey
+    field, a reference thumbnail pinned to the top-left corner, and (on the
+    main poses) a four-square colour key. Flood-fill the field from the edge,
+    then drop the thumbnail and the key so only the artwork survives.
+    """
+    im = Image.open(src(source)).convert("RGBA")
+    im.thumbnail((work, work), Image.LANCZOS)
+    a = np.asarray(im)
+    rgb = a[:, :, :3].astype(np.int16)
+
+    bg = a[:, :, 3] < 16
+    # Seed from the dominant colours of the 1px border ring rather than the corner
+    # pixels — one sheet has artwork running into a corner, which ate the drawing.
+    ring = np.concatenate([a[0, :, :3], a[-1, :, :3], a[:, 0, :3], a[:, -1, :3]])
+    keys, counts = np.unique(ring.astype(np.int32) @ np.array([65536, 256, 1]), return_counts=True)
+    for key in keys[counts.argsort()[::-1][:2]]:
+        if counts[list(keys).index(key)] < len(ring) * 0.05:
+            continue
+        colour = np.array([key >> 16, (key >> 8) & 255, key & 255], np.int16)
+        bg |= np.abs(rgb - colour).sum(axis=2) < tol
+
+    lab, _ = ndimage.label(bg)
+    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    ink = ~np.isin(lab, edge[edge != 0])
+
+    parts, count = ndimage.label(ink)
+    sizes = np.array(ndimage.sum(ink, parts, range(1, count + 1)))
+    boxes = ndimage.find_objects(parts)
+    height, width = ink.shape
+    biggest = sizes.max()
+
+    keep = []
+    for i, box in enumerate(boxes):
+        if sizes[i] < biggest * 0.004:
+            continue
+        h = box[0].stop - box[0].start
+        w = box[1].stop - box[1].start
+        fill = sizes[i] / float(h * w)
+        px = a[box][:, :, :3][parts[box] == i + 1]
+        # Reference thumbnail, pinned to the top-left corner. On a grey sheet it
+        # survives as a white card; on a white sheet the card itself flood-fills
+        # away and only the miniature drawing inside it is left behind.
+        white = ((px >= 232).all(axis=1)).mean()
+        card = (box[0].start < height * 0.06 and box[1].start < width * 0.06
+                and white > 0.20 and sizes[i] < biggest * 0.70)
+        residue = (box[0].start < height * 0.06 and box[1].start < width * 0.12
+                   and sizes[i] < biggest * 0.25)
+        if card or residue:
+            continue
+        bins = (px // 48).astype(np.int32)
+        _, counts = np.unique(bins[:, 0] * 10000 + bins[:, 1] * 100 + bins[:, 2], return_counts=True)
+        if counts.max() / len(px) >= 0.9 and fill >= 0.85 and sizes[i] < biggest * 0.7:
+            continue  # colour-key square, not artwork
+        keep.append(i + 1)
+
+    mask = np.isin(parts, keep)
+    ys, xs = np.where(mask)
+    out = np.dstack([a[:, :, :3], (mask * 255).astype(np.uint8)])
+    out = out[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+    im = Image.fromarray(out, "RGBA")
+    im.thumbnail((size, size), Image.LANCZOS)
+    save(im, name + ".png")
+
+
 # --------------------------------------------------------------------------
 # Manifest
 # --------------------------------------------------------------------------
@@ -147,7 +211,6 @@ def cutout(source, name, size, thresh=243, work=1100):
 BD = "assets/characters/bangladesh"
 
 CHARACTERS = ["mr-waffle", "air-maxi", "bhoppu", "picchi", "stovy", "swirly", "tvy", "spacy", "icy"]
-CARD_ART = ["mr-waffle", "air-maxi", "bhoppu", "picchi", "stovy", "swirly"]
 T_POSES = ["air-maxi", "bhoppu", "picchi", "swirly"]
 MODELS_3D = {"mr-waffle": "3d/model-reference.jpg", "air-maxi": "3d/model-reference.jpg",
              "picchi": "3d/model-reference.jpg", "bhoppu": "2d/hero.png"}
@@ -155,8 +218,9 @@ MODELS_3D = {"mr-waffle": "3d/model-reference.jpg", "air-maxi": "3d/model-refere
 WORDMARKS = ["Ashol", "Crispy", "Crunch", "Drizzle", "Everyday", "Halal-1", "Halal-2", "Love",
              "Obsessed", "Order Now", "Smile", "Square", "Sweet", "Waffle Love", "Waffleistic"]
 
+# Merlulu is omitted — the printed card carries the superseded design.
 SURPRISE_CARDS = ["Mr Waffle", "Air Maxi", "Bhoppu", "Picchi", "Stovy", "Swirly", "Tvy", "Spacy",
-                  "Icy", "Merlulu"]
+                  "Icy"]
 
 PRODUCTS = ["01-woas-nutella", "02-woas-red-velvet", "03-woas-tri-chocolate", "04-woas-mad-mango",
             "05-woas-kunaffle", "06-death-by-nutella", "07-bananatella-and-nuts",
@@ -177,6 +241,29 @@ EVENTS = ["WUP Event Backdrop 10ft x 8ft.png", "WUP Event Backdrop 8ft x 8ft.png
 
 EXTRAS = ["Mr Waffle-01.png", "Mr Waffle-02.png", "Spacy-02.png", "Stovy-02.png", "Tvy-01.png",
           "Scratch Card - Ice Cream.png"]
+
+# The Aug 2026 pose batch (Sadbin Ahmed) — `Character poses/`. Folder spellings differ
+# from the approved public names, so map them here rather than renaming the source.
+POSE_DIR = "Character poses"
+POSES = {
+    "bhoppu":    ["Bhoppu 001", "Bhoppu 002", "Bhoppu 003", "Bhoppu 004"],
+    "air-maxi":  ["Air maxi 001", "Air maxi 002", "Air maxi 003", "Air maxi 004"],
+    "mr-waffle": ["Mr Waffle 001", "Mr Waffle 002", "Mr Waffle 003", "Mr Waffle 004", "Mr Waffle 005"],
+    "picchi":    ["picchi 001", "picchi 002", "picchi 003", "picchi 004"],
+    "swirly":    ["Swirly 001", "Swirly 002", "Swirly 003", "Swirly 004"],
+    "merlulu":   ["Merlulu 001", "Merlulu 002", "Merlulu 003", "Merlulu 004"],
+    "tvy":       ["TV 001", "TV 002", "TV 003", "TV 004"],
+    "spacy":     ["Spacie 001", "Spacie 002", "Spacie 003", "Spacie 004"],
+    "stovy":     ["Stovie 001", "Stovie 002", "Stovie 003 ", "Stovie 004"],
+    "icy":       ["popsicle 001", "popsicle 002", "popsicle 003", "popsicle 004"],
+}
+POSE_MAIN = {
+    "bhoppu": "Bhoopu Main Pose", "air-maxi": "Air maxi final", "mr-waffle": "mr waffle final",
+    "picchi": "picchi final", "swirly": "swirly final", "spacy": "spacie final",
+    "stovy": "stovie final", "icy": "popsicle final", "tvy": "TVy final",
+}
+# Merlulu's main pose sits in the top-level folder, not Mains/.
+POSE_MAIN_FLAT = {"merlulu": "Merlulu Main"}
 
 FONTS = {
     "Chum": ("assets/fonts/web/Chum.ttf", "truetype"),
@@ -220,17 +307,20 @@ def build_images():
     for name in CHARACTERS:
         cutout(BD + "/%s/2d/hero.png" % name, "char-" + name, 820)
         photo(BD + "/%s/2d/expressions.png" % name, "expr-" + name, 1000)
-    for name in CARD_ART:
-        trim(BD + "/%s/2d/card.png" % name, "cardart-" + name, 620)
     for name in T_POSES:
-        photo(BD + "/%s/2d/t-pose-front.png" % name, "tpose-" + name, 900)
+        scan(BD + "/%s/2d/t-pose-front.png" % name, "tpose-" + name, 1300)
     for name, rel in MODELS_3D.items():
         photo(BD + "/%s/%s" % (name, rel), "model-" + name, 1100)
-    cutout_field("assets/characters/singapore/merlulu/references/sg-sticker-sheet-full.jpg",
-                 "char-merlulu", 820, crop=(10, 1310, 780, 2230),
-                 seeds=[(241, 99, 155), (110, 204, 216), (247, 177, 205), (166, 224, 231)])
-    photo("assets/characters/singapore/merlulu/references/sg-sticker-sheet-full.jpg",
-          "sg-sheet", 1500, quality=86)
+
+    log("character poses (Aug 2026 batch)")
+    for key, names in POSES.items():
+        for n, f in enumerate(names, 1):
+            pose("%s/%s.png" % (POSE_DIR, f), "pose-%s-%d" % (key, n), 900)
+    for key, f in POSE_MAIN.items():
+        pose("%s/Mains/%s.png" % (POSE_DIR, f), "pose-%s-main" % key, 1000)
+    for key, f in POSE_MAIN_FLAT.items():
+        pose("%s/%s.png" % (POSE_DIR, f), "pose-%s-main" % key, 1000)
+    photo("%s/Mains/family.png" % POSE_DIR, "gang-banner", 2600, quality=88)
 
     log("surprise cards")
     for name in SURPRISE_CARDS:
