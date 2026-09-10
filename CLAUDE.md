@@ -226,6 +226,7 @@ Delivered as copy-pasteable blocks, one per shot, plus a shot list.
 | Programme-level strategy (loyalty, etc.) | `programs/` |
 | Raw discovery / interview captures | `brainstorms/` |
 | **Long-running brand documents** | own top-level folder — `brand-guidelines/`, `company-profile/` |
+| **Fundraise / investor material** | `fundraise/` — deck, diligence, operating plan |
 
 **Brand documents are not campaigns.** A campaign has a date, a run and an end. The Brand Guidelines and the Company Profile are standing brand assets that get revised for years, and each one owns a top-level folder holding its planning, copy and HTML source, rendering its PDF to the repo root through `brand-guidelines/build.py`. Don't file them under `campaigns/<yyyy-mm>-…` — they have no month.
 

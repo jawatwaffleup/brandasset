@@ -255,6 +255,36 @@ CQ @ Clarke Quay. Separate market, separate trip — most likely briefed to some
 
 ---
 
+## 10b. Premix, production and the investor story `MIX`
+
+**Added 11 Sep 2026.** This block does not serve the company profile — it serves the **fundraise deck** (`fundraise/DECK.md`). It lives here because the shoot happens once. Capturing it on a second trip costs double and delays the raise.
+
+The premix is the asset the raise is actually being made against, and there is **no photograph of it anywhere.** Treat this block as P1 throughout.
+
+**Before shooting anything in this section, check `fundraise/DILIGENCE.md` §2.** If IP counsel has not yet set the disclosure strategy, photograph the *bag, the process and the result* — never the ingredient list, never a formulation document, never a labelled raw-material store. A published photograph is a disclosure.
+
+| ID | Shot | Notes |
+|---|---|---|
+| MIX-01 | The premix bag — product shot, set-built, full brand rules | The hero of slide 4. It has never been photographed |
+| MIX-02 | The powder itself — macro, texture, in a scoop | |
+| MIX-03 | **The whole sequence: dry powder → water → batter → iron → finished waffle** | Shot as one continuous set. This *is* the pitch, told in pictures |
+| MIX-04 | Water being added — the single frame that says "just add water" | |
+| MIX-05 | Production line — mixing, filling, sealing | Slide 14 justifies the plant; this makes it real |
+| MIX-06 | Bags stacked, warehouse, batch coding visible | Shows a supply business, not a kitchen |
+| MIX-07 | QC / lab — testing in progress, instruments, someone in a lab coat | Turns "we tested it" into something seen |
+| MIX-08 | **The crunch test — the same waffle at 0, 15, 30, 60 minutes** | Shoot as documentary evidence with a visible timer, not as an ad. This is the proof behind the strongest claim in the deck |
+| MIX-09 | The break/snap — macro, the crunch as a still image | Also capture clean audio |
+| MIX-10 | Two waffles side by side after an hour — ours and a conventional one | Only if the lab result supports it. **Never stage a comparison the data does not back** |
+| MIX-11 | Dry goods being boxed for shipping | The export story — no cold chain, in one frame |
+| MIX-12 | An outlet with **no refrigeration in sight** — a clean, simple counter | The cold-chain-free claim, made visible |
+| MIX-13 | Training session — someone being taught in minutes | The franchise story |
+| MIX-14 | An outlet mid-fit-out | Proves the unit model is repeatable |
+| MIX-15 | Founder, investor register — plain, direct, credible | A different portrait from TEA-01. Less warmth, more authority |
+
+**Add to Block B (Production & operations)** in the schedule, and extend it to two days. MIX-08 alone needs an uninterrupted 90-minute run.
+
+---
+
 ## 11. Permissions, releases and access
 
 Sort these **before** the crew moves, not on the day.
