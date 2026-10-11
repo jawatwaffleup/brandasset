@@ -37,6 +37,23 @@ er[820:890,590:660]=True
 er[900:,:]=False
 a=cv2.GaussianBlur(er.astype('float32'),(0,0),5)[...,None]
 out=base*(1-a)+bg*a
+
+# --- continuous stick section: plain wood strip from the real waffle shoot, runs under the waffle and under the engraved stick
+strip=cv2.imread(S+'stick_strip.png')
+def stick_piece(out,top,ang_deg,width=56,length=90):
+    st=cv2.resize(strip,(width,length),interpolation=cv2.INTER_AREA)
+    tile=np.zeros((length+40,width+40,4),np.uint8); tile[20:20+length,20:20+width,:3]=st; tile[20:20+length,20:20+width,3]=255
+    # rotate about the strip's top-centre; ang>0 is ccw in cv2 (left stick leans bottom-left => clockwise => negative)
+    M=cv2.getRotationMatrix2D((20+width/2,20),ang_deg,1.0)
+    M[0,2]+=top[0]-(20+width/2); M[1,2]+=top[1]-20
+    w=cv2.warpAffine(tile,M,(W,H),flags=cv2.INTER_LINEAR,borderValue=(0,0,0,0))
+    al=cv2.GaussianBlur(w[:,:,3].astype(np.float32)/255,(0,0),0.8)
+    fade=np.clip((868-np.arange(H))/16.,0,1)[:,None]; al=(al*fade)[...,None]   # only fills the gap; the engraved stick takes over below
+    rgb=cv2.cvtColor(w[:,:,:3],cv2.COLOR_BGR2RGB).astype(float)
+    return out*(1-al)+rgb*al
+p0=eval(open(S+'params.txt').read())
+out=stick_piece(out,(288,828),-p0['L'][2])
+out=stick_piece(out,(797,836), p0['R'][2])
 # real waffle cutout
 cut=cv2.imread(S+'tri.png',cv2.IMREAD_UNCHANGED)     # Higgsfield tri-chocolate waffle, chroma-keyed, squared 1:1
 cx,bot,bw=eval(open(S+'tri_anchor.txt').read())
