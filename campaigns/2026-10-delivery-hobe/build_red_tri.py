@@ -33,6 +33,7 @@ fill=np.maximum(fill,pl)
 er=cv2.dilate(fill,cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(61,61)))>0
 for x0,y0,x1,y1 in prot: er[y0:y1,x0:x1]=False
 er[845:900,215:325]=False; er[845:900,735:865]=False
+er[820:890,590:660]=True
 er[900:,:]=False
 a=cv2.GaussianBlur(er.astype('float32'),(0,0),5)[...,None]
 out=base*(1-a)+bg*a
@@ -40,7 +41,9 @@ out=base*(1-a)+bg*a
 cut=cv2.imread(S+'tri.png',cv2.IMREAD_UNCHANGED)     # Higgsfield tri-chocolate waffle, chroma-keyed, squared 1:1
 cx,bot,bw=eval(open(S+'tri_anchor.txt').read())
 cut=cut[:int(bot)+6]; ANCHOR=(cx,bot-14); LEAN=0.
+WA=np.zeros((H,W),np.float32)
 def place(out,target,lean_t,scale,mirror):
+    global WA
     c=cut[:,::-1].copy() if mirror else cut
     ax=(c.shape[1]-ANCHOR[0]) if mirror else ANCHOR[0]
     ang=(lean_t-LEAN) if mirror else -(lean_t-LEAN)      # cv2: +ccw
@@ -48,6 +51,7 @@ def place(out,target,lean_t,scale,mirror):
     M[0,2]+=target[0]-ax; M[1,2]+=target[1]-ANCHOR[1]
     w=cv2.warpAffine(c,M,(W,H),flags=cv2.INTER_LANCZOS4,borderValue=(0,0,0,0))
     rgb=cv2.cvtColor(w[:,:,:3],cv2.COLOR_BGR2RGB).astype(float); al=(w[:,:,3:]/255.)
+    WA=np.maximum(WA,al[:,:,0].astype(np.float32))
     return out*(1-al)+rgb*al
 p=eval(open(S+'params.txt').read())
 out=place(out,p['L'][0],p['L'][2],p['L'][1],False)
@@ -58,5 +62,7 @@ keep=tan&(yy>=840); keep=cv2.dilate(keep.astype('uint8'),np.ones((3,3),np.uint8)
 keep=cv2.morphologyEx(keep,cv2.MORPH_OPEN,np.ones((5,5),np.uint8)).astype('float32')
 keep=cv2.GaussianBlur(keep,(0,0),1.2)[...,None]
 # only hands + old stick tops come back from the generated post; red field stays modelled
+keep[:, :]=keep; keep[820:890,590:660]=0
+keep=keep*(1-WA[...,None])
 out=out*(1-keep)+base*keep
 cv2.imwrite(S+'red_tri.png',cv2.cvtColor(np.clip(out,0,255).astype('uint8'),cv2.COLOR_RGB2BGR))
